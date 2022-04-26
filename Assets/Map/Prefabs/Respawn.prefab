@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4563672395875263804}
   - component: {fileID: 7615769599995712951}
   - component: {fileID: 8568381654102971667}
+  - component: {fileID: 181019588605684734}
   m_Layer: 0
   m_Name: Respawn
   m_TagString: Untagged
@@ -103,3 +104,17 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &181019588605684734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7867100125316195845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bae710ef6a79a3c44bede5b41ce14d15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefub: {fileID: 8926663183237267438, guid: 05d2126dc21c2474eaa285b66c7ba03c,
+    type: 3}
