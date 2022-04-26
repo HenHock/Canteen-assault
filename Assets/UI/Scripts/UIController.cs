@@ -22,10 +22,9 @@ public class UIController : MonoBehaviour
         if (money + value > 0)
         {
             money += value;
-            textFieldMoney.text = $"Money: {money}";
+            textFieldMoney.text = "Money: " + money;
             return true;
         }
-        
         return false;
     }
 }

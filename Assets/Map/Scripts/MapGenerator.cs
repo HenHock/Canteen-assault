@@ -8,7 +8,7 @@ public class MapGenerator : MonoBehaviour
     [SerializeField] private GameObject finishPrefab;
     [SerializeField] private GameObject respawnPrefab;
     [SerializeField] private GameObject wellPrefab;
-    [SerializeField] private GameObject characterPrefab;
+    [SerializeField] private GameObject characterSpawnPlacePrefab;
 
     public static int[,] titleArray;
     public static int countR = 12;
@@ -23,6 +23,7 @@ public class MapGenerator : MonoBehaviour
          * 3 - enemy spawn possition
          * 4 - finish 
          */
+
         DataManager.titleArray = new int[,]
         {
             { 1, 1, 1,1,1,1,1,1,1,1 },
@@ -43,11 +44,12 @@ public class MapGenerator : MonoBehaviour
             for (int j = 0; j < countC; j++)
             {
                 GameObject title = null;
+                Vector3 position = new Vector3(j - Screen.width / 310, -10, i - Screen.height / 310);
 
                 if (DataManager.titleArray[i, j] == 0)
                     title = Instantiate(groundPrefab);
                 else if (DataManager.titleArray[i, j] == 2)
-                    title = Instantiate(characterPrefab);
+                    title = Instantiate(characterSpawnPlacePrefab);
                 else if (DataManager.titleArray[i, j] == 3)
                     title = Instantiate(respawnPrefab);
                 else if (DataManager.titleArray[i, j] == 4)
@@ -57,7 +59,7 @@ public class MapGenerator : MonoBehaviour
                 if (title != null)
                 {
                     title.transform.SetParent(transform);
-                    title.transform.localPosition = new Vector3(j - Screen.width / 310, -10, i - Screen.height / 310 );
+                    title.transform.localPosition = position;
                 }
             }
     }

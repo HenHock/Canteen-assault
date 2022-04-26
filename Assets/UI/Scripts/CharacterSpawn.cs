@@ -1,27 +1,34 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CharacterSpawn : MonoBehaviour
 {
-    [SerializeField] private static GameObject characterPrefab;
+    [SerializeField] private GameObject characterPrefab;
 
     public void onClick()
     {
-        SpawnCharacter(0);
+        SpawnCharacter();
     }
 
-    private void SpawnCharacter(int placeID)
+    private void SpawnCharacter()
     {
         GameObject Map = GameObject.Find("Map");
-        // -1 10 1
-        GameObject character = Instantiate(characterPrefab);
 
-        if(Map != null)
-            character.transform.SetParent(Map.transform);
-        character.transform.localPosition = new Vector3(-1, 10, 1);
+        if (DataManager.uIController != null)
+            if (DataManager.uIController.changeMoney(-Convert.ToInt32(GetComponentInChildren<Text>().text)))
+            {
+                GameObject character = Instantiate(characterPrefab);
 
-        // Close buy panel
+                if (Map != null)
+                    character.transform.SetParent(Map.transform);
+
+                character.transform.localPosition = DataManager.selectedPositionPlaceCharacterSpawn;
+            }
+
+        // Close buy character panel
         PanelController buyPanelController = this.GetComponentInParent<PanelController>();
         buyPanelController.Close();
     }

@@ -56,14 +56,14 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\UI\Scripts\PanelController.cs" />
+    <Compile Include="Assets\Enemy\Scripts\EnemyTemplate.cs" />
+    <Compile Include="Assets\DataManager.cs" />
+    <Compile Include="Assets\Character\Scripts\ShotTemplate.cs" />
+    <Compile Include="Assets\Map\Scripts\CharacterSpawnPlaceClick.cs" />
     <Compile Include="Assets\Map\Scripts\MapGenerator.cs" />
     <Compile Include="Assets\UI\Scripts\UIController.cs" />
-    <Compile Include="Assets\Character\Scripts\ShotTemplate.cs" />
-    <Compile Include="Assets\Enemy\Scripts\EnemyTemplate.cs" />
     <Compile Include="Assets\UI\Scripts\CharacterSpawn.cs" />
-    <Compile Include="Assets\UI\Scripts\PanelController.cs" />
-    <Compile Include="Assets\Map\Scripts\CharacterSpawnPlaceClick.cs" />
-    <Compile Include="Assets\DataManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

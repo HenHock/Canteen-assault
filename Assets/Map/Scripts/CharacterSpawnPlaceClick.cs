@@ -9,9 +9,11 @@ public class CharacterSpawnPlaceClick : MonoBehaviour
 
     public void onClick()
     {
-        UIController uIController = GameObject.Find("UIController").GetComponent<UIController>();
-        if (uIController != null)
-            uIController.buyCharacterPanelController.Open();
+        if (DataManager.uIController != null)
+        {
+            DataManager.uIController.buyCharacterPanelController.Open();
+            DataManager.selectedPositionPlaceCharacterSpawn = this.transform.localPosition;
+        }
     }
 
     private void Update()
