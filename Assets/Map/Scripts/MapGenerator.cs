@@ -89,11 +89,11 @@ public class MapGenerator : MonoBehaviour
         */
         DataManager.WayToFinish = new List<DataManager.CordinatesStruct>();
         findWay(spawnCordinates, 1);
-        
+        /*
            for (int i = 0; i < DataManager.titleArray.GetLength(0); i++, Debug.Log("\n"))
                for (int j = 0; j < DataManager.titleArray.GetLength(1);j++) 
                 Debug.Log(DataManager.titleArray[i,j]);
-        
+        */
     }
 
     private void findWay(DataManager.CordinatesStruct tempÑor, int i)
@@ -102,6 +102,7 @@ public class MapGenerator : MonoBehaviour
         if (DataManager.titleArray[tempÑor.xPosition, tempÑor.yPosition] == -4)
         {
             DataManager.titleArray[tempÑor.xPosition, tempÑor.yPosition] = i;
+            DataManager.WayToFinish.Add(new DataManager.CordinatesStruct(1, 0));
             buildWayBack(new(tempÑor.xPosition, tempÑor.yPosition), i);
             return;
         }

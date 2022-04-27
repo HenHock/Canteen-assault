@@ -10,13 +10,11 @@ public class EnemyTemplate : MonoBehaviour
     [SerializeField] private int Reward = 0;
     private Vector3 target;
     private int i;
-  //  private const float criticalDistance = 0.01f;
-
+ 
     void Start()
     {
         target = new Vector3(0, 0, 0);
         i = DataManager.WayToFinish.Count-1;
-        Debug.Log(i);
     }
 
     void Update()
@@ -28,29 +26,18 @@ public class EnemyTemplate : MonoBehaviour
         }
         //transform.position = Vector3.MoveTowards(transform.position, target, Speed * Time.deltaTime);
 
-        transform.Translate(DataManager.WayToFinish[i].xPosition * Time.deltaTime, 0, DataManager.WayToFinish[i].yPosition * Time.deltaTime);
+        transform.Translate(DataManager.WayToFinish[i].xPosition * Time.deltaTime * (-1), 0, DataManager.WayToFinish[i].yPosition * Time.deltaTime);
 
-       /* float distance = Vector3.Distance(point.pos, transform.position);
-        
 
-        if (distance < criticalDistance)
-        {
-            //DO SOMETHING
-        }
-        Debug.Log(i--);
-        //i--;
-        */
     }
 
     void OnTriggerExit(Collider other)
     {
         
-        //if(other.gameObject.tag.Equals("GameBoard"))
-      //  {
-        i--;
-        //    Debug.Log("I was here!");
-        //}
-        Debug.Log("I was there!");
+        if(string.Equals(other.gameObject.tag,"GameBoard"))
+        {
+            i--;
+        }
     }
 
     public void TakeDamage(int _damage)
