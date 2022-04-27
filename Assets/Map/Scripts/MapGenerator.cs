@@ -52,22 +52,24 @@ public class MapGenerator : MonoBehaviour
         //spawnCordinates = new CordinatesStruct();
         //finishCordinates = new CordinatesStruct();
 
-        for (int i = 0; i < countR; i++)
+        for (int i = countR-1; i >= 0; i--)
             for (int j = 0; j < countC; j++)
             {
                 GameObject title = null;
-                Vector3 position = new Vector3((-1)*j - Screen.width / 310, -10, i - Screen.height / 310*(-1));
+                Vector3 position = new Vector3(j - Screen.width / 310, -10, (i - Screen.height / 310)*(-1));
 
                 if (DataManager.titleArray[i, j] == 0)
                     title = Instantiate(groundPrefab);
-                else if (DataManager.titleArray[i, j] == 2)
+                else if (DataManager.titleArray[i, j] == -2)
                     title = Instantiate(characterSpawnPlacePrefab);
-                else if (DataManager.titleArray[i, j] == 3)
+                else if (DataManager.titleArray[i, j] == -3)
+                {
                     title = Instantiate(respawnPrefab);
                     //spawnCordinates.Add(new CordinatesStruct(i, j));
                     spawnCordinates = new DataManager.CordinatesStruct(i, j);
                     DataManager.titleArray[i, j] = 0;
                 }
+
                 else if (DataManager.titleArray[i, j] == -4)
                 {
                     title = Instantiate(finishPrefab);
@@ -97,73 +99,73 @@ public class MapGenerator : MonoBehaviour
         
     }
 
-    private void findWay(DataManager.CordinatesStruct temp�or, int i)
+    private void findWay(DataManager.CordinatesStruct tempor, int i)
     {
 
-        if (DataManager.titleArray[temp�or.xPosition, temp�or.yPosition] == -4)
+        if (DataManager.titleArray[tempor.xPosition, tempor.yPosition] == -4)
         {
-            DataManager.titleArray[temp�or.xPosition, temp�or.yPosition] = i;
-            buildWayBack(new(temp�or.xPosition, temp�or.yPosition), i);
+            DataManager.titleArray[tempor.xPosition, tempor.yPosition] = i;
+            buildWayBack(new(tempor.xPosition, tempor.yPosition), i);
             return;
         }
 
-        if(DataManager.titleArray[temp�or.xPosition, temp�or.yPosition] == 0)
+        if(DataManager.titleArray[tempor.xPosition, tempor.yPosition] == 0)
         {
-            DataManager.titleArray[temp�or.xPosition, temp�or.yPosition] = i;
+            DataManager.titleArray[tempor.xPosition, tempor.yPosition] = i;
             
-            if (temp�or.xPosition - 1 > -1)
-                findWay(new DataManager.CordinatesStruct(temp�or.xPosition - 1, temp�or.yPosition), i+1);
-            if (temp�or.xPosition + 1 < DataManager.titleArray.GetLength(0))
-                findWay(new DataManager.CordinatesStruct(temp�or.xPosition + 1, temp�or.yPosition), i+1);
-            if (temp�or.yPosition - 1 > -1)
-                findWay(new DataManager.CordinatesStruct(temp�or.xPosition, temp�or.yPosition - 1), i+1);
-            if (temp�or.yPosition + 1 < DataManager.titleArray.GetLength(1))
-                findWay(new DataManager.CordinatesStruct(temp�or.xPosition, temp�or.yPosition + 1), i+1);
+            if (tempor.xPosition - 1 > -1)
+                findWay(new DataManager.CordinatesStruct(tempor.xPosition - 1, tempor.yPosition), i+1);
+            if (tempor.xPosition + 1 < DataManager.titleArray.GetLength(0))
+                findWay(new DataManager.CordinatesStruct(tempor.xPosition + 1, tempor.yPosition), i+1);
+            if (tempor.yPosition - 1 > -1)
+                findWay(new DataManager.CordinatesStruct(tempor.xPosition, tempor.yPosition - 1), i+1);
+            if (tempor.yPosition + 1 < DataManager.titleArray.GetLength(1))
+                findWay(new DataManager.CordinatesStruct(tempor.xPosition, tempor.yPosition + 1), i+1);
         }            
     }
 
-    private void buildWayBack(DataManager.CordinatesStruct temp�or, int i)
+    private void buildWayBack(DataManager.CordinatesStruct tempor, int i)
     {
 
-        if (DataManager.titleArray[temp�or.xPosition, temp�or.yPosition] == 1)
+        if (DataManager.titleArray[tempor.xPosition, tempor.yPosition] == 1)
         {
 
             return;
         }
-        if (temp�or.xPosition - 1 > -1)
+        if (tempor.xPosition - 1 > -1)
         {
-            if (DataManager.titleArray[temp�or.xPosition - 1, temp�or.yPosition] + 1 == i)
+            if (DataManager.titleArray[tempor.xPosition - 1, tempor.yPosition] + 1 == i)
             {
                 DataManager.WayToFinish.Add(new DataManager.CordinatesStruct(0, 1));
-                buildWayBack(new DataManager.CordinatesStruct(temp�or.xPosition - 1, temp�or.yPosition), i - 1);
+                buildWayBack(new DataManager.CordinatesStruct(tempor.xPosition - 1, tempor.yPosition), i - 1);
                 return;
             }
         }
-        if (temp�or.xPosition + 1 < DataManager.titleArray.GetLength(0))
+        if (tempor.xPosition + 1 < DataManager.titleArray.GetLength(0))
         {
-            if (DataManager.titleArray[temp�or.xPosition + 1, temp�or.yPosition] + 1 == i)
+            if (DataManager.titleArray[tempor.xPosition + 1, tempor.yPosition] + 1 == i)
             {
                 DataManager.WayToFinish.Add(new DataManager.CordinatesStruct(0, -1));
-                buildWayBack(new DataManager.CordinatesStruct(temp�or.xPosition + 1, temp�or.yPosition), i - 1);
+                buildWayBack(new DataManager.CordinatesStruct(tempor.xPosition + 1, tempor.yPosition), i - 1);
                 return;
             }
         }
-        if (temp�or.yPosition - 1 > -1)
+        if (tempor.yPosition - 1 > -1)
         {
-            if (DataManager.titleArray[temp�or.xPosition, temp�or.yPosition - 1] + 1 == i)
+            if (DataManager.titleArray[tempor.xPosition, tempor.yPosition - 1] + 1 == i)
             {
                 DataManager.WayToFinish.Add(new DataManager.CordinatesStruct(-1, 0));
-                buildWayBack(new DataManager.CordinatesStruct(temp�or.xPosition, temp�or.yPosition - 1), i - 1);
+                buildWayBack(new DataManager.CordinatesStruct(tempor.xPosition, tempor.yPosition - 1), i - 1);
                 return;
             }
         }
             
-        if (temp�or.yPosition + 1 < DataManager.titleArray.GetLength(1))
+        if (tempor.yPosition + 1 < DataManager.titleArray.GetLength(1))
         {
-            if (DataManager.titleArray[temp�or.xPosition, temp�or.yPosition + 1] + 1 == i)
+            if (DataManager.titleArray[tempor.xPosition, tempor.yPosition + 1] + 1 == i)
             {
                 DataManager.WayToFinish.Add(new DataManager.CordinatesStruct(1, 0));
-                buildWayBack(new DataManager.CordinatesStruct(temp�or.xPosition, temp�or.yPosition + 1), i - 1);
+                buildWayBack(new DataManager.CordinatesStruct(tempor.xPosition, tempor.yPosition + 1), i - 1);
                 return;
             }
         }
