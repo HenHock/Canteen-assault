@@ -24,7 +24,7 @@ public class DropMoney : MonoBehaviour
     {
         if (Random.Range(0, 100) <= percentOfDropping)
         {
-            Debug.Log("I am here");
+            //Debug.Log("I am here");
             _gold = Instantiate(goldPrefub);
             _gold.transform.position = position;
            // gold.transform.SetParent(transform);

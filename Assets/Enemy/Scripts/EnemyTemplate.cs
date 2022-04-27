@@ -21,7 +21,7 @@ public class EnemyTemplate : MonoBehaviour
         if (i == 0)
         {
             //eat cake
-            EnemyKilled();
+            EnemyDeath();
         }
         transform.Translate(DataManager.WayToFinish[i].xPosition * Time.deltaTime*(-1), 0, DataManager.WayToFinish[i].yPosition * Time.deltaTime*(-1));
     }

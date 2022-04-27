@@ -26,7 +26,7 @@ public class UIController : MonoBehaviour
         {
             money += value;
             textFieldMoney.text = "Money: " + money;
-            Debug.Log(money);
+           // Debug.Log(money);
             return true;
         }
         return false;
