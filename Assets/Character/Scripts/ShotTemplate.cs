@@ -4,18 +4,22 @@ using UnityEngine;
 
 public class ShotTemplate : MonoBehaviour
 {
-    public int Damage = 5;
+    public int damage { private get; set; }
+    public float speed { private get; set; } = 2;
 
-    void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
-
-        // определение столкновения с двумя разноименными объектами
         if (other.gameObject.tag.Equals("Enemy"))
         {
-            EnemyTemplate enemy = other.gameObject.GetComponent<EnemyTemplate>(); ;
-            enemy.TakeDamage(Damage);
+            EnemyTemplate enemy = other.gameObject.GetComponent<EnemyTemplate>();
+            enemy.TakeDamage(damage);
         }
         Destroy(gameObject);
+    }
+
+    void Update()
+    {
+        transform.Translate(0, 0, speed * Time.deltaTime);
     }
 
 }

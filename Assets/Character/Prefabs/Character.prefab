@@ -111,3 +111,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d201fc79b79b81e449347214f7515b59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 1
+  costToBuy: 100
+  costToUpgrade: 100
+  radiusHit: 3
+  hitObject: {fileID: 0}
+  shotPrefab: {fileID: 8954230633760785283, guid: 7369a1a3486566941aaa35f53ea9e034,
+    type: 3}

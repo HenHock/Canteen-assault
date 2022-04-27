@@ -29,7 +29,7 @@ public class EnemyTemplate : MonoBehaviour
 
         //transform.position = Vector3.MoveTowards(transform.position, target, Speed * Time.deltaTime);
 
-        transform.Translate(DataManager.WayToFinish[i].xPosition * Time.deltaTime, 0, DataManager.WayToFinish[i].yPosition * Time.deltaTime);
+        //transform.Translate(DataManager.WayToFinish[i].xPosition * Time.deltaTime, 0, DataManager.WayToFinish[i].yPosition * Time.deltaTime);
 
        /* float distance = Vector3.Distance(point.pos, transform.position);
         

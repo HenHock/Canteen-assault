@@ -25,7 +25,7 @@ public class CharacterSpawn : MonoBehaviour
                 if (Map != null)
                     character.transform.SetParent(Map.transform);
 
-                character.transform.localPosition = DataManager.selectedPositionPlaceCharacterSpawn;
+                character.transform.localPosition = new Vector3(DataManager.selectedPositionPlaceCharacterSpawn.x, DataManager.selectedPositionPlaceCharacterSpawn.y + character.transform.localScale.y/2+1, DataManager.selectedPositionPlaceCharacterSpawn.z);
             }
 
         // Close buy character panel
