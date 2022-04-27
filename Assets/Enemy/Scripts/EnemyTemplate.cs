@@ -7,16 +7,13 @@ public class EnemyTemplate : MonoBehaviour
 {
     [SerializeField] private int Heath = 0;
     [SerializeField] private int Speed = 0;
-    [SerializeField] private int Reward = 0;
     private Vector3 target;
     private int i;
-  //  private const float criticalDistance = 0.01f;
 
     void Start()
     {
         target = new Vector3(0, 0, 0);
         i = DataManager.WayToFinish.Count - 1;
-        Debug.Log(i);
     }
 
     void Update()
@@ -24,23 +21,9 @@ public class EnemyTemplate : MonoBehaviour
         if (i == 0)
         {
             //eat cake
-            EnemyDeath();
+            EnemyKilled();
         }
-
-        //transform.position = Vector3.MoveTowards(transform.position, target, Speed * Time.deltaTime);
-
         transform.Translate(DataManager.WayToFinish[i].xPosition * Time.deltaTime*(-1), 0, DataManager.WayToFinish[i].yPosition * Time.deltaTime*(-1));
-
-       /* float distance = Vector3.Distance(point.pos, transform.position);
-        
-
-        if (distance < criticalDistance)
-        {
-            //DO SOMETHING
-        }
-        Debug.Log(i--);
-        //i--;
-        */
     }
 
     void OnTriggerExit(Collider other)
@@ -49,19 +32,24 @@ public class EnemyTemplate : MonoBehaviour
         if (string.Equals(other.gameObject.tag, "GameBoard"))
         { 
             i--;
-//            Debug.Log("I was here!");
         }
-  //      Debug.Log("I was there!");
     }
 
     public void TakeDamage(int _damage)
     {
         Heath -= _damage;
         if (Heath <= 0)
-            EnemyDeath();
+            EnemyKilled();
     }
 
-    public void EnemyDeath()
+    private void EnemyKilled()
+    {
+        DropMoney makeMoneyDrop = gameObject.GetComponent<DropMoney>();
+        makeMoneyDrop.Drop(transform.position);
+        EnemyDeath();
+    }
+
+    private void EnemyDeath()
     {
         Destroy(gameObject);
     }
