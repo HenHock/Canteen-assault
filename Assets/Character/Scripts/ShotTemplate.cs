@@ -9,7 +9,7 @@ public class ShotTemplate : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag.Equals("Enemy"))
+        if (string.Equals(other.gameObject.tag,"Enemy"))
         {
             EnemyTemplate enemy = other.gameObject.GetComponent<EnemyTemplate>();
             enemy.TakeDamage(damage);

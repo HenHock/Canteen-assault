@@ -118,3 +118,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefub: {fileID: 8926663183237267438, guid: 05d2126dc21c2474eaa285b66c7ba03c,
     type: 3}
+  timeSpawn: 1000

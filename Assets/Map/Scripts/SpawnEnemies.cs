@@ -5,24 +5,25 @@ using UnityEngine;
 public class SpawnEnemies : MonoBehaviour
 {
     [SerializeField] private GameObject enemyPrefub;
-    GameObject enemy;
+    [SerializeField] private int timeSpawn = 1000;
+    private GameObject _enemy;
     int i = 0;
 
     void Start()
     {
-        enemy = Instantiate(enemyPrefub);
-        enemy.transform.SetParent(transform);
-        enemy.transform.localPosition = new Vector3(0,0,0);
+        _enemy = Instantiate(enemyPrefub);
+        _enemy.transform.SetParent(transform);
+        _enemy.transform.localPosition = new Vector3(0,0,0);
     }
 
     void Update()
     {
         i++;
-        if (i%1000 == 0)
+        if (i% timeSpawn == 0)
         {
-            enemy = Instantiate(enemyPrefub);
-            enemy.transform.SetParent(transform);
-            enemy.transform.localPosition = new Vector3(0, 0, 0);
+            _enemy = Instantiate(enemyPrefub);
+            _enemy.transform.SetParent(transform);
+            _enemy.transform.localPosition = new Vector3(0, 0, 0);
         }
     }
 }
