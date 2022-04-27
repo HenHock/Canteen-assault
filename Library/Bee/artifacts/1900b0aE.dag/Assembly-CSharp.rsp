@@ -336,14 +336,17 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
+"Assets/Character/Scripts/Character.cs"
 "Assets/Character/Scripts/ShotTemplate.cs"
 "Assets/DataManager.cs"
 "Assets/Enemy/Scripts/EnemyTemplate.cs"
+"Assets/Map/Scripts/Cake.cs"
 "Assets/Map/Scripts/CharacterSpawnPlaceClick.cs"
 "Assets/Map/Scripts/MapGenerator.cs"
 "Assets/Map/Scripts/SpawnEnemies.cs"
 "Assets/UI/Scripts/CharacterSpawn.cs"
 "Assets/UI/Scripts/PanelController.cs"
+"Assets/UI/Scripts/ResetButton.cs"
 "Assets/UI/Scripts/UIController.cs"
 -langversion:9.0
 

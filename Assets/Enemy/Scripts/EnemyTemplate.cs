@@ -15,17 +15,18 @@ public class EnemyTemplate : MonoBehaviour
     void Start()
     {
         target = new Vector3(0, 0, 0);
-        i = DataManager.WayToFinish.Count-1;
+        i = 0;
         Debug.Log(i);
     }
 
     void Update()
     {
-        if (i == 0)
+        if (i >= DataManager.WayToFinish.Count-1)
         {
             //eat cake
             EnemyDeath();
         }
+
         //transform.position = Vector3.MoveTowards(transform.position, target, Speed * Time.deltaTime);
 
         transform.Translate(DataManager.WayToFinish[i].xPosition * Time.deltaTime, 0, DataManager.WayToFinish[i].yPosition * Time.deltaTime);
@@ -47,10 +48,10 @@ public class EnemyTemplate : MonoBehaviour
         
         //if(other.gameObject.tag.Equals("GameBoard"))
       //  {
-        i--;
+        i++;
         //    Debug.Log("I was here!");
         //}
-        Debug.Log("I was there!");
+        //Debug.Log("I was there!");
     }
 
     public void TakeDamage(int _damage)

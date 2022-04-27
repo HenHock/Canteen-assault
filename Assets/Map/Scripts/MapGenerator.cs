@@ -93,9 +93,9 @@ public class MapGenerator : MonoBehaviour
         DataManager.WayToFinish = new List<DataManager.CordinatesStruct>();
         findWay(spawnCordinates, 1);
         
-           for (int i = 0; i < DataManager.titleArray.GetLength(0); i++, Debug.Log("\n"))
-               for (int j = 0; j < DataManager.titleArray.GetLength(1);j++) 
-                Debug.Log(DataManager.titleArray[i,j]);
+           //for (int i = 0; i < DataManager.titleArray.GetLength(0); i++, Debug.Log("\n"))
+           //    for (int j = 0; j < DataManager.titleArray.GetLength(1);j++) 
+           //     Debug.Log(DataManager.titleArray[i,j]);
         
     }
 

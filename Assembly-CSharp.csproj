@@ -65,6 +65,9 @@
     <Compile Include="Assets\Map\Scripts\MapGenerator.cs" />
     <Compile Include="Assets\UI\Scripts\UIController.cs" />
     <Compile Include="Assets\UI\Scripts\CharacterSpawn.cs" />
+    <Compile Include="Assets\Character\Scripts\Character.cs" />
+    <Compile Include="Assets\Map\Scripts\Cake.cs" />
+    <Compile Include="Assets\UI\Scripts\ResetButton.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
