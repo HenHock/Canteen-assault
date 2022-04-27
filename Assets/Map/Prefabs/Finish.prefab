@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 862813531860214123}
   m_Layer: 0
   m_Name: Finish
-  m_TagString: Untagged
+  m_TagString: GameBoard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -116,7 +116,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3606378b0ebd954c8a871aaee371206, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  titleText: {fileID: 0}
-  statistics: {fileID: 0}
   health: 5
   countStar: 0

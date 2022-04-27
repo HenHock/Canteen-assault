@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 181019588605684734}
   m_Layer: 0
   m_Name: Respawn
-  m_TagString: Untagged
+  m_TagString: GameBoard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

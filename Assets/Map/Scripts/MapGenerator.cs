@@ -105,6 +105,7 @@ public class MapGenerator : MonoBehaviour
         if (DataManager.titleArray[tempor.xPosition, tempor.yPosition] == -4)
         {
             DataManager.titleArray[tempor.xPosition, tempor.yPosition] = i;
+            DataManager.WayToFinish.Add(new DataManager.CordinatesStruct(0, 1));
             buildWayBack(new(tempor.xPosition, tempor.yPosition), i);
             return;
         }

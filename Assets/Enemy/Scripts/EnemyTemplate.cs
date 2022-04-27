@@ -15,13 +15,13 @@ public class EnemyTemplate : MonoBehaviour
     void Start()
     {
         target = new Vector3(0, 0, 0);
-        i = 0;
+        i = DataManager.WayToFinish.Count - 1;
         Debug.Log(i);
     }
 
     void Update()
     {
-        if (i >= DataManager.WayToFinish.Count-1)
+        if (i == 0)
         {
             //eat cake
             EnemyDeath();
@@ -29,7 +29,7 @@ public class EnemyTemplate : MonoBehaviour
 
         //transform.position = Vector3.MoveTowards(transform.position, target, Speed * Time.deltaTime);
 
-        //transform.Translate(DataManager.WayToFinish[i].xPosition * Time.deltaTime, 0, DataManager.WayToFinish[i].yPosition * Time.deltaTime);
+        transform.Translate(DataManager.WayToFinish[i].xPosition * Time.deltaTime*(-1), 0, DataManager.WayToFinish[i].yPosition * Time.deltaTime*(-1));
 
        /* float distance = Vector3.Distance(point.pos, transform.position);
         
@@ -45,13 +45,13 @@ public class EnemyTemplate : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
-        
-        //if(other.gameObject.tag.Equals("GameBoard"))
-      //  {
-        i++;
-        //    Debug.Log("I was here!");
-        //}
-        //Debug.Log("I was there!");
+
+        if (string.Equals(other.gameObject.tag, "GameBoard"))
+        { 
+            i--;
+//            Debug.Log("I was here!");
+        }
+  //      Debug.Log("I was there!");
     }
 
     public void TakeDamage(int _damage)
