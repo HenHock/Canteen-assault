@@ -13,7 +13,7 @@ public class ShotTemplate : MonoBehaviour
         if (other.gameObject.tag.Equals("Enemy"))
         {
             EnemyTemplate enemy = other.gameObject.GetComponent<EnemyTemplate>(); ;
-            enemy.GetDamage(Damage);
+            enemy.TakeDamage(Damage);
         }
         Destroy(gameObject);
     }

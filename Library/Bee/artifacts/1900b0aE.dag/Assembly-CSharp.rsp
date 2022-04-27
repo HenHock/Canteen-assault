@@ -341,6 +341,7 @@
 "Assets/Enemy/Scripts/EnemyTemplate.cs"
 "Assets/Map/Scripts/CharacterSpawnPlaceClick.cs"
 "Assets/Map/Scripts/MapGenerator.cs"
+"Assets/Map/Scripts/SpawnEnemies.cs"
 "Assets/UI/Scripts/CharacterSpawn.cs"
 "Assets/UI/Scripts/PanelController.cs"
 "Assets/UI/Scripts/UIController.cs"

@@ -61,6 +61,7 @@
     <Compile Include="Assets\DataManager.cs" />
     <Compile Include="Assets\Character\Scripts\ShotTemplate.cs" />
     <Compile Include="Assets\Map\Scripts\CharacterSpawnPlaceClick.cs" />
+    <Compile Include="Assets\Map\Scripts\SpawnEnemies.cs" />
     <Compile Include="Assets\Map\Scripts\MapGenerator.cs" />
     <Compile Include="Assets\UI\Scripts\UIController.cs" />
     <Compile Include="Assets\UI\Scripts\CharacterSpawn.cs" />
