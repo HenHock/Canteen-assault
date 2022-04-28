@@ -9,8 +9,18 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5722114100306856819, guid: 684bcaf0a552dde47a7d4533c7470d70,
         type: 3}
+      propertyPath: Heath
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5722114100306856819, guid: 684bcaf0a552dde47a7d4533c7470d70,
+        type: 3}
       propertyPath: Speed
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5722114100306856819, guid: 684bcaf0a552dde47a7d4533c7470d70,
+        type: 3}
+      propertyPath: damage
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5722114100306856824, guid: 684bcaf0a552dde47a7d4533c7470d70,
         type: 3}

@@ -13,7 +13,7 @@ public class SpawnEnemies : MonoBehaviour
     {
         _enemy = Instantiate(enemyPrefub);
         _enemy.transform.SetParent(transform);
-        _enemy.transform.localPosition = new Vector3(0,0,0);
+        _enemy.transform.localPosition = new Vector3(0, 0, 0);
     }
 
     void Update()
@@ -23,7 +23,7 @@ public class SpawnEnemies : MonoBehaviour
         {
             _enemy = Instantiate(enemyPrefub);
             _enemy.transform.SetParent(transform);
-            _enemy.transform.localPosition = new Vector3(0, 0, 0);
+            _enemy.transform.localPosition = new Vector3(0, 0 , 0);
         }
     }
 }

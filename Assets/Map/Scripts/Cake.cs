@@ -12,16 +12,16 @@ public class Cake : MonoBehaviour
     public void eatCake(int damage)
     {
         health -= damage;
-        if (health == 0)
+        if (health <= 0)
             EndGame(false);
     }
 
     public void EndGame(bool flag)
     {
         DataManager.uIController.endGamePanel.SetActive(true);
+
         GameObject titleText = GameObject.Find("TitleText");
         GameObject statistics = GameObject.Find("Statistics");
-
 
         if (flag)
         {
