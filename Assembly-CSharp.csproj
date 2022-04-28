@@ -70,6 +70,7 @@
     <Compile Include="Assets\Money\Scripts\processAdditionalGold.cs" />
     <Compile Include="Assets\Money\Scripts\DropMoney.cs" />
     <Compile Include="Assets\UI\Scripts\CharacterSpawn.cs" />
+    <Compile Include="Assets\Map\Scripts\EnemyWave.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
