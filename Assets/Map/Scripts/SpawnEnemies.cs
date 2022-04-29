@@ -24,10 +24,16 @@ public class SpawnEnemies : MonoBehaviour
             MakeListEnemies(k);
             MixList(enemyWavesList[k].allSquardsList);
             yield return StartCoroutine(SpawnSquards(k));
+
         }
     }
-
-
+    /*
+    private IEnumerator CheckIfWaveIsDead()
+    {
+        GameObject[] go = GameObject.FindGameObjectsWithTag("Enemy");
+        if ()
+    }
+    */
     private void MakeListEnemies(int numberWave)
     {
         for (int numberSquard = 0; numberSquard < enemyWavesList[numberWave].squardsList.Count; numberSquard++)

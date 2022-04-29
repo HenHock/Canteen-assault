@@ -11,7 +11,7 @@ public class DataManager : MonoBehaviour
         attackSpeed,
         radiusHit
     };
-
+    /*
     public struct CordinatesStruct
     {
         public int xPosition;
@@ -23,11 +23,11 @@ public class DataManager : MonoBehaviour
             yPosition = j;
         }
     };
-
+    */
     public static int[,] titleArray;
     public static Vector3 selectedPositionPlaceCharacterSpawn;
     public static UIController uIController;
-    public static List<CordinatesStruct> WayToFinish;
+   // public static List<CordinatesStruct> WayToFinish;
 
     void Awake()
     {
