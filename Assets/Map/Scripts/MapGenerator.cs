@@ -16,8 +16,8 @@ public class MapGenerator : MonoBehaviour
     public static int countR = 12;
     public static int countC = 10;
     
-    private DataManager.CordinatesStruct spawnCordinates;
-    private DataManager.CordinatesStruct finishCordinates;
+    //private DataManager.CordinatesStruct spawnCordinates;
+    //private DataManager.CordinatesStruct finishCordinates;
     //private List<CordinatesStruct> spawnCordinates;
     //private List<CordinatesStruct> finishCordinates;
 
@@ -66,14 +66,14 @@ public class MapGenerator : MonoBehaviour
                 {
                     title = Instantiate(respawnPrefab);
                     //spawnCordinates.Add(new CordinatesStruct(i, j));
-                    spawnCordinates = new DataManager.CordinatesStruct(i, j);
+                    //spawnCordinates = new DataManager.CordinatesStruct(i, j);
                     DataManager.titleArray[i, j] = 0;
                 }
 
                 else if (DataManager.titleArray[i, j] == -4)
                 {
                     title = Instantiate(finishPrefab);
-                    finishCordinates = new DataManager.CordinatesStruct(i, j);
+                    //finishCordinates = new DataManager.CordinatesStruct(i, j);
                     //finishCordinates.Add(new CordinatesStruct(i, j));
                 }
                 else title = Instantiate(wellPrefab);
@@ -90,15 +90,15 @@ public class MapGenerator : MonoBehaviour
             findWay(tempSpawnForBuildingWay);
         }
         */
-        DataManager.WayToFinish = new List<DataManager.CordinatesStruct>();
-        findWay(spawnCordinates, 1);
+        //DataManager.WayToFinish = new List<DataManager.CordinatesStruct>();
+       // findWay(spawnCordinates, 1);
         
            //for (int i = 0; i < DataManager.titleArray.GetLength(0); i++, Debug.Log("\n"))
            //    for (int j = 0; j < DataManager.titleArray.GetLength(1);j++) 
            //     Debug.Log(DataManager.titleArray[i,j]);
         
     }
-
+    /*
     private void findWay(DataManager.CordinatesStruct tempor, int i)
     {
 
@@ -124,7 +124,7 @@ public class MapGenerator : MonoBehaviour
                 findWay(new DataManager.CordinatesStruct(tempor.xPosition, tempor.yPosition + 1), i+1);
         }            
     }
-
+    
     private void buildWayBack(DataManager.CordinatesStruct tempor, int i)
     {
 
@@ -171,5 +171,6 @@ public class MapGenerator : MonoBehaviour
             }
         }
     }
+    */
 
 }

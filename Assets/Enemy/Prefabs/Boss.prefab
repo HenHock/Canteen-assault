@@ -30,7 +30,17 @@ PrefabInstance:
     - target: {fileID: 8926663183237267429, guid: 05d2126dc21c2474eaa285b66c7ba03c,
         type: 3}
       propertyPath: Speed
-      value: 1
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8926663183237267429, guid: 05d2126dc21c2474eaa285b66c7ba03c,
+        type: 3}
+      propertyPath: pathDuration
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8926663183237267433, guid: 05d2126dc21c2474eaa285b66c7ba03c,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8926663183237267434, guid: 05d2126dc21c2474eaa285b66c7ba03c,
         type: 3}
