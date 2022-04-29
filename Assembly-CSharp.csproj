@@ -66,12 +66,12 @@
     <Compile Include="Assets\Map\Scripts\SpawnEnemies.cs" />
     <Compile Include="Assets\Map\Scripts\MapGenerator.cs" />
     <Compile Include="Assets\UI\Scripts\UIController.cs" />
+    <Compile Include="Assets\UI\Scripts\BuyCharacterItem.cs" />
     <Compile Include="Assets\Character\Scripts\Character.cs" />
     <Compile Include="Assets\UI\Scripts\ResetButton.cs" />
     <Compile Include="Assets\Money\Scripts\processAdditionalGold.cs" />
     <Compile Include="Assets\Money\Scripts\DropMoney.cs" />
     <Compile Include="Assets\Character\Scripts\CharacterSpawn.cs" />
-    <Compile Include="Assets\UI\Scripts\BuyCharacterItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
