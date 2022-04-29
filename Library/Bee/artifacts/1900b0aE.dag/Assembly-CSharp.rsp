@@ -344,6 +344,7 @@
 "Assets/Enemy/Scripts/Enemy.cs"
 "Assets/Map/Scripts/Cake.cs"
 "Assets/Map/Scripts/CharacterSpawnPlaceClick.cs"
+"Assets/Map/Scripts/EnemyWave.cs"
 "Assets/Map/Scripts/MapGenerator.cs"
 "Assets/Map/Scripts/SpawnEnemies.cs"
 "Assets/Money/Scripts/DropMoney.cs"

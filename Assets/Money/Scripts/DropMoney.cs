@@ -13,9 +13,7 @@ public class DropMoney : MonoBehaviour
 
     public void Drop(Vector3 position)
     {
-        GameObject uiCanvas = GameObject.Find("UIController");
-        UIController money = uiCanvas.GetComponent<UIController>();
-        money.changeMoney(fixdedGold);
+        DataManager.uIController.changeMoney(fixdedGold);
         TakeAdditionalGold(position);
     }
     
@@ -24,14 +22,9 @@ public class DropMoney : MonoBehaviour
     {
         if (Random.Range(0, 100) <= percentOfDropping)
         {
-            //Debug.Log("I am here");
             _gold = Instantiate(goldPrefub);
             _gold.transform.position = position;
-           // gold.transform.SetParent(transform);
-            //gold.transform.localPosition = new Vector3(0, 0, 0);
-            _gold.GetComponent<processAdditionalGold>().setAdditionalGold(additionalGold);
-           // gold.transform.localPosition = ;
-            
+            _gold.GetComponent<processAdditionalGold>().setAdditionalGold(additionalGold);            
         }
     }
 }

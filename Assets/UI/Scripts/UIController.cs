@@ -22,11 +22,10 @@ public class UIController : MonoBehaviour
 
     public bool changeMoney(int value)
     {
-        if (money + value > 0)
+        if (money + value >= 0)
         {
             money += value;
             textFieldMoney.text = "Money: " + money;
-           // Debug.Log(money);
             return true;
         }
         return false;

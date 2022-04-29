@@ -118,4 +118,44 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefub: {fileID: 8926663183237267438, guid: 05d2126dc21c2474eaa285b66c7ba03c,
     type: 3}
-  timeSpawn: 1000
+  timeSpawn: 1
+  enemyWavesList:
+  - numberOfWave: 1
+    delayTime: 0
+    whichWavesShouldDieFirst: 
+    squardsList:
+    - typeOfEnemy: {fileID: 8926663183237267438, guid: 05d2126dc21c2474eaa285b66c7ba03c,
+        type: 3}
+      numberOfEnemyinSquard: 3
+      numberInGroupe: 1
+    - typeOfEnemy: {fileID: 5722114100306856824, guid: 684bcaf0a552dde47a7d4533c7470d70,
+        type: 3}
+      numberOfEnemyinSquard: 4
+      numberInGroupe: 2
+    - typeOfEnemy: {fileID: 8876202103683799119, guid: dcf64e8f03c762b428eeda9af4fcea6c,
+        type: 3}
+      numberOfEnemyinSquard: 2
+      numberInGroupe: 1
+    allSquardsList: []
+  - numberOfWave: 1
+    delayTime: 5
+    whichWavesShouldDieFirst: 
+    squardsList:
+    - typeOfEnemy: {fileID: 8926663183237267438, guid: 05d2126dc21c2474eaa285b66c7ba03c,
+        type: 3}
+      numberOfEnemyinSquard: 3
+      numberInGroupe: 1
+    allSquardsList: []
+  - numberOfWave: 2
+    delayTime: 5
+    whichWavesShouldDieFirst: 
+    squardsList:
+    - typeOfEnemy: {fileID: 8926663183237267438, guid: 05d2126dc21c2474eaa285b66c7ba03c,
+        type: 3}
+      numberOfEnemyinSquard: 3
+      numberInGroupe: 1
+    - typeOfEnemy: {fileID: 5722114100306856824, guid: 684bcaf0a552dde47a7d4533c7470d70,
+        type: 3}
+      numberOfEnemyinSquard: 4
+      numberInGroupe: 2
+    allSquardsList: []

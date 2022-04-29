@@ -28,7 +28,7 @@ public class Enemy : MonoBehaviour
 
             EnemyDeath();
         }
-        transform.Translate(DataManager.WayToFinish[i].xPosition * Time.deltaTime*(-1), 0, DataManager.WayToFinish[i].yPosition * Time.deltaTime*(-1));
+        transform.Translate(DataManager.WayToFinish[i].xPosition * Speed * Time.deltaTime*(-1), 0, DataManager.WayToFinish[i].yPosition * Speed * Time.deltaTime*(-1));
     }
 
     void OnTriggerExit(Collider other)

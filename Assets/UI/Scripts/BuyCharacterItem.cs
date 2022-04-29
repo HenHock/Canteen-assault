@@ -52,9 +52,10 @@ public class BuyCharacterItem : MonoBehaviour
                     buyCharacterButton = itemPanel.transform.Find("CharacterBuyButton").gameObject;
                     buyCharacterButton.GetComponent<CharacterSpawn>().characterPrefab = prefab;
 
+                    if (prefab.GetComponent<Image>() != null)
+                        img.GetComponent<Image>().sprite = prefab.GetComponent<Image>().sprite;
                     nameCharacter.GetComponent<Text>().text = prefab.name;
                     buyCharacterButton.GetComponentInChildren<Text>().text = costToBuy.ToString();
-                    img.GetComponent<Image>().sprite = prefab.GetComponent<Image>().sprite;
                     characterSkills.GetComponent<Text>().text =
                         $"Damage: {attackDamage}\n" +
                         $"Radius Hit: {radiusHit}\n" +
