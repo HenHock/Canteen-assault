@@ -25,7 +25,11 @@ public class CharacterSpawn : MonoBehaviour
                 if (Map != null)
                     character.transform.SetParent(Map.transform);
 
-                character.transform.localPosition = new Vector3(DataManager.selectedPositionPlaceCharacterSpawn.x, DataManager.selectedPositionPlaceCharacterSpawn.y + character.transform.localScale.y*1.5f, DataManager.selectedPositionPlaceCharacterSpawn.z);
+                character.transform.localPosition = new Vector3(DataManager.selectedPositionPlaceCharacterSpawn.x, DataManager.selectedPositionPlaceCharacterSpawn.y + character.transform.localScale.y, DataManager.selectedPositionPlaceCharacterSpawn.z);
+            }
+            else
+            {
+                Debug.Log("Sorry, you need more money!");
             }
 
         // Close buy character panel

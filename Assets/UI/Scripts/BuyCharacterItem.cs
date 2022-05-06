@@ -23,10 +23,10 @@ public class BuyCharacterItem : MonoBehaviour
         List<GameObject> prefabs = new List<GameObject>();
 
         // Get all prefabs like gameobject from directory: Assets/Character/Prefabs and add in List
-        foreach (var asset in AssetDatabase.FindAssets("t: prefab",new[] { "Assets/Character/Prefabs" }))
+        foreach (var asset in UnityEditor.AssetDatabase.FindAssets("t: prefab",new[] { "Assets/Character/Prefabs" }))
         {
-            var path = AssetDatabase.GUIDToAssetPath(asset);
-            prefabs.Add((GameObject)AssetDatabase.LoadMainAssetAtPath(path));
+            var path = UnityEditor.AssetDatabase.GUIDToAssetPath(asset);
+            prefabs.Add((GameObject)UnityEditor.AssetDatabase.LoadMainAssetAtPath(path));
         }
 
         if(prefabs.Count > 0)

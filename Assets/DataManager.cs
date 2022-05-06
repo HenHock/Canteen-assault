@@ -27,6 +27,7 @@ public class DataManager : MonoBehaviour
     public static int[,] titleArray;
     public static Vector3 selectedPositionPlaceCharacterSpawn;
     public static UIController uIController;
+    public static GameObject selectedCharacter;
    // public static List<CordinatesStruct> WayToFinish;
 
     void Awake()
