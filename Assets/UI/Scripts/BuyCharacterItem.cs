@@ -22,8 +22,8 @@ public class BuyCharacterItem : MonoBehaviour
     {
         List<GameObject> prefabs = new List<GameObject>();
 
-        // Get all prefabs like gameobject from directory: Assets/Character/Prefabs and add in List
-        foreach (var asset in UnityEditor.AssetDatabase.FindAssets("t: prefab",new[] { "Assets/Character/Prefabs" }))
+        // Get all prefabs like gameobject from directory: Assets/Character/Prefabs/Level 1 and add in List
+        foreach (var asset in UnityEditor.AssetDatabase.FindAssets("t: prefab",new[] { "Assets/Character/Prefabs/Level 1" }))
         {
             var path = UnityEditor.AssetDatabase.GUIDToAssetPath(asset);
             prefabs.Add((GameObject)UnityEditor.AssetDatabase.LoadMainAssetAtPath(path));
@@ -49,8 +49,10 @@ public class BuyCharacterItem : MonoBehaviour
                     img = itemPanel.transform.Find("ImageCharacter").gameObject;
                     nameCharacter = itemPanel.transform.Find("NameCharacter").gameObject;
                     characterSkills = itemPanel.transform.Find("ÑharacterSkills").gameObject;
+
                     buyCharacterButton = itemPanel.transform.Find("CharacterBuyButton").gameObject;
                     buyCharacterButton.GetComponent<CharacterSpawn>().characterPrefab = prefab;
+                    buyCharacterButton.GetComponent<Button>().onClick.AddListener(buyCharacterButton.GetComponent<CharacterSpawn>().onClick);
 
                     if (prefab.GetComponent<Image>() != null)
                         img.GetComponent<Image>().sprite = prefab.GetComponent<Image>().sprite;
@@ -63,5 +65,6 @@ public class BuyCharacterItem : MonoBehaviour
                 }
             }
         }
+        else Debug.Log("Did not find any more in Assets/Character/Prefabs/ Level 1.");
     }
 }

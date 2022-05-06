@@ -3040,6 +3040,7 @@ GameObject:
   - component: {fileID: 2017284754}
   - component: {fileID: 2017284753}
   - component: {fileID: 2017284752}
+  - component: {fileID: 2017284755}
   m_Layer: 5
   m_Name: UpdateCharacterPanel
   m_TagString: Untagged
@@ -3119,6 +3120,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2017284750}
   m_CullTransparentMesh: 1
+--- !u!114 &2017284755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2017284750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68d89f6d0799bea4db078845a33e3433, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ItemPanel: {fileID: 6970766983873431109, guid: f65961d873b467b4a8ab4300e0fbc90c,
+    type: 3}
 --- !u!1 &2023838275
 GameObject:
   m_ObjectHideFlags: 0

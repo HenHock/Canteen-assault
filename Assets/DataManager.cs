@@ -7,6 +7,7 @@ public class DataManager : MonoBehaviour
     public enum CharacterFileds
     {
         costToBuy,
+        costToUpgrade,
         attackDamage,
         attackSpeed,
         radiusHit

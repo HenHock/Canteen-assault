@@ -56,6 +56,7 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Map\Scripts\CharacterUpdatePlaceClick.cs" />
     <Compile Include="Assets\Enemy\Scripts\TargetPoint.cs" />
     <Compile Include="Assets\Map\Scripts\Cake.cs" />
     <Compile Include="Assets\UI\Scripts\PanelController.cs" />
@@ -67,6 +68,7 @@
     <Compile Include="Assets\Map\Scripts\MapGenerator.cs" />
     <Compile Include="Assets\UI\Scripts\PathManager.cs" />
     <Compile Include="Assets\UI\Scripts\UIController.cs" />
+    <Compile Include="Assets\UI\Scripts\DestroyCharacterClick.cs" />
     <Compile Include="Assets\UI\Scripts\BuyCharacterItem.cs" />
     <Compile Include="Assets\Character\Scripts\Character.cs" />
     <Compile Include="Assets\UI\Scripts\ResetButton.cs" />
@@ -74,8 +76,8 @@
     <Compile Include="Assets\Money\Scripts\DropMoney.cs" />
     <Compile Include="Assets\Character\Scripts\CharacterSpawn.cs" />
     <Compile Include="Assets\Map\Scripts\EnemyWave.cs" />
+    <Compile Include="Assets\UI\Scripts\UpdateCharacterItem.cs" />
     <Compile Include="Assets\Character\Scripts\CharacterUpdate.cs" />
-    <Compile Include="Assets\UI\Scripts\DestroyCharacterClick.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

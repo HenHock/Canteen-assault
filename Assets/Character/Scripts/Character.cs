@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Character : MonoBehaviour 
 {
+    public int level = 1;
+
     [SerializeField] private int costToBuy;
     [SerializeField] private int costToUpgrade;
     [SerializeField] private int attackDamage;
-    [SerializeField, Range(1.5f, 10f)]
-        private float radiusHit = 1.5f;
-    [SerializeField, Range (1f, 10f)]
-        private float attackSpeed = 2f;
+    [SerializeField, Range(1.5f, 10f)] private float radiusHit = 1.5f;
+    [SerializeField, Range (1f, 10f)] private float attackSpeed = 2f;
     [SerializeField] private Transform turret;
     [SerializeField] private GameObject shotPrefab;
 
@@ -73,6 +73,8 @@ public class Character : MonoBehaviour
     {
         if (fileds == DataManager.CharacterFileds.costToBuy)
             return costToBuy;
+        else if(fileds == DataManager.CharacterFileds.costToUpgrade)
+            return costToUpgrade;
         else if(fileds == DataManager.CharacterFileds.attackDamage)
             return attackDamage;
         else if (fileds == DataManager.CharacterFileds.radiusHit)

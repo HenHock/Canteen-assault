@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6970766983388832912}
   - component: {fileID: 6970766983388832927}
   - component: {fileID: 6970766983388832914}
+  - component: {fileID: 5645745543680544114}
   m_Layer: 5
   m_Name: CharacterBuyButton
   m_TagString: Untagged
@@ -122,19 +123,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6970766983388832912}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6970766983388832914}
-        m_TargetAssemblyTypeName: CharacterSpawn, Assembly-CSharp
-        m_MethodName: onClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &6970766983388832914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,8 +136,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6e76391a15e3a74d807679e1e92b4b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterPrefab: {fileID: 4127227770261344757, guid: 36e40f4aacd32e244a81af5174ece0da,
-    type: 3}
+--- !u!114 &5645745543680544114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6970766983388832925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5612bae4a4b44d44b212d9c17bf8e04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6970766983467537348
 GameObject:
   m_ObjectHideFlags: 0

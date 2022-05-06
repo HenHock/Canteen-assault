@@ -1,31 +1,49 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class CharacterUpdate : MonoBehaviour
 {
-    [SerializeField] private UnityEvent unityEvent = new UnityEvent();
-
-    void Update()
-    {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
-        if (Input.GetMouseButtonDown(0))
-        {
-            if(Physics.Raycast(ray, out hit) && hit.collider.gameObject == gameObject)
-            {
-                unityEvent.Invoke();
-            }
-        }
-    }
+    public GameObject characterPrefab { private get; set; }
 
     public void onClick()
     {
+        UpdateCharacter();
+    }
+
+    public void UpdateCharacter()
+    {
+        GameObject Map = GameObject.Find("Map");
+
+        if (DataManager.uIController != null)
+            if (DataManager.uIController.changeMoney(-Convert.ToInt32(GetComponentInChildren<Text>().text)))
+            {
+                GameObject character = Instantiate(characterPrefab);
+
+                if (Map != null)
+                    character.transform.SetParent(Map.transform);
+
+                character.transform.localPosition = new Vector3(DataManager.selectedCharacter.transform.position.x, DataManager.selectedCharacter.transform.position.y, DataManager.selectedCharacter.transform.position.z);
+            }
+            else
+            {
+                Debug.Log("Sorry, you need more money!");
+            }
+
+        
         if (DataManager.uIController != null)
         {
-            DataManager.uIController.updateCharacterPanel.SetActive(true);
-            DataManager.selectedCharacter = gameObject;
+            // Destroy all UpdateCharacterItem
+            foreach (Transform child in DataManager.uIController.updateCharacterPanel.transform)
+                if (child.GetComponentInChildren<CharacterUpdate>() != null)
+                    Destroy(child.gameObject);
+
+            // Close update character panel
+            DataManager.uIController.updateCharacterPanel.SetActive(false);
         }
+
+        Destroy(DataManager.selectedCharacter);
     }
 }
