@@ -116,8 +116,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bae710ef6a79a3c44bede5b41ce14d15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefub: {fileID: 8926663183237267438, guid: 05d2126dc21c2474eaa285b66c7ba03c,
-    type: 3}
   timeSpawn: 1
   enemyWavesList:
   - numberOfWave: 1
