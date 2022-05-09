@@ -24,11 +24,10 @@ public class UpdateCharacterItem : MonoBehaviour
         List<GameObject> prefabs = new List<GameObject>();
         level = DataManager.selectedCharacter.GetComponent<Character>().level + 1;
 
-        // Get all prefabs like gameobject from directory: Assets/Character/Prefabs/ Level {N} and add in List
-        foreach (var asset in UnityEditor.AssetDatabase.FindAssets("t: prefab", new[] { $"Assets/Character/Prefabs/Level {level}" }))
+        // Get all prefabs like gameobject from directory: Assets/Resources/Character/Prefabs/ Level {N} and add in List
+        foreach (var asset in Resources.LoadAll($"Character/Prefabs/Level {level}", typeof(GameObject)))
         {
-            var path = UnityEditor.AssetDatabase.GUIDToAssetPath(asset);
-            prefabs.Add((GameObject)UnityEditor.AssetDatabase.LoadMainAssetAtPath(path));
+            prefabs.Add((GameObject)asset);
         }
 
         if (prefabs.Count > 0)
