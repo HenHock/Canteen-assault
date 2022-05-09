@@ -144,7 +144,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: fb51c22bca0c6e64f81d5c88b787285a, type: 2}
+  - {fileID: 2100000, guid: d2c2b73facd62f0448a35f4971e77f32, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -241,7 +241,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: be8d430b1e215ff469a672e148a73947, type: 2}
+  - {fileID: 2100000, guid: d15598e4f4b789d4492d54f26db912bc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -314,11 +314,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 1
-  costToBuy: 0
+  costToBuy: 500
   costToUpgrade: 0
-  attackDamage: 0
-  radiusHit: 1.5
-  attackSpeed: 2
+  attackDamage: 100
+  radiusHit: 3
+  attackSpeed: 8
   turret: {fileID: 1738822313921107627}
   shotPrefab: {fileID: 8954230633760785283, guid: 7369a1a3486566941aaa35f53ea9e034,
     type: 3}

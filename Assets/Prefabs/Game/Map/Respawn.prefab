@@ -111,17 +111,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8810b7338649e64ba971c6bee1710eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeSpawn: 1
-  enemyWavesList:
-  - numberOfWave: 3
-    delayTime: 5
-    squardsList:
-    - typeOfEnemy: {fileID: 5722114100306856824, guid: 684bcaf0a552dde47a7d4533c7470d70,
-        type: 3}
-      numberOfEnemyinSquard: 1
-      numberInGroupe: 1
-    - typeOfEnemy: {fileID: 8876202103683799119, guid: dcf64e8f03c762b428eeda9af4fcea6c,
-        type: 3}
-      numberOfEnemyinSquard: 1
-      numberInGroupe: 1
-    allSquardsList: []
+  timeSpawn: 5
+  enemyWavesList: []

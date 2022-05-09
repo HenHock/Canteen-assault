@@ -75,7 +75,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ad2cb457afb1143458d7f89af429f30f, type: 2}
+  - {fileID: 2100000, guid: f0e376690b6e6c840abc1b117617c331, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -148,11 +148,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 1
-  costToBuy: 0
-  costToUpgrade: 0
-  attackDamage: 0
-  radiusHit: 1.5
-  attackSpeed: 2
+  costToBuy: 125
+  costToUpgrade: 100
+  attackDamage: 5
+  radiusHit: 4
+  attackSpeed: 3
   turret: {fileID: 7554724725049829399}
   shotPrefab: {fileID: 8954230633760785283, guid: 7369a1a3486566941aaa35f53ea9e034,
     type: 3}
@@ -369,7 +369,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4b42c10d85d3527418c6f3b8992f70f9, type: 2}
+  - {fileID: 2100000, guid: d2c2b73facd62f0448a35f4971e77f32, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -453,7 +453,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ad2cb457afb1143458d7f89af429f30f, type: 2}
+  - {fileID: 2100000, guid: f0e376690b6e6c840abc1b117617c331, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

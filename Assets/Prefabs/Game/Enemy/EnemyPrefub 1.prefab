@@ -107,5 +107,15 @@ PrefabInstance:
       propertyPath: percentOfDropping
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 7469563962495937169, guid: 51afe82de5888b740989e748e5f2ac8b,
+        type: 3}
+      propertyPath: fixdedGold
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469563962495937169, guid: 51afe82de5888b740989e748e5f2ac8b,
+        type: 3}
+      propertyPath: percentOfDropping
+      value: 40
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51afe82de5888b740989e748e5f2ac8b, type: 3}

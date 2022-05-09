@@ -134,7 +134,7 @@ MonoBehaviour:
   Health: 10
   damage: 1
   healthBar: {fileID: 5762029833808620021}
-  pathDuration: 5
+  pathDuration: 45
 --- !u!114 &7469563962495937169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,9 +147,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f41182b960962444ad2f8e52abb7cb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fixdedGold: 1
-  additionalGold: 1
-  percentOfDropping: 5
+  fixdedGold: 20
+  additionalGold: 20
+  percentOfDropping: 20
   goldPrefub: {fileID: 7930989234382563006, guid: 07cce8eb97ad9794da0fa0841f1507d1,
     type: 3}
 --- !u!114 &876673707615097246

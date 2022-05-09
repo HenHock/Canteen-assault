@@ -22,6 +22,21 @@ PrefabInstance:
       propertyPath: percentOfDropping
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2291157294309676649, guid: 05d2126dc21c2474eaa285b66c7ba03c,
+        type: 3}
+      propertyPath: fixdedGold
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2291157294309676649, guid: 05d2126dc21c2474eaa285b66c7ba03c,
+        type: 3}
+      propertyPath: additionalGold
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2291157294309676649, guid: 05d2126dc21c2474eaa285b66c7ba03c,
+        type: 3}
+      propertyPath: percentOfDropping
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 8926663183237267429, guid: 05d2126dc21c2474eaa285b66c7ba03c,
         type: 3}
       propertyPath: Heath
