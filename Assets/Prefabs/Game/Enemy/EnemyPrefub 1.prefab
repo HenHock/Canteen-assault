@@ -1,0 +1,121 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &5542245697662732398
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 253058562984805137, guid: 51afe82de5888b740989e748e5f2ac8b,
+        type: 3}
+      propertyPath: m_Height
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 253058562984805138, guid: 51afe82de5888b740989e748e5f2ac8b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8294a74595c26344d97a8da59d86cfbe, type: 2}
+    - target: {fileID: 253058562984805142, guid: 51afe82de5888b740989e748e5f2ac8b,
+        type: 3}
+      propertyPath: m_Name
+      value: EnemyPrefub 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 253058562984805143, guid: 51afe82de5888b740989e748e5f2ac8b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 253058562984805143, guid: 51afe82de5888b740989e748e5f2ac8b,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 253058562984805143, guid: 51afe82de5888b740989e748e5f2ac8b,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 253058562984805143, guid: 51afe82de5888b740989e748e5f2ac8b,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 253058562984805143, guid: 51afe82de5888b740989e748e5f2ac8b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 253058562984805143, guid: 51afe82de5888b740989e748e5f2ac8b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 253058562984805143, guid: 51afe82de5888b740989e748e5f2ac8b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 253058562984805143, guid: 51afe82de5888b740989e748e5f2ac8b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 253058562984805143, guid: 51afe82de5888b740989e748e5f2ac8b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 253058562984805143, guid: 51afe82de5888b740989e748e5f2ac8b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 253058562984805143, guid: 51afe82de5888b740989e748e5f2ac8b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 253058562984805143, guid: 51afe82de5888b740989e748e5f2ac8b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 253058562984805143, guid: 51afe82de5888b740989e748e5f2ac8b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 253058562984805143, guid: 51afe82de5888b740989e748e5f2ac8b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 253058562984805149, guid: 51afe82de5888b740989e748e5f2ac8b,
+        type: 3}
+      propertyPath: Health
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 253058562984805149, guid: 51afe82de5888b740989e748e5f2ac8b,
+        type: 3}
+      propertyPath: pathDuration
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 2400412267554846797, guid: 51afe82de5888b740989e748e5f2ac8b,
+        type: 3}
+      propertyPath: percentOfDropping
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469563962495937169, guid: 51afe82de5888b740989e748e5f2ac8b,
+        type: 3}
+      propertyPath: fixdedGold
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469563962495937169, guid: 51afe82de5888b740989e748e5f2ac8b,
+        type: 3}
+      propertyPath: percentOfDropping
+      value: 40
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 51afe82de5888b740989e748e5f2ac8b, type: 3}
