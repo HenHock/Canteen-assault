@@ -56,53 +56,30 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Map\Scripts\CharacterUpdatePlaceClick.cs" />
-    <Compile Include="Assets\Enemy\Scripts\TargetPoint.cs" />
-    <Compile Include="Assets\FloatExtensions.cs" />
-    <Compile Include="Assets\Map\Scripts\Cake.cs" />
-    <Compile Include="Assets\UI\Scripts\PanelController.cs" />
-    <Compile Include="Assets\Enemy\Scripts\Enemy.cs" />
-    <Compile Include="Assets\UI\Scripts\UpdateCharacterItem.cs" />
-    <Compile Include="Assets\DataManager.cs" />
-    <Compile Include="Assets\Character\Scripts\CharacterUpdate.cs" />
-    <Compile Include="Assets\Character\Scripts\Shot.cs" />
-    <Compile Include="Assets\Map\Scripts\CharacterSpawnPlaceClick.cs" />
-    <Compile Include="Assets\ProgressBar.cs" />
-    <Compile Include="Assets\Map\Scripts\SpawnEnemies.cs" />
-    <Compile Include="Assets\Map\Scripts\MapGenerator.cs" />
-    <Compile Include="Assets\UI\Scripts\PathManager.cs" />
-    <Compile Include="Assets\UI\Scripts\UIController.cs" />
-    <Compile Include="Assets\UI\Scripts\DestroyCharacterClick.cs" />
-    <Compile Include="Assets\UI\Scripts\BuyCharacterItem.cs" />
-    <Compile Include="Assets\Character\Scripts\Character.cs" />
-    <Compile Include="Assets\UI\Scripts\ResetButton.cs" />
-    <Compile Include="Assets\Money\Scripts\processAdditionalGold.cs" />
-    <Compile Include="Assets\Money\Scripts\DropMoney.cs" />
-    <Compile Include="Assets\Character\Scripts\CharacterSpawn.cs" />
-    <Compile Include="Assets\Map\Scripts\EnemyWave.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
-    <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
-    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
-    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
-    <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
-    <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
+    <Compile Include="Assets\Scripts\Game\Character\CharacterSpawn.cs" />
+    <Compile Include="Assets\Scripts\Game\FloatExtensions.cs" />
+    <Compile Include="Assets\Scripts\Game\Character\Character.cs" />
+    <Compile Include="Assets\Scripts\UI\PanelController.cs" />
+    <Compile Include="Assets\Scripts\UI\UpdateCharacterItem.cs" />
+    <Compile Include="Assets\Scripts\Game\Money\processAdditionalGold.cs" />
+    <Compile Include="Assets\Scripts\Game\DataManager.cs" />
+    <Compile Include="Assets\Scripts\Game\Map\CharacterSpawnPlaceClick.cs" />
+    <Compile Include="Assets\Scripts\Game\Map\MapGenerator.cs" />
+    <Compile Include="Assets\Scripts\Game\Character\Shot.cs" />
+    <Compile Include="Assets\Scripts\Game\Money\DropMoney.cs" />
+    <Compile Include="Assets\Scripts\Game\ProgressBar.cs" />
+    <Compile Include="Assets\Scripts\Game\Map\EnemyWave.cs" />
+    <Compile Include="Assets\Scripts\UI\PathManager.cs" />
+    <Compile Include="Assets\Scripts\UI\UIController.cs" />
+    <Compile Include="Assets\Scripts\UI\DestroyCharacterClick.cs" />
+    <Compile Include="Assets\Scripts\Game\Enemy\Enemy.cs" />
+    <Compile Include="Assets\Scripts\Game\Enemy\TargetPoint.cs" />
+    <Compile Include="Assets\Scripts\Game\Map\Cake.cs" />
+    <Compile Include="Assets\Scripts\Game\Character\CharacterUpdate.cs" />
+    <Compile Include="Assets\Scripts\UI\BuyCharacterItem.cs" />
+    <Compile Include="Assets\Scripts\UI\ResetButton.cs" />
+    <Compile Include="Assets\Scripts\Game\Map\SpawnEnemies.cs" />
+    <Compile Include="Assets\Scripts\Game\Map\CharacterUpdatePlaceClick.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

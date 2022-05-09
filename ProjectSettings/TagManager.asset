@@ -7,6 +7,7 @@ TagManager:
   - Shot
   - GameBoard
   - Enemy
+  - Character
   layers:
   - Default
   - TransparentFX
