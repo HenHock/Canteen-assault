@@ -40,10 +40,10 @@ public class MapGenerator : MonoBehaviour
             { -1, -1, 0,-1,-1,-2,-1,-1,-1,-1 },
             { -1, -1, 0,-1, 0, 0, 0,-1,-1,-1 },
             { -1, -1, 0, 0, 0, -1,0,-1,-1,-1 },
-            { -1, -1, -1,-1,-1,-1,0,-1,-2,-1 },
+            { -1, -1, -1,-1,-1,-1,0,-2,-1,-1 },
             { -1, -1, -1,-1,-1,-1,0,-1,-1,-1 },
-            { -1, -1, -2,-1, 0, 0, 0,-1,-1,-1 },
-            { -1, -1, -1,-1,0,-1,0,-1,-1,-1 },
+            { -1, -1, -1,-1, 0, 0, 0,-1,-1,-1 },
+            { -1, -1, -2,-1,0,-1,0,-1,-1,-1 },
             { -1, 0, 0, 0, 0, 0, 0, -1, -1, -1 },
             { -1, -4, -1,-1,-1,-1,-1,-1,-1,-1 },
             { -1, -1, -1,-1,-1,-1,-1,-1,-1,-1 }
@@ -53,7 +53,8 @@ public class MapGenerator : MonoBehaviour
             for (int j = 0; j < countC; j++)
             {
                 GameObject title = null;
-                /* 1px = 155 unity unit;
+                /* 
+                 * 1px = 155 unity unit;
                  * V3(0,0,0) is the center of the screen, we find the top-left location to start drawing the map.
                  */
                 Vector3 position = new Vector3(j - Screen.width / 2 / 155, -10, (i - Screen.height / 2 / 155)*(-1));
@@ -61,7 +62,6 @@ public class MapGenerator : MonoBehaviour
                 if (DataManager.titleArray[i, j] == 0)
                 {
                     title = Instantiate(groundPrefab);
-                    
                 }
                 else if (DataManager.titleArray[i, j] == -2)
                     title = Instantiate(characterSpawnPlacePrefab);
