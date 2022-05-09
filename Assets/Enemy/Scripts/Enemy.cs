@@ -6,15 +6,19 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] private int Heath = 0;
+    [SerializeField] private int Health = 0;
     [SerializeField] private int damage = 1;
+    [SerializeField] private ProgressBar healthBar;
 
     [SerializeField] private float pathDuration;
+    
+    private Color color;
 
     private Tween moveTween;
 
     void Start()
     {
+        color = GetComponent<Renderer>().material.color;
         moveTween = transform.DOPath(PathManager.GetRandomPath(), pathDuration).SetLookAt(-1f).OnComplete(() =>
         {
             Cake cake = GameObject.Find("Finish(Clone)").GetComponent<Cake>();
@@ -23,6 +27,8 @@ public class Enemy : MonoBehaviour
 
             EnemyDestroy();
         });
+
+        healthBar.Initialize(Health);
     }
 
     private void OnDestroy()
@@ -47,9 +53,20 @@ public class Enemy : MonoBehaviour
     {
         //moveTween = DOColor(Color.red, 0.2f);
 
-        Heath -= _damage;
-        if (Heath <= 0)
+        ChangeColor();
+/*        Heath -= _damage;*/
+
+        healthBar.Value -= ((float)_damage).ToPercent(healthBar.MaxValue);
+
+        if (healthBar.Value <= 0)
             EnemyKilled();
+    }
+
+    private void /*IEnumerable*/ ChangeColor()
+    {
+        transform.GetComponent<MeshRenderer>().material.DOColor(Color.red, 1f);
+        //yield return new WaitForSeconds(1f);
+        transform.GetComponent<MeshRenderer>().material.DOColor(color, 1f);
     }
 
     private void EnemyKilled()
