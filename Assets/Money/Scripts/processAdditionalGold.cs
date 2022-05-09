@@ -27,7 +27,6 @@ public class processAdditionalGold : MonoBehaviour
         GameObject uiCanvas = GameObject.Find("UIController");
         UIController money = uiCanvas.GetComponent<UIController>();
         money.changeMoney(additionalGold);
-        Debug.Log(additionalGold);
         additionalGoldDestroy();
     }
 

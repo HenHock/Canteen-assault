@@ -7,10 +7,11 @@ using UnityEngine.UI;
 public class ProgressBar : MonoBehaviour
 {
     [SerializeField] private Image filler;
-    [SerializeField] private float maxValue;
+    [HideInInspector] private float maxValue;
 
     [SerializeField] private float fillDUration;
     [SerializeField] private Ease fillEase;
+    private Sequence sequence;
 
     private Camera _mainCamera;
     private Tween _tween;
@@ -24,7 +25,6 @@ public class ProgressBar : MonoBehaviour
         {
             _value = value;
             _tween?.Kill();
-            Debug.Log(_value);
             _tween = FillAnimation(_value).Play();
         }
     }
@@ -40,15 +40,14 @@ public class ProgressBar : MonoBehaviour
 
     private Sequence FillAnimation(float value)
     {
-        Sequence sequence = DOTween.Sequence();
-
+        sequence = DOTween.Sequence();
         filler.DOFillAmount(value, fillDUration).SetEase(fillEase);
-
         return sequence;
     }
 
     private void OnDestroy()
     {
+        sequence?.Kill();
         _tween?.Kill();
     }
 

@@ -28,15 +28,8 @@ public class SpawnEnemies : MonoBehaviour
 
         }
         DataManager.IsLastWave = true;
-       // GameObject.Find("Finish(Clone)").GetComponent<Cake>().EndGame(true);
     }
-    /*
-    private IEnumerator CheckIfWaveIsDead()
-    {
-        GameObject[] go = GameObject.FindGameObjectsWithTag("Enemy");
-        if ()
-    }
-    */
+  
     private void MakeListEnemies(int numberWave)
     {
         for (int numberSquard = 0; numberSquard < enemyWavesList[numberWave].squardsList.Count; numberSquard++)
