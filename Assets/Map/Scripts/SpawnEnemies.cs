@@ -5,9 +5,10 @@ using UnityEngine;
 
 public class SpawnEnemies : MonoBehaviour
 {
-    [SerializeField] private GameObject enemyPrefub;
+   // [SerializeField] private GameObject enemyPrefub;
     [SerializeField] private int timeSpawn = 1;
     [SerializeField] private List<EnemyWave> enemyWavesList;
+    
    
     private GameObject _enemy;
     
@@ -26,6 +27,8 @@ public class SpawnEnemies : MonoBehaviour
             yield return StartCoroutine(SpawnSquards(k));
 
         }
+        DataManager.IsLastWave = true;
+       // GameObject.Find("Finish(Clone)").GetComponent<Cake>().EndGame(true);
     }
     /*
     private IEnumerator CheckIfWaveIsDead()
@@ -72,6 +75,7 @@ public class SpawnEnemies : MonoBehaviour
             _enemy = Instantiate(enemyWavesList[numberWave].allSquardsList[numberSquard].typeOfEnemy);
             _enemy.transform.SetParent(transform);
             _enemy.transform.localPosition = new Vector3( 0, 0, 0);
+            DataManager.NumberOfAllEnemies++;
         }
     }
 

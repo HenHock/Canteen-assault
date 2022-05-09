@@ -21,7 +21,7 @@ public class Enemy : MonoBehaviour
             if (cake != null)
                 cake.eatCake(damage);
 
-            EnemyDeath();
+            EnemyDestroy();
         });
     }
 
@@ -45,6 +45,8 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(int _damage)
     {
+        //moveTween = DOColor(Color.red, 0.2f);
+
         Heath -= _damage;
         if (Heath <= 0)
             EnemyKilled();
@@ -55,11 +57,16 @@ public class Enemy : MonoBehaviour
         moveTween?.Kill();
         DropMoney makeMoneyDrop = gameObject.GetComponent<DropMoney>();
         makeMoneyDrop.Drop(transform.position);
-        EnemyDeath();
+        EnemyDestroy();
     }
 
-    private void EnemyDeath()
+    private void EnemyDestroy()
     {
+        DataManager.NumberOfDeathEnemies++;
+        if(DataManager.IsLastWave && DataManager.NumberOfDeathEnemies== DataManager.NumberOfAllEnemies)
+        {
+            GameObject.Find("Finish(Clone)").GetComponent<Cake>().EndGame(true);
+        }
         Destroy(gameObject);
     }
 }
