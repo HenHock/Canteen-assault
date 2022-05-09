@@ -11,7 +11,7 @@ public class DestroyCharacterClick : MonoBehaviour
             Destroy(DataManager.selectedCharacter);
 
             // Close update character panel
-            DataManager.uIController.updateCharacterPanel.SetActive(false);
+            DataManager.uIController.updateCharacterPanel.Close();
         }
     }
 }

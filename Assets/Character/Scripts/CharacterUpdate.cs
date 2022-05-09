@@ -41,7 +41,7 @@ public class CharacterUpdate : MonoBehaviour
                     Destroy(child.gameObject);
 
             // Close update character panel
-            DataManager.uIController.updateCharacterPanel.SetActive(false);
+            DataManager.uIController.updateCharacterPanel.Close();
         }
 
         Destroy(DataManager.selectedCharacter);

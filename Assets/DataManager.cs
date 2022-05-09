@@ -29,10 +29,23 @@ public class DataManager : MonoBehaviour
     public static Vector3 selectedPositionPlaceCharacterSpawn;
     public static UIController uIController;
     public static GameObject selectedCharacter;
+<<<<<<< HEAD
+    public static bool isPanel;
    // public static List<CordinatesStruct> WayToFinish;
+=======
+    // public static List<CordinatesStruct> WayToFinish;
+
+    public static int NumberOfAllEnemies { get; set; } = 0;
+    public static int NumberOfDeathEnemies { get; set; } = 0;
+    public static bool IsLastWave { get; set; } = false;
+
+>>>>>>> 51ab3332403fa2d94277bddf768ecac9ebc0c3e6
 
     void Awake()
     {
         uIController = GameObject.Find("UIController").GetComponent<UIController>();
+        NumberOfAllEnemies = 0;
+        NumberOfDeathEnemies = 0;
+        IsLastWave = false;
     }
 }

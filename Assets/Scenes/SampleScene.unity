@@ -2728,8 +2728,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buyCharacterPanelController: {fileID: 1989629126}
-  endGamePanel: {fileID: 1076534403}
-  updateCharacterPanel: {fileID: 2017284750}
+  endGamePanel: {fileID: 1076534405}
+  updateCharacterPanel: {fileID: 2017284752}
   startMoney: 1000
   textFieldMoney: {fileID: 1780254003}
 --- !u!1 &1864860540

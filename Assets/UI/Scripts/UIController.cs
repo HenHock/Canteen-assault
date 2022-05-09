@@ -7,8 +7,8 @@ public class UIController : MonoBehaviour
 {
     private int money = 0;
     public PanelController buyCharacterPanelController;
-    public GameObject endGamePanel;
-    public GameObject updateCharacterPanel;
+    public PanelController endGamePanel;
+    public PanelController updateCharacterPanel;
 
     [SerializeField] private int startMoney;
     [SerializeField] private Text textFieldMoney;
@@ -18,8 +18,8 @@ public class UIController : MonoBehaviour
         changeMoney(startMoney);
 
         buyCharacterPanelController.Close();
-        endGamePanel.SetActive(false);
-        updateCharacterPanel.SetActive(false);
+        endGamePanel.Close();
+        updateCharacterPanel.Close();
     }
 
     public bool changeMoney(int value)

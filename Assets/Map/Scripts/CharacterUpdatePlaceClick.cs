@@ -26,7 +26,7 @@ public class CharacterUpdatePlaceClick : MonoBehaviour
         if (DataManager.uIController != null)
         {
             DataManager.selectedCharacter = gameObject;
-            DataManager.uIController.updateCharacterPanel.SetActive(true);
+            DataManager.uIController.updateCharacterPanel.Open();
         }
     }
 }
