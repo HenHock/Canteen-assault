@@ -144,15 +144,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1070939780770251419}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d201fc79b79b81e449347214f7515b59, type: 3}
+  m_Script: {fileID: 11500000, guid: a9bd1000b57d56e4a80cffc74a74eff7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   level: 1
-  costToBuy: 125
-  costToUpgrade: 125
-  attackDamage: 1
-  radiusHit: 4
-  attackSpeed: 5
+  costToBuy: 0
+  costToUpgrade: 0
+  attackDamage: 0
+  radiusHit: 1.5
+  attackSpeed: 2
   turret: {fileID: 7554724725049829399}
   shotPrefab: {fileID: 8954230633760785283, guid: 7369a1a3486566941aaa35f53ea9e034,
     type: 3}
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1070939780770251419}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a0daa9e3a715424b9d55c118ecf80a0, type: 3}
+  m_Script: {fileID: 11500000, guid: 7b165376d26bc2d4dabe92ae5775d17f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   unityEvent:

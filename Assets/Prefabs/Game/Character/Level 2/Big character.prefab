@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 3610181335044726546}
   - component: {fileID: 6735335654065670329}
   - component: {fileID: 6393825042599802443}
-  - component: {fileID: 903196959261938609}
-  - component: {fileID: 2359630258311035343}
   - component: {fileID: 7786412517854469133}
   - component: {fileID: 3800160973555270991}
   - component: {fileID: 3366806842215960451}
   - component: {fileID: 1161871236533748843}
+  - component: {fileID: 619439727508869021}
+  - component: {fileID: 4641330207307610950}
   m_Layer: 0
   m_Name: Big character
   m_TagString: Character
@@ -44,7 +44,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0.395}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!33 &6735335654065670329
@@ -97,33 +97,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &903196959261938609
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1070939780770251419}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1.5, z: 1}
-  m_Center: {x: 0, y: 0.25, z: 0}
---- !u!136 &2359630258311035343
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1070939780770251419}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.17
-  m_Height: 1.4
-  m_Direction: 1
-  m_Center: {x: 0, y: 3, z: 0}
 --- !u!222 &7786412517854469133
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -171,15 +144,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1070939780770251419}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d201fc79b79b81e449347214f7515b59, type: 3}
+  m_Script: {fileID: 11500000, guid: a9bd1000b57d56e4a80cffc74a74eff7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   level: 1
-  costToBuy: 125
-  costToUpgrade: 125
-  attackDamage: 100
-  radiusHit: 4
-  attackSpeed: 7
+  costToBuy: 0
+  costToUpgrade: 0
+  attackDamage: 0
+  radiusHit: 1.5
+  attackSpeed: 2
   turret: {fileID: 7554724725049829399}
   shotPrefab: {fileID: 8954230633760785283, guid: 7369a1a3486566941aaa35f53ea9e034,
     type: 3}
@@ -192,24 +165,39 @@ MonoBehaviour:
   m_GameObject: {fileID: 1070939780770251419}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a0daa9e3a715424b9d55c118ecf80a0, type: 3}
+  m_Script: {fileID: 11500000, guid: 7b165376d26bc2d4dabe92ae5775d17f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   unityEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1161871236533748843}
-        m_TargetAssemblyTypeName: CharacterUpdatePlaceClick, Assembly-CSharp
-        m_MethodName: onClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+--- !u!136 &619439727508869021
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1070939780770251419}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.17
+  m_Height: 1.4
+  m_Direction: 1
+  m_Center: {x: 0, y: 3, z: 0}
+--- !u!65 &4641330207307610950
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1070939780770251419}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.5, z: 1}
+  m_Center: {x: 0, y: 0.25, z: 0}
 --- !u!1 &5791379339466619085
 GameObject:
   m_ObjectHideFlags: 0

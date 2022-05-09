@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 253058562984805148}
   - component: {fileID: 253058562984805149}
   - component: {fileID: 7469563962495937169}
-  - component: {fileID: 2400412267554846797}
+  - component: {fileID: 876673707615097246}
   m_Layer: 9
   m_Name: EnemyPrefub 1 1
   m_TagString: Enemy
@@ -152,7 +152,7 @@ MonoBehaviour:
   percentOfDropping: 5
   goldPrefub: {fileID: 7930989234382563006, guid: 07cce8eb97ad9794da0fa0841f1507d1,
     type: 3}
---- !u!114 &2400412267554846797
+--- !u!114 &876673707615097246
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -161,10 +161,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 253058562984805142}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d6a69796e589824c88a792254f7d74e, type: 3}
+  m_Script: {fileID: 11500000, guid: 7c0724aed70e6b544806d2bf8cd2f388, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeLive: 1
 --- !u!1 &1189550215818962738
 GameObject:
   m_ObjectHideFlags: 0

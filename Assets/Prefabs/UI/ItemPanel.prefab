@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 6970766983388832913}
   - component: {fileID: 6970766983388832912}
   - component: {fileID: 6970766983388832927}
-  - component: {fileID: 5645745543680544114}
-  - component: {fileID: 6909543817992480182}
+  - component: {fileID: 3991524080374423277}
+  - component: {fileID: 6715171648668549259}
   m_Layer: 5
   m_Name: CharacterBuyButton
   m_TagString: Untagged
@@ -124,7 +124,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &5645745543680544114
+--- !u!114 &3991524080374423277
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -133,11 +133,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6970766983388832925}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c8601dbfb8d61943ac54cbdda422b60, type: 3}
+  m_Script: {fileID: 11500000, guid: eb08ac5e873158648809e7585cd145e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemPanel: {fileID: 6970766983873431109}
---- !u!114 &6909543817992480182
+--- !u!114 &6715171648668549259
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -146,10 +145,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6970766983388832925}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68d89f6d0799bea4db078845a33e3433, type: 3}
+  m_Script: {fileID: 11500000, guid: e10f55a9a2e70bf44a901d58f26bdc3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemPanel: {fileID: 6970766983873431109}
 --- !u!1 &6970766983467537348
 GameObject:
   m_ObjectHideFlags: 0

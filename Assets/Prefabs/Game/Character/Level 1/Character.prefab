@@ -241,15 +241,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 4127227770261344757}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d201fc79b79b81e449347214f7515b59, type: 3}
+  m_Script: {fileID: 11500000, guid: a9bd1000b57d56e4a80cffc74a74eff7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   level: 1
-  costToBuy: 100
-  costToUpgrade: 100
-  attackDamage: 1
-  radiusHit: 2
-  attackSpeed: 3
+  costToBuy: 500
+  costToUpgrade: 500
+  attackDamage: 500
+  radiusHit: 1.5
+  attackSpeed: 2
   turret: {fileID: 8528750843281972476}
   shotPrefab: {fileID: 8954230633760785283, guid: 7369a1a3486566941aaa35f53ea9e034,
     type: 3}
@@ -262,14 +262,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 4127227770261344757}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a0daa9e3a715424b9d55c118ecf80a0, type: 3}
+  m_Script: {fileID: 11500000, guid: 7b165376d26bc2d4dabe92ae5775d17f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   unityEvent:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 537955532301752932}
-        m_TargetAssemblyTypeName: CharacterUpdate, Assembly-CSharp
+        m_TargetAssemblyTypeName: CharacterUpdatePlaceClick, Assembly-CSharp
         m_MethodName: onClick
         m_Mode: 1
         m_Arguments:
