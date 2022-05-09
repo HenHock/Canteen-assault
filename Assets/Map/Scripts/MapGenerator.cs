@@ -10,10 +10,8 @@ public class MapGenerator : MonoBehaviour
     [SerializeField] private GameObject wellPrefab;
     [SerializeField] private GameObject characterSpawnPlacePrefab;
 
-    
-
     public static int[,] titleArray;
-    public static int countR = 12;
+    public static int countR = 15;
     public static int countC = 10;
     
     //private DataManager.CordinatesStruct spawnCordinates;
@@ -34,7 +32,11 @@ public class MapGenerator : MonoBehaviour
         DataManager.titleArray = new int[,]
         {
             { -1, -1, -1,-1,-1,-1,-1,-1,-1,-1 },
-            { -1, -1, -3,-1,-1,-1,-1,-1,-1,-1 },
+            { -1, -1, -1,-1,-1,-1,-1,-1,-3,-1 },
+            { -1, -1, -1,-1,-1,-1,-1,-1,0,-1 },
+            { -1, -1, -1,-1,-1,-1,0,0,0,-1 },
+            { -1, -1, 0,0,0,0,0,-1,-1,-1 },
+            { -1, -1, 0,-1,-1,-1,-1,-1,-1,-1 },
             { -1, -1, 0,-1,-1,-2,-1,-1,-1,-1 },
             { -1, -1, 0,-1, 0, 0, 0,-1,-1,-1 },
             { -1, -1, 0, 0, 0, -1,0,-1,-1,-1 },
@@ -47,34 +49,31 @@ public class MapGenerator : MonoBehaviour
             { -1, -1, -1,-1,-1,-1,-1,-1,-1,-1 }
         };
 
-        //spawnCordinates = new List<CordinatesStruct>();
-        //finishCordinates = new List<CordinatesStruct>();
-        //spawnCordinates = new CordinatesStruct();
-        //finishCordinates = new CordinatesStruct();
-
         for (int i = countR-1; i >= 0; i--)
             for (int j = 0; j < countC; j++)
             {
                 GameObject title = null;
-                Vector3 position = new Vector3(j - Screen.width / 310, -10, (i - Screen.height / 310)*(-1));
+                /* 1px = 155 unity unit;
+                 * V3(0,0,0) is the center of the screen, we find the top-left location to start drawing the map.
+                 */
+                Vector3 position = new Vector3(j - Screen.width / 2 / 155, -10, (i - Screen.height / 2 / 155)*(-1));
 
                 if (DataManager.titleArray[i, j] == 0)
+                {
                     title = Instantiate(groundPrefab);
+                    
+                }
                 else if (DataManager.titleArray[i, j] == -2)
                     title = Instantiate(characterSpawnPlacePrefab);
                 else if (DataManager.titleArray[i, j] == -3)
                 {
                     title = Instantiate(respawnPrefab);
-                    //spawnCordinates.Add(new CordinatesStruct(i, j));
-                    //spawnCordinates = new DataManager.CordinatesStruct(i, j);
                     DataManager.titleArray[i, j] = 0;
                 }
 
                 else if (DataManager.titleArray[i, j] == -4)
                 {
                     title = Instantiate(finishPrefab);
-                    //finishCordinates = new DataManager.CordinatesStruct(i, j);
-                    //finishCordinates.Add(new CordinatesStruct(i, j));
                 }
                 else title = Instantiate(wellPrefab);
 

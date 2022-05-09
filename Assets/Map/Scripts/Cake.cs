@@ -7,10 +7,10 @@ public class Cake : MonoBehaviour
 {
     [SerializeField] private int health;
 
-    public int countStar;
+    public int countStar{get;set;} = 3;
 
-    GameObject titleText;
-    GameObject statistics;
+    private GameObject titleText;
+    private GameObject statistics;
 
     public void eatCake(int damage)
     {
@@ -40,7 +40,7 @@ public class Cake : MonoBehaviour
     {
         // You win
         titleText.GetComponent<Text>().text = "You win!";
-        statistics.GetComponent<Text>().text = $"Íou earned {countStar} star";
+        statistics.GetComponent<Text>().text = $"You earned {countStar} star!";
     }
 
     private void Lose()

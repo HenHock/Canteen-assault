@@ -14,7 +14,8 @@ public class Shot : MonoBehaviour
             Enemy enemy = other.gameObject.GetComponent<Enemy>();
             enemy.TakeDamage(damage);
         }
-        Destroy(gameObject);
+        else if (!string.Equals(other.gameObject.tag, "Character"))
+            Destroy(gameObject);
     }
 
     void Update()

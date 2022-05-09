@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -61,11 +62,18 @@ public class Character : MonoBehaviour
         Collider[] targets = Physics.OverlapSphere(transform.position, radiusHit, ENEMY_LAYER_MASK);
         if (targets.Length > 0)
         {
-            target = targets[0].GetComponent<TargetPoint>();
+            target = Array.Find(targets, detactEnemy).GetComponent<TargetPoint>();
             return true;
         }
 
         target = null;
+        return false;
+    }
+
+    private bool detactEnemy(Collider target)
+    {
+        if (target.GetComponent<Enemy>() != null)
+            return true;
         return false;
     }
 
