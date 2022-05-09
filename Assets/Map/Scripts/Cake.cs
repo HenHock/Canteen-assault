@@ -9,6 +9,9 @@ public class Cake : MonoBehaviour
 
     public int countStar;
 
+    GameObject titleText;
+    GameObject statistics;
+
     public void eatCake(int damage)
     {
         health -= damage;
@@ -20,20 +23,30 @@ public class Cake : MonoBehaviour
     {
         DataManager.uIController.endGamePanel.SetActive(true);
 
-        GameObject titleText = GameObject.Find("TitleText");
-        GameObject statistics = GameObject.Find("Statistics");
+        titleText = GameObject.Find("TitleText");
+        statistics = GameObject.Find("Statistics");
 
         if (flag)
         {
-            // You win
-            titleText.GetComponent<Text>().text = "You win!";
-            statistics.GetComponent<Text>().text = $"Íou earned {countStar} star";
+            Win();
         }
         else
         {
-            // You lose
-            titleText.GetComponent<Text>().text = "You lose!";
-            statistics.GetComponent<Text>().text = "You nothing eared :(";
+            Lose();
         }
+    }
+
+    private void Win()
+    {
+        // You win
+        titleText.GetComponent<Text>().text = "You win!";
+        statistics.GetComponent<Text>().text = $"Íou earned {countStar} star";
+    }
+
+    private void Lose()
+    {
+        // You lose
+        titleText.GetComponent<Text>().text = "You lose!";
+        statistics.GetComponent<Text>().text = "You nothing eared :(";
     }
 }
