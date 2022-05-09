@@ -7,9 +7,9 @@ public class EnemyWave
 {
     [SerializeField] public int numberOfWave;
     [SerializeField] public int delayTime;
-    [SerializeField] public List<int> whichWavesShouldDieFirst;
+   // [SerializeField] public List<int> whichWavesShouldDieFirst;
     [SerializeField] public List<Squard> squardsList;
-    public List<Squard> allSquardsList;
+    [HideInInspector]public List<Squard> allSquardsList;
 
     [System.Serializable]
     public struct Squard

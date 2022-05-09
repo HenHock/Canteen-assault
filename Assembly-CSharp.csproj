@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets\Map\Scripts\CharacterUpdatePlaceClick.cs" />
     <Compile Include="Assets\Enemy\Scripts\TargetPoint.cs" />
+    <Compile Include="Assets\FloatExtensions.cs" />
     <Compile Include="Assets\Map\Scripts\Cake.cs" />
     <Compile Include="Assets\UI\Scripts\PanelController.cs" />
     <Compile Include="Assets\Enemy\Scripts\Enemy.cs" />
@@ -66,6 +67,7 @@
     <Compile Include="Assets\Character\Scripts\CharacterUpdate.cs" />
     <Compile Include="Assets\Character\Scripts\Shot.cs" />
     <Compile Include="Assets\Map\Scripts\CharacterSpawnPlaceClick.cs" />
+    <Compile Include="Assets\ProgressBar.cs" />
     <Compile Include="Assets\Map\Scripts\SpawnEnemies.cs" />
     <Compile Include="Assets\Map\Scripts\MapGenerator.cs" />
     <Compile Include="Assets\UI\Scripts\PathManager.cs" />

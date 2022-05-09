@@ -17,7 +17,8 @@ public class BuyCharacterItem : MonoBehaviour
     private GameObject buyCharacterButton;
 
     [SerializeField] private GameObject ItemPanel;
-
+    
+    //#if UNITY_EDITOR
     void Start()
     {
         List<GameObject> prefabs = new List<GameObject>();
@@ -67,4 +68,5 @@ public class BuyCharacterItem : MonoBehaviour
         }
         else Debug.Log("Did not find any more in Assets/Character/Prefabs/ Level 1.");
     }
+    //#endif
 }
