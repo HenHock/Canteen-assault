@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using Assets.Scripts.ScriptableObjects;
 
 public class processAdditionalGold : MonoBehaviour
 {
     private int additionalGold;
 
     [SerializeField] private int timeLive = 0;
+    [SerializeField] private ResourceItemSO resource;
 
     private Tween moveTween;
 
@@ -24,7 +26,7 @@ public class processAdditionalGold : MonoBehaviour
 
     private void OnMouseDown()
     {
-        CurrencyManager.CurrentAmount += additionalGold;
+        ResourcesManager.Change(resource, additionalGold);
         additionalGoldDestroy();
     }
 

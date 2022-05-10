@@ -9,5 +9,6 @@ public class ResetButton : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
         SceneManager.SetActiveScene(SceneManager.GetActiveScene());
+        Time.timeScale = 1;
     }
 }

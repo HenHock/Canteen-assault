@@ -136,6 +136,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb08ac5e873158648809e7585cd145e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  price: 100
+  resource: {fileID: 11400000, guid: 84c448a28bef0cf4ab37da1b1cfe5a59, type: 2}
 --- !u!114 &6715171648668549259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,6 +150,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e10f55a9a2e70bf44a901d58f26bdc3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  price: 100
+  resource: {fileID: 11400000, guid: 84c448a28bef0cf4ab37da1b1cfe5a59, type: 2}
 --- !u!1 &6970766983467537348
 GameObject:
   m_ObjectHideFlags: 0

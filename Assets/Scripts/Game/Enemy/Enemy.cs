@@ -21,9 +21,7 @@ public class Enemy : MonoBehaviour
 
         moveTween = transform.DOPath(PathManager.GetRandomPath(_listIndex), _speed).SetLookAt(-1f).OnComplete(() =>
         {
-            Cake cake = GameObject.Find("Finish(Clone)").GetComponent<Cake>();
-            if (cake != null)
-                cake.eatCake(damage);
+            Cake.EatCake(damage);
 
             EnemyDestroy();
         });
@@ -35,32 +33,6 @@ public class Enemy : MonoBehaviour
     {
         moveTween?.Kill();
     }
-
-    /*
-    void OnTriggerEnter(Collider other)
-    {
-        if (string.Equals(other.gameObject.tag, "Enemy"))
-        {
-            Debug.Log("!");
-
-            //moveTween = transform.DOJump(transform.position, 0.1f, 1, 0.5f);
-           // moveTween.Flip();
-        }
-        
-    }
-    
-     void OnTriggerExit(Collider other)
-    {
-        if (string.Equals(other.gameObject.tag, "Enemy"))
-        {
-            //Debug.Log("!");
-
-            moveTween = transform.DOJump(transform.position, 0.1f, 1, 0.5f);
-           // moveTween.Flip();
-        }
-        
-    }
-     */
 
     public void TakeDamage(int _damage)
     {
@@ -84,7 +56,7 @@ public class Enemy : MonoBehaviour
         DataManager.NumberOfDeathEnemies++;
         if(DataManager.IsLastWave && DataManager.NumberOfDeathEnemies == DataManager.NumberOfAllEnemies)
         {
-            GameObject.Find("Finish(Clone)").GetComponent<Cake>().EndGame(true);
+            Cake.EndGame(true);
         }
         Destroy(gameObject);
     }

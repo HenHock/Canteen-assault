@@ -11,7 +11,6 @@ public class ProgressBar : MonoBehaviour
 
     [SerializeField] private float fillDUration;
     [SerializeField] private Ease fillEase;
-    private Sequence sequence;
 
     private Camera _mainCamera;
     private Tween _tween;
@@ -40,14 +39,13 @@ public class ProgressBar : MonoBehaviour
 
     private Sequence FillAnimation(float value)
     {
-        sequence = DOTween.Sequence();
-        filler.DOFillAmount(value, fillDUration).SetEase(fillEase);
+        Sequence sequence = DOTween.Sequence();
+        sequence.Append(filler.DOFillAmount(value, fillDUration).SetEase(fillEase));
         return sequence;
     }
 
     private void OnDestroy()
     {
-        sequence?.Kill();
         _tween?.Kill();
     }
 

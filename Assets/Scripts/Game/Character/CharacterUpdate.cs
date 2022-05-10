@@ -1,3 +1,4 @@
+using Assets.Scripts.ScriptableObjects;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -7,6 +8,8 @@ using UnityEngine.UI;
 public class CharacterUpdate : MonoBehaviour
 {
     [SerializeField] private float price;
+    [SerializeField] private ResourceItemSO resource;
+    //[SerializeField] private GameObject Map;
     public GameObject characterPrefab { private get; set; }
 
     public void onClick()
@@ -18,13 +21,13 @@ public class CharacterUpdate : MonoBehaviour
     {
         GameObject Map = GameObject.Find("Map");
 
-        if (CurrencyManager.CurrentAmount < price)
+        if (ResourcesManager.Get(resource) < price)
         {
             Debug.Log("Sorry, you need more money!");
         }
         else
         {
-            CurrencyManager.CurrentAmount -= price;
+            ResourcesManager.Change(resource, -price);
 
             GameObject character = Instantiate(characterPrefab);
 
