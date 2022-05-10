@@ -11668,7 +11668,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1076534404
 RectTransform:
   m_ObjectHideFlags: 0
@@ -19294,6 +19294,8 @@ MonoBehaviour:
   buyCharacterPanelController: {fileID: 1989629126}
   endGamePanel: {fileID: 1076534405}
   updateCharacterPanel: {fileID: 2017284752}
+  nextLevelButton: {fileID: 466435874}
+  previouslyLevelButton: {fileID: 1318608592}
   startMoney: 1000
   textFieldMoney: {fileID: 1780254003}
 --- !u!1 &1796582272
