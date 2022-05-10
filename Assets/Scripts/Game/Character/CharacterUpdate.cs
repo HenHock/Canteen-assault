@@ -35,7 +35,7 @@ public class CharacterUpdate : MonoBehaviour
         
         if (DataManager.uIController != null)
         {
-            // Destroy all UpdateCharacterItem
+            // Destroy all UpdateCharacterItems
             foreach (Transform child in DataManager.uIController.updateCharacterPanel.transform)
                 if (child.GetComponentInChildren<CharacterUpdate>() != null)
                     Destroy(child.gameObject);
