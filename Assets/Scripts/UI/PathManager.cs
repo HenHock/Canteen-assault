@@ -6,21 +6,29 @@ using Random = UnityEngine.Random;
 [Serializable]
 public struct Path
 {
+    public float pathDuration;
     public Transform[] points;
 }
 
 public class PathManager : MonoBehaviour
 {
+   // [SerializeField] private float pathDuration;
     [SerializeField] private List<Path> pathsTransformsList;
 
     private List<Vector3[]> pathPointsList = new List<Vector3[]>();
 
-    public static Func<Vector3[]> GetRandomPath;
+    public static Func<int, Vector3[]> GetRandomPath;
+
+    public static Func<int, float> GetPathDuration;
+
+    public static Func<int> GetRandomPathNumber;
 
     private void Awake()
     {
         Initialize();
         GetRandomPath = ReturnRandomPath;
+        GetPathDuration = ReturnPathDuration;
+        GetRandomPathNumber = RetunRandomNumber;
     }
 
     private void Initialize()
@@ -41,8 +49,20 @@ public class PathManager : MonoBehaviour
         }
     }
 
-    private Vector3[] ReturnRandomPath()
+    private int RetunRandomNumber()
     {
-        return pathPointsList[Random.Range(0, pathPointsList.Count)];
+        return Random.Range(0, pathPointsList.Count);
     }
+
+    private Vector3[] ReturnRandomPath(int i)
+    {
+        return pathPointsList[i];
+    }
+
+
+    private float ReturnPathDuration(int i)
+    {
+        return pathsTransformsList[i].pathDuration;
+    }
+
 }

@@ -13,7 +13,7 @@ public class MapGenerator : MonoBehaviour
     public static int[,] titleArray;
     public static int countR = 17;
     public static int countC = 10;
-
+    /*
     private void Start()
     {
         /*
@@ -22,7 +22,7 @@ public class MapGenerator : MonoBehaviour
          *-2- character who damage enemy
          *-3- enemy spawn possition
          *-4- finish 
-         */
+         *//*
         
         DataManager.titleArray = new int[,]
         {
@@ -52,7 +52,7 @@ public class MapGenerator : MonoBehaviour
                 /* 
                  * 1px = 155 unity unit;
                  * V3(0,-0,-0) is the center of the screen, we find the top-left location to start drawing the map.
-                 */
+                 *//*
                 Vector3 position = new Vector3(j- Screen.width / 2 / 155,-10, (i- Screen.height / 2 / 155)*(-1));
 
                 if (DataManager.titleArray[i, j] == 0)
@@ -80,5 +80,5 @@ public class MapGenerator : MonoBehaviour
                 }
             }
     
-    }
+    }*/
 }

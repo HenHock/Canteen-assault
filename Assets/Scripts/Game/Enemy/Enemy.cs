@@ -10,13 +10,16 @@ public class Enemy : MonoBehaviour
     [SerializeField] private int damage = 1;
     [SerializeField] private ProgressBar healthBar;
 
-    [SerializeField] private float pathDuration;
+    [SerializeField] private float FasterProcent;
 
     private Tween moveTween;
 
     void Start()
     {
-        moveTween = transform.DOPath(PathManager.GetRandomPath(), pathDuration).SetLookAt(-1f).OnComplete(() =>
+        int _listIndex = PathManager.GetRandomPathNumber();
+        float _speed = PathManager.GetPathDuration(_listIndex)-(float)(PathManager.GetPathDuration(_listIndex) * FasterProcent * 0.01);
+
+        moveTween = transform.DOPath(PathManager.GetRandomPath(_listIndex), _speed).SetLookAt(-1f).OnComplete(() =>
         {
             Cake cake = GameObject.Find("Finish(Clone)").GetComponent<Cake>();
             if (cake != null)
@@ -79,7 +82,7 @@ public class Enemy : MonoBehaviour
     private void EnemyDestroy()
     {
         DataManager.NumberOfDeathEnemies++;
-        if(DataManager.IsLastWave && DataManager.NumberOfDeathEnemies== DataManager.NumberOfAllEnemies)
+        if(DataManager.IsLastWave && DataManager.NumberOfDeathEnemies == DataManager.NumberOfAllEnemies)
         {
             GameObject.Find("Finish(Clone)").GetComponent<Cake>().EndGame(true);
         }
