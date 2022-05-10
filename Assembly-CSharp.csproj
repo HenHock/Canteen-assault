@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scripts\Game\ProgressBar.cs" />
     <Compile Include="Assets\Scripts\Game\Map\EnemyWave.cs" />
     <Compile Include="Assets\Scripts\UI\PathManager.cs" />
+    <Compile Include="Assets\Scripts\UI\LevelManager.cs" />
     <Compile Include="Assets\Scripts\UI\UIController.cs" />
     <Compile Include="Assets\Scripts\UI\DestroyCharacterClick.cs" />
     <Compile Include="Assets\Scripts\Game\Enemy\Enemy.cs" />
@@ -80,7 +81,6 @@
     <Compile Include="Assets\Scripts\UI\ResetButton.cs" />
     <Compile Include="Assets\Scripts\Game\Map\SpawnEnemies.cs" />
     <Compile Include="Assets\Scripts\Game\Map\CharacterUpdatePlaceClick.cs" />
-    <Compile Include="Assets\Scripts\UI\LevelManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

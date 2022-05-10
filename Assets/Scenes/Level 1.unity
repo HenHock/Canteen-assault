@@ -3382,24 +3382,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeSpawn: 5
   enemyWavesList:
-  - numberOfWave: 1
-    delayTime: 5
+  - delayTime: 5
     squardsList:
     - typeOfEnemy: {fileID: 253058562984805142, guid: 51afe82de5888b740989e748e5f2ac8b,
         type: 3}
       numberOfEnemyinSquard: 5
       numberInGroupe: 2
     allSquardsList: []
-  - numberOfWave: 2
-    delayTime: 5
+  - delayTime: 5
     squardsList:
     - typeOfEnemy: {fileID: 8926663183237267438, guid: 05d2126dc21c2474eaa285b66c7ba03c,
         type: 3}
       numberOfEnemyinSquard: 5
       numberInGroupe: 5
     allSquardsList: []
-  - numberOfWave: 3
-    delayTime: 5
+  - delayTime: 5
     squardsList:
     - typeOfEnemy: {fileID: 8876202103683799119, guid: dcf64e8f03c762b428eeda9af4fcea6c,
         type: 3}
@@ -20864,8 +20861,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68bbcdd896289d345b1f416fa7b83def, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pathDuration: 0
   pathsTransformsList:
-  - points:
+  - pathDuration: 80
+    points:
     - {fileID: 361452172}
     - {fileID: 1191901197}
     - {fileID: 1572884652}
@@ -20880,7 +20879,8 @@ MonoBehaviour:
     - {fileID: 992095491}
     - {fileID: 2145289666}
     - {fileID: 1956301154}
-  - points:
+  - pathDuration: 80
+    points:
     - {fileID: 1282233586}
     - {fileID: 1932791419}
     - {fileID: 934469088}
@@ -20893,7 +20893,8 @@ MonoBehaviour:
     - {fileID: 2031171531}
     - {fileID: 168880569}
     - {fileID: 939941985}
-  - points:
+  - pathDuration: 80
+    points:
     - {fileID: 2105555066}
     - {fileID: 1751459937}
     - {fileID: 1852345853}
@@ -20906,7 +20907,8 @@ MonoBehaviour:
     - {fileID: 1512722981}
     - {fileID: 207457968}
     - {fileID: 478595791}
-  - points:
+  - pathDuration: 80
+    points:
     - {fileID: 836360191}
     - {fileID: 29397900}
     - {fileID: 186106262}

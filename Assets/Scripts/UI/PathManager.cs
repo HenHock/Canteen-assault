@@ -12,7 +12,7 @@ public struct Path
 
 public class PathManager : MonoBehaviour
 {
-   // [SerializeField] private float pathDuration;
+    [SerializeField] private float pathDuration;
     [SerializeField] private List<Path> pathsTransformsList;
 
     private List<Vector3[]> pathPointsList = new List<Vector3[]>();
