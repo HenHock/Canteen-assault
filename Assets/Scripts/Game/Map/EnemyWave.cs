@@ -5,7 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class EnemyWave
 {
-    [SerializeField] public int numberOfWave;
+    //[SerializeField] public int numberOfWave;
     [SerializeField] public int delayTime;
    // [SerializeField] public List<int> whichWavesShouldDieFirst;
     [SerializeField] public List<Squard> squardsList;

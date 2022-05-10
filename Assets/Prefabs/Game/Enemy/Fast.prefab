@@ -20,7 +20,7 @@ PrefabInstance:
     - target: {fileID: 253058562984805142, guid: 51afe82de5888b740989e748e5f2ac8b,
         type: 3}
       propertyPath: m_Name
-      value: EnemyPrefub 1
+      value: Fast
       objectReference: {fileID: 0}
     - target: {fileID: 253058562984805143, guid: 51afe82de5888b740989e748e5f2ac8b,
         type: 3}
@@ -101,6 +101,11 @@ PrefabInstance:
         type: 3}
       propertyPath: pathDuration
       value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 253058562984805149, guid: 51afe82de5888b740989e748e5f2ac8b,
+        type: 3}
+      propertyPath: FasterProcent
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 2400412267554846797, guid: 51afe82de5888b740989e748e5f2ac8b,
         type: 3}
