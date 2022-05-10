@@ -8,11 +8,8 @@ public class UIController : MonoBehaviour
     public PanelController endGamePanel;
     public PanelController updateCharacterPanel;
 
-
-
     private void Start()
     {
-
         buyCharacterPanelController.Close();
         endGamePanel.Close();
         updateCharacterPanel.Close();

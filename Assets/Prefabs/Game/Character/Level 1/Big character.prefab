@@ -151,7 +151,7 @@ MonoBehaviour:
   costToBuy: 125
   costToUpgrade: 100
   attackDamage: 5
-  radiusHit: 4
+  radiusHit: 5
   attackSpeed: 3
   turret: {fileID: 7554724725049829399}
   shotPrefab: {fileID: 8954230633760785283, guid: 7369a1a3486566941aaa35f53ea9e034,

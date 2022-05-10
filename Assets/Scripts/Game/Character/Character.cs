@@ -31,6 +31,16 @@ public class Character : MonoBehaviour
             onAttack();
     }
 
+    public int GetCostToBuy()
+    {
+        return costToBuy;
+    }
+
+    public int GetCostToUpgrade()
+    {
+        return costToUpgrade;
+    }
+
     public void onAttack()
     {
         var point = target.position;

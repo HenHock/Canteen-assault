@@ -3359,7 +3359,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e10f55a9a2e70bf44a901d58f26bdc3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 0
   resource: {fileID: 0}
 --- !u!23 &361394648
 MeshRenderer:
@@ -4412,6 +4411,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77993b9e144d5ef449a71bd7da044865, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: {fileID: 11400000, guid: 06e6e973f4c8db34bb108b136c880a77, type: 2}
+  money: {fileID: 11400000, guid: 84c448a28bef0cf4ab37da1b1cfe5a59, type: 2}
 --- !u!114 &491728511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5097,7 +5098,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e10f55a9a2e70bf44a901d58f26bdc3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 0
   resource: {fileID: 0}
 --- !u!23 &557456363
 MeshRenderer:
@@ -6770,7 +6770,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e10f55a9a2e70bf44a901d58f26bdc3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 0
   resource: {fileID: 0}
 --- !u!23 &774640397
 MeshRenderer:
@@ -14905,7 +14904,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e10f55a9a2e70bf44a901d58f26bdc3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 0
   resource: {fileID: 0}
 --- !u!23 &1442888857
 MeshRenderer:
@@ -20780,7 +20778,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e10f55a9a2e70bf44a901d58f26bdc3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 0
   resource: {fileID: 0}
 --- !u!23 &2002222544
 MeshRenderer:

@@ -25,7 +25,7 @@ public class UpdateCharacterItem : MonoBehaviour
         level = DataManager.selectedCharacter.GetComponent<Character>().level + 1;
 
         // Get all prefabs like gameobject from directory: Assets/Resources/Character/Prefabs/ Level {N} and add in List
-        foreach (var asset in Resources.LoadAll($"Character/Prefabs/Level {level}", typeof(GameObject)))
+        foreach (var asset in Resources.LoadAll($"Assets/Prefabs/Game/Character/Level {level}", typeof(GameObject)))
         {
             prefabs.Add((GameObject)asset);
         }
@@ -65,6 +65,6 @@ public class UpdateCharacterItem : MonoBehaviour
                 }
             }
         }
-        else Debug.Log($"Did not find any more in Assets/Character/Prefabs/ Level {level}.");
+        else Debug.Log($"Did not find any more in Prefabs/Game/Character/Level {level}.");
     }
 }
