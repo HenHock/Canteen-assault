@@ -13,7 +13,7 @@ public class DropMoney : MonoBehaviour
 
     public void Drop(Vector3 position)
     {
-        DataManager.uIController.changeMoney(fixdedGold);
+        UIController.changeMoney(fixdedGold);
         TakeAdditionalGold(position);
     }
     

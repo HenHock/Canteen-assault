@@ -24,9 +24,7 @@ public class processAdditionalGold : MonoBehaviour
 
     private void OnMouseDown()
     {
-        GameObject uiCanvas = GameObject.Find("UIController");
-        UIController money = uiCanvas.GetComponent<UIController>();
-        money.changeMoney(additionalGold);
+        UIController.changeMoney(additionalGold);
         additionalGoldDestroy();
     }
 

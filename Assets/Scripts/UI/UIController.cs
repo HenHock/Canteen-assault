@@ -1,7 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class UIController : MonoBehaviour
 {
@@ -12,6 +11,16 @@ public class UIController : MonoBehaviour
 
     [SerializeField] private int startMoney;
     [SerializeField] private Text textFieldMoney;
+    [SerializeField] private Text textFieldLife;
+
+    public static Func<int, bool> changeMoney;
+    public static Func<int,bool> changeLife;
+
+    private void Awake()
+    {
+        changeMoney = changeMoneyProcess;
+        changeLife = changeLifeProcess;
+    }
 
     private void Start()
     {
@@ -22,7 +31,7 @@ public class UIController : MonoBehaviour
         updateCharacterPanel.Close();
     }
 
-    public bool changeMoney(int value)
+    private bool changeMoneyProcess(int value)
     {
         if (money + value >= 0)
         {
@@ -31,5 +40,11 @@ public class UIController : MonoBehaviour
             return true;
         }
         return false;
+    }
+
+    private bool changeLifeProcess(int value)
+    {
+        textFieldLife.text = "Pice of cake left: " + value;
+        return true;
     }
 }
