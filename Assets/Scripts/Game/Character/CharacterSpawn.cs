@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class CharacterSpawn : MonoBehaviour
 {
+    [SerializeField] private float price;
     public GameObject characterPrefab {get;set;}
 
     public void onClick()
@@ -17,20 +18,23 @@ public class CharacterSpawn : MonoBehaviour
     {
         GameObject Map = GameObject.Find("Map");
 
-        if (DataManager.uIController != null)
-            if (UIController.changeMoney(-Convert.ToInt32(GetComponentInChildren<Text>().text)))
-            {
-                GameObject character = Instantiate(characterPrefab);
+        if (CurrencyManager.CurrentAmount < price)
+        {
+            Debug.Log("Sorry, you need more money!");
+        }
+        else
+        {
+            CurrencyManager.CurrentAmount -= price;
 
-                if (Map != null)
-                    character.transform.SetParent(Map.transform);
+            GameObject character = Instantiate(characterPrefab);
 
-                character.transform.localPosition = new Vector3(DataManager.selectedPositionPlaceCharacterSpawn.x, DataManager.selectedPositionPlaceCharacterSpawn.y + character.transform.localScale.y, DataManager.selectedPositionPlaceCharacterSpawn.z);
-            }
-            else
-            {
-                Debug.Log("Sorry, you need more money!");
-            }
+            if (Map != null)
+                character.transform.SetParent(Map.transform);
+
+            character.transform.localPosition = new Vector3(DataManager.selectedPositionPlaceCharacterSpawn.x, 
+                DataManager.selectedPositionPlaceCharacterSpawn.y + character.transform.localScale.y, 
+                DataManager.selectedPositionPlaceCharacterSpawn.z);
+        }
 
         // Close buy character panel
         PanelController buyPanelController = this.GetComponentInParent<PanelController>();

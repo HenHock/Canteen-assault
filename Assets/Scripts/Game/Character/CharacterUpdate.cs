@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class CharacterUpdate : MonoBehaviour
 {
+    [SerializeField] private float price;
     public GameObject characterPrefab { private get; set; }
 
     public void onClick()
@@ -17,22 +18,24 @@ public class CharacterUpdate : MonoBehaviour
     {
         GameObject Map = GameObject.Find("Map");
 
-        if (DataManager.uIController != null)
-            if (UIController.changeMoney(-Convert.ToInt32(GetComponentInChildren<Text>().text)))
-            {
-                GameObject character = Instantiate(characterPrefab);
+        if (CurrencyManager.CurrentAmount < price)
+        {
+            Debug.Log("Sorry, you need more money!");
+        }
+        else
+        {
+            CurrencyManager.CurrentAmount -= price;
 
-                if (Map != null)
-                    character.transform.SetParent(Map.transform);
+            GameObject character = Instantiate(characterPrefab);
 
-                character.transform.localPosition = new Vector3(DataManager.selectedCharacter.transform.position.x, DataManager.selectedCharacter.transform.position.y, DataManager.selectedCharacter.transform.position.z);
-            }
-            else
-            {
-                Debug.Log("Sorry, you need more money!");
-            }
+            if (Map != null)
+                character.transform.SetParent(Map.transform);
 
-        
+            character.transform.localPosition = new Vector3(DataManager.selectedCharacter.transform.position.x,
+                DataManager.selectedCharacter.transform.position.y, DataManager.selectedCharacter.transform.position.z);
+        }
+
+
         if (DataManager.uIController != null)
         {
             // Destroy all UpdateCharacterItem
