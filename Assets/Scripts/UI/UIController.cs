@@ -17,8 +17,9 @@ public class UIController : MonoBehaviour
     [SerializeField] private int startMoney;
     [SerializeField] private Text textFieldMoney;
 
-    private void Start()
+    private void Awake()
     {
+        DataManager.uIController = this;
         changeMoney(startMoney);
 
         if (SceneManager.GetActiveScene().buildIndex == 0)
