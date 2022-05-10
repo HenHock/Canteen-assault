@@ -17,6 +17,7 @@ public class Character : MonoBehaviour
 
     private GameObject shot;
     private TargetPoint target;
+
     /*
      * 1 - default layer
      * 9 - our custom layer, which all enemies have
@@ -62,7 +63,7 @@ public class Character : MonoBehaviour
         Collider[] targets = Physics.OverlapSphere(transform.position, radiusHit, ENEMY_LAYER_MASK);
         if (targets.Length > 0)
         {
-            target = Array.Find(targets, detactEnemy).GetComponent<TargetPoint>();
+            target = Array.FindLast(targets, detactEnemy).GetComponent<TargetPoint>();
             return true;
         }
 

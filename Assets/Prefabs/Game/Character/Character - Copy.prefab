@@ -116,7 +116,7 @@ GameObject:
   - component: {fileID: 3751913328914028381}
   - component: {fileID: 8949834771995151776}
   m_Layer: 0
-  m_Name: Character
+  m_Name: Character - Copy
   m_TagString: Character
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -245,11 +245,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 1
-  costToBuy: 100
-  costToUpgrade: 100
-  attackDamage: 3
-  radiusHit: 2
-  attackSpeed: 3
+  costToBuy: 500
+  costToUpgrade: 500
+  attackDamage: 500
+  radiusHit: 1.5
+  attackSpeed: 2
   turret: {fileID: 8528750843281972476}
   shotPrefab: {fileID: 8954230633760785283, guid: 7369a1a3486566941aaa35f53ea9e034,
     type: 3}
