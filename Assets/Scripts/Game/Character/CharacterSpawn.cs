@@ -18,7 +18,7 @@ public class CharacterSpawn : MonoBehaviour
         GameObject Map = GameObject.Find("Map");
 
         if (DataManager.uIController != null)
-            if (DataManager.uIController.changeMoney(-Convert.ToInt32(GetComponentInChildren<Text>().text)))
+            if (UIController.changeMoney(-Convert.ToInt32(GetComponentInChildren<Text>().text)))
             {
                 GameObject character = Instantiate(characterPrefab);
 

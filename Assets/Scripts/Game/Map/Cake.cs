@@ -12,9 +12,15 @@ public class Cake : MonoBehaviour
     private GameObject titleText;
     private GameObject statistics;
 
+    void Start()
+    {
+       UIController.changeLife(health);
+    }
+
     public void eatCake(int damage)
     {
         health -= damage;
+        UIController.changeLife(health);
         if (health <= 0)
             EndGame(false);
     }
