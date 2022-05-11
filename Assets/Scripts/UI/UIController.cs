@@ -20,10 +20,8 @@ public class UIController : MonoBehaviour
     {
         changeMoney = changeMoneyProcess;
         changeLife = changeLifeProcess;
-    }
 
-    private void Start()
-    {
+        DataManager.uIController = this;
         changeMoney(startMoney);
 
         buyCharacterPanelController.Close();
