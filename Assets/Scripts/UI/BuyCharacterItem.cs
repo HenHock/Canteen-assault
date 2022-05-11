@@ -24,24 +24,16 @@ public class BuyCharacterItem : MonoBehaviour
     //#if UNITY_EDITOR
     void Start()
     {
-/*        List<GameObject> prefabs = new List<GameObject>();
-
-        // Get all prefabs like gameobject from directory: Assets/Resources/Character/Prefabs/Level 1 and add in List
-        foreach (var asset in Resources.LoadAll($"Character/Prefabs/Level 1", typeof(GameObject)))
-        {
-            prefabs.Add((GameObject)asset);
-        }
-*/
         if (prefabs.Count > 0)
         {
             foreach (GameObject prefab in prefabs)
             {
                 if (prefab.GetComponent<Character>() != null)
                 {
-                    costToBuy = (int)prefab.GetComponent<Character>().getField(DataManager.CharacterFileds.costToBuy);
-                    attackDamage = (int)prefab.GetComponent<Character>().getField(DataManager.CharacterFileds.attackDamage);
-                    attackSpeed = prefab.GetComponent<Character>().getField(DataManager.CharacterFileds.attackSpeed);
-                    radiusHit = prefab.GetComponent<Character>().getField(DataManager.CharacterFileds.radiusHit);
+                    costToBuy = prefab.GetComponent<Character>().costToBuy;
+                    attackDamage = prefab.GetComponent<Character>().attackDamage;
+                    attackSpeed = prefab.GetComponent<Character>().attackSpeed;
+                    radiusHit = prefab.GetComponent<Character>().radiusHit;
 
                     // Create new ItemPanel and fill it with prefab's information.
                     GameObject itemPanel = Instantiate(ItemPanel);

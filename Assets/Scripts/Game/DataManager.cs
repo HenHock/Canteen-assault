@@ -4,15 +4,6 @@ using UnityEngine;
 
 public class DataManager : MonoBehaviour
 {
-    public enum CharacterFileds
-    {
-        costToBuy,
-        costToUpgrade,
-        attackDamage,
-        attackSpeed,
-        radiusHit
-    };
-
     public static Vector3 selectedPositionPlaceCharacterSpawn;
     public static UIController uIController;
     public static GameObject selectedCharacter;
