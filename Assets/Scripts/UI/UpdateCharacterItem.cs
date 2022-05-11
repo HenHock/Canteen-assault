@@ -21,50 +21,36 @@ public class UpdateCharacterItem : MonoBehaviour
     void OnEnable()
     {
         startItemPosition = 510;
-        List<GameObject> prefabs = new List<GameObject>();
-        level = DataManager.selectedCharacter.GetComponent<Character>().level + 1;
+        GameObject prefab = DataManager.selectedCharacter.GetComponent<Character>().nextLevelPrefab;
 
-        // Get all prefabs like gameobject from directory: Assets/Resources/Character/Prefabs/ Level {N} and add in List
-        foreach (var asset in Resources.LoadAll($"Assets/Prefabs/Game/Character/Level {level}", typeof(GameObject)))
+        if (prefab != null)
         {
-            prefabs.Add((GameObject)asset);
+            costToUpgrade = DataManager.selectedCharacter.GetComponent<Character>().costToUpgrade;
+            attackDamage = (int)prefab.GetComponent<Character>().attackDamage;
+            attackSpeed = prefab.GetComponent<Character>().attackSpeed;
+            radiusHit = prefab.GetComponent<Character>().radiusHit;
+
+            // Create new ItemPanel and fill it with prefab's information.
+            GameObject itemPanel = Instantiate(ItemPanel);
+            itemPanel.transform.SetParent(transform);
+            itemPanel.transform.localPosition = new Vector3(0, startItemPosition, 0);
+            startItemPosition -= itemPanel.GetComponent<RectTransform>().rect.height;
+
+            img = itemPanel.transform.Find("ImageCharacter").gameObject;
+            nameCharacter = itemPanel.transform.Find("NameCharacter").gameObject;
+            characterSkills = itemPanel.transform.Find("ÑharacterSkills").gameObject;
+            updateCharacterButton = itemPanel.transform.Find("CharacterBuyButton").gameObject;
+            updateCharacterButton.GetComponent<CharacterUpdate>().characterPrefab = prefab;
+            updateCharacterButton.GetComponent<Button>().onClick.AddListener(updateCharacterButton.GetComponent<CharacterUpdate>().onClick);
+
+            if (prefab.GetComponent<Image>() != null)
+                img.GetComponent<Image>().sprite = prefab.GetComponent<Image>().sprite;
+            nameCharacter.GetComponent<Text>().text = prefab.name;
+            updateCharacterButton.GetComponentInChildren<Text>().text = costToUpgrade.ToString();
+            characterSkills.GetComponent<Text>().text =
+                $"Damage: {attackDamage}\n" +
+                $"Radius Hit: {radiusHit}\n" +
+                $"Attack Speed: {attackSpeed}\n";
         }
-
-        if (prefabs.Count > 0)
-        {
-            foreach (GameObject prefab in prefabs)
-            {
-                if (prefab.GetComponent<Character>() != null && prefab.gameObject.name + "(Clone)" == DataManager.selectedCharacter.name)
-                {
-                    costToUpgrade = (int)prefab.GetComponent<Character>().getField(DataManager.CharacterFileds.costToUpgrade);
-                    attackDamage = (int)prefab.GetComponent<Character>().getField(DataManager.CharacterFileds.attackDamage);
-                    attackSpeed = prefab.GetComponent<Character>().getField(DataManager.CharacterFileds.attackSpeed);
-                    radiusHit = prefab.GetComponent<Character>().getField(DataManager.CharacterFileds.radiusHit);
-
-                    // Create new ItemPanel and fill it with prefab's information.
-                    GameObject itemPanel = Instantiate(ItemPanel);
-                    itemPanel.transform.SetParent(transform);
-                    itemPanel.transform.localPosition = new Vector3(0, startItemPosition, 0);
-                    startItemPosition -= itemPanel.GetComponent<RectTransform>().rect.height;
-
-                    img = itemPanel.transform.Find("ImageCharacter").gameObject;
-                    nameCharacter = itemPanel.transform.Find("NameCharacter").gameObject;
-                    characterSkills = itemPanel.transform.Find("ÑharacterSkills").gameObject;
-                    updateCharacterButton = itemPanel.transform.Find("CharacterBuyButton").gameObject;
-                    updateCharacterButton.GetComponent<CharacterUpdate>().characterPrefab = prefab;
-                    updateCharacterButton.GetComponent<Button>().onClick.AddListener(updateCharacterButton.GetComponent<CharacterUpdate>().onClick);
-
-                    if (prefab.GetComponent<Image>() != null)
-                        img.GetComponent<Image>().sprite = prefab.GetComponent<Image>().sprite;
-                    nameCharacter.GetComponent<Text>().text = prefab.name;
-                    updateCharacterButton.GetComponentInChildren<Text>().text = costToUpgrade.ToString();
-                    characterSkills.GetComponent<Text>().text =
-                        $"Damage: {attackDamage}\n" +
-                        $"Radius Hit: {radiusHit}\n" +
-                        $"Attack Speed: {attackSpeed}\n";
-                }
-            }
-        }
-        else Debug.Log($"Did not find any more in Prefabs/Game/Character/Level {level}.");
     }
 }
