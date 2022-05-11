@@ -24,10 +24,7 @@ public class UIController : MonoBehaviour
     {
         changeMoney = changeMoneyProcess;
         changeLife = changeLifeProcess;
-    }
 
-    private void Awake()
-    {
         DataManager.uIController = this;
         changeMoney(startMoney);
 
