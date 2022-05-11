@@ -5,7 +5,7 @@ using UnityEngine;
 
 public static class CurrencyManager
 {
-/*    private static float _currentAmount;
+    private static float _currentAmount;
 
     public static float CurrentAmount
     {
@@ -19,15 +19,15 @@ public static class CurrencyManager
 
     public static event Action<float> OnCurrencyAmountChanged;
 
-    [RuntimeInitializeOnLoadMethod]
+/*    [RuntimeInitializeOnLoadMethod]
     private static void Initialize()
     {
         _currentAmount = PlayerPrefs.GetFloat("Currency", 0);
-    }
+    }*/
 
     public static void Save()
     {
         PlayerPrefs.GetFloat("Currency", _currentAmount);
         PlayerPrefs.Save();
-    }*/
+    }
 }

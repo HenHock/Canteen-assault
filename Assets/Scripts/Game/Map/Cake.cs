@@ -1,5 +1,3 @@
-using Assets.Scripts.ScriptableObjects;
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,50 +5,32 @@ using UnityEngine.UI;
 
 public class Cake : MonoBehaviour
 {
+    [SerializeField] private int health;
 
-    public int countStar { get; set; } = 3;
+    public int countStar{get;set;} = 3;
 
-    [SerializeField] private GameObject titleText;
-    [SerializeField] private GameObject statistics;
-    [SerializeField] private ResourceItemSO resource;
+    private GameObject titleText;
+    private GameObject statistics;
 
-    public static Action<int> EatCake;
-    public static Action<bool> EndGame;
-
-    private void Awake()
+    void Start()
     {
-        ResourcesManager.OnResourcesAmountChanged += HandleLifeAmountChanged;
-        EatCake = eatCakeRealise;
-        EndGame = endGameRealise;
+       UIController.changeLife(health);
     }
 
-    private void OnDestroy()
+    public void eatCake(int damage)
     {
-        ResourcesManager.OnResourcesAmountChanged -= HandleLifeAmountChanged;
-    }
-
-    private void HandleLifeAmountChanged(ResourceItemSO item, float amount)
-    {
-        if(item!=resource)
-        {
-            return;
-        }
-
-        if(amount<=0)
-        {
+        health -= damage;
+        UIController.changeLife(health);
+        if (health <= 0)
             EndGame(false);
-        }
     }
 
-
-    public void eatCakeRealise(int damage)
-    {
-        ResourcesManager.Change(resource, -damage);
-    }
-
-    public void endGameRealise(bool flag)
+    public void EndGame(bool flag)
     {
         DataManager.uIController.endGamePanel.Open();
+
+        titleText = GameObject.Find("TitleText");
+        statistics = GameObject.Find("Statistics");
 
         if (flag)
         {
@@ -60,7 +40,6 @@ public class Cake : MonoBehaviour
         {
             Lose();
         }
-        Time.timeScale = 0;
     }
 
     private void Win()

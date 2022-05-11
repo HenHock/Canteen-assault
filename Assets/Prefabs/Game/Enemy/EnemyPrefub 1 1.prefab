@@ -150,7 +150,6 @@ MonoBehaviour:
   fixdedGold: 20
   additionalGold: 20
   percentOfDropping: 20
-  resource: {fileID: 11400000, guid: 84c448a28bef0cf4ab37da1b1cfe5a59, type: 2}
   goldPrefub: {fileID: 7930989234382563006, guid: 07cce8eb97ad9794da0fa0841f1507d1,
     type: 3}
 --- !u!114 &876673707615097246

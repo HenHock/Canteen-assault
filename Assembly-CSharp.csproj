@@ -81,13 +81,8 @@
     <Compile Include="Assets\Scripts\Game\Map\SpawnEnemies.cs" />
     <Compile Include="Assets\Scripts\Game\Map\CharacterUpdatePlaceClick.cs" />
     <Compile Include="Assets\Scripts\Game\Managers\CurrencyManager.cs" />
+    <Compile Include="Assets\Scripts\UI\CurrencyDisplay.cs" />
     <Compile Include="Assets\Scripts\Game\Managers\LevelManager.cs" />
-    <Compile Include="Assets\Scripts\UI\HealthDisplay.cs" />
-    <Compile Include="Assets\Scripts\Game\Managers\LifeManager.cs" />
-    <Compile Include="Assets\Scripts\UI\TMP_text.cs" />
-    <Compile Include="Assets\Scripts\Game\Managers\ResourcesManager.cs" />
-    <Compile Include="Assets\Scripts\ScriptableObjects\ResourceItemSO.cs" />
-    <Compile Include="Assets\Scripts\UI\ResourceDisplay.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
