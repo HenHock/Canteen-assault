@@ -184,7 +184,7 @@ GameObject:
   - component: {fileID: 5168208923123175586}
   - component: {fileID: 4947621014760140341}
   m_Layer: 0
-  m_Name: CheatCharacter 1
+  m_Name: PowerCharacter 1
   m_TagString: Character
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -316,7 +316,7 @@ MonoBehaviour:
   level: 1
   costToBuy: 500
   costToUpgrade: 0
-  attackDamage: 100
+  attackDamage: 40
   nextLevelPrefab: {fileID: 0}
   radiusHit: 3
   attackSpeed: 8

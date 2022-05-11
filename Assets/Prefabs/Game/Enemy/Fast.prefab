@@ -12,6 +12,11 @@ PrefabInstance:
       propertyPath: m_Height
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 253058562984805137, guid: 51afe82de5888b740989e748e5f2ac8b,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 253058562984805138, guid: 51afe82de5888b740989e748e5f2ac8b,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -95,7 +100,7 @@ PrefabInstance:
     - target: {fileID: 253058562984805149, guid: 51afe82de5888b740989e748e5f2ac8b,
         type: 3}
       propertyPath: Health
-      value: 30
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 253058562984805149, guid: 51afe82de5888b740989e748e5f2ac8b,
         type: 3}

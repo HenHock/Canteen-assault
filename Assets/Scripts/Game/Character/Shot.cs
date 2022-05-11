@@ -4,14 +4,21 @@ using UnityEngine;
 
 public class Shot : MonoBehaviour
 {
-    public int damage { private get; set; }
-    public float speed { private get; set; }
+    [SerializeField] public int damage;
+    [SerializeField] public float speed;
     [SerializeField, Range(0.1f,4f)] private float radiusHit = 1;
+
+    public int GetDamage()
+    {
+        return damage;
+    }
 
     public void OnTriggerEnter(Collider other)
     {
-        if(!string.Equals(other.transform.tag, "Character"))
+        if (!string.Equals(other.transform.tag, "Character"))
+        {
             Destroy(gameObject);
+        }
     }
 
     void Hurt()
@@ -24,6 +31,7 @@ public class Shot : MonoBehaviour
                 if (string.Equals(target.gameObject.tag, "Enemy"))
                 {
                     Enemy enemy = target.gameObject.GetComponent<Enemy>();
+                    transform.LookAt(target.transform.position);
                     enemy.TakeDamage(damage);
                 }
             }

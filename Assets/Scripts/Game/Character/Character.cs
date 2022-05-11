@@ -29,7 +29,7 @@ public class Character : MonoBehaviour
 
     private void Update()
     {
-        if (isAcquireTarger())
+        if (isAcquireTarger() && shot == null)
             onAttack();
     }
 
@@ -74,7 +74,7 @@ public class Character : MonoBehaviour
         Collider[] targets = Physics.OverlapSphere(transform.position, radiusHit, ENEMY_LAYER_MASK);
         if (targets.Length > 0)
         {
-            target = Array.Find(targets, detactEnemy).GetComponent<TargetPoint>();
+            target = Array.FindLast(targets, detactEnemy).GetComponent<TargetPoint>();
             return true;
         }
 

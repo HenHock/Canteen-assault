@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine;
 
 public class HealthDisplay : MonoBehaviour
-{
+{/*
     [SerializeField] private TMP_Text lifeLabel;
     [SerializeField] private ResourceItemSO resource;
 
@@ -31,4 +31,5 @@ public class HealthDisplay : MonoBehaviour
 
         lifeLabel.text = value.ToString();
     }
+    */
 }

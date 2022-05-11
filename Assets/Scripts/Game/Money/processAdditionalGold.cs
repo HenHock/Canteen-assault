@@ -9,7 +9,6 @@ public class processAdditionalGold : MonoBehaviour
     private int additionalGold;
 
     [SerializeField] private int timeLive = 0;
-    [SerializeField] private ResourceItemSO resource;
 
     private Tween moveTween;
 
@@ -26,7 +25,7 @@ public class processAdditionalGold : MonoBehaviour
 
     private void OnMouseDown()
     {
-        ResourcesManager.Change(resource, additionalGold);
+        ResourcesManager.Change(ResourceType.Money, additionalGold);
         additionalGoldDestroy();
     }
 

@@ -7,8 +7,6 @@ using UnityEngine.UI;
 
 public class CharacterUpdate : MonoBehaviour
 {
-    [SerializeField] private ResourceItemSO resource;
-    //[SerializeField] private GameObject Map;
     public GameObject characterPrefab { private get; set; }
 
     public void onClick()
@@ -18,23 +16,20 @@ public class CharacterUpdate : MonoBehaviour
 
     public void UpdateCharacter()
     {
-        GameObject Map = GameObject.Find("Map");
-
-        if (ResourcesManager.Get(resource) < characterPrefab.GetComponent<Character>().GetCostToUpgrade())
+        if (ResourcesManager.Get(ResourceType.Money) < characterPrefab.GetComponent<Character>().GetCostToUpgrade())
         {
             Debug.Log("Sorry, you need more money!");
         }
         else
         {
-            ResourcesManager.Change(resource, -characterPrefab.GetComponent<Character>().GetCostToUpgrade());
+            ResourcesManager.Change(ResourceType.Money, -characterPrefab.GetComponent<Character>().GetCostToUpgrade());
 
             GameObject character = Instantiate(characterPrefab);
 
-            if (Map != null)
-                character.transform.SetParent(Map.transform);
-
             character.transform.localPosition = new Vector3(DataManager.selectedCharacter.transform.position.x,
                 DataManager.selectedCharacter.transform.position.y, DataManager.selectedCharacter.transform.position.z);
+
+            Destroy(DataManager.selectedCharacter);
         }
 
 
@@ -48,7 +43,5 @@ public class CharacterUpdate : MonoBehaviour
             // Close update character panel
             DataManager.uIController.updateCharacterPanel.Close();
         }
-
-        Destroy(DataManager.selectedCharacter);
     }
 }
