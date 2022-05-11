@@ -5,11 +5,9 @@ using UnityEngine;
 
 public class SpawnEnemies : MonoBehaviour
 {
-   // [SerializeField] private GameObject enemyPrefub;
     [SerializeField] private int timeSpawn = 1;
     [SerializeField] private List<EnemyWave> enemyWavesList;
     
-   
     private GameObject _enemy;
     
     void Start()

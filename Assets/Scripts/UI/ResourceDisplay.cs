@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class ResourceDisplay : MonoBehaviour
 {
-    [SerializeField] private ResourceItemSO itemSO;
+    [SerializeField] private ResourceType type;
     [SerializeField] private TMP_Text amountLabel;
 
     private void Awake()
@@ -17,7 +17,7 @@ public class ResourceDisplay : MonoBehaviour
 
     private void Start()
     {
-        HandleCurrencyAmountChanged(itemSO, ResourcesManager.Get(itemSO));
+        HandleCurrencyAmountChanged(type, ResourcesManager.Get(type));
     }
 
     private void OnDestroy()
@@ -25,9 +25,9 @@ public class ResourceDisplay : MonoBehaviour
         ResourcesManager.OnResourcesAmountChanged -= HandleCurrencyAmountChanged;
     }
 
-    private void HandleCurrencyAmountChanged(ResourceItemSO resource, float value)
+    private void HandleCurrencyAmountChanged(ResourceType resource, float value)
     {
-        if (resource == itemSO)
+        if (resource == type)
             amountLabel.text = value.ToString();
     }
 }

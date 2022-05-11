@@ -12,7 +12,6 @@ public class Cake : MonoBehaviour
 
     [SerializeField] private GameObject titleText;
     [SerializeField] private GameObject statistics;
-    [SerializeField] private ResourceItemSO resource;
 
     public static Action<int> EatCake;
     public static Action<bool> EndGame;
@@ -29,9 +28,9 @@ public class Cake : MonoBehaviour
         ResourcesManager.OnResourcesAmountChanged -= HandleLifeAmountChanged;
     }
 
-    private void HandleLifeAmountChanged(ResourceItemSO item, float amount)
+    private void HandleLifeAmountChanged(ResourceType type, float amount)
     {
-        if(item!=resource)
+        if(type != ResourceType.Life)
         {
             return;
         }
@@ -45,7 +44,7 @@ public class Cake : MonoBehaviour
 
     public void eatCakeRealise(int damage)
     {
-        ResourcesManager.Change(resource, -damage);
+        ResourcesManager.Change(ResourceType.Life, -damage);
     }
 
     public void endGameRealise(bool flag)
@@ -73,7 +72,7 @@ public class Cake : MonoBehaviour
     private void Lose()
     {
         // You lose
-        titleText.GetComponent<Text>().text = "You lose!";
-        statistics.GetComponent<Text>().text = "You nothing eared :(";
+        titleText.GetComponent<Text>().text = "You lose :(";
+        statistics.GetComponent<Text>().text = "You can try again!";
     }
 }

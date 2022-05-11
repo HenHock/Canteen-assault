@@ -5,7 +5,7 @@ using UnityEngine;
 public class DataManager : MonoBehaviour
 {
     public static Vector3 selectedPositionPlaceCharacterSpawn;
-    public static UIController uIController;
+    [SerializeField] public static UIController uIController;
     public static GameObject selectedCharacter;
     public static bool isPanel;
     
@@ -15,7 +15,7 @@ public class DataManager : MonoBehaviour
 
     void Awake()
     {
-        uIController = GameObject.Find("UIController").GetComponent<UIController>();
+        //uIController = GameObject.Find("UIController").GetComponent<UIController>();
         NumberOfAllEnemies = 0;
         NumberOfDeathEnemies = 0;
         IsLastWave = false;

@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] private int Health = 0;
+    public int Health = 0;
     [SerializeField] private int damage = 1;
     [SerializeField] private ProgressBar healthBar;
 

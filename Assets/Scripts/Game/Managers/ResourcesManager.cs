@@ -4,31 +4,48 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum ResourceType
+{
+    Life,
+    Money,
+    Star
+}
+
 public static class ResourcesManager
 {
-    private static readonly Dictionary<ResourceItemSO, float> valueByResource = new Dictionary<ResourceItemSO, float>();
+    private static Dictionary<ResourceType, float> valueByResourceType;
 
     [RuntimeInitializeOnLoadMethod]
     private static void Initialize()
     {
-        var resources = Resources.LoadAll<ResourceItemSO>("Data/Items/");
-
-        foreach(var resource in resources)
+        valueByResourceType = new Dictionary<ResourceType, float>
         {
-            valueByResource.Add(resource, 0);
-        }
+            { ResourceType.Life, 0 },
+            { ResourceType.Money, 0 },
+            { ResourceType.Star, 0 }
+        };
     }
 
-    public static void Change(ResourceItemSO resource, float amount)
+    public static void Change(ResourceType resource, float amount)
     {
-        valueByResource[resource] += amount;
-        OnResourcesAmountChanged?.Invoke(resource, valueByResource[resource]);
+        valueByResourceType[resource] += amount;
+        
+        if (valueByResourceType[resource] < 0)
+            valueByResourceType[resource] = 0;
+        
+        OnResourcesAmountChanged?.Invoke(resource, valueByResourceType[resource]);
     }
 
-    public static float Get(ResourceItemSO resource)
+    public static float Get(ResourceType resource)
     {
-        return valueByResource[resource];
+        return valueByResourceType[resource];
     }
 
-    public static event Action<ResourceItemSO, float> OnResourcesAmountChanged;
+    public static void Reset(ResourceType resource)
+    {
+        valueByResourceType[resource] = 0;
+        OnResourcesAmountChanged?.Invoke(resource, valueByResourceType[resource]);
+    }
+
+    public static event Action<ResourceType, float> OnResourcesAmountChanged;
 }

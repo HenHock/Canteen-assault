@@ -26,7 +26,7 @@ public class UpdateCharacterItem : MonoBehaviour
         if (prefab != null)
         {
             costToUpgrade = DataManager.selectedCharacter.GetComponent<Character>().costToUpgrade;
-            attackDamage = (int)prefab.GetComponent<Character>().attackDamage;
+            attackDamage = prefab.GetComponent<Character>().attackDamage;
             attackSpeed = prefab.GetComponent<Character>().attackSpeed;
             radiusHit = prefab.GetComponent<Character>().radiusHit;
 

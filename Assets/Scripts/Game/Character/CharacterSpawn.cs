@@ -7,8 +7,6 @@ using UnityEngine.UI;
 
 public class CharacterSpawn : MonoBehaviour
 {
-    [SerializeField] private ResourceItemSO resource;
-
     public GameObject characterPrefab {get;set;}
 
     public void onClick()
@@ -18,20 +16,15 @@ public class CharacterSpawn : MonoBehaviour
 
     private void SpawnCharacter()
     {
-        GameObject Map = GameObject.Find("Map");
-
-        if (ResourcesManager.Get(resource) < characterPrefab.GetComponent<Character>().GetCostToBuy())
+        if (ResourcesManager.Get(ResourceType.Money) < characterPrefab.GetComponent<Character>().GetCostToBuy())
         {
             Debug.Log("Sorry, you need more money!");
         }
         else
         {
-            ResourcesManager.Change(resource, -characterPrefab.GetComponent<Character>().GetCostToBuy());
+            ResourcesManager.Change(ResourceType.Money, -characterPrefab.GetComponent<Character>().GetCostToBuy());
 
             GameObject character = Instantiate(characterPrefab);
-
-            if (Map != null)
-                character.transform.SetParent(Map.transform);
 
             character.transform.localPosition = new Vector3(DataManager.selectedPositionPlaceCharacterSpawn.x, 
                 DataManager.selectedPositionPlaceCharacterSpawn.y + character.transform.localScale.y, 

@@ -230,9 +230,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 1
-  costToBuy: 500
-  costToUpgrade: 500
-  attackDamage: 500
+  costToBuy: 100
+  costToUpgrade: 100
+  attackDamage: 5
   nextLevelPrefab: {fileID: 0}
   radiusHit: 1.5
   attackSpeed: 2
