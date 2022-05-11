@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class CharacterUpdate : MonoBehaviour
 {
+    [SerializeField] private float price;
     [SerializeField] private ResourceItemSO resource;
     //[SerializeField] private GameObject Map;
     public GameObject characterPrefab { private get; set; }
@@ -20,13 +21,13 @@ public class CharacterUpdate : MonoBehaviour
     {
         GameObject Map = GameObject.Find("Map");
 
-        if (ResourcesManager.Get(resource) < characterPrefab.GetComponent<Character>().GetCostToUpgrade())
+        if (ResourcesManager.Get(resource) < price)
         {
             Debug.Log("Sorry, you need more money!");
         }
         else
         {
-            ResourcesManager.Change(resource, -characterPrefab.GetComponent<Character>().GetCostToUpgrade());
+            ResourcesManager.Change(resource, -price);
 
             GameObject character = Instantiate(characterPrefab);
 

@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class CharacterSpawn : MonoBehaviour
 {
+    [SerializeField] private float price;
     [SerializeField] private ResourceItemSO resource;
 
     public GameObject characterPrefab {get;set;}
@@ -20,13 +21,13 @@ public class CharacterSpawn : MonoBehaviour
     {
         GameObject Map = GameObject.Find("Map");
 
-        if (ResourcesManager.Get(resource) < characterPrefab.GetComponent<Character>().GetCostToBuy())
+        if (ResourcesManager.Get(resource) < price)
         {
             Debug.Log("Sorry, you need more money!");
         }
         else
         {
-            ResourcesManager.Change(resource, -characterPrefab.GetComponent<Character>().GetCostToBuy());
+            ResourcesManager.Change(resource, -price);
 
             GameObject character = Instantiate(characterPrefab);
 
