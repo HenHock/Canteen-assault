@@ -24,7 +24,7 @@ public class processAdditionalGold : MonoBehaviour
 
     private void OnMouseDown()
     {
-        CurrencyManager.CurrentAmount += additionalGold;
+        UIController.changeMoney(additionalGold);
         additionalGoldDestroy();
     }
 

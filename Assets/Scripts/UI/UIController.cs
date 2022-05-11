@@ -13,18 +13,18 @@ public class UIController : MonoBehaviour
     [SerializeField] private Text textFieldMoney;
     [SerializeField] private Text textFieldLife;
 
-    //public static Func<int, bool> changeMoney;
+    public static Func<int, bool> changeMoney;
     public static Func<int,bool> changeLife;
 
     private void Awake()
     {
-        //changeMoney = changeMoneyProcess;
+        changeMoney = changeMoneyProcess;
         changeLife = changeLifeProcess;
     }
 
     private void Start()
     {
-        //changeMoney(startMoney);
+        changeMoney(startMoney);
 
         buyCharacterPanelController.Close();
         endGamePanel.Close();
