@@ -232,7 +232,7 @@ MonoBehaviour:
   level: 1
   costToBuy: 100
   costToUpgrade: 100
-  attackDamage: 5
+  attackDamage: 30
   nextLevelPrefab: {fileID: 0}
   radiusHit: 1.5
   attackSpeed: 2

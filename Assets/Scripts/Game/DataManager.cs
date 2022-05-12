@@ -4,6 +4,7 @@ using UnityEngine;
 //Hi Gleb!
 public class DataManager : MonoBehaviour
 {
+    //e
     public static Vector3 selectedPositionPlaceCharacterSpawn;
     [SerializeField] public static UIController uIController;
     public static GameObject selectedCharacter;
@@ -15,7 +16,6 @@ public class DataManager : MonoBehaviour
 
     void Awake()
     {
-        //uIController = GameObject.Find("UIController").GetComponent<UIController>();
         NumberOfAllEnemies = 0;
         NumberOfDeathEnemies = 0;
         IsLastWave = false;

@@ -7,9 +7,9 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public int Health = 0;
+    public float _speed { get; private set; }
     [SerializeField] private int damage = 1;
     [SerializeField] private ProgressBar healthBar;
-
     [SerializeField] private float FasterProcent;
 
     private Tween moveTween;
@@ -17,7 +17,7 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         int _listIndex = PathManager.GetRandomPathNumber();
-        float _speed = PathManager.GetPathDuration(_listIndex)-(float)(PathManager.GetPathDuration(_listIndex) * FasterProcent * 0.01);
+        _speed = PathManager.GetPathDuration(_listIndex)-(float)(PathManager.GetPathDuration(_listIndex) * FasterProcent * 0.01);
 
         moveTween = transform.DOPath(PathManager.GetRandomPath(_listIndex), _speed).SetLookAt(-1f).OnComplete(() =>
         {
@@ -36,7 +36,6 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(int _damage)
     {
-
         healthBar.Value -= ((float)_damage).ToPercent(healthBar.MaxValue);
 
         if (healthBar.Value <= 0)

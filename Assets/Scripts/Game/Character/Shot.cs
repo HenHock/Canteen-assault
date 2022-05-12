@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Shot : MonoBehaviour
 {
-    [SerializeField] public int damage;
-    [SerializeField] public float speed;
+    public int damage { set; get; }
+    public float speed = 5;
+    public Transform target { set; private get; }
     [SerializeField, Range(0.1f,4f)] private float radiusHit = 1;
 
     public int GetDamage()
@@ -17,6 +18,7 @@ public class Shot : MonoBehaviour
     {
         if (!string.Equals(other.transform.tag, "Character"))
         {
+            Hurt();
             Destroy(gameObject);
         }
     }
@@ -31,7 +33,6 @@ public class Shot : MonoBehaviour
                 if (string.Equals(target.gameObject.tag, "Enemy"))
                 {
                     Enemy enemy = target.gameObject.GetComponent<Enemy>();
-                    transform.LookAt(target.transform.position);
                     enemy.TakeDamage(damage);
                 }
             }
@@ -39,9 +40,10 @@ public class Shot : MonoBehaviour
     }
 
     void Update()
-    {
-        Hurt();
-        transform.Translate(0, 0, speed * Time.deltaTime);
+    { 
+        if(target != null)
+            transform.position = Vector3.MoveTowards(transform.position, target.position, speed*Time.deltaTime);
+        else Destroy(gameObject);
     }
 
     private void OnDrawGizmosSelected()
