@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//Hi Gleb!
 public class DataManager : MonoBehaviour
 {
     public static Vector3 selectedPositionPlaceCharacterSpawn;
