@@ -67,14 +67,13 @@
     <Compile Include="Assets\Scripts\Game\DataManager.cs" />
     <Compile Include="Assets\Scripts\Game\Map\CharacterSpawnPlaceClick.cs" />
     <Compile Include="Assets\Scripts\Game\Map\MapGenerator.cs" />
-    <Compile Include="Assets\Scripts\UI\TMP_text.cs" />
     <Compile Include="Assets\Scripts\Game\Character\Shot.cs" />
     <Compile Include="Assets\Scripts\Game\Money\DropMoney.cs" />
     <Compile Include="Assets\Scripts\Game\ProgressBar.cs" />
     <Compile Include="Assets\Scripts\Game\Map\EnemyWave.cs" />
     <Compile Include="Assets\Scripts\Game\Managers\LifeManager.cs" />
     <Compile Include="Assets\Scripts\UI\PathManager.cs" />
-    <Compile Include="Assets\Scripts\UI\LevelController.cs" />
+    <Compile Include="Assets\Scripts\UI\ScenesController.cs" />
     <Compile Include="Assets\Scripts\UI\UIController.cs" />
     <Compile Include="Assets\Scripts\UI\DestroyCharacterClick.cs" />
     <Compile Include="Assets\Scripts\Game\Enemy\Enemy.cs" />

@@ -24,6 +24,7 @@ public class Character : MonoBehaviour
      * 9 - our custom layer, which all enemies have
      * 1 << 9 - operation which bit shift by 9 elements from 0000000001 to 1000000000;
      * 1000000000 in decimal number system is equal to 512
+     * ENEMY_LAYER_MASK contain value 512
      */
     private const int ENEMY_LAYER_MASK = 1 << 9;
 
@@ -60,9 +61,9 @@ public class Character : MonoBehaviour
                 {
                     shot = Instantiate(shotPrefab);
                     shot.GetComponent<Shot>().damage = attackDamage;
-                    shot.GetComponent<Shot>().speed = attackSpeed;
-                    shot.transform.position = turret.transform.TransformPoint(Vector3.forward * 1.5f);
+                    shot.GetComponent<Shot>().target = hitObject.transform;
                     shot.transform.rotation = turret.transform.rotation;
+                    shot.transform.position = turret.transform.TransformPoint(Vector3.forward * 1.5f);
                 }
             }
         }
@@ -74,7 +75,7 @@ public class Character : MonoBehaviour
         Collider[] targets = Physics.OverlapSphere(transform.position, radiusHit, ENEMY_LAYER_MASK);
         if (targets.Length > 0)
         {
-            target = Array.FindLast(targets, detactEnemy).GetComponent<TargetPoint>();
+            target = Array.Find(targets, detactEnemy).GetComponent<TargetPoint>();
             return true;
         }
 
