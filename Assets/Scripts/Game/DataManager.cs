@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DataManager : MonoBehaviour
 {
+    //e
     public static Vector3 selectedPositionPlaceCharacterSpawn;
     [SerializeField] public static UIController uIController;
     public static GameObject selectedCharacter;
