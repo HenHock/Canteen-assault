@@ -7,12 +7,8 @@ using UnityEngine.UI;
 
 public class Cake : MonoBehaviour
 {
-
     public int countStar { get; set; } = 3;
-    private List<float> cakeConditional = new List<float> { 10, 6, 3, 0 };
 
-    [SerializeField] private GameObject titleText;
-    [SerializeField] private GameObject statistics;
     [SerializeField] private GameObject nextCakePrefab;
 
     public static Action<int> EatCake;
@@ -48,6 +44,7 @@ public class Cake : MonoBehaviour
     public void eatCakeRealise(int damage)
     {
         ResourcesManager.Change(ResourceType.Life, -damage);
+        changeCakeDisplay();
     }
 
     public void endGameRealise(bool flag)
@@ -65,29 +62,28 @@ public class Cake : MonoBehaviour
         Time.timeScale = 0;
     }
 
-    private void changeCakeDisplay(ResourceType type, float amount)
+    private void changeCakeDisplay()
     {
-        if(type == ResourceType.Life && cakeConditional.IndexOf(amount) > -1)
-            if (nextCakePrefab) {
-                Vector3 pos = transform.position;
-                GameObject newCakePrefab = Instantiate(nextCakePrefab);
-                newCakePrefab.transform.position = pos;
+        if (nextCakePrefab) {
+            Vector3 pos = transform.position;
+            GameObject newCakePrefab = Instantiate(nextCakePrefab);
+            newCakePrefab.transform.position = pos;
 
-                Destroy(gameObject);
-            }
+            Destroy(gameObject);
+        }
     }
 
     private void Win()
     {
         // You win
-        titleText.GetComponent<Text>().text = "You win!";
-        statistics.GetComponent<Text>().text = $"You earned {countStar} star!";
+        DataManager.uIController.TitleEndGameText.GetComponent<Text>().text = "You win!";
+        DataManager.uIController.StatisticsEndGameText.GetComponent<Text>().text = $"You earned {countStar} star!";
     }
 
     private void Lose()
     {
         // You lose
-        titleText.GetComponent<Text>().text = "You lose :(";
-        statistics.GetComponent<Text>().text = "You can try again!";
+        DataManager.uIController.TitleEndGameText.GetComponent<Text>().text = "You lose :(";
+        DataManager.uIController.StatisticsEndGameText.GetComponent<Text>().text = "You can try again!";
     }
 }

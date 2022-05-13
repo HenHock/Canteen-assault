@@ -9,6 +9,9 @@ public class UIController : MonoBehaviour
     public PanelController endGamePanel;
     public PanelController updateCharacterPanel;
 
+    public GameObject TitleEndGameText;
+    public GameObject StatisticsEndGameText;
+
     [SerializeField] private GameObject nextLevelButton;
     [SerializeField] private GameObject previouslyLevelButton;
 
