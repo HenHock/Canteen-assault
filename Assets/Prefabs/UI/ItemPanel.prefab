@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6970766983388832927}
   - component: {fileID: 3991524080374423277}
   - component: {fileID: 6715171648668549259}
+  - component: {fileID: 2972306191403347505}
   m_Layer: 5
   m_Name: CharacterBuyButton
   m_TagString: Untagged
@@ -136,8 +137,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb08ac5e873158648809e7585cd145e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 100
-  resource: {fileID: 11400000, guid: 84c448a28bef0cf4ab37da1b1cfe5a59, type: 2}
 --- !u!114 &6715171648668549259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,8 +149,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e10f55a9a2e70bf44a901d58f26bdc3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 100
-  resource: {fileID: 11400000, guid: 84c448a28bef0cf4ab37da1b1cfe5a59, type: 2}
+--- !u!61 &2972306191403347505
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6970766983388832925}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 250, y: 60}
+  m_EdgeRadius: 0
 --- !u!1 &6970766983467537348
 GameObject:
   m_ObjectHideFlags: 0

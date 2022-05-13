@@ -22,7 +22,8 @@ public class CharacterSpawnPlaceClick : MonoBehaviour
         RaycastHit hit;
         if (Input.GetMouseButtonDown(0))
         {
-            if(Physics.Raycast(ray, out hit) && hit.collider.gameObject == gameObject && !DataManager.isPanel)
+            if(Physics.Raycast(ray, out hit) 
+                && hit.collider.gameObject == gameObject)
             {
                 unityEvent.Invoke();
             }

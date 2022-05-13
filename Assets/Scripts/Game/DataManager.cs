@@ -7,7 +7,6 @@ public class DataManager : MonoBehaviour
     public static Vector3 selectedPositionPlaceCharacterSpawn;
     [SerializeField] public static UIManager uIController;
     public static GameObject selectedCharacter;
-    public static bool isPanel;
     
     public static int NumberOfAllEnemies { get; set; } = 0;
     public static int NumberOfDeathEnemies { get; set; } = 0;
