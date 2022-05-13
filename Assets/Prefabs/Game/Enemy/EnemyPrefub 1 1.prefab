@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c0fbfab8b1db2c4b952fae6440e4033, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 50
+  Health: 100
   damage: 1
   healthBar: {fileID: 5762029833808620021}
   FasterProcent: 30
@@ -147,10 +147,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f41182b960962444ad2f8e52abb7cb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fixdedGold: 20
+  fixdedGold: 5
   additionalGold: 20
   percentOfDropping: 20
-  resource: {fileID: 11400000, guid: 84c448a28bef0cf4ab37da1b1cfe5a59, type: 2}
   goldPrefub: {fileID: 7930989234382563006, guid: 07cce8eb97ad9794da0fa0841f1507d1,
     type: 3}
 --- !u!114 &876673707615097246

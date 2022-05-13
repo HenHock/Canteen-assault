@@ -50,12 +50,17 @@ PrefabInstance:
     - target: {fileID: 8926663183237267429, guid: 05d2126dc21c2474eaa285b66c7ba03c,
         type: 3}
       propertyPath: Health
-      value: 150
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 8926663183237267429, guid: 05d2126dc21c2474eaa285b66c7ba03c,
         type: 3}
       propertyPath: pathDuration
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8926663183237267429, guid: 05d2126dc21c2474eaa285b66c7ba03c,
+        type: 3}
+      propertyPath: FasterProcent
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8926663183237267433, guid: 05d2126dc21c2474eaa285b66c7ba03c,
         type: 3}
