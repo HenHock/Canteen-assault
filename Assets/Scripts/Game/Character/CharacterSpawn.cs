@@ -16,7 +16,7 @@ public class CharacterSpawn : MonoBehaviour
 
     private void SpawnCharacter()
     {
-        if (ResourcesManager.Get(ResourceType.Money) < characterPrefab.GetComponent<Character>().costToBuy)
+        if (ResourcesManager.Get(ResourceType.Money)<characterPrefab.GetComponent<Character>().costToBuy)
         {
             Debug.Log("Sorry, you need more money!");
         }
@@ -26,9 +26,9 @@ public class CharacterSpawn : MonoBehaviour
 
             GameObject character = Instantiate(characterPrefab);
 
-            character.transform.localPosition = new Vector3(DataManager.selectedPositionPlaceCharacterSpawn.x, 
-                DataManager.selectedPositionPlaceCharacterSpawn.y + character.transform.localScale.y, 
-                DataManager.selectedPositionPlaceCharacterSpawn.z);
+            character.transform.localPosition = new Vector3(DataManager.selectedPositionPlaceCharacterSpawn.x,
+                 DataManager.selectedPositionPlaceCharacterSpawn.y + character.transform.localScale.y,
+                 DataManager.selectedPositionPlaceCharacterSpawn.z);  
         }
 
         // Close buy character panel

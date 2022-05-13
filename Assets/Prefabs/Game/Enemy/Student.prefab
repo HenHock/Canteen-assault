@@ -7,6 +7,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3117401063439655679, guid: 684bcaf0a552dde47a7d4533c7470d70,
+        type: 3}
+      propertyPath: fixdedGold
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5722114100306856818, guid: 684bcaf0a552dde47a7d4533c7470d70,
         type: 3}
       propertyPath: m_IsKinematic
@@ -25,7 +30,7 @@ PrefabInstance:
     - target: {fileID: 5722114100306856819, guid: 684bcaf0a552dde47a7d4533c7470d70,
         type: 3}
       propertyPath: Health
-      value: 65
+      value: 130
       objectReference: {fileID: 0}
     - target: {fileID: 5722114100306856819, guid: 684bcaf0a552dde47a7d4533c7470d70,
         type: 3}

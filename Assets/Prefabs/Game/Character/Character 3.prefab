@@ -184,7 +184,7 @@ GameObject:
   - component: {fileID: 5168208923123175586}
   - component: {fileID: 4947621014760140341}
   m_Layer: 0
-  m_Name: PowerCharacter 1
+  m_Name: Character 3
   m_TagString: Character
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -313,15 +313,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9bd1000b57d56e4a80cffc74a74eff7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  costToBuy: 500
+  costToBuy: 300
   costToUpgrade: 0
-  attackDamage: 40
+  attackDamage: 20
   moneyBackPercentage: 50
   nextLevelPrefab: {fileID: 0}
-  radiusHit: 3
-  attackSpeed: 8
+  radiusHit: 3.5
+  attackSpeed: 1.5
   turret: {fileID: 1738822313921107627}
-  shotPrefab: {fileID: 8954230633760785283, guid: 7369a1a3486566941aaa35f53ea9e034,
+  shotPrefab: {fileID: 8954230633760785283, guid: a746a3b5585073442a7eda413e29a18d,
     type: 3}
 --- !u!114 &7052673908355270408
 MonoBehaviour:
