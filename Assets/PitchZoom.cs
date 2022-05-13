@@ -6,6 +6,7 @@ public class PitchZoom : MonoBehaviour
 {
     public float perspectiveZoomSpeed = .5f;
     public float orthoZoomSpeed = .5f;
+    [SerializeField] GameObject LeftUp;
     public Camera camera;
 
     private void Update()
@@ -24,7 +25,7 @@ public class PitchZoom : MonoBehaviour
             float deltaMagnitudediff = prevTouchDeltaMag - touchDeltaMag;
 
             camera.fieldOfView += deltaMagnitudediff * perspectiveZoomSpeed;
-            camera.fieldOfView = Mathf.Clamp(camera.fieldOfView, .1f, 179.9f);
+            camera.fieldOfView = Mathf.Clamp(camera.fieldOfView, 100f, LeftUp.transform.position.y*10);
 
         }
     }

@@ -90,6 +90,7 @@
     <Compile Include="Assets\Scripts\Game\Map\SpawnEnemies.cs" />
     <Compile Include="Assets\Scripts\Game\Managers\CurrencyManager.cs" />
     <Compile Include="Assets\Scripts\Game\Map\CharacterUpdatePlaceClick.cs" />
+    <Compile Include="Assets\BorderSceneDetection.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

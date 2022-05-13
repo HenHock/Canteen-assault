@@ -9,6 +9,8 @@ public class LevelManager : MonoBehaviour
 
     private void Start()
     {
+        
+
         ResourcesManager.Change(ResourceType.Life, startHealthByLevel[Random.Range(0, startHealthByLevel.Length)]);
         ResourcesManager.Change(ResourceType.Money, 500);
     }

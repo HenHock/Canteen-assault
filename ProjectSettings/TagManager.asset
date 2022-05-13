@@ -8,6 +8,7 @@ TagManager:
   - GameBoard
   - Enemy
   - Character
+  - GameBorder
   layers:
   - Default
   - TransparentFX

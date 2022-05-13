@@ -1,4 +1,5 @@
 //using Lean.Touch;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +12,9 @@ public class CameraController : MonoBehaviour
     private Vector3 newPosition;
     private Vector3 dragStartPosition;
     private Vector3 dragCurrentPosition;
+
+    [SerializeField] GameObject RightDown;
+    [SerializeField] GameObject LeftUp;
 
     private void Awake()
     {
@@ -50,11 +54,30 @@ public class CameraController : MonoBehaviour
                 }
             }
         }
-
-        //newPosition.x = Mathf.Clamp(newPosition.x, 16f, 145f);  // ограничеваем передвижение Рига по X и Z
+        
+        //newPosition.x = Mathf.Clamp(newPosition.x, RightDown.transform, , 145f);  // ограничеваем передвижение Рига по X и Z
         //newPosition.z = Mathf.Clamp(newPosition.z, -8.5f, 390f);
-        transform.position = Vector3.Lerp(transform.position, newPosition, Time.deltaTime * movementTime); // плавное передвижение
+        transform.position = Vector3.Lerp(transform.position, putInBorders(newPosition), Time.deltaTime * movementTime); // плавное передвижение
     }
+
+    private Vector3 putInBorders(Vector3 newPosition)
+    {
+        if (newPosition.x > RightDown.transform.position.x)
+            newPosition.x = RightDown.transform.position.x;
+        if (newPosition.x < LeftUp.transform.position.x)
+            newPosition.x = LeftUp.transform.position.x;
+        if (newPosition.y > LeftUp.transform.position.y)
+            newPosition.y = LeftUp.transform.position.y;
+        if (newPosition.y < RightDown.transform.position.y)
+            newPosition.y = RightDown.transform.position.y;
+        if (newPosition.z > LeftUp.transform.position.z)
+            newPosition.z = LeftUp.transform.position.z;
+        if (newPosition.z < RightDown.transform.position.z)
+            newPosition.z = RightDown.transform.position.z;
+        return newPosition;
+    }
+
+
 
     //private Vector3 touchStart;
     //public Camera cam;
