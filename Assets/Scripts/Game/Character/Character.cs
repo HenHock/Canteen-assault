@@ -5,11 +5,10 @@ using UnityEngine;
 
 public class Character : MonoBehaviour 
 {
-    public int level = 1;
-
     public int costToBuy;
     public int costToUpgrade;
     public int attackDamage;
+    [Range(1,100)] public float moneyBackPercentage;
     public GameObject nextLevelPrefab;
 
     [SerializeField, Range(1.5f, 10f)] public float radiusHit = 1.5f;
@@ -30,64 +29,51 @@ public class Character : MonoBehaviour
 
     private void Update()
     {
-        if (isAcquireTarger() && shot == null)
-            onAttack();
+        isAcquireTarger();
     }
 
-    public int GetCostToBuy()
+    private void onAttack(GameObject hitObject)
     {
-        return costToBuy;
-    }
-
-    public int GetCostToUpgrade()
-    {
-        return costToUpgrade;
-    }
-
-    public void onAttack()
-    {
-        var point = target.position;
-        turret.LookAt(point);
-
-        Ray ray = new Ray(turret.position, turret.transform.forward);
-        RaycastHit hit;
-        if(Physics.Raycast(ray, out hit))
+        if (shot == null)
         {
-            GameObject hitObject = hit.transform.gameObject;
+            shot = Instantiate(shotPrefab);
+            shot.GetComponent<Shot>().damage = attackDamage;
+            shot.GetComponent<Shot>().target = hitObject.transform;
+            shot.transform.rotation = turret.transform.rotation;
+            shot.transform.position = turret.transform.TransformPoint(Vector3.forward * 1.5f);
+        }
+    }
 
-            if (hitObject.GetComponent<Enemy>() != null)
-            {
-                if (shot == null)
+    // Find target to shoot
+    private void isAcquireTarger()
+    {
+        Collider[] targets = Physics.OverlapSphere(transform.position, radiusHit, ENEMY_LAYER_MASK);
+        if (targets.Length > 0)
+        {
+            for (int i = 0; i < targets.Length; i++) {
+
+                target = targets[i].GetComponent<TargetPoint>();
+                turret.LookAt(target.position);
+
+                Ray ray = new Ray(turret.position, turret.transform.forward);
+                RaycastHit hit;
+                if (Physics.Raycast(ray, out hit))
                 {
-                    shot = Instantiate(shotPrefab);
-                    shot.GetComponent<Shot>().damage = attackDamage;
-                    shot.GetComponent<Shot>().target = hitObject.transform;
-                    shot.transform.rotation = turret.transform.rotation;
-                    shot.transform.position = turret.transform.TransformPoint(Vector3.forward * 1.5f);
+                    GameObject hitObject = hit.transform.gameObject;
+
+                    if (hitObject.GetComponent<Enemy>())
+                    {
+                        onAttack(hitObject);
+                    }
                 }
             }
         }
     }
 
-    // Find target to shoot
-    private bool isAcquireTarger()
+    public void DestroyCharacter()
     {
-        Collider[] targets = Physics.OverlapSphere(transform.position, radiusHit, ENEMY_LAYER_MASK);
-        if (targets.Length > 0)
-        {
-            target = Array.Find(targets, detactEnemy).GetComponent<TargetPoint>();
-            return true;
-        }
-
-        target = null;
-        return false;
-    }
-
-    private bool detactEnemy(Collider target)
-    {
-        if (target.GetComponent<Enemy>() != null)
-            return true;
-        return false;
+        ResourcesManager.Change(ResourceType.Money, costToBuy * moneyBackPercentage * 0.01f);
+        Destroy(gameObject);
     }
 
     private void OnDrawGizmosSelected()

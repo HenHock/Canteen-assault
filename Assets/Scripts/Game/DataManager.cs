@@ -1,10 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//Hi Gleb!
+
 public class DataManager : MonoBehaviour
 {
-    //e
     public static Vector3 selectedPositionPlaceCharacterSpawn;
     [SerializeField] public static UIController uIController;
     public static GameObject selectedCharacter;

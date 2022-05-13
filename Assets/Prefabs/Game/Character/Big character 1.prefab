@@ -147,10 +147,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9bd1000b57d56e4a80cffc74a74eff7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 1
   costToBuy: 125
   costToUpgrade: 100
   attackDamage: 20
+  moneyBackPercentage: 90
   nextLevelPrefab: {fileID: 1070939780770251419, guid: 9c9a39357c4b069439cd8e9681d39323,
     type: 3}
   radiusHit: 4

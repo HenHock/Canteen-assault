@@ -150,6 +150,7 @@ MonoBehaviour:
   costToBuy: 125
   costToUpgrade: 100
   attackDamage: 50
+  moneyBackPercentage: 90
   nextLevelPrefab: {fileID: 0}
   radiusHit: 4
   attackSpeed: 5

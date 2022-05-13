@@ -22,7 +22,6 @@ public class Enemy : MonoBehaviour
         moveTween = transform.DOPath(PathManager.GetRandomPath(_listIndex), _speed).SetLookAt(-1f).OnComplete(() =>
         {
             Cake.EatCake(damage);
-
             EnemyDestroy();
         });
 
@@ -52,8 +51,10 @@ public class Enemy : MonoBehaviour
 
     private void EnemyDestroy()
     {
+        Debug.Log(DataManager.NumberOfAllEnemies + ": all enemies");
         DataManager.NumberOfDeathEnemies++;
-        if(DataManager.IsLastWave && DataManager.NumberOfDeathEnemies == DataManager.NumberOfAllEnemies)
+        Debug.Log(DataManager.NumberOfDeathEnemies + ": all death enemies");
+        if (DataManager.IsLastWave && DataManager.NumberOfDeathEnemies == DataManager.NumberOfAllEnemies)
         {
             Cake.EndGame(true);
         }

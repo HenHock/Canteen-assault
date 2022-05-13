@@ -9,9 +9,11 @@ public class Cake : MonoBehaviour
 {
 
     public int countStar { get; set; } = 3;
+    private List<float> cakeConditional = new List<float> { 10, 6, 3, 0 };
 
     [SerializeField] private GameObject titleText;
     [SerializeField] private GameObject statistics;
+    [SerializeField] private GameObject nextCakePrefab;
 
     public static Action<int> EatCake;
     public static Action<bool> EndGame;
@@ -19,6 +21,7 @@ public class Cake : MonoBehaviour
     private void Awake()
     {
         ResourcesManager.OnResourcesAmountChanged += HandleLifeAmountChanged;
+
         EatCake = eatCakeRealise;
         EndGame = endGameRealise;
     }
@@ -30,7 +33,7 @@ public class Cake : MonoBehaviour
 
     private void HandleLifeAmountChanged(ResourceType type, float amount)
     {
-        if(type != ResourceType.Life)
+        if (type != ResourceType.Life)
         {
             return;
         }
@@ -60,6 +63,18 @@ public class Cake : MonoBehaviour
             Lose();
         }
         Time.timeScale = 0;
+    }
+
+    private void changeCakeDisplay(ResourceType type, float amount)
+    {
+        if(type == ResourceType.Life && cakeConditional.IndexOf(amount) > -1)
+            if (nextCakePrefab) {
+                Vector3 pos = transform.position;
+                GameObject newCakePrefab = Instantiate(nextCakePrefab);
+                newCakePrefab.transform.position = pos;
+
+                Destroy(gameObject);
+            }
     }
 
     private void Win()

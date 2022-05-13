@@ -16,13 +16,13 @@ public class CharacterSpawn : MonoBehaviour
 
     private void SpawnCharacter()
     {
-        if (ResourcesManager.Get(ResourceType.Money) < characterPrefab.GetComponent<Character>().GetCostToBuy())
+        if (ResourcesManager.Get(ResourceType.Money) < characterPrefab.GetComponent<Character>().costToBuy)
         {
             Debug.Log("Sorry, you need more money!");
         }
         else
         {
-            ResourcesManager.Change(ResourceType.Money, -characterPrefab.GetComponent<Character>().GetCostToBuy());
+            ResourcesManager.Change(ResourceType.Money, -characterPrefab.GetComponent<Character>().costToBuy);
 
             GameObject character = Instantiate(characterPrefab);
 

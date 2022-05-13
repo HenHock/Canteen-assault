@@ -8,7 +8,7 @@ public class DestroyCharacterClick : MonoBehaviour
     {
         if(DataManager.selectedCharacter != null)
         {
-            Destroy(DataManager.selectedCharacter);
+            DataManager.selectedCharacter.GetComponent<Character>().DestroyCharacter();
 
             // Close update character panel
             DataManager.uIController.updateCharacterPanel.Close();

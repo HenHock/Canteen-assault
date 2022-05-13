@@ -16,7 +16,7 @@ public class Shot : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (!string.Equals(other.transform.tag, "Character"))
+        if (!string.Equals(other.transform.tag, "Character") || other.transform.GetComponent<processAdditionalGold>() != null)
         {
             Hurt();
             Destroy(gameObject);

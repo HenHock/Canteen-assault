@@ -313,10 +313,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9bd1000b57d56e4a80cffc74a74eff7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 1
   costToBuy: 500
   costToUpgrade: 0
   attackDamage: 40
+  moneyBackPercentage: 50
   nextLevelPrefab: {fileID: 0}
   radiusHit: 3
   attackSpeed: 8
