@@ -9,11 +9,6 @@ public class Shot : MonoBehaviour
     public Transform target { set; private get; }
     [SerializeField, Range(0.1f,4f)] private float radiusHit = 1;
 
-    public int GetDamage()
-    {
-        return damage;
-    }
-
     public void OnTriggerEnter(Collider other)
     {
         if (!string.Equals(other.transform.tag, "Character") || other.transform.GetComponent<processAdditionalGold>() != null)
