@@ -51,7 +51,19 @@ public class PathManager : MonoBehaviour
 
     private int RetunRandomNumber()
     {
-        return Random.Range(0, pathPointsList.Count);
+        int _currentWay = Random.Range(0, pathPointsList.Count);
+
+        if (_currentWay == DataManager.prevWay)
+            if (_currentWay + 1 == pathPointsList.Count)
+            {
+                _currentWay = 0;
+            }
+            else
+            {
+                _currentWay++;
+            }
+        DataManager.prevWay = _currentWay;
+        return _currentWay;
     }
 
     private Vector3[] ReturnRandomPath(int i)

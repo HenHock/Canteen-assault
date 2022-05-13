@@ -7,7 +7,7 @@ public class CharacterSpawnPlaceClick : MonoBehaviour
 {
     public UnityEvent unityEvent = new UnityEvent();
 
-    public void onClick()
+    public void OnMouseUpAsButton()
     {
         if (DataManager.uIController != null)
         {

@@ -28,9 +28,21 @@ public class Enemy : MonoBehaviour
         healthBar.Initialize(Health);
     }
 
+    private void EnemyDestroy()
+    {
+        Destroy(gameObject);
+    }
+
     private void OnDestroy()
     {
         moveTween?.Kill();
+        Debug.Log(DataManager.NumberOfAllEnemies + ": all enemies");
+        DataManager.NumberOfDeathEnemies++;
+        Debug.Log(DataManager.NumberOfDeathEnemies + ": all death enemies");
+        if (DataManager.IsLastWave && DataManager.NumberOfDeathEnemies >= DataManager.NumberOfAllEnemies)
+        {
+            Cake.EndGame(true);
+        }
     }
 
     public void TakeDamage(int _damage)
@@ -49,15 +61,6 @@ public class Enemy : MonoBehaviour
         EnemyDestroy();
     }
 
-    private void EnemyDestroy()
-    {
-        Debug.Log(DataManager.NumberOfAllEnemies + ": all enemies");
-        DataManager.NumberOfDeathEnemies++;
-        Debug.Log(DataManager.NumberOfDeathEnemies + ": all death enemies");
-        if (DataManager.IsLastWave && DataManager.NumberOfDeathEnemies == DataManager.NumberOfAllEnemies)
-        {
-            Cake.EndGame(true);
-        }
-        Destroy(gameObject);
-    }
+    
+
 }

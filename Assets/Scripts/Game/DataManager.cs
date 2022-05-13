@@ -13,6 +13,8 @@ public class DataManager : MonoBehaviour
     public static int NumberOfDeathEnemies { get; set; } = 0;
     public static bool IsLastWave { get; set; } = false;
 
+    public static int prevWay = 0;
+
     void Awake()
     {
         NumberOfAllEnemies = 0;
