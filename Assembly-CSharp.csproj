@@ -76,7 +76,7 @@
     <Compile Include="Assets\Scripts\Game\Managers\LifeManager.cs" />
     <Compile Include="Assets\Scripts\UI\PathManager.cs" />
     <Compile Include="Assets\Scripts\UI\ScenesController.cs" />
-    <Compile Include="Assets\Scripts\UI\UIController.cs" />
+    <Compile Include="Assets\Scripts\UI\UIManager.cs" />
     <Compile Include="Assets\Scripts\UI\DestroyCharacterClick.cs" />
     <Compile Include="Assets\Scripts\Game\Enemy\Enemy.cs" />
     <Compile Include="Assets\Scripts\Game\Enemy\TargetPoint.cs" />

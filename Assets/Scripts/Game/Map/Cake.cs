@@ -49,15 +49,13 @@ public class Cake : MonoBehaviour
 
     public void endGameRealise(bool flag)
     {
-        DataManager.uIController.endGamePanel.Open();
-
         if (flag)
         {
-            Win();
+            DataManager.uIController.Win();
         }
         else
         {
-            Lose();
+            DataManager.uIController.Lose();
         }
         Time.timeScale = 0;
     }
@@ -71,19 +69,5 @@ public class Cake : MonoBehaviour
 
             Destroy(gameObject);
         }
-    }
-
-    private void Win()
-    {
-        // You win
-        DataManager.uIController.TitleEndGameText.GetComponent<Text>().text = "You win!";
-        DataManager.uIController.StatisticsEndGameText.GetComponent<Text>().text = $"You earned {countStar} star!";
-    }
-
-    private void Lose()
-    {
-        // You lose
-        DataManager.uIController.TitleEndGameText.GetComponent<Text>().text = "You lose :(";
-        DataManager.uIController.StatisticsEndGameText.GetComponent<Text>().text = "You can try again!";
     }
 }

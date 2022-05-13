@@ -7,7 +7,9 @@ public class ScenesController : MonoBehaviour
 {
     public void NextLevel()
     {
-       SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        if (SceneManager.GetActiveScene().buildIndex == SceneManager.sceneCountInBuildSettings - 1)
+            SceneManager.LoadScene(0);
+        else SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void PreviouslyLevel()

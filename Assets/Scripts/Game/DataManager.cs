@@ -5,7 +5,7 @@ using UnityEngine;
 public class DataManager : MonoBehaviour
 {
     public static Vector3 selectedPositionPlaceCharacterSpawn;
-    [SerializeField] public static UIController uIController;
+    [SerializeField] public static UIManager uIController;
     public static GameObject selectedCharacter;
     public static bool isPanel;
     
