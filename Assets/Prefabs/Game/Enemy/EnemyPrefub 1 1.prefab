@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fixdedGold: 5
-  additionalGold: 20
+  additionalGold: 50
   percentOfDropping: 20
   goldPrefub: {fileID: 7930989234382563006, guid: 07cce8eb97ad9794da0fa0841f1507d1,
     type: 3}
