@@ -12,11 +12,11 @@ public class DancingAbility : Ability
      * ENEMY_LAYER_MASK contain value 512
      */
     private const int ENEMY_LAYER_MASK = 1 << 9;
+
     public float duration;
 
     public override void Use()
     {
-        Debug.Log("Dancing");
         Collider[] targets = Physics.OverlapSphere(Vector3.zero, 100f, ENEMY_LAYER_MASK);
 
         if(targets.Length > 0)
@@ -24,5 +24,12 @@ public class DancingAbility : Ability
             foreach(Collider target in targets)
                 Debug.Log(target.name);
         }
+    }
+
+    public override Ability Get(Abilities ability)
+    {
+        if (ability == Abilities.dancingAbility)
+            return gameObject.GetComponent<DancingAbility>();
+        return null;
     }
 }

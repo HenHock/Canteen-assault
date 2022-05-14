@@ -4,7 +4,7 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - UIImage: {fileID: 21300000, guid: a592ebeec60f93a45bb6f2e4793465e0, type: 3}
+  - artWork: {fileID: 21300000, guid: a592ebeec60f93a45bb6f2e4793465e0, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

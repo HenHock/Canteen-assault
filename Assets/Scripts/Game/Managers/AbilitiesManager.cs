@@ -12,27 +12,36 @@ public enum Abilities
 public class AbilitiesManager : MonoBehaviour
 {
     private static Dictionary<Abilities, Ability> abilities;
+    private static Ability[] abilitiesArray;
+
 
     private void Awake()
     {
         abilities = new Dictionary<Abilities, Ability>()
         {
-            {Abilities.dancingAbility, new DancingAbility()},
-            {Abilities.meatballsAbility, new MeatballsAbility()}
+            {Abilities.dancingAbility, null},
+            {Abilities.meatballsAbility, null}
         };
-        
-        //Ability[] abilitiesArray = transform.GetComponentsInChildren<Ability>();
-        //int index = 0;
-        //foreach(KeyValuePair<Abilities, Ability> kvp in abilities)
-        //{
-        //    var newItem = new KeyValuePair<Abilities, Ability>(kvp.Key, abilitiesArray[index]);
 
-        //    index++;
-        //}
+        abilitiesArray = transform.GetComponentsInChildren<Ability>();
     }
 
     public static Ability GetAbility(Abilities ability)
     {
         return abilities[ability];
+    }
+
+    public static void SetAbility(Abilities ability, GameObject button)
+    {
+        if (abilities.Count == abilitiesArray.Length)
+        {
+            foreach (var item in abilitiesArray)
+                if(item.Get(ability))
+                    abilities[ability] = item.Get(ability);
+
+            button.GetComponent<Image>().sprite = abilities[ability].artWork;
+            button.GetComponent<Button>().onClick.AddListener(abilities[ability].Use);
+        }
+        else Debug.Log("Count of elements in dictionary of abilities is not equals count of abilities in AbilitiesManager");
     }
 }

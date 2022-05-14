@@ -11,4 +11,11 @@ public class MeatballsAbility : Ability
         Debug.Log("Meat");
         throw new System.NotImplementedException(); 
     }
+
+    public override Ability Get(Abilities ability)
+    {
+        if (ability == Abilities.meatballsAbility)
+            return gameObject.GetComponent<MeatballsAbility>();
+        return null;
+    }
 }
