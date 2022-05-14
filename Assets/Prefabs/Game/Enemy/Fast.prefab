@@ -100,7 +100,7 @@ PrefabInstance:
     - target: {fileID: 253058562984805149, guid: 51afe82de5888b740989e748e5f2ac8b,
         type: 3}
       propertyPath: Health
-      value: 60
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 253058562984805149, guid: 51afe82de5888b740989e748e5f2ac8b,
         type: 3}
@@ -120,7 +120,7 @@ PrefabInstance:
     - target: {fileID: 7469563962495937169, guid: 51afe82de5888b740989e748e5f2ac8b,
         type: 3}
       propertyPath: fixdedGold
-      value: 30
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7469563962495937169, guid: 51afe82de5888b740989e748e5f2ac8b,
         type: 3}
