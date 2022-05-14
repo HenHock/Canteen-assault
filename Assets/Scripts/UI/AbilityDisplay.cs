@@ -11,7 +11,7 @@ public class AbilityDisplay : MonoBehaviour
     [SerializeField] private GameObject rightAbilityButton;
     public Abilities secondAbility;
 
-    private void Start()
+    private void Awake()
     {
         AbilitiesManager.SetAbility(firstAbility, leftAbilityButton);
         AbilitiesManager.SetAbility(secondAbility, rightAbilityButton);

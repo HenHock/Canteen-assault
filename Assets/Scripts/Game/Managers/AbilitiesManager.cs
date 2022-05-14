@@ -11,9 +11,11 @@ public enum Abilities
 
 public class AbilitiesManager : MonoBehaviour
 {
+    /// <summary>
+    /// 
+    /// </summary>
     private static Dictionary<Abilities, Ability> abilities;
     private static Ability[] abilitiesArray;
-
 
     private void Awake()
     {
