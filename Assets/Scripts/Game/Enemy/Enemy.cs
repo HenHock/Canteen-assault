@@ -36,9 +36,7 @@ public class Enemy : MonoBehaviour
     private void OnDestroy()
     {
         moveTween?.Kill();
-        Debug.Log(DataManager.NumberOfAllEnemies + ": all enemies");
         DataManager.NumberOfDeathEnemies++;
-        Debug.Log(DataManager.NumberOfDeathEnemies + ": all death enemies");
         if (DataManager.IsLastWave && DataManager.NumberOfDeathEnemies >= DataManager.NumberOfAllEnemies)
         {
             Cake.EndGame(true);
