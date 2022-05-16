@@ -8553,6 +8553,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plane
       objectReference: {fileID: 0}
+    - target: {fileID: 5916200547911045278, guid: 0a9abdfe04e85d5489a898e7a8a75858,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5916200547911045279, guid: 0a9abdfe04e85d5489a898e7a8a75858,
         type: 3}
       propertyPath: m_RootOrder

@@ -14,7 +14,7 @@ public class AbilityDisplay : MonoBehaviour
 
     public static Action<Abilities> onDeactivateButton;
     public static Action<Abilities> onActivateButton;
-    public static Action<Abilities, Sprite> onChangeArtWork;
+    public static Action<Abilities, Sprite> onChangeArtwork;
 
     private void Start()
     {
@@ -23,7 +23,7 @@ public class AbilityDisplay : MonoBehaviour
 
         onDeactivateButton = DeactivateButton;
         onActivateButton = ActivateButton;
-        onChangeArtWork = changeArtwork;
+        onChangeArtwork = changeArtwork;
     }
 
     private void DeactivateButton(Abilities ability)

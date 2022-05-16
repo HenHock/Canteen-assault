@@ -6,7 +6,6 @@ public class DragObject : MonoBehaviour
 {
     private float zCoord;
     private Vector3 offSet;
-    [SerializeField] private GameObject dragPrefab;
     public int damage { get; set; }
 
     private void Start()
@@ -23,7 +22,7 @@ public class DragObject : MonoBehaviour
             target.GetComponent<Enemy>().TakeDamage(damage);
 
         Sprite sprite = AbilitiesManager.GetAbility(Abilities.meatballsAbility).artWork;
-        AbilityDisplay.onChangeArtWork(Abilities.meatballsAbility, sprite);
+        AbilityDisplay.onChangeArtwork(Abilities.meatballsAbility, sprite);
 
         DataManager.canMoveCamera = true;
     }
@@ -63,5 +62,7 @@ public class DragObject : MonoBehaviour
             if(gameObject == hitObject)
                 Destroy(gameObject);
         }
+
+        Destroy(gameObject);
     }
 }
