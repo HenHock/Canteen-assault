@@ -5,19 +5,19 @@ using UnityEngine;
 
 public class Character : MonoBehaviour 
 {
-    public int costToBuy;
-    public int costToUpgrade;
-    public int attackDamage;
-    [Range(1,100)] public float moneyBackPercentage;
-    public GameObject nextLevelPrefab;
+    public int costToBuy; // Стоимость покупки персонажа
+    public int costToUpgrade; // Стоимость повышения уровня персонажа
+    public int attackDamage; // Значение урона персонажа
+    [Range(1,100)] public float moneyBackPercentage; // Процент денег, от покупки, который будет возвращен игроку при удаление персонажа
+    public GameObject nextLevelPrefab; // Префаб на следующий уровень персонажа.
 
-    [SerializeField, Range(1.5f, 10f)] public float radiusHit = 1.5f;
-    [SerializeField, Range (1f, 10f)] public float attackSpeed = 2f;
-    [SerializeField] private Transform turret;
-    [SerializeField] private GameObject shotPrefab;
+    [SerializeField, Range(1.5f, 10f)] public float radiusHit = 1.5f; // Радиус, в котором персонаж сможет стрелять.
+    [SerializeField, Range (1f, 10f)] public float attackSpeed = 2f; // Скорость атаки персонажа
+    [SerializeField] private Transform turret; // Объект внутри персонажа, который наводится на цель и от которого генерируется снаряд для поражения врага
+    [SerializeField] private GameObject shotPrefab; // Префаб снаряда, который персонаж будет использовать
 
     private GameObject shot;
-    private TargetPoint target;
+    private TargetPoint target; // Цель персонажа
     /*
      * 1 - default layer
      * 9 - our custom layer, which all enemies have

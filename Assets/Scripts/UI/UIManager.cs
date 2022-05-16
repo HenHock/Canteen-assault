@@ -8,6 +8,7 @@ public class UIManager : MonoBehaviour
     public PanelController buyCharacterPanelController;
     public PanelController endGamePanel;
     public PanelController updateCharacterPanel;
+    public GameObject sceneIgnoring;
 
     [SerializeField] private GameObject titleEndGameText;
     [SerializeField] private GameObject statisticsEndGameText;
@@ -18,6 +19,7 @@ public class UIManager : MonoBehaviour
     private void Awake()
     {
         DataManager.uIController = this;
+        sceneIgnoring.SetActive(false);
 
         nextLevelButton.SetActive(false);
         buyCharacterPanelController.Close();

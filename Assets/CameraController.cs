@@ -29,7 +29,7 @@ public class CameraController : MonoBehaviour
     {
         foreach (Touch touch in Input.touches)
         {
-            if (Input.touchCount == 1) // касание одного пальца
+            if (Input.touchCount == 1 && DataManager.canMoveCamera) // касание одного пальца
             {
                 if (touch.phase == TouchPhase.Began) // касается ли палец экрана и создаем плейн, куда отправляем луч
                 {
