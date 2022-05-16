@@ -38,8 +38,8 @@ public class AbilitiesManager : MonoBehaviour
         if (abilities.Count == abilitiesArray.Length)
         {
             foreach (var item in abilitiesArray)
-                if(item.Get(ability))
-                    abilities[ability] = item.Get(ability);
+                if(item.Get(ability) != null)
+                   abilities[ability] = item.Get(ability);
 
             button.GetComponent<Image>().sprite = abilities[ability].artWork;
             button.GetComponent<Button>().onClick.AddListener(abilities[ability].Use);
