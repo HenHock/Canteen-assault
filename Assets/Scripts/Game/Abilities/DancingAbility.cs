@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class DancingAbility : Ability
 {
@@ -13,7 +14,7 @@ public class DancingAbility : Ability
      */
     private const int ENEMY_LAYER_MASK = 1 << 9;
 
-    public float duration;
+    public int duration;
 
     public override void Use()
     {
@@ -21,9 +22,12 @@ public class DancingAbility : Ability
 
         if(targets.Length > 0)
         {
-            foreach(Collider target in targets)
-                Debug.Log(target.name);
+            foreach (Collider target in targets)
+                target.GetComponent<Enemy>().Dancing(duration);
         }
+
+        DeactivateAbility(Abilities.dancingAbility);
+        StartCoroutine(WaitCooldown(Abilities.dancingAbility));
     }
 
     public override Ability Get(Abilities ability)

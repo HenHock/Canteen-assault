@@ -47,3 +47,4 @@ MonoBehaviour:
   cooldown: 3
   artWork: {fileID: 21300000, guid: aa42e8c6432068744969cacce2ab0a22, type: 3}
   radiuHit: 2
+  prefab: {fileID: 597204999838736522, guid: 4f1047f0b2d4c8644af2e3281f3bf36f, type: 3}

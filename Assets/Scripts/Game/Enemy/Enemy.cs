@@ -7,7 +7,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public int Health = 0;
-    public float _speed { get; private set; }
+    private float _speed;
     [SerializeField] private int damage = 1;
     [SerializeField] private ProgressBar healthBar;
     [SerializeField] private float FasterProcent;
@@ -59,6 +59,17 @@ public class Enemy : MonoBehaviour
         EnemyDestroy();
     }
 
-    
+    public void Dancing(int duration)
+    {
+        moveTween?.Pause();
+        transform.DOJump(transform.position, 0.5f, duration, duration);
+        StartCoroutine(waitToPlayAnim(duration));
+    }
+
+    private IEnumerator waitToPlayAnim(int duration)
+    {
+        yield return new WaitForSeconds(duration);
+        moveTween?.Play();
+    }
 
 }

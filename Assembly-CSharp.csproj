@@ -96,6 +96,7 @@
     <Compile Include="Assets\BorderSceneDetection.cs" />
     <Compile Include="Assets\Scripts\Game\Managers\CurrencyManager.cs" />
     <Compile Include="Assets\Scripts\Game\Map\CharacterUpdatePlaceClick.cs" />
+    <Compile Include="Assets\Scripts\Game\DragObject.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
