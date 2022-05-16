@@ -18,14 +18,6 @@ public class Character : MonoBehaviour
 
     private GameObject shot;
     private TargetPoint target; // Цель персонажа
-    /*
-     * 1 - default layer
-     * 9 - our custom layer, which all enemies have
-     * 1 << 9 - operation which bit shift by 9 elements from 0000000001 to 1000000000;
-     * 1000000000 in decimal number system is equal to 512
-     * ENEMY_LAYER_MASK contain value 512
-     */
-    private const int ENEMY_LAYER_MASK = 1 << 9;
 
     private void Update()
     {
@@ -47,7 +39,7 @@ public class Character : MonoBehaviour
     // Find target to shoot
     private void isAcquireTarger()
     {
-        Collider[] targets = Physics.OverlapSphere(transform.position, radiusHit, ENEMY_LAYER_MASK);
+        Collider[] targets = Physics.OverlapSphere(transform.position, radiusHit, DataManager.ENEMY_LAYER_MASK);
         if (targets.Length > 0)
         {
             for (int i = 0; i < targets.Length; i++) {

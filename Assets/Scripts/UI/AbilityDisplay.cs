@@ -14,6 +14,7 @@ public class AbilityDisplay : MonoBehaviour
 
     public static Action<Abilities> onDeactivateButton;
     public static Action<Abilities> onActivateButton;
+    public static Action<Abilities, Sprite> onChangeArtWork;
 
     private void Start()
     {
@@ -22,6 +23,7 @@ public class AbilityDisplay : MonoBehaviour
 
         onDeactivateButton = DeactivateButton;
         onActivateButton = ActivateButton;
+        onChangeArtWork = changeArtwork;
     }
 
     private void DeactivateButton(Abilities ability)
@@ -36,5 +38,12 @@ public class AbilityDisplay : MonoBehaviour
         if (firstAbility == ability)
             leftAbilityButton.GetComponent<Button>().enabled = true;
         else rightAbilityButton.GetComponent<Button>().enabled = true;
+    }
+
+    public void changeArtwork(Abilities ability, Sprite newArtwork)
+    {
+        if (firstAbility == ability)
+            leftAbilityButton.GetComponent<Image>().sprite = newArtwork;
+        else rightAbilityButton.GetComponent<Image>().sprite = newArtwork;
     }
 }
