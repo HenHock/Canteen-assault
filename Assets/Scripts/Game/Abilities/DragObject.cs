@@ -22,9 +22,6 @@ public class DragObject : MonoBehaviour
     {
         if (DataManager.isNeedToDestroy)
         {
-            GameObject meatballs = Instantiate(meatballsEfectPrefab);
-            meatballs.transform.position = transform.position;
-
             float radiusHit = GetComponent<SphereCollider>().radius;
 
             Collider[] targets = Physics.OverlapSphere(transform.position, radiusHit, DataManager.ENEMY_LAYER_MASK);
@@ -73,10 +70,13 @@ public class DragObject : MonoBehaviour
             if(IsPointerOverUIObject())
                 DataManager.isNeedToDestroy = false;
 
-            Destroy(gameObject);
+           StartCoroutine(DestroyByTime(gameObject, 1.5f));
         }
     }
-
+    /// <summary>
+    /// Проверяет если курсор находится на UI объекте
+    /// </summary>
+    /// <returns>true or false</returns>
     private static bool IsPointerOverUIObject()
     {
         PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
@@ -84,6 +84,19 @@ public class DragObject : MonoBehaviour
         List<RaycastResult> results = new List<RaycastResult>();
         EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
         return results.Count > 0;
+    }
+    /// <summary>
+    /// Уничтожает объект по истечению времени
+    /// </summary>
+    /// <param name="duration">Время ожидания в секундах</param>
+    /// <param name="target">Объект, который нужно уничтожить</param>
+    /// <returns></returns>
+    private IEnumerator DestroyByTime(GameObject target, float duration)
+    {
+        GameObject meatballs = Instantiate(meatballsEfectPrefab);
+        meatballs.transform.position = transform.position;
+        yield return new WaitForSeconds(duration);
+        Destroy(gameObject);
     }
 
     private Vector3 GetMouseWorldPos()
@@ -97,6 +110,6 @@ public class DragObject : MonoBehaviour
 
     private void OnMouseUp()
     {
-       Destroy(gameObject);
+        StartCoroutine(DestroyByTime(gameObject, 1.5f));
     }
 }

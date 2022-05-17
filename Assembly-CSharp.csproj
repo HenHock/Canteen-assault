@@ -87,7 +87,7 @@
     <Compile Include="Assets\Scripts\Game\Map\EnemyWave.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RandomDirectionTranslate.cs" />
     <Compile Include="Assets\Scripts\Game\Managers\LifeManager.cs" />
-    <Compile Include="Assets\Scripts\Game\DragObject.cs" />
+    <Compile Include="Assets\Scripts\Game\Abilities\DragObject.cs" />
     <Compile Include="Assets\Scripts\UI\AbilityDisplay.cs" />
     <Compile Include="Assets\Scripts\UI\PathManager.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RandomDir.cs" />

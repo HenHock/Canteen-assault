@@ -18,7 +18,6 @@ public class DancingAbility : Ability
         }
 
         DeactivateAbility(Abilities.dancingAbility);
-        StartCoroutine(WaitCooldown(Abilities.dancingAbility));
     }
 
     public override Ability Get(Abilities ability)
