@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Shot : MonoBehaviour
 {
+    [SerializeField] GameObject explosionPrefub;
     public int damage { set; get; }
     public float speed = 5;
     public Transform target { set; private get; }
@@ -13,6 +14,7 @@ public class Shot : MonoBehaviour
     {
         if (!string.Equals(other.transform.tag, "Character") || other.transform.GetComponent<processAdditionalGold>() != null)
         {
+            Instantiate(explosionPrefub, transform.position, Quaternion.Euler(0, 0, 0));
             Hurt();
             Destroy(gameObject);
         }

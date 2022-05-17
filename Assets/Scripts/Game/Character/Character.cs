@@ -48,6 +48,7 @@ public class Character : MonoBehaviour
     private void isAcquireTarger()
     {
         Collider[] targets = Physics.OverlapSphere(transform.position, radiusHit, ENEMY_LAYER_MASK);
+        Debug.Log(targets.Length);
         if (targets.Length > 0)
         {
             for (int i = 0; i < targets.Length; i++) {
@@ -60,7 +61,7 @@ public class Character : MonoBehaviour
                 if (Physics.Raycast(ray, out hit))
                 {
                     GameObject hitObject = hit.transform.gameObject;
-
+           
                     if (hitObject.GetComponent<Enemy>())
                     {
                         onAttack(hitObject);
