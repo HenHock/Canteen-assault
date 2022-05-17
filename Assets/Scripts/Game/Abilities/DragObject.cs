@@ -67,24 +67,16 @@ public class DragObject : MonoBehaviour
 
         if ((touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled))
         {
-            if(IsPointerOverUIObject())
+            if (UIManager.IsPointerOverUIObject())
+            {
                 DataManager.isNeedToDestroy = false;
+                Destroy(gameObject);
+            }
 
            StartCoroutine(DestroyByTime(gameObject, 1.5f));
         }
     }
-    /// <summary>
-    /// Проверяет если курсор находится на UI объекте
-    /// </summary>
-    /// <returns>true or false</returns>
-    private static bool IsPointerOverUIObject()
-    {
-        PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
-        eventDataCurrentPosition.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
-        List<RaycastResult> results = new List<RaycastResult>();
-        EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
-        return results.Count > 0;
-    }
+
     /// <summary>
     /// Уничтожает объект по истечению времени
     /// </summary>
@@ -93,8 +85,12 @@ public class DragObject : MonoBehaviour
     /// <returns></returns>
     private IEnumerator DestroyByTime(GameObject target, float duration)
     {
-        GameObject meatballs = Instantiate(meatballsEfectPrefab);
-        meatballs.transform.position = transform.position;
+        if (DataManager.isNeedToDestroy)
+        {
+            GameObject meatballs = Instantiate(meatballsEfectPrefab);
+            meatballs.transform.position = transform.position;
+        }
+
         yield return new WaitForSeconds(duration);
         Destroy(gameObject);
     }

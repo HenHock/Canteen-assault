@@ -9,7 +9,7 @@ public class CharacterSpawnPlaceClick : MonoBehaviour
 
     public void onClick()
     {
-        if (DataManager.uIController != null)
+        if (DataManager.uIController != null && !UIManager.IsPointerOverUIObject())
         {
             DataManager.uIController.buyCharacterPanelController.Open();
             DataManager.selectedPositionPlaceCharacterSpawn = transform;
