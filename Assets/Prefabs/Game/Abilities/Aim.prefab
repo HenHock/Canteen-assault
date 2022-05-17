@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7260230362573946283}
   m_Layer: 0
   m_Name: Aim
-  m_TagString: Untagged
+  m_TagString: Finish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46,7 +46,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00efefb546927434b9430599122da75d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dragPrefab: {fileID: 597204999838736522}
+  meatballsEfectPrefab: {fileID: 6387765896894910280, guid: bd7c6398d933c844a95cbd3bd982c529,
+    type: 3}
 --- !u!135 &7260230362573946283
 SphereCollider:
   m_ObjectHideFlags: 0

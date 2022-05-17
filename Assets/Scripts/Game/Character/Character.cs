@@ -5,70 +5,64 @@ using UnityEngine;
 
 public class Character : MonoBehaviour 
 {
-    public int costToBuy; // Стоимость покупки персонажа
-    public int costToUpgrade; // Стоимость повышения уровня персонажа
-    public int attackDamage; // Значение урона персонажа
-    [Range(1,100)] public float moneyBackPercentage; // Процент денег, от покупки, который будет возвращен игроку при удаление персонажа
-    public GameObject nextLevelPrefab; // Префаб на следующий уровень персонажа.
+    public int costToBuy; // Г‘ГІГ®ГЁГ¬Г®Г±ГІГј ГЇГ®ГЄГіГЇГЄГЁ ГЇГҐГ°Г±Г®Г­Г Г¦Г 
+    public int costToUpgrade; // Г‘ГІГ®ГЁГ¬Г®Г±ГІГј ГЇГ®ГўГ»ГёГҐГ­ГЁГї ГіГ°Г®ГўГ­Гї ГЇГҐГ°Г±Г®Г­Г Г¦Г 
+    public int attackDamage; // Г‡Г­Г Г·ГҐГ­ГЁГҐ ГіГ°Г®Г­Г  ГЇГҐГ°Г±Г®Г­Г Г¦Г 
+    [Range(1,100)] public float moneyBackPercentage; // ГЏГ°Г®Г¶ГҐГ­ГІ Г¤ГҐГ­ГҐГЈ, Г®ГІ ГЇГ®ГЄГіГЇГЄГЁ, ГЄГ®ГІГ®Г°Г»Г© ГЎГіГ¤ГҐГІ ГўГ®Г§ГўГ°Г Г№ГҐГ­ ГЁГЈГ°Г®ГЄГі ГЇГ°ГЁ ГіГ¤Г Г«ГҐГ­ГЁГҐ ГЇГҐГ°Г±Г®Г­Г Г¦Г 
+    public GameObject nextLevelPrefab; // ГЏГ°ГҐГґГ ГЎ Г­Г  Г±Г«ГҐГ¤ГіГѕГ№ГЁГ© ГіГ°Г®ГўГҐГ­Гј ГЇГҐГ°Г±Г®Г­Г Г¦Г .
 
-    [SerializeField, Range(1.5f, 10f)] public float radiusHit = 1.5f; // Радиус, в котором персонаж сможет стрелять.
-    [SerializeField, Range (1f, 10f)] public float attackSpeed = 2f; // Скорость атаки персонажа
-    [SerializeField] private Transform turret; // Объект внутри персонажа, который наводится на цель и от которого генерируется снаряд для поражения врага
-    [SerializeField] private GameObject shotPrefab; // Префаб снаряда, который персонаж будет использовать
+    [SerializeField, Range(1.5f, 10f)] public float radiusHit = 1.5f; // ГђГ Г¤ГЁГіГ±, Гў ГЄГ®ГІГ®Г°Г®Г¬ ГЇГҐГ°Г±Г®Г­Г Г¦ Г±Г¬Г®Г¦ГҐГІ Г±ГІГ°ГҐГ«ГїГІГј.
+    [SerializeField, Range (1f, 10f)] public float attackSpeed = 2f; // Г‘ГЄГ®Г°Г®Г±ГІГј Г ГІГ ГЄГЁ ГЇГҐГ°Г±Г®Г­Г Г¦Г 
+    [SerializeField] private Transform turret; // ГЋГЎГєГҐГЄГІ ГўГ­ГіГІГ°ГЁ ГЇГҐГ°Г±Г®Г­Г Г¦Г , ГЄГ®ГІГ®Г°Г»Г© Г­Г ГўГ®Г¤ГЁГІГ±Гї Г­Г  Г¶ГҐГ«Гј ГЁ Г®ГІ ГЄГ®ГІГ®Г°Г®ГЈГ® ГЈГҐГ­ГҐГ°ГЁГ°ГіГҐГІГ±Гї Г±Г­Г Г°ГїГ¤ Г¤Г«Гї ГЇГ®Г°Г Г¦ГҐГ­ГЁГї ГўГ°Г ГЈГ 
+    [SerializeField] private GameObject shotPrefab; // ГЏГ°ГҐГґГ ГЎ Г±Г­Г Г°ГїГ¤Г , ГЄГ®ГІГ®Г°Г»Г© ГЇГҐГ°Г±Г®Г­Г Г¦ ГЎГіГ¤ГҐГІ ГЁГ±ГЇГ®Г«ГјГ§Г®ГўГ ГІГј
 
     private GameObject shot;
-    private TargetPoint target; // Цель персонажа
-    /*
-     * 1 - default layer
-     * 9 - our custom layer, which all enemies have
-     * 1 << 9 - operation which bit shift by 9 elements from 0000000001 to 1000000000;
-     * 1000000000 in decimal number system is equal to 512
-     * ENEMY_LAYER_MASK contain value 512
-     */
-    private const int ENEMY_LAYER_MASK = 1 << 9;
+    private TargetPoint target; // Г–ГҐГ«Гј ГЇГҐГ°Г±Г®Г­Г Г¦Г 
+    private float nextShoot = 0;
 
     private void Update()
     {
-        isAcquireTarger();
+        if (isAcquireTarger())
+            onAttack();
     }
 
-    private void onAttack(GameObject hitObject)
+    private void onAttack()
     {
-        if (shot == null)
+        if(target != null)
+            turret.LookAt(target.position);
+
+        Ray ray = new Ray(turret.position, turret.transform.forward);
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit))
         {
-            shot = Instantiate(shotPrefab);
-            shot.GetComponent<Shot>().damage = attackDamage;
-            shot.GetComponent<Shot>().target = hitObject.transform;
-            shot.transform.rotation = turret.transform.rotation;
-            shot.transform.position = turret.transform.TransformPoint(Vector3.forward * 1.5f);
+            GameObject hitObject = hit.transform.gameObject;
+
+            if (Time.time > nextShoot)
+            {
+                shot = Instantiate(shotPrefab);
+                shot.GetComponent<Shot>().damage = attackDamage;
+                shot.GetComponent<Shot>().target = hitObject.transform;
+                shot.transform.rotation = turret.transform.rotation;
+                shot.transform.position = turret.transform.TransformPoint(Vector3.forward * 1.5f);
+                nextShoot = Time.time + (1000 / attackSpeed) / 1000;
+            }
         }
     }
 
     // Find target to shoot
-    private void isAcquireTarger()
+    private bool isAcquireTarger()
     {
-        Collider[] targets = Physics.OverlapSphere(transform.position, radiusHit, ENEMY_LAYER_MASK);
-        Debug.Log(targets.Length);
+
         if (targets.Length > 0)
         {
-            for (int i = 0; i < targets.Length; i++) {
-
-                target = targets[i].GetComponent<TargetPoint>();
-                turret.LookAt(target.position);
-
-                Ray ray = new Ray(turret.position, turret.transform.forward);
-                RaycastHit hit;
-                if (Physics.Raycast(ray, out hit))
-                {
-                    GameObject hitObject = hit.transform.gameObject;
-           
-                    if (hitObject.GetComponent<Enemy>())
-                    {
-                        onAttack(hitObject);
-                    }
-                }
-            }
+            target = targets[0].GetComponent<TargetPoint>();
+            return true;
         }
+        
+        target = null;
+        return false;
+    }
+    
     }
 
     public void DestroyCharacter()

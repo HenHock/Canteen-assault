@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class BuyCharacterItem : MonoBehaviour
 {
@@ -18,6 +19,9 @@ public class BuyCharacterItem : MonoBehaviour
     private GameObject nameCharacter;
     private GameObject characterSkills;
     private GameObject buyCharacterButton;
+    private TextMeshProUGUI TMP_speedAttack;
+    private TextMeshProUGUI TMP_radiusAttack;
+    private TextMeshProUGUI TMP_damage;
 
     [SerializeField] private GameObject ItemPanel;
     
@@ -43,7 +47,10 @@ public class BuyCharacterItem : MonoBehaviour
 
                     img = itemPanel.transform.Find("ImageCharacter").gameObject;
                     nameCharacter = itemPanel.transform.Find("NameCharacter").gameObject;
-                    characterSkills = itemPanel.transform.Find("ÑharacterSkills").gameObject;
+                    characterSkills = itemPanel.transform.Find("CharacterSkills").gameObject;
+                    TMP_damage = characterSkills.transform.Find("Damage").GetComponent<TextMeshProUGUI>();
+                    TMP_speedAttack = characterSkills.transform.Find("SpeedAttack").GetComponent <TextMeshProUGUI>();
+                    TMP_radiusAttack = characterSkills.transform.Find("RadiusAttack").GetComponent<TextMeshProUGUI>();
 
                     buyCharacterButton = itemPanel.transform.Find("CharacterBuyButton").gameObject;
                     buyCharacterButton.GetComponent<CharacterSpawn>().characterPrefab = prefab;
@@ -53,14 +60,12 @@ public class BuyCharacterItem : MonoBehaviour
                         img.GetComponent<Image>().sprite = prefab.GetComponent<Image>().sprite;
                     nameCharacter.GetComponent<Text>().text = prefab.name;
                     buyCharacterButton.GetComponentInChildren<Text>().text = costToBuy.ToString();
-                    characterSkills.GetComponent<Text>().text =
-                        $"Damage: {attackDamage}\n" +
-                        $"Radius Hit: {radiusHit}\n" +
-                        $"Attack Speed: {attackSpeed}\n";
+                    TMP_damage.text = attackDamage.ToString();
+                    TMP_speedAttack.text = attackSpeed.ToString();
+                    TMP_radiusAttack.text = radiusHit.ToString();
                 }
             }
         }
-        else Debug.Log("Did not find any more in Assets/Character/Prefabs/ Level 1.");
     }
     //#endif
 }
