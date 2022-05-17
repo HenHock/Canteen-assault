@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,11 +16,17 @@ public class UpdateCharacterItem : MonoBehaviour
     private GameObject nameCharacter;
     private GameObject characterSkills;
     private GameObject updateCharacterButton;
+    private TextMeshProUGUI TMP_speedAttack;
+    private TextMeshProUGUI TMP_radiusAttack;
+    private TextMeshProUGUI TMP_damage;
 
     [SerializeField] private GameObject ItemPanel;
 
     void OnEnable()
     {
+        if (transform.childCount > 2)
+            Destroy(transform.GetChild(2).gameObject);
+
         startItemPosition = 510;
         GameObject prefab = DataManager.selectedCharacter.GetComponent<Character>().nextLevelPrefab;
 
@@ -38,8 +45,11 @@ public class UpdateCharacterItem : MonoBehaviour
 
             img = itemPanel.transform.Find("ImageCharacter").gameObject;
             nameCharacter = itemPanel.transform.Find("NameCharacter").gameObject;
-            characterSkills = itemPanel.transform.Find("ÑharacterSkills").gameObject;
+            characterSkills = itemPanel.transform.Find("CharacterSkills").gameObject;
             updateCharacterButton = itemPanel.transform.Find("CharacterBuyButton").gameObject;
+            TMP_damage = characterSkills.transform.Find("Damage").GetComponent<TextMeshProUGUI>();
+            TMP_speedAttack = characterSkills.transform.Find("SpeedAttack").GetComponent<TextMeshProUGUI>();
+            TMP_radiusAttack = characterSkills.transform.Find("RadiusAttack").GetComponent<TextMeshProUGUI>();
             updateCharacterButton.GetComponent<CharacterUpdate>().characterPrefab = prefab;
             updateCharacterButton.GetComponent<Button>().onClick.AddListener(updateCharacterButton.GetComponent<CharacterUpdate>().onClick);
 
@@ -47,10 +57,9 @@ public class UpdateCharacterItem : MonoBehaviour
                 img.GetComponent<Image>().sprite = prefab.GetComponent<Image>().sprite;
             nameCharacter.GetComponent<Text>().text = prefab.name;
             updateCharacterButton.GetComponentInChildren<Text>().text = costToUpgrade.ToString();
-            characterSkills.GetComponent<Text>().text =
-                $"Damage: {attackDamage}\n" +
-                $"Radius Hit: {radiusHit}\n" +
-                $"Attack Speed: {attackSpeed}\n";
+            TMP_damage.text = attackDamage.ToString();
+            TMP_speedAttack.text = attackSpeed.ToString();
+            TMP_radiusAttack.text = radiusHit.ToString();
         }
     }
 }

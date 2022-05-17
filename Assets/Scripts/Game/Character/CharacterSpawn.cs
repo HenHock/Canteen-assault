@@ -26,9 +26,11 @@ public class CharacterSpawn : MonoBehaviour
 
             GameObject character = Instantiate(characterPrefab);
 
-            character.transform.localPosition = new Vector3(DataManager.selectedPositionPlaceCharacterSpawn.x,
-                 DataManager.selectedPositionPlaceCharacterSpawn.y + character.transform.localScale.y,
-                 DataManager.selectedPositionPlaceCharacterSpawn.z);  
+            character.transform.SetParent(DataManager.uIController.parentCharacter);
+            character.transform.localPosition = new Vector3(DataManager.selectedPositionPlaceCharacterSpawn.localPosition.x,
+                 DataManager.selectedPositionPlaceCharacterSpawn.localPosition.y + character.transform.localScale.y*2f,
+                 DataManager.selectedPositionPlaceCharacterSpawn.localPosition.z);  
+            Destroy(DataManager.selectedPositionPlaceCharacterSpawn.gameObject);
         }
 
         // Close buy character panel

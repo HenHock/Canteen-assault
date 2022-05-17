@@ -26,5 +26,6 @@ public abstract class Ability : MonoBehaviour
     public void DeactivateAbility(Abilities ability)
     {
         AbilityDisplay.onDeactivateButton(ability);
+        StartCoroutine(WaitCooldown(ability));
     }
 }
