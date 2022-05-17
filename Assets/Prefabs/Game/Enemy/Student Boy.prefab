@@ -108,7 +108,7 @@ MonoBehaviour:
   damage: 1
   healthBar: {fileID: 4509829947998559067}
   FasterProcent: 30
-  explosionPrefub: {fileID: 725748389856807714, guid: 4bda94453d2ca7444a0fff05b2d425f5,
+  explosionPrefub: {fileID: 9010849596890224403, guid: 999ba9aeea7c53d4283dbf64827396c4,
     type: 3}
 --- !u!114 &3407594749345748809
 MonoBehaviour:
@@ -123,7 +123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fixdedGold: 5
-  additionalGold: 50
+  additionalGold: 25
   percentOfDropping: 20
   goldPrefub: {fileID: 7930989234382563006, guid: 07cce8eb97ad9794da0fa0841f1507d1,
     type: 3}

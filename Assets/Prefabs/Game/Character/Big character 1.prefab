@@ -157,8 +157,7 @@ MonoBehaviour:
   radiusHit: 4
   attackSpeed: 1
   turret: {fileID: 7554724725049829399}
-  shotPrefab: {fileID: 8954230633760785283, guid: 7369a1a3486566941aaa35f53ea9e034,
-    type: 3}
+  shotPrefab: {fileID: 1103964131845936, guid: faa352a3dce1ac244b963b62aeefb0ed, type: 3}
 --- !u!114 &1161871236533748843
 MonoBehaviour:
   m_ObjectHideFlags: 0
