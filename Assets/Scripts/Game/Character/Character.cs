@@ -18,48 +18,57 @@ public class Character : MonoBehaviour
 
     private GameObject shot;
     private TargetPoint target; // Цель персонажа
+    private float nextShoot = 0;
 
     private void Update()
     {
-        isAcquireTarger();
+        if (isAcquireTarger())
+            onAttack();
     }
 
-    private void onAttack(GameObject hitObject)
+    private void onAttack()
     {
-        if (shot == null)
+        if(target != null)
+            turret.LookAt(target.position);
+
+        Ray ray = new Ray(turret.position, turret.transform.forward);
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit))
         {
-            shot = Instantiate(shotPrefab);
-            shot.GetComponent<Shot>().damage = attackDamage;
-            shot.GetComponent<Shot>().target = hitObject.transform;
-            shot.transform.rotation = turret.transform.rotation;
-            shot.transform.position = turret.transform.TransformPoint(Vector3.forward * 1.5f);
+            GameObject hitObject = hit.transform.gameObject;
+
+            if (Time.time > nextShoot)
+            {
+                shot = Instantiate(shotPrefab);
+                shot.GetComponent<Shot>().damage = attackDamage;
+                shot.GetComponent<Shot>().target = hitObject.transform;
+                shot.transform.rotation = turret.transform.rotation;
+                shot.transform.position = turret.transform.TransformPoint(Vector3.forward * 1.5f);
+                nextShoot = Time.time + (1000 / attackSpeed) / 1000;
+            }
         }
     }
 
     // Find target to shoot
-    private void isAcquireTarger()
+    private bool isAcquireTarger()
     {
         Collider[] targets = Physics.OverlapSphere(transform.position, radiusHit, DataManager.ENEMY_LAYER_MASK);
         if (targets.Length > 0)
         {
-            for (int i = 0; i < targets.Length; i++) {
-
-                target = targets[i].GetComponent<TargetPoint>();
-                turret.LookAt(target.position);
-
-                Ray ray = new Ray(turret.position, turret.transform.forward);
-                RaycastHit hit;
-                if (Physics.Raycast(ray, out hit))
-                {
-                    GameObject hitObject = hit.transform.gameObject;
-
-                    if (hitObject.GetComponent<Enemy>())
-                    {
-                        onAttack(hitObject);
-                    }
-                }
-            }
+            target = targets[0].GetComponent<TargetPoint>();
+            return true;
         }
+        
+        target = null;
+        return false;
+    }
+
+    private bool cooldawnAttack(float time)
+    {
+        if (time - Time.time > attackSpeed)
+            return true;
+
+        return false;
     }
 
     public void DestroyCharacter()

@@ -7,12 +7,12 @@ public class CharacterSpawnPlaceClick : MonoBehaviour
 {
     public UnityEvent unityEvent = new UnityEvent();
 
-    public void OnMouseUpAsButton()
+    public void onClick()
     {
         if (DataManager.uIController != null)
         {
             DataManager.uIController.buyCharacterPanelController.Open();
-            DataManager.selectedPositionPlaceCharacterSpawn = this.transform.localPosition;
+            DataManager.selectedPositionPlaceCharacterSpawn = transform;
         }
     }
 

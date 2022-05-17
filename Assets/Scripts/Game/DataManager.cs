@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DataManager : MonoBehaviour
 {
-    public static Vector3 selectedPositionPlaceCharacterSpawn;
+    public static Transform selectedPositionPlaceCharacterSpawn;
     public static UIManager uIController;
     public static GameObject selectedCharacter;
     public static bool canMoveCamera;

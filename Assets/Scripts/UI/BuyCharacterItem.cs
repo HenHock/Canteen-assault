@@ -66,7 +66,6 @@ public class BuyCharacterItem : MonoBehaviour
                 }
             }
         }
-        else Debug.Log("Did not find any more in Assets/Character/Prefabs/ Level 1.");
     }
     //#endif
 }

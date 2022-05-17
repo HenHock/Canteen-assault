@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 1161871236533748843}
   - component: {fileID: 619439727508869021}
   - component: {fileID: 4641330207307610950}
+  - component: {fileID: 7132252113987643791}
   m_Layer: 0
   m_Name: Big character 1
   m_TagString: Character
@@ -154,7 +155,7 @@ MonoBehaviour:
   nextLevelPrefab: {fileID: 1070939780770251419, guid: 9c9a39357c4b069439cd8e9681d39323,
     type: 3}
   radiusHit: 4
-  attackSpeed: 5
+  attackSpeed: 1
   turret: {fileID: 7554724725049829399}
   shotPrefab: {fileID: 8954230633760785283, guid: 7369a1a3486566941aaa35f53ea9e034,
     type: 3}
@@ -208,10 +209,23 @@ BoxCollider:
   m_GameObject: {fileID: 1070939780770251419}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 3.8, y: 6, z: 3.8}
+  m_Center: {x: 0, y: -2, z: 0}
+--- !u!135 &7132252113987643791
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1070939780770251419}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 3.5, z: 1}
-  m_Center: {x: 0, y: -0.75, z: 0}
+  m_Radius: 0.3
+  m_Center: {x: -1, y: 0, z: 0}
 --- !u!1 &5791379339466619085
 GameObject:
   m_ObjectHideFlags: 0

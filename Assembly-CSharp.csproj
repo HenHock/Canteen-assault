@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\Game\Managers\ResourcesManager.cs" />
     <Compile Include="Assets\PitchZoom.cs" />
     <Compile Include="Assets\Scripts\UI\UpdateCharacterItem.cs" />
+    <Compile Include="Assets\Scripts\Game\Abilities\MeatballsShotScirpt.cs" />
     <Compile Include="Assets\Scripts\Game\Money\processAdditionalGold.cs" />
     <Compile Include="Assets\Scripts\Game\DataManager.cs" />
     <Compile Include="Assets\Scripts\Game\Map\CharacterSpawnPlaceClick.cs" />
@@ -97,7 +98,6 @@
     <Compile Include="Assets\BorderSceneDetection.cs" />
     <Compile Include="Assets\Scripts\Game\Managers\CurrencyManager.cs" />
     <Compile Include="Assets\Scripts\Game\Map\CharacterUpdatePlaceClick.cs" />
-    <Compile Include="Assets\Scripts\Game\Abilities\MeatballsShotScirpt.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
