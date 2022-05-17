@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private int damage = 1;
     [SerializeField] private ProgressBar healthBar;
     [SerializeField] private float FasterProcent;
+    [SerializeField] private GameObject explosionPrefub;
 
     private Tween moveTween;
 
@@ -56,6 +57,7 @@ public class Enemy : MonoBehaviour
         moveTween?.Kill();
         DropMoney makeMoneyDrop = gameObject.GetComponent<DropMoney>();
         makeMoneyDrop.Drop(transform.position);
+        Instantiate(explosionPrefub, transform.position, Quaternion.Euler(0, 0, 0));
         EnemyDestroy();
     }
 

@@ -5,19 +5,19 @@ using UnityEngine;
 
 public class Character : MonoBehaviour 
 {
-    public int costToBuy; // Ñòîèìîñòü ïîêóïêè ïåğñîíàæà
-    public int costToUpgrade; // Ñòîèìîñòü ïîâûøåíèÿ óğîâíÿ ïåğñîíàæà
-    public int attackDamage; // Çíà÷åíèå óğîíà ïåğñîíàæà
-    [Range(1,100)] public float moneyBackPercentage; // Ïğîöåíò äåíåã, îò ïîêóïêè, êîòîğûé áóäåò âîçâğàùåí èãğîêó ïğè óäàëåíèå ïåğñîíàæà
-    public GameObject nextLevelPrefab; // Ïğåôàá íà ñëåäóşùèé óğîâåíü ïåğñîíàæà.
+    public int costToBuy; // Ã‘Ã²Ã®Ã¨Ã¬Ã®Ã±Ã²Ã¼ Ã¯Ã®ÃªÃ³Ã¯ÃªÃ¨ Ã¯Ã¥Ã°Ã±Ã®Ã­Ã Ã¦Ã 
+    public int costToUpgrade; // Ã‘Ã²Ã®Ã¨Ã¬Ã®Ã±Ã²Ã¼ Ã¯Ã®Ã¢Ã»Ã¸Ã¥Ã­Ã¨Ã¿ Ã³Ã°Ã®Ã¢Ã­Ã¿ Ã¯Ã¥Ã°Ã±Ã®Ã­Ã Ã¦Ã 
+    public int attackDamage; // Ã‡Ã­Ã Ã·Ã¥Ã­Ã¨Ã¥ Ã³Ã°Ã®Ã­Ã  Ã¯Ã¥Ã°Ã±Ã®Ã­Ã Ã¦Ã 
+    [Range(1,100)] public float moneyBackPercentage; // ÃÃ°Ã®Ã¶Ã¥Ã­Ã² Ã¤Ã¥Ã­Ã¥Ã£, Ã®Ã² Ã¯Ã®ÃªÃ³Ã¯ÃªÃ¨, ÃªÃ®Ã²Ã®Ã°Ã»Ã© Ã¡Ã³Ã¤Ã¥Ã² Ã¢Ã®Ã§Ã¢Ã°Ã Ã¹Ã¥Ã­ Ã¨Ã£Ã°Ã®ÃªÃ³ Ã¯Ã°Ã¨ Ã³Ã¤Ã Ã«Ã¥Ã­Ã¨Ã¥ Ã¯Ã¥Ã°Ã±Ã®Ã­Ã Ã¦Ã 
+    public GameObject nextLevelPrefab; // ÃÃ°Ã¥Ã´Ã Ã¡ Ã­Ã  Ã±Ã«Ã¥Ã¤Ã³Ã¾Ã¹Ã¨Ã© Ã³Ã°Ã®Ã¢Ã¥Ã­Ã¼ Ã¯Ã¥Ã°Ã±Ã®Ã­Ã Ã¦Ã .
 
-    [SerializeField, Range(1.5f, 10f)] public float radiusHit = 1.5f; // Ğàäèóñ, â êîòîğîì ïåğñîíàæ ñìîæåò ñòğåëÿòü.
-    [SerializeField, Range (1f, 10f)] public float attackSpeed = 2f; // Ñêîğîñòü àòàêè ïåğñîíàæà
-    [SerializeField] private Transform turret; // Îáúåêò âíóòğè ïåğñîíàæà, êîòîğûé íàâîäèòñÿ íà öåëü è îò êîòîğîãî ãåíåğèğóåòñÿ ñíàğÿä äëÿ ïîğàæåíèÿ âğàãà
-    [SerializeField] private GameObject shotPrefab; // Ïğåôàá ñíàğÿäà, êîòîğûé ïåğñîíàæ áóäåò èñïîëüçîâàòü
+    [SerializeField, Range(1.5f, 10f)] public float radiusHit = 1.5f; // ÃÃ Ã¤Ã¨Ã³Ã±, Ã¢ ÃªÃ®Ã²Ã®Ã°Ã®Ã¬ Ã¯Ã¥Ã°Ã±Ã®Ã­Ã Ã¦ Ã±Ã¬Ã®Ã¦Ã¥Ã² Ã±Ã²Ã°Ã¥Ã«Ã¿Ã²Ã¼.
+    [SerializeField, Range (1f, 10f)] public float attackSpeed = 2f; // Ã‘ÃªÃ®Ã°Ã®Ã±Ã²Ã¼ Ã Ã²Ã ÃªÃ¨ Ã¯Ã¥Ã°Ã±Ã®Ã­Ã Ã¦Ã 
+    [SerializeField] private Transform turret; // ÃÃ¡ÃºÃ¥ÃªÃ² Ã¢Ã­Ã³Ã²Ã°Ã¨ Ã¯Ã¥Ã°Ã±Ã®Ã­Ã Ã¦Ã , ÃªÃ®Ã²Ã®Ã°Ã»Ã© Ã­Ã Ã¢Ã®Ã¤Ã¨Ã²Ã±Ã¿ Ã­Ã  Ã¶Ã¥Ã«Ã¼ Ã¨ Ã®Ã² ÃªÃ®Ã²Ã®Ã°Ã®Ã£Ã® Ã£Ã¥Ã­Ã¥Ã°Ã¨Ã°Ã³Ã¥Ã²Ã±Ã¿ Ã±Ã­Ã Ã°Ã¿Ã¤ Ã¤Ã«Ã¿ Ã¯Ã®Ã°Ã Ã¦Ã¥Ã­Ã¨Ã¿ Ã¢Ã°Ã Ã£Ã 
+    [SerializeField] private GameObject shotPrefab; // ÃÃ°Ã¥Ã´Ã Ã¡ Ã±Ã­Ã Ã°Ã¿Ã¤Ã , ÃªÃ®Ã²Ã®Ã°Ã»Ã© Ã¯Ã¥Ã°Ã±Ã®Ã­Ã Ã¦ Ã¡Ã³Ã¤Ã¥Ã² Ã¨Ã±Ã¯Ã®Ã«Ã¼Ã§Ã®Ã¢Ã Ã²Ã¼
 
     private GameObject shot;
-    private TargetPoint target; // Öåëü ïåğñîíàæà
+    private TargetPoint target; // Ã–Ã¥Ã«Ã¼ Ã¯Ã¥Ã°Ã±Ã®Ã­Ã Ã¦Ã 
     private float nextShoot = 0;
 
     private void Update()
@@ -52,7 +52,7 @@ public class Character : MonoBehaviour
     // Find target to shoot
     private bool isAcquireTarger()
     {
-        Collider[] targets = Physics.OverlapSphere(transform.position, radiusHit, DataManager.ENEMY_LAYER_MASK);
+
         if (targets.Length > 0)
         {
             target = targets[0].GetComponent<TargetPoint>();
@@ -62,13 +62,7 @@ public class Character : MonoBehaviour
         target = null;
         return false;
     }
-
-    private bool cooldawnAttack(float time)
-    {
-        if (time - Time.time > attackSpeed)
-            return true;
-
-        return false;
+    
     }
 
     public void DestroyCharacter()
