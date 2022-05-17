@@ -52,6 +52,7 @@ public class Character : MonoBehaviour
     // Find target to shoot
     private bool isAcquireTarger()
     {
+        Collider[] targets = Physics.OverlapSphere(transform.position, radiusHit, DataManager.ENEMY_LAYER_MASK);
 
         if (targets.Length > 0)
         {
@@ -61,8 +62,6 @@ public class Character : MonoBehaviour
         
         target = null;
         return false;
-    }
-    
     }
 
     public void DestroyCharacter()

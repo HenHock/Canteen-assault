@@ -30,7 +30,6 @@ public class CharacterSpawn : MonoBehaviour
             character.transform.localPosition = new Vector3(DataManager.selectedPositionPlaceCharacterSpawn.localPosition.x,
                  DataManager.selectedPositionPlaceCharacterSpawn.localPosition.y + character.transform.localScale.y*2f,
                  DataManager.selectedPositionPlaceCharacterSpawn.localPosition.z);  
-            Destroy(DataManager.selectedPositionPlaceCharacterSpawn.gameObject);
         }
 
         // Close buy character panel
