@@ -313,16 +313,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9bd1000b57d56e4a80cffc74a74eff7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  costToBuy: 300
+  costToBuy: 100
   costToUpgrade: 0
   attackDamage: 20
   moneyBackPercentage: 50
   nextLevelPrefab: {fileID: 0}
-  radiusHit: 3.5
-  attackSpeed: 1.5
+  radiusHit: 5
+  attackSpeed: 1
   turret: {fileID: 1738822313921107627}
-  shotPrefab: {fileID: 8954230633760785283, guid: a746a3b5585073442a7eda413e29a18d,
-    type: 3}
+  shotPrefab: {fileID: 1000013939694586, guid: d193fdd8639ce7c47a14f39cf69fef9b, type: 3}
 --- !u!114 &7052673908355270408
 MonoBehaviour:
   m_ObjectHideFlags: 0
