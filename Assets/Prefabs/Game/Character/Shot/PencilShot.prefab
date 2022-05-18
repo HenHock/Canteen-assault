@@ -113,4 +113,4 @@ MonoBehaviour:
   explosionPrefub: {fileID: 6131278079450256903, guid: dd1b345f20b13e24b9f184d4917ad726,
     type: 3}
   speed: 5
-  radiusHit: 1
+  radiusHit: 0.2

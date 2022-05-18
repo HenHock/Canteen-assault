@@ -12,10 +12,10 @@ public class Shot : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (!string.Equals(other.transform.tag, "Character") ||
-            other.transform.GetComponent<processAdditionalGold>() != null)
+        if (string.Equals(other.transform.tag, "Enemy"))
         {
-            Instantiate(explosionPrefub, transform.position, Quaternion.Euler(0, 0, 0));
+            if(explosionPrefub)
+                Instantiate(explosionPrefub, transform.position, Quaternion.Euler(0, 0, 0));
             Hurt();
             Destroy(gameObject);
         }

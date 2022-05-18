@@ -5,19 +5,19 @@ using UnityEngine;
 
 public class Character : MonoBehaviour 
 {
-    public int costToBuy; // Ñòîèìîñòü ïîêóïêè ïåðñîíàæà
-    public int costToUpgrade; // Ñòîèìîñòü ïîâûøåíèÿ óðîâíÿ ïåðñîíàæà
-    public int attackDamage; // Çíà÷åíèå óðîíà ïåðñîíàæà
-    [Range(1,100)] public float moneyBackPercentage; // Ïðîöåíò äåíåã, îò ïîêóïêè, êîòîðûé áóäåò âîçâðàùåí èãðîêó ïðè óäàëåíèå ïåðñîíàæà
-    public GameObject nextLevelPrefab; // Ïðåôàá íà ñëåäóþùèé óðîâåíü ïåðñîíàæà.
+    public int costToBuy; 
+    public int costToUpgrade; 
+    public int attackDamage; 
+    [Range(1,100)] public float moneyBackPercentage; 
+    public GameObject nextLevelPrefab; 
 
-    [SerializeField, Range(1.5f, 10f)] public float radiusHit = 1.5f; // Ðàäèóñ, â êîòîðîì ïåðñîíàæ ñìîæåò ñòðåëÿòü.
-    [SerializeField, Range (1f, 10f)] public float attackSpeed = 2f; // Ñêîðîñòü àòàêè ïåðñîíàæà
-    [SerializeField] private Transform turret; // Îáúåêò âíóòðè ïåðñîíàæà, êîòîðûé íàâîäèòñÿ íà öåëü è îò êîòîðîãî ãåíåðèðóåòñÿ ñíàðÿä äëÿ ïîðàæåíèÿ âðàãà
-    [SerializeField] private GameObject shotPrefab; // Ïðåôàá ñíàðÿäà, êîòîðûé ïåðñîíàæ áóäåò èñïîëüçîâàòü
+    [SerializeField, Range(1.5f, 10f)] public float radiusHit = 1.5f; 
+    [SerializeField, Range (0f, 10f)] public float attackSpeed = 2f;
+    [SerializeField] private Transform turret; 
+    [SerializeField] private GameObject shotPrefab;
 
     private GameObject shot;
-    [SerializeField] private TargetPoint target; // Öåëü ïåðñîíàæà
+    [SerializeField] private TargetPoint target; 
     private float nextShoot = 0;
 
     private void Update()
@@ -28,8 +28,11 @@ public class Character : MonoBehaviour
 
     private void onAttack()
     {
-        if(target != null)
+        if (target != null)
+        {
             turret.LookAt(target.position);
+            transform.LookAt(target.position);
+        }
 
         Ray ray = new Ray(turret.position, turret.transform.forward);
         RaycastHit hit;
@@ -37,7 +40,6 @@ public class Character : MonoBehaviour
         {
             GameObject hitObject = hit.transform.gameObject;
 
-            
             if (Time.time > nextShoot && hitObject.GetComponent<Enemy>() != null)
             {
                 shot = Instantiate(shotPrefab);
@@ -57,7 +59,7 @@ public class Character : MonoBehaviour
 
         if (targets.Length > 0)
         {
-            target = targets[0].GetComponent<TargetPoint>();
+            target = targets[targets.Length-1].GetComponent<TargetPoint>();
             return true;
         }
         
@@ -85,9 +87,6 @@ public class Character : MonoBehaviour
     public void DestroyCharacter()
     {
         ResourcesManager.Change(ResourceType.Money, costToBuy * moneyBackPercentage * 0.01f);
-
-        
-
         Destroy(gameObject);
     }
 

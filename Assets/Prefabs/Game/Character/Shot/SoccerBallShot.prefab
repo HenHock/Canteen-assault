@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1368686138392959783}
   - component: {fileID: 1390150288900027317}
   - component: {fileID: 3626694566530593783}
+  - component: {fileID: 1420723927922966636}
   m_Layer: 0
   m_Name: SoccerBallShot
   m_TagString: Untagged
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 1345975013518307251}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -94,7 +95,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1345975013518307251}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.11000001
@@ -115,3 +116,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1420723927922966636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1345975013518307251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3894695eac2008e4b93a43994bfdb40c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionPrefub: {fileID: 0}
+  speed: 5
+  radiusHit: 0.6
