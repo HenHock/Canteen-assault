@@ -12,7 +12,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private ProgressBar healthBar;
     [SerializeField] private float FasterProcent;
     [SerializeField] private GameObject explosionPrefub;
-    public float scale;
+    public float scale { get; private set; }
 
     private Tween moveTween;
 

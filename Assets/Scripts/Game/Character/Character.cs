@@ -34,21 +34,14 @@ public class Character : MonoBehaviour
             transform.LookAt(target.position);
         }
 
-        Ray ray = new Ray(turret.position, turret.transform.forward);
-        RaycastHit hit;
-        if (Physics.Raycast(ray, out hit))
+        if (Time.time > nextShoot)
         {
-            GameObject hitObject = hit.transform.gameObject;
-
-            if (Time.time > nextShoot && hitObject.GetComponent<Enemy>() != null)
-            {
-                shot = Instantiate(shotPrefab);
-                shot.GetComponent<Shot>().damage = attackDamage;
-                shot.GetComponent<Shot>().target = hitObject.transform;
-                shot.transform.rotation = turret.transform.rotation;
-                shot.transform.position = turret.transform.TransformPoint(Vector3.forward * 1.5f);
-                nextShoot = Time.time + (1000 / attackSpeed) / 1000;
-            }
+            shot = Instantiate(shotPrefab);
+            shot.GetComponent<Shot>().damage = attackDamage;
+            shot.GetComponent<Shot>().target = target.transform;
+            shot.transform.rotation = turret.transform.rotation;
+            shot.transform.position = turret.transform.TransformPoint(Vector3.forward * 1.5f);
+            nextShoot = Time.time + (1000 / attackSpeed) / 1000;
         }
     }
 
@@ -62,7 +55,7 @@ public class Character : MonoBehaviour
             target = targets[targets.Length-1].GetComponent<TargetPoint>();
             return true;
         }
-        
+
         target = null;
         return false;
     }
