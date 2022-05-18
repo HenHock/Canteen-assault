@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DataManager : MonoBehaviour
 {
+    public static int currentLevel = 0;
+
     public static Transform selectedPositionPlaceCharacterSpawn;
     public static UIManager uIController;
     public static GameObject selectedCharacter;
@@ -25,12 +27,4 @@ public class DataManager : MonoBehaviour
     public static bool isNeedToDestroy { get; set; } = true;
 
     public static int prevWay = 0;
-
-    void Awake()
-    {
-        NumberOfAllEnemies = 0;
-        NumberOfDeathEnemies = 0;
-        IsLastWave = false;
-        canMoveCamera = true;
-    }
 }
