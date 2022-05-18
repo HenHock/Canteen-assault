@@ -126,8 +126,7 @@ MonoBehaviour:
   fixdedGold: 5
   additionalGold: 25
   percentOfDropping: 20
-  goldPrefub: {fileID: 7930989234382563006, guid: 07cce8eb97ad9794da0fa0841f1507d1,
-    type: 3}
+  goldPrefub: {fileID: 1950871307682000, guid: 01348926c7cbb3347a006c37204131c3, type: 3}
 --- !u!114 &8747817399172389918
 MonoBehaviour:
   m_ObjectHideFlags: 0
