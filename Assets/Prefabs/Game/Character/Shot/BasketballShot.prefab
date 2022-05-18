@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4523745242467291020}
   - component: {fileID: 2565837220010920469}
   - component: {fileID: 450761931160233944}
+  - component: {fileID: 4510089447300619403}
   m_Layer: 0
   m_Name: BasketballShot
   m_TagString: Untagged
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 2722265603637243481}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
   m_LocalPosition: {x: 4.575, y: 1.822, z: -16.241}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalScale: {x: 75, y: 75, z: 75}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -116,3 +117,18 @@ CapsuleCollider:
   m_Height: 0.0074987146
   m_Direction: 1
   m_Center: {x: 0.000000034458935, y: 0, z: 0}
+--- !u!114 &4510089447300619403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2722265603637243481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3894695eac2008e4b93a43994bfdb40c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionPrefub: {fileID: 0}
+  speed: 5
+  radiusHit: 0.3

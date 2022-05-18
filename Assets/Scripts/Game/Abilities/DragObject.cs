@@ -20,6 +20,8 @@ public class DragObject : MonoBehaviour
 
     private void OnDestroy()
     {
+        GetComponent<SphereCollider>().enabled = true;
+
         if (DataManager.isNeedToDestroy)
         {
             float radiusHit = GetComponent<SphereCollider>().radius;
@@ -87,10 +89,10 @@ public class DragObject : MonoBehaviour
     {
         if (DataManager.isNeedToDestroy)
         {
+            GetComponent<SphereCollider>().enabled = false;
             GameObject meatballs = Instantiate(meatballsEfectPrefab);
             meatballs.transform.position = transform.position;
         }
-
         yield return new WaitForSeconds(duration);
         Destroy(gameObject);
     }

@@ -25,8 +25,36 @@ public class CharacterUpdatePlaceClick : MonoBehaviour
     {
         if (DataManager.uIController != null && !UIManager.IsPointerOverUIObject())
         {
-            DataManager.selectedCharacter = gameObject;
+            if (transform.childCount > 0)
+                DataManager.selectedCharacter = GetLastChild(gameObject);
+            else DataManager.selectedCharacter = gameObject;
+
             DataManager.uIController.updateCharacterPanel.Open();
         }
+    }
+
+
+    private GameObject GetLastChild(GameObject parent)
+    {
+        //the parent object
+        GameObject lastChild = parent;
+
+        /*
+        Initialize a checkChild element
+
+        while check child is not null, continue checking
+
+        assign the checkChild to its child
+         */
+        for (GameObject checkChild = parent; checkChild != null; checkChild = checkChild.transform.GetChild(0).gameObject)
+        {
+            lastChild = checkChild;
+            if (checkChild.GetComponent<Character>())
+            {
+                break;
+            }
+        }
+
+        return lastChild;
     }
 }

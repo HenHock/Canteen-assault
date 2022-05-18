@@ -30,6 +30,7 @@ public class UpdateCharacterItem : MonoBehaviour
         startItemPosition = 510;
         GameObject prefab = DataManager.selectedCharacter.GetComponent<Character>().nextLevelPrefab;
 
+
         if (prefab != null)
         {
             costToUpgrade = DataManager.selectedCharacter.GetComponent<Character>().costToUpgrade;

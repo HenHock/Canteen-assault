@@ -27,22 +27,19 @@ public class CharacterSpawn : MonoBehaviour
             GameObject character = Instantiate(characterPrefab);
 
             character.transform.SetParent(DataManager.selectedPositionPlaceCharacterSpawn.GetChild(0).transform);
-            //character.transform.localPosition = new Vector3(DataManager.selectedPositionPlaceCharacterSpawn.localPosition.x,
-            //  DataManager.selectedPositionPlaceCharacterSpawn.localPosition.y + character.transform.localScale.y * 3f,
-            // DataManager.selectedPositionPlaceCharacterSpawn.localPosition.z);
-            character.transform.localPosition = Vector3.zero;
+            character.transform.localPosition = new Vector3(0,0 + character.transform.localScale.y/2,0);
 
             if(DataManager.selectedPositionPlaceCharacterSpawn.childCount > 0)
             {
                 foreach (Transform item in DataManager.selectedPositionPlaceCharacterSpawn)
                 {
-                    item.GetComponent<CharacterSpawnPlaceClick>().gameObject.SetActive(false);
-                    item.GetComponent<CharacterUpdatePlaceClick>().gameObject.SetActive(true);
+                    item.GetComponent<CharacterSpawnPlaceClick>().enabled = false;
+                    item.GetComponent<CharacterUpdatePlaceClick>().enabled = true;
                 }
             }
 
-            DataManager.selectedPositionPlaceCharacterSpawn.GetComponent<CharacterSpawnPlaceClick>().gameObject.SetActive(false);
-            DataManager.selectedPositionPlaceCharacterSpawn.GetComponent<CharacterUpdatePlaceClick>().gameObject.SetActive(true);
+            DataManager.selectedPositionPlaceCharacterSpawn.GetComponent<CharacterSpawnPlaceClick>().enabled = false;
+            DataManager.selectedPositionPlaceCharacterSpawn.GetComponent<CharacterUpdatePlaceClick>().enabled = true;
         }
 
         // Close buy character panel

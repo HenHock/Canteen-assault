@@ -26,8 +26,9 @@ public class CharacterUpdate : MonoBehaviour
 
             GameObject character = Instantiate(characterPrefab);
 
-            character.transform.localPosition = new Vector3(DataManager.selectedCharacter.transform.position.x,
-                DataManager.selectedCharacter.transform.position.y, DataManager.selectedCharacter.transform.position.z);
+            character.transform.SetParent(DataManager.selectedCharacter.transform.parent);
+            character.transform.localPosition = new Vector3(DataManager.selectedCharacter.transform.localPosition.x,
+                DataManager.selectedCharacter.transform.localPosition.y, DataManager.selectedCharacter.transform.localPosition.z);
 
             Destroy(DataManager.selectedCharacter);
         }
