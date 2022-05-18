@@ -85,6 +85,9 @@ public class Character : MonoBehaviour
     public void DestroyCharacter()
     {
         ResourcesManager.Change(ResourceType.Money, costToBuy * moneyBackPercentage * 0.01f);
+
+        
+
         Destroy(gameObject);
     }
 

@@ -12,7 +12,10 @@ public class CharacterSpawnPlaceClick : MonoBehaviour
         if (DataManager.uIController != null && !UIManager.IsPointerOverUIObject())
         {
             DataManager.uIController.buyCharacterPanelController.Open();
-            DataManager.selectedPositionPlaceCharacterSpawn = transform;
+
+            if (transform.parent.GetComponent<CharacterSpawnPlaceClick>() != null)
+                DataManager.selectedPositionPlaceCharacterSpawn = transform.parent;
+            else DataManager.selectedPositionPlaceCharacterSpawn = transform;
         }
     }
 
