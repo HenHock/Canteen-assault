@@ -15,6 +15,7 @@ public class Enemy : MonoBehaviour
     public float scale { get; private set; }
 
     private Tween moveTween;
+    private Tween jumpTween;
 
     void Start()
     {
@@ -57,6 +58,7 @@ public class Enemy : MonoBehaviour
     private void EnemyKilled()
     {
         moveTween?.Kill();
+        jumpTween?.Kill();
         DropMoney makeMoneyDrop = gameObject.GetComponent<DropMoney>();
         makeMoneyDrop.Drop(transform.position);
         Instantiate(explosionPrefub, transform.position, Quaternion.Euler(0, 0, 0));
@@ -66,7 +68,7 @@ public class Enemy : MonoBehaviour
     public void Dancing(int duration)
     {
         moveTween?.Pause();
-        transform.DOJump(transform.position, 0.5f, duration, duration);
+        jumpTween = transform.DOJump(transform.position, 0.5f, duration, duration);
         StartCoroutine(waitToPlayAnim(duration));
     }
 
