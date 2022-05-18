@@ -445,6 +445,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: table2 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 7590153667698692632, guid: 7b1aca651b3cd5c4788a34dab021bc0c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Character
+      objectReference: {fileID: 0}
     - target: {fileID: 7590153667700690136, guid: 7b1aca651b3cd5c4788a34dab021bc0c,
         type: 3}
       propertyPath: m_Enabled
