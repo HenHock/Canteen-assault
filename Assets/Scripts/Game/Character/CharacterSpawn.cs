@@ -26,7 +26,6 @@ public class CharacterSpawn : MonoBehaviour
 
             GameObject character = Instantiate(characterPrefab);
 
-            character.transform.SetParent(DataManager.uIController.parentCharacter);
             character.transform.localPosition = new Vector3(DataManager.selectedPositionPlaceCharacterSpawn.localPosition.x,
                  DataManager.selectedPositionPlaceCharacterSpawn.localPosition.y + character.transform.localScale.y*3f,
                  DataManager.selectedPositionPlaceCharacterSpawn.localPosition.z);  

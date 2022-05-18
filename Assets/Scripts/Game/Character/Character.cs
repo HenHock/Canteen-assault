@@ -17,12 +17,12 @@ public class Character : MonoBehaviour
     [SerializeField] private GameObject shotPrefab; // Ïðåôàá ñíàðÿäà, êîòîðûé ïåðñîíàæ áóäåò èñïîëüçîâàòü
 
     private GameObject shot;
-    private TargetPoint target; // Öåëü ïåðñîíàæà
+    [SerializeField] private TargetPoint target; // Öåëü ïåðñîíàæà
     private float nextShoot = 0;
 
     private void Update()
     {
-        if (isAcquireTarger())
+        if (isAcquireTarger() || isTargetTrucked())
             onAttack();
     }
 
@@ -62,6 +62,23 @@ public class Character : MonoBehaviour
         
         target = null;
         return false;
+    }
+
+    private bool isTargetTrucked()
+    {
+        if (target == null)
+            return false;
+        else
+        {
+            Vector3 myPos = transform.localPosition;
+            Vector3 targetPos = target.position;
+            if (Vector3.Distance(myPos, targetPos) > radiusHit + target.colliderSize*target.enemy.scale) { 
+                target = null;
+                return false;
+            }
+        }
+
+        return true;
     }
 
     public void DestroyCharacter()

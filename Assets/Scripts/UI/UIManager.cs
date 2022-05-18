@@ -11,7 +11,6 @@ public class UIManager : MonoBehaviour
     public PanelController endGamePanel;
     public PanelController updateCharacterPanel;
     public GameObject sceneIgnoring;
-    public Transform parentCharacter;
 
     [SerializeField] private GameObject titleEndGameText;
     [SerializeField] private GameObject statisticsEndGameText;

@@ -158,6 +158,7 @@ MonoBehaviour:
   attackSpeed: 1
   turret: {fileID: 7554724725049829399}
   shotPrefab: {fileID: 1103964131845936, guid: faa352a3dce1ac244b963b62aeefb0ed, type: 3}
+  target: {fileID: 0}
 --- !u!114 &1161871236533748843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,8 +211,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1.5, z: 1}
+  m_Center: {x: 0, y: 0.25, z: 0}
 --- !u!1 &5791379339466619085
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,6 +7,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -436742636366774854, guid: 9c9a39357c4b069439cd8e9681d39323,
+        type: 3}
+      propertyPath: unityEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -436742636366774854, guid: 9c9a39357c4b069439cd8e9681d39323,
+        type: 3}
+      propertyPath: unityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8671432381669844282}
+    - target: {fileID: -436742636366774854, guid: 9c9a39357c4b069439cd8e9681d39323,
+        type: 3}
+      propertyPath: unityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: onClick
+      objectReference: {fileID: 0}
+    - target: {fileID: -436742636366774854, guid: 9c9a39357c4b069439cd8e9681d39323,
+        type: 3}
+      propertyPath: unityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CharacterUpdatePlaceClick, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: -436742636366774854, guid: 9c9a39357c4b069439cd8e9681d39323,
+        type: 3}
+      propertyPath: unityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1070939780770251419, guid: 9c9a39357c4b069439cd8e9681d39323,
         type: 3}
       propertyPath: m_Name
@@ -130,3 +155,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c9a39357c4b069439cd8e9681d39323, type: 3}
+--- !u!114 &8671432381669844282 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -436742636366774854, guid: 9c9a39357c4b069439cd8e9681d39323,
+    type: 3}
+  m_PrefabInstance: {fileID: 119201543321229440}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b165376d26bc2d4dabe92ae5775d17f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

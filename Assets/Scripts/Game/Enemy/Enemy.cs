@@ -12,11 +12,13 @@ public class Enemy : MonoBehaviour
     [SerializeField] private ProgressBar healthBar;
     [SerializeField] private float FasterProcent;
     [SerializeField] private GameObject explosionPrefub;
+    public float scale;
 
     private Tween moveTween;
 
     void Start()
     {
+        scale = transform.localScale.x;
         int _listIndex = PathManager.GetRandomPathNumber();
         _speed = PathManager.GetPathDuration(_listIndex)-(float)(PathManager.GetPathDuration(_listIndex) * FasterProcent * 0.01);
 
