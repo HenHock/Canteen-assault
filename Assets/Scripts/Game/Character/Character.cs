@@ -37,7 +37,8 @@ public class Character : MonoBehaviour
         {
             GameObject hitObject = hit.transform.gameObject;
 
-            if (Time.time > nextShoot)
+            
+            if (Time.time > nextShoot && hitObject.GetComponent<Enemy>() != null)
             {
                 shot = Instantiate(shotPrefab);
                 shot.GetComponent<Shot>().damage = attackDamage;
