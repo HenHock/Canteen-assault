@@ -6,12 +6,15 @@ using UnityEngine;
 public class SpawnEnemies : MonoBehaviour
 {
     [SerializeField] private int timeSpawn = 1;
-    [SerializeField] private List<EnemyWave> enemyWavesList;
-    
+    //[SerializeField] private List<EnemyWave> enemyWavesList;
+    private List<EnemyWave> enemyWavesList;
+
     private GameObject _enemy;
     
     void Start()
     {
+        Debug.Log(DataManager.currentLevel);
+        enemyWavesList = LevelManager.returnEnemyList(DataManager.currentLevel);
         StartCoroutine(SpawnWaves());
     }
     
