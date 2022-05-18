@@ -10094,7 +10094,7 @@ MonoBehaviour:
     enemyWavesList:
     - delayTime: 0
       squardsList:
-      - typeOfEnemy: {fileID: 914514279314569284, guid: 21741747b98a161439a93fab44a1174d,
+      - typeOfEnemy: {fileID: 5203135501161705419, guid: fd242588ceca7ae48a777cbd504c46f4,
           type: 3}
         numberOfEnemyinSquard: 40
         numberInGroupe: 2
@@ -10138,7 +10138,7 @@ MonoBehaviour:
     enemyWavesList:
     - delayTime: 0
       squardsList:
-      - typeOfEnemy: {fileID: 914514279314569284, guid: 21741747b98a161439a93fab44a1174d,
+      - typeOfEnemy: {fileID: 5203135501161705419, guid: fd242588ceca7ae48a777cbd504c46f4,
           type: 3}
         numberOfEnemyinSquard: 40
         numberInGroupe: 2
