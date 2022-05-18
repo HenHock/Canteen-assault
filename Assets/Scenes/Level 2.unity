@@ -2982,6 +2982,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 23576271713620882, guid: 405988af1bd38ee4fb92e86058b6c926,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 405988af1bd38ee4fb92e86058b6c926, type: 3}
 --- !u!4 &503252547 stripped
@@ -3423,35 +3428,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8810b7338649e64ba971c6bee1710eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeSpawn: 5
-  enemyWavesList:
-  - delayTime: 0
-    squardsList:
-    - typeOfEnemy: {fileID: 5203135501161705419, guid: fd242588ceca7ae48a777cbd504c46f4,
-        type: 3}
-      numberOfEnemyinSquard: 1
-      numberInGroupe: 1
-    - typeOfEnemy: {fileID: 914514279314569284, guid: 21741747b98a161439a93fab44a1174d,
-        type: 3}
-      numberOfEnemyinSquard: 10
-      numberInGroupe: 1
-    - typeOfEnemy: {fileID: 6281214345940797698, guid: b4abca2a3dce94549b4ad59614a72662,
-        type: 3}
-      numberOfEnemyinSquard: 1
-      numberInGroupe: 1
-    - typeOfEnemy: {fileID: 8688853251620885656, guid: 71fd9db8ff6a97246ab4ac3d1e8d0dc6,
-        type: 3}
-      numberOfEnemyinSquard: 1
-      numberInGroupe: 1
-    - typeOfEnemy: {fileID: 9197050588711862813, guid: c9288dd4362f00540aca5047a532c1cb,
-        type: 3}
-      numberOfEnemyinSquard: 1
-      numberInGroupe: 1
-    - typeOfEnemy: {fileID: 1471673085362196822, guid: 5739796181a4254438c2bed9532d1163,
-        type: 3}
-      numberOfEnemyinSquard: 10
-      numberInGroupe: 1
-    allSquardsList: []
+  timeSpawn: 4
 --- !u!64 &540666925
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4135,9 +4112,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabs:
-  - {fileID: 1070939780770251419, guid: 3c6d77b62d471c046b6ada0bf7140ba0, type: 3}
-  - {fileID: 4127227770261344757, guid: 36e40f4aacd32e244a81af5174ece0da, type: 3}
-  - {fileID: 7292955306219730619, guid: c75332471c6783140915c357d682a86b, type: 3}
+  - {fileID: 2017941185452668863, guid: 008f5a10d531fba43a38b244da87d036, type: 3}
+  - {fileID: 686638384857076333, guid: a119ac8345536e14abb5cc2a29b4a4a1, type: 3}
+  - {fileID: 174676523816972963, guid: 98235cd36794b91488c9119743b453da, type: 3}
   ItemPanel: {fileID: 6970766983873431109, guid: f65961d873b467b4a8ab4300e0fbc90c,
     type: 3}
 --- !u!114 &608782356
@@ -9449,6 +9426,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 23576271713620882, guid: 405988af1bd38ee4fb92e86058b6c926,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 405988af1bd38ee4fb92e86058b6c926, type: 3}
 --- !u!4 &1204984926 stripped
@@ -10106,7 +10088,139 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 023936c990aca4a43bf7a4f49062e50f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startHealthByLevel: 0a000000
+  resourceManagerStruct:
+  - startHealthByLevel: 30
+    startMoneyByLevel: 200
+    enemyWavesList:
+    - delayTime: 0
+      squardsList:
+      - typeOfEnemy: {fileID: 914514279314569284, guid: 21741747b98a161439a93fab44a1174d,
+          type: 3}
+        numberOfEnemyinSquard: 40
+        numberInGroupe: 2
+      - typeOfEnemy: {fileID: 6281214345940797698, guid: b4abca2a3dce94549b4ad59614a72662,
+          type: 3}
+        numberOfEnemyinSquard: 20
+        numberInGroupe: 2
+      allSquardsList: []
+    - delayTime: 20
+      squardsList:
+      - typeOfEnemy: {fileID: 9197050588711862813, guid: c9288dd4362f00540aca5047a532c1cb,
+          type: 3}
+        numberOfEnemyinSquard: 15
+        numberInGroupe: 1
+      - typeOfEnemy: {fileID: 914514279314569284, guid: 21741747b98a161439a93fab44a1174d,
+          type: 3}
+        numberOfEnemyinSquard: 20
+        numberInGroupe: 2
+      - typeOfEnemy: {fileID: 6281214345940797698, guid: b4abca2a3dce94549b4ad59614a72662,
+          type: 3}
+        numberOfEnemyinSquard: 32
+        numberInGroupe: 4
+      allSquardsList: []
+    - delayTime: 25
+      squardsList:
+      - typeOfEnemy: {fileID: 6281214345940797698, guid: b4abca2a3dce94549b4ad59614a72662,
+          type: 3}
+        numberOfEnemyinSquard: 40
+        numberInGroupe: 2
+      - typeOfEnemy: {fileID: 9197050588711862813, guid: c9288dd4362f00540aca5047a532c1cb,
+          type: 3}
+        numberOfEnemyinSquard: 20
+        numberInGroupe: 1
+      - typeOfEnemy: {fileID: 8688853251620885656, guid: 71fd9db8ff6a97246ab4ac3d1e8d0dc6,
+          type: 3}
+        numberOfEnemyinSquard: 20
+        numberInGroupe: 1
+      allSquardsList: []
+  - startHealthByLevel: 30
+    startMoneyByLevel: 200
+    enemyWavesList:
+    - delayTime: 0
+      squardsList:
+      - typeOfEnemy: {fileID: 914514279314569284, guid: 21741747b98a161439a93fab44a1174d,
+          type: 3}
+        numberOfEnemyinSquard: 40
+        numberInGroupe: 2
+      - typeOfEnemy: {fileID: 6281214345940797698, guid: b4abca2a3dce94549b4ad59614a72662,
+          type: 3}
+        numberOfEnemyinSquard: 20
+        numberInGroupe: 2
+      allSquardsList: []
+    - delayTime: 10
+      squardsList:
+      - typeOfEnemy: {fileID: 6281214345940797698, guid: b4abca2a3dce94549b4ad59614a72662,
+          type: 3}
+        numberOfEnemyinSquard: 20
+        numberInGroupe: 2
+      - typeOfEnemy: {fileID: 9197050588711862813, guid: c9288dd4362f00540aca5047a532c1cb,
+          type: 3}
+        numberOfEnemyinSquard: 24
+        numberInGroupe: 3
+      - typeOfEnemy: {fileID: 914514279314569284, guid: 21741747b98a161439a93fab44a1174d,
+          type: 3}
+        numberOfEnemyinSquard: 20
+        numberInGroupe: 4
+      allSquardsList: []
+    - delayTime: 30
+      squardsList:
+      - typeOfEnemy: {fileID: 6281214345940797698, guid: b4abca2a3dce94549b4ad59614a72662,
+          type: 3}
+        numberOfEnemyinSquard: 20
+        numberInGroupe: 2
+      - typeOfEnemy: {fileID: 9197050588711862813, guid: c9288dd4362f00540aca5047a532c1cb,
+          type: 3}
+        numberOfEnemyinSquard: 20
+        numberInGroupe: 1
+      - typeOfEnemy: {fileID: 8688853251620885656, guid: 71fd9db8ff6a97246ab4ac3d1e8d0dc6,
+          type: 3}
+        numberOfEnemyinSquard: 20
+        numberInGroupe: 1
+      - typeOfEnemy: {fileID: 1471673085362196822, guid: 5739796181a4254438c2bed9532d1163,
+          type: 3}
+        numberOfEnemyinSquard: 2
+        numberInGroupe: 1
+      allSquardsList: []
+  - startHealthByLevel: 30
+    startMoneyByLevel: 200
+    enemyWavesList:
+    - delayTime: 0
+      squardsList:
+      - typeOfEnemy: {fileID: 6281214345940797698, guid: b4abca2a3dce94549b4ad59614a72662,
+          type: 3}
+        numberOfEnemyinSquard: 20
+        numberInGroupe: 2
+      - typeOfEnemy: {fileID: 9197050588711862813, guid: c9288dd4362f00540aca5047a532c1cb,
+          type: 3}
+        numberOfEnemyinSquard: 5
+        numberInGroupe: 1
+      allSquardsList: []
+    - delayTime: 15
+      squardsList:
+      - typeOfEnemy: {fileID: 5203135501161705419, guid: fd242588ceca7ae48a777cbd504c46f4,
+          type: 3}
+        numberOfEnemyinSquard: 52
+        numberInGroupe: 4
+      - typeOfEnemy: {fileID: 6281214345940797698, guid: b4abca2a3dce94549b4ad59614a72662,
+          type: 3}
+        numberOfEnemyinSquard: 10
+        numberInGroupe: 1
+      allSquardsList: []
+    - delayTime: 15
+      squardsList:
+      - typeOfEnemy: {fileID: 8688853251620885656, guid: 71fd9db8ff6a97246ab4ac3d1e8d0dc6,
+          type: 3}
+        numberOfEnemyinSquard: 10
+        numberInGroupe: 1
+      - typeOfEnemy: {fileID: 914514279314569284, guid: 21741747b98a161439a93fab44a1174d,
+          type: 3}
+        numberOfEnemyinSquard: 20
+        numberInGroupe: 4
+      - typeOfEnemy: {fileID: 9197050588711862813, guid: c9288dd4362f00540aca5047a532c1cb,
+          type: 3}
+        numberOfEnemyinSquard: 10
+        numberInGroupe: 1
+      allSquardsList: []
 --- !u!1 &1328866184
 GameObject:
   m_ObjectHideFlags: 0

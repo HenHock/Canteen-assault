@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public struct resourceManager
+public struct resourceManagerData
 {
     public int startHealthByLevel;
     public int startMoneyByLevel;
@@ -17,7 +17,7 @@ public class LevelManager : MonoBehaviour
     public static Func<int, List<EnemyWave>> returnEnemyList;
     public static Func<int> returnNumberOfLevels;
 
-    public resourceManager[] resourceManagerStruct;
+    public resourceManagerData[] resourceManagerStruct;
 
     private int getNumberOfLevels()
     {
@@ -40,7 +40,10 @@ public class LevelManager : MonoBehaviour
         returnNumberOfLevels = getNumberOfLevels;
 
         Debug.Log(DataManager.currentLevel);
+    }
 
+    private void Start()
+    {
         ResourcesManager.Change(ResourceType.Life, resourceManagerStruct[DataManager.currentLevel].startHealthByLevel);
         ResourcesManager.Change(ResourceType.Money, resourceManagerStruct[DataManager.currentLevel].startMoneyByLevel);
     }
