@@ -169,7 +169,7 @@ PrefabInstance:
     - target: {fileID: 3407594749345748809, guid: e18b2d6083bc05f48aa7c290de67fe2c,
         type: 3}
       propertyPath: fixdedGold
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3407594749345748809, guid: e18b2d6083bc05f48aa7c290de67fe2c,
         type: 3}
@@ -184,7 +184,7 @@ PrefabInstance:
     - target: {fileID: 7082707153201779243, guid: e18b2d6083bc05f48aa7c290de67fe2c,
         type: 3}
       propertyPath: Health
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7082707153201779243, guid: e18b2d6083bc05f48aa7c290de67fe2c,
         type: 3}

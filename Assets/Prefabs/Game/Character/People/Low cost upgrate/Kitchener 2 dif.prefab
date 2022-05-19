@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 2017941185452668863, guid: 008f5a10d531fba43a38b244da87d036,
         type: 3}
       propertyPath: m_Name
-      value: Kitchener 2
+      value: Kitchener 2 dif
       objectReference: {fileID: 0}
     - target: {fileID: 2017941185453026269, guid: 008f5a10d531fba43a38b244da87d036,
         type: 3}
@@ -75,7 +75,7 @@ PrefabInstance:
     - target: {fileID: 7903008122108735536, guid: 008f5a10d531fba43a38b244da87d036,
         type: 3}
       propertyPath: costToBuy
-      value: 250
+      value: 170
       objectReference: {fileID: 0}
     - target: {fileID: 7903008122108735536, guid: 008f5a10d531fba43a38b244da87d036,
         type: 3}
@@ -96,13 +96,18 @@ PrefabInstance:
     - target: {fileID: 7903008122108735536, guid: 008f5a10d531fba43a38b244da87d036,
         type: 3}
       propertyPath: attackDamage
-      value: 20
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7903008122108735536, guid: 008f5a10d531fba43a38b244da87d036,
+        type: 3}
+      propertyPath: costToUpgrade
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 7903008122108735536, guid: 008f5a10d531fba43a38b244da87d036,
         type: 3}
       propertyPath: nextLevelPrefab
       value: 
-      objectReference: {fileID: 3287589888976586153, guid: 4a7f2fb21369a4449b603eb085bf05bf,
+      objectReference: {fileID: 3287589888976586153, guid: ee5c393eb72181147acee89481ee94fb,
         type: 3}
     - target: {fileID: 7903008122108735536, guid: 008f5a10d531fba43a38b244da87d036,
         type: 3}

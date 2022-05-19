@@ -103,13 +103,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c0fbfab8b1db2c4b952fae6440e4033, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 120
+  Health: 15
   damage: 1
   healthBar: {fileID: 4509829947998559067}
   FasterProcent: 30
   explosionPrefub: {fileID: 9010849596890224403, guid: 999ba9aeea7c53d4283dbf64827396c4,
     type: 3}
-  scale: 0
 --- !u!114 &3407594749345748809
 MonoBehaviour:
   m_ObjectHideFlags: 0
