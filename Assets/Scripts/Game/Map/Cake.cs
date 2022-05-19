@@ -14,7 +14,7 @@ public class Cake : MonoBehaviour
     public static Action<int> EatCake;
     public static Action<bool> EndGame;
 
-    private void Awake()
+    private void Start()
     {
         ResourcesManager.OnResourcesAmountChanged += HandleLifeAmountChanged;
 

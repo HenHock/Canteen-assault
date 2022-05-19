@@ -22,13 +22,14 @@ public class Enemy : MonoBehaviour
         scale = transform.localScale.x;
         int _listIndex = PathManager.GetRandomPathNumber();
         _speed = PathManager.GetPathDuration(_listIndex)-(float)(PathManager.GetPathDuration(_listIndex) * FasterProcent * 0.01);
-
+        //Debug.Log(_speed + "speed");
+        //Debug.Log(PathManager.GetRandomPath(_listIndex).Length);
         moveTween = transform.DOPath(PathManager.GetRandomPath(_listIndex), _speed).SetLookAt(-1f).OnComplete(() =>
         {
             Cake.EatCake(damage);
             EnemyDestroy();
         });
-
+        //Debug.Log(moveTween + "is anim");
         healthBar.Initialize(Health);
     }
 

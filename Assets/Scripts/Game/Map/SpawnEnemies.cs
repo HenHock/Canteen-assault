@@ -13,7 +13,6 @@ public class SpawnEnemies : MonoBehaviour
     
     void Start()
     {
-        Debug.Log(DataManager.currentLevel);
         enemyWavesList = LevelManager.returnEnemyList(DataManager.currentLevel);
         StartCoroutine(SpawnWaves());
     }

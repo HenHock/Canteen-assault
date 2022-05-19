@@ -24,10 +24,13 @@ public class ScenesController : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+
+        Time.timeScale = 1;
     }
 
     public void PreviouslyLevel()
     {
        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        Time.timeScale = 1;
     }
 }

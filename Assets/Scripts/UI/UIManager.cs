@@ -4,6 +4,7 @@ using System;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 using System.Collections.Generic;
+using TMPro;
 
 public class UIManager : MonoBehaviour
 {
@@ -32,8 +33,8 @@ public class UIManager : MonoBehaviour
     public void Win()
     {
         endGamePanel.Open();
-        titleEndGameText.GetComponent<Text>().text = "You win!";
-        statisticsEndGameText.GetComponent<Text>().text = $"You earned {ResourcesManager.Get(ResourceType.Star)} star!";
+        titleEndGameText.GetComponent<TextMeshProUGUI>().text = "You win!";
+        statisticsEndGameText.GetComponent<TextMeshProUGUI>().text = $"You earned {ResourcesManager.Get(ResourceType.Star)} star!";
 
         nextLevelButton.SetActive(true);
         resetButton.SetActive(false);
@@ -42,8 +43,8 @@ public class UIManager : MonoBehaviour
     public void Lose()
     {
         endGamePanel.Open();
-        titleEndGameText.GetComponent<Text>().text = "You lose :(";
-        statisticsEndGameText.GetComponent<Text>().text = "You can try again!";
+        titleEndGameText.GetComponent<TextMeshProUGUI>().text = "You lose :(";
+        statisticsEndGameText.GetComponent<TextMeshProUGUI>().text = "You can try again!";
 
         nextLevelButton.SetActive(false);
         resetButton.SetActive(true);

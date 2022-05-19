@@ -16,13 +16,13 @@ public class CharacterUpdate : MonoBehaviour
 
     public void UpdateCharacter()
     {
-        if (ResourcesManager.Get(ResourceType.Money) < characterPrefab.GetComponent<Character>().costToUpgrade)
+        if (ResourcesManager.Get(ResourceType.Money) < characterPrefab.GetComponent<Character>().costToBuy)
         {
             Debug.Log("Sorry, you need more money!");
         }
         else
         {
-            ResourcesManager.Change(ResourceType.Money, -characterPrefab.GetComponent<Character>().costToUpgrade);
+            ResourcesManager.Change(ResourceType.Money, -characterPrefab.GetComponent<Character>().costToBuy);
 
             GameObject character = Instantiate(characterPrefab);
 
