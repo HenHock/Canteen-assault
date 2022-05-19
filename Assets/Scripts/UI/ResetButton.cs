@@ -14,6 +14,6 @@ public class ResetButton : MonoBehaviour
 
         ResourcesManager.Reset(ResourceType.Life);
         ResourcesManager.Reset(ResourceType.Money);
-        Time.timeScale = 1;
+        
     }
 }
