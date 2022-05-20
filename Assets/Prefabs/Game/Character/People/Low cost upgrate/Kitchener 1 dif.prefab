@@ -92,7 +92,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100058, guid: f783b7aac5e1b604bbcde592a5145213, type: 3}
       propertyPath: m_Name
-      value: Kitchener 1
+      value: Kitchener 1 dif
       objectReference: {fileID: 0}
     - target: {fileID: 100058, guid: f783b7aac5e1b604bbcde592a5145213, type: 3}
       propertyPath: m_TagString
@@ -623,7 +623,7 @@ MonoBehaviour:
   moneyBackPercentage: 100
   nextLevelPrefab: {fileID: 6388480008027206938, guid: 0715a21a2638e5542a5b23b4b421e2d9,
     type: 3}
-  radiusHit: 4
+  radiusHit: 2
   attackSpeed: 0.5
   turret: {fileID: 7698938979109528536}
   shotPrefab: {fileID: 1000013284424148, guid: 7cd5dcc5474c0a143b5bc3b52de9b3f7, type: 3}

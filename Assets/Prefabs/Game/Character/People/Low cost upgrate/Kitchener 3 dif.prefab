@@ -80,7 +80,7 @@ PrefabInstance:
     - target: {fileID: 7903008122108735536, guid: 008f5a10d531fba43a38b244da87d036,
         type: 3}
       propertyPath: radiusHit
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7903008122108735536, guid: 008f5a10d531fba43a38b244da87d036,
         type: 3}
