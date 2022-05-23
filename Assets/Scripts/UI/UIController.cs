@@ -8,7 +8,7 @@ using UnityEngine.UIElements;
 public class UIController : MonoBehaviour
 {
     /*
-     * Скрипт для настройки UI главного меню.
+     * РЎРєСЂРёРїС‚ РґР»СЏ РЅР°СЃС‚СЂРѕР№РєРё UI СЌР»РµРјРµРЅС‚РѕРІ РІ РјРµРЅСЋ.
      */
 
     public Button playButton;
@@ -23,7 +23,6 @@ public class UIController : MonoBehaviour
 
     public void PlayButton_Click()
     {
-        Debug.Log("e");
         SceneManager.LoadScene("Main menu");
     }
 

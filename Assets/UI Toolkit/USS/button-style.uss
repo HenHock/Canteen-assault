@@ -22,8 +22,8 @@
 }
 
 .button-style:active {
-    height: 250px;
-    width: 600px;
+    height: 240px;
+    width: 590px;
     margin-bottom: 75px;
     font-size: 110px;
     border-top-left-radius: 50px;
