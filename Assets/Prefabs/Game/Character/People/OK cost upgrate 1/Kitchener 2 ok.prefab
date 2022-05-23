@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &3575567029821043222
+--- !u!1001 &4947585073427514021
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 2017941185452668863, guid: 008f5a10d531fba43a38b244da87d036,
         type: 3}
       propertyPath: m_Name
-      value: Kitchener 3 dif
+      value: Kitchener 2 ok
       objectReference: {fileID: 0}
     - target: {fileID: 2017941185453026269, guid: 008f5a10d531fba43a38b244da87d036,
         type: 3}
@@ -86,11 +86,11 @@ PrefabInstance:
         type: 3}
       propertyPath: turret
       value: 
-      objectReference: {fileID: 6577181186390462926}
+      objectReference: {fileID: 3346590537302368637}
     - target: {fileID: 7903008122108735536, guid: 008f5a10d531fba43a38b244da87d036,
         type: 3}
       propertyPath: costToBuy
-      value: 70
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 7903008122108735536, guid: 008f5a10d531fba43a38b244da87d036,
         type: 3}
@@ -101,7 +101,7 @@ PrefabInstance:
         type: 3}
       propertyPath: shotPrefab
       value: 
-      objectReference: {fileID: 1000013939694586, guid: d193fdd8639ce7c47a14f39cf69fef9b,
+      objectReference: {fileID: 1000011003416750, guid: 1eb5fd885f4b34540ad0fd8739e6f616,
         type: 3}
     - target: {fileID: 7903008122108735536, guid: 008f5a10d531fba43a38b244da87d036,
         type: 3}
@@ -111,18 +111,19 @@ PrefabInstance:
     - target: {fileID: 7903008122108735536, guid: 008f5a10d531fba43a38b244da87d036,
         type: 3}
       propertyPath: attackDamage
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7903008122108735536, guid: 008f5a10d531fba43a38b244da87d036,
         type: 3}
       propertyPath: costToUpgrade
-      value: 0
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 7903008122108735536, guid: 008f5a10d531fba43a38b244da87d036,
         type: 3}
       propertyPath: nextLevelPrefab
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 3287589888976586153, guid: f85092fa05415194caa69afbd87dced5,
+        type: 3}
     - target: {fileID: 7903008122108735536, guid: 008f5a10d531fba43a38b244da87d036,
         type: 3}
       propertyPath: moneyBackPercentage
@@ -130,9 +131,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 008f5a10d531fba43a38b244da87d036, type: 3}
---- !u!4 &6577181186390462926 stripped
+--- !u!4 &3346590537302368637 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7698938979109528536, guid: 008f5a10d531fba43a38b244da87d036,
     type: 3}
-  m_PrefabInstance: {fileID: 3575567029821043222}
+  m_PrefabInstance: {fileID: 4947585073427514021}
   m_PrefabAsset: {fileID: 0}

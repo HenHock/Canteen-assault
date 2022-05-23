@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 2017941185452668863, guid: 008f5a10d531fba43a38b244da87d036,
         type: 3}
       propertyPath: m_Name
-      value: Kitchener 3 dif
+      value: Kitchener 3 ok
       objectReference: {fileID: 0}
     - target: {fileID: 2017941185453026269, guid: 008f5a10d531fba43a38b244da87d036,
         type: 3}
@@ -90,7 +90,7 @@ PrefabInstance:
     - target: {fileID: 7903008122108735536, guid: 008f5a10d531fba43a38b244da87d036,
         type: 3}
       propertyPath: costToBuy
-      value: 70
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 7903008122108735536, guid: 008f5a10d531fba43a38b244da87d036,
         type: 3}

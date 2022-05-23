@@ -107,7 +107,7 @@ MonoBehaviour:
   damage: 1
   healthBar: {fileID: 4509829947998559067}
   FasterProcent: 30
-  explosionPrefub: {fileID: 9010849596890224403, guid: 999ba9aeea7c53d4283dbf64827396c4,
+  explosionPrefub: {fileID: 2433282508537954060, guid: 3ef3ae421f71c5c4e97fe12dc2fc6312,
     type: 3}
 --- !u!114 &3407594749345748809
 MonoBehaviour:

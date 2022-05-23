@@ -185,7 +185,7 @@ PrefabInstance:
         type: 3}
       propertyPath: explosionPrefub
       value: 
-      objectReference: {fileID: 621846293696078086, guid: d9cf122d18f079945ab131f5b0d3a40b,
+      objectReference: {fileID: 1641839031538123451, guid: 08bc3173e3ac6af4d93f486bbcd594d5,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e18b2d6083bc05f48aa7c290de67fe2c, type: 3}

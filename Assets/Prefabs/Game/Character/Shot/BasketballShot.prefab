@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 2722265603637243481}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
   m_LocalPosition: {x: 4.575, y: 1.822, z: -16.241}
-  m_LocalScale: {x: 75, y: 75, z: 75}
+  m_LocalScale: {x: 45, y: 45, z: 45}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3894695eac2008e4b93a43994bfdb40c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionPrefub: {fileID: 458320537626344600, guid: b4bc86fafdaad344b970825610d77f07,
+  explosionPrefub: {fileID: 5880797563127281583, guid: 265d3a5ba69981a4698ceabcedf368b0,
     type: 3}
   speed: 7
-  radiusHit: 0.3
+  radiusHit: 2

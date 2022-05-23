@@ -92,7 +92,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100058, guid: 3b524a6b242ca1243b30520be42cd95f, type: 3}
       propertyPath: m_Name
-      value: Literature teacher 1 dif
+      value: Literature teacher 1 ok
       objectReference: {fileID: 0}
     - target: {fileID: 100058, guid: 3b524a6b242ca1243b30520be42cd95f, type: 3}
       propertyPath: m_TagString
@@ -490,11 +490,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9bd1000b57d56e4a80cffc74a74eff7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  costToBuy: 100
-  costToUpgrade: 40
+  costToBuy: 70
+  costToUpgrade: 100
   attackDamage: 4
   moneyBackPercentage: 100
-  nextLevelPrefab: {fileID: 2584213311033791341, guid: 475ff81825be1bb4ea356cddd4a7e6c7,
+  nextLevelPrefab: {fileID: 2584213311033791341, guid: 43e0a39e272efea4b91d054ee364ca00,
     type: 3}
   radiusHit: 2
   attackSpeed: 1

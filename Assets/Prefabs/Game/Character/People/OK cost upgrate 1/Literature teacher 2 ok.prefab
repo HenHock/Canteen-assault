@@ -65,7 +65,7 @@ PrefabInstance:
     - target: {fileID: 686638384857076333, guid: a119ac8345536e14abb5cc2a29b4a4a1,
         type: 3}
       propertyPath: m_Name
-      value: Literature teacher 2 dif
+      value: Literature teacher 2 ok
       objectReference: {fileID: 0}
     - target: {fileID: 3013893204259600804, guid: a119ac8345536e14abb5cc2a29b4a4a1,
         type: 3}
@@ -75,7 +75,7 @@ PrefabInstance:
     - target: {fileID: 3013893204259600804, guid: a119ac8345536e14abb5cc2a29b4a4a1,
         type: 3}
       propertyPath: costToBuy
-      value: 40
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3013893204259600804, guid: a119ac8345536e14abb5cc2a29b4a4a1,
         type: 3}
@@ -96,13 +96,13 @@ PrefabInstance:
     - target: {fileID: 3013893204259600804, guid: a119ac8345536e14abb5cc2a29b4a4a1,
         type: 3}
       propertyPath: costToUpgrade
-      value: 60
+      value: 130
       objectReference: {fileID: 0}
     - target: {fileID: 3013893204259600804, guid: a119ac8345536e14abb5cc2a29b4a4a1,
         type: 3}
       propertyPath: nextLevelPrefab
       value: 
-      objectReference: {fileID: 3318423671671420020, guid: 2ec546a5fd4f5e64fa34fabde18a5f74,
+      objectReference: {fileID: 3318423671671420020, guid: d645a4dfaac6efa44977816a61e29cd2,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a119ac8345536e14abb5cc2a29b4a4a1, type: 3}

@@ -92,7 +92,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100058, guid: f783b7aac5e1b604bbcde592a5145213, type: 3}
       propertyPath: m_Name
-      value: Kitchener 1 dif
+      value: Kitchener 1 ok
       objectReference: {fileID: 0}
     - target: {fileID: 100058, guid: f783b7aac5e1b604bbcde592a5145213, type: 3}
       propertyPath: m_TagString
@@ -629,8 +629,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9bd1000b57d56e4a80cffc74a74eff7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  costToBuy: 120
-  costToUpgrade: 50
+  costToBuy: 90
+  costToUpgrade: 120
   attackDamage: 8
   moneyBackPercentage: 100
   nextLevelPrefab: {fileID: 6388480008027206938, guid: 0715a21a2638e5542a5b23b4b421e2d9,
