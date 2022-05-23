@@ -1,6 +1,0 @@
-<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Assets/UI%20Toolkit/USS/button-style.uss?fileID=7433441132597879392&amp;guid=f264aec1f0be6ab47b751a6b470ef06b&amp;type=3#button-style" />
-    <ui:VisualElement name="VisualElement" style="height: 2347px; align-items: center; justify-content: flex-end;">
-        <ui:Button text="Play" display-tooltip-when-elided="true" name="button-play" enable-rich-text="true" class="button-style" />
-    </ui:VisualElement>
-</ui:UXML>

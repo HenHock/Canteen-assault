@@ -14,10 +14,9 @@ public class Shot : MonoBehaviour
     {
         if (string.Equals(other.transform.tag, "Enemy"))
         {
-            if(explosionPrefub)
-                Instantiate(explosionPrefub, transform.position, Quaternion.Euler(0, 0, 0));
             Hurt();
-            Destroy(gameObject);
+            if (explosionPrefub)
+                Instantiate(explosionPrefub, transform.position, Quaternion.Euler(0, 0, 0));
         }
     }
 

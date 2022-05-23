@@ -61,13 +61,13 @@
     <Compile Include="Assets\Scripts\Game\Character\CharacterSpawn.cs" />
     <Compile Include="Assets\Scripts\Game\FloatExtensions.cs" />
     <Compile Include="Assets\Scripts\Game\Character\Character.cs" />
-    <Compile Include="Assets\Scripts\UI\ResourceDisplay.cs" />
+    <Compile Include="Assets\Scripts\UI\Game\ResourceDisplay.cs" />
     <Compile Include="Assets\Scripts\Game\Abilities\DancingAbility.cs" />
     <Compile Include="Assets\Scripts\UI\PanelController.cs" />
     <Compile Include="Assets\Scripts\Game\Abilities\MeatballsAbility.cs" />
     <Compile Include="Assets\Scripts\Game\Managers\ResourcesManager.cs" />
     <Compile Include="Assets\PitchZoom.cs" />
-    <Compile Include="Assets\Scripts\UI\UpdateCharacterItem.cs" />
+    <Compile Include="Assets\Scripts\UI\Game\UpdateCharacterItem.cs" />
     <Compile Include="Assets\Scripts\Game\Abilities\MeatballsShotScirpt.cs" />
     <Compile Include="Assets\Scripts\Game\Money\processAdditionalGold.cs" />
     <Compile Include="Assets\Scripts\Game\DataManager.cs" />
@@ -79,30 +79,34 @@
     <Compile Include="Assets\Scripts\Game\Map\EnemyWave.cs" />
     <Compile Include="Assets\Scripts\Game\Managers\LifeManager.cs" />
     <Compile Include="Assets\Scripts\Game\Abilities\DragObject.cs" />
-    <Compile Include="Assets\Scripts\UI\UIController.cs" />
-    <Compile Include="Assets\Scripts\UI\AbilityDisplay.cs" />
-    <Compile Include="Assets\Scripts\UI\PathManager.cs" />
-    <Compile Include="Assets\Scripts\UI\ScenesController.cs" />
+    <Compile Include="Assets\Scripts\UI\Main menu\UIController.cs" />
+    <Compile Include="Assets\Scripts\UI\Game\AbilityDisplay.cs" />
+    <Compile Include="Assets\Scripts\UI\Game\PathManager.cs" />
+    <Compile Include="Assets\Scripts\UI\Game\ScenesController.cs" />
     <Compile Include="Assets\Scripts\UI\UIManager.cs" />
-    <Compile Include="Assets\Scripts\UI\DestroyCharacterClick.cs" />
+    <Compile Include="Assets\Scripts\UI\Game\DestroyCharacterClick.cs" />
     <Compile Include="Assets\Scripts\Game\Abilities\Ability.cs" />
     <Compile Include="Assets\Scripts\Game\Enemy\Enemy.cs" />
     <Compile Include="Assets\Scripts\Game\Enemy\TargetPoint.cs" />
     <Compile Include="Assets\Scripts\Game\Managers\LevelManager.cs" />
     <Compile Include="Assets\Scripts\Game\Map\Cake.cs" />
     <Compile Include="Assets\Scripts\Game\Character\CharacterUpdate.cs" />
-    <Compile Include="Assets\Scripts\UI\BuyCharacterItem.cs" />
+    <Compile Include="Assets\Scripts\UI\Game\BuyCharacterItem.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\ResourceItemSO.cs" />
-    <Compile Include="Assets\Scripts\UI\ResetButton.cs" />
-    <Compile Include="Assets\Scripts\UI\HealthDisplay.cs" />
+    <Compile Include="Assets\Scripts\UI\Game\ResetButton.cs" />
+    <Compile Include="Assets\Scripts\UI\Game\HealthDisplay.cs" />
     <Compile Include="Assets\Scripts\Game\Map\SpawnEnemies.cs" />
     <Compile Include="Assets\BorderSceneDetection.cs" />
     <Compile Include="Assets\Scripts\Game\Managers\CurrencyManager.cs" />
     <Compile Include="Assets\Scripts\Game\Map\CharacterUpdatePlaceClick.cs" />
+    <Compile Include="Assets\Scripts\UI\Main menu\Levels\LevelListGenerator.cs" />
+    <Compile Include="Assets\Scripts\UI\ButtonController.cs" />
+    <Compile Include="Assets\Scripts\UI\Main menu\Levels\Level.cs" />
+    <Compile Include="Assets\Scripts\UI\Main menu\Levels\LevelDisplay.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\UI Toolkit\USS\button-style.uss" />
-    <None Include="Assets\UI Toolkit\MainMenu.uxml" />
+    <None Include="Assets\UI Toolkit\WelcomePage.uxml" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -770,29 +774,29 @@
       <Project>{9314B63E-81AA-E66F-D6EB-FFE613DF66C2}</Project>
       <Name>LeanTouch</Name>
     </ProjectReference>
-    <ProjectReference Include="LeanCommon.csproj">
-      <Project>{0196D87E-7587-5734-B6CA-76845CCC55DA}</Project>
-      <Name>LeanCommon</Name>
+    <ProjectReference Include="ToonyColorsPro.Demo.Editor.csproj">
+      <Project>{C1907EFA-61F4-DE5C-D915-2ED5BDE5B114}</Project>
+      <Name>ToonyColorsPro.Demo.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="CFXRRuntime.csproj">
-      <Project>{9ECF56F0-BE3C-2B12-18A9-3C4F10410F09}</Project>
-      <Name>CFXRRuntime</Name>
+    <ProjectReference Include="KinoBloom.Runtime.csproj">
+      <Project>{4391F72C-DAC1-F072-23FD-F376410A73AA}</Project>
+      <Name>KinoBloom.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="CFXREditor.csproj">
       <Project>{B26FD50E-DCD6-9490-7CFC-DC3A33E13405}</Project>
       <Name>CFXREditor</Name>
     </ProjectReference>
-    <ProjectReference Include="ToonyColorsPro.Demo.Editor.csproj">
-      <Project>{C1907EFA-61F4-DE5C-D915-2ED5BDE5B114}</Project>
-      <Name>ToonyColorsPro.Demo.Editor</Name>
+    <ProjectReference Include="LeanCommon.csproj">
+      <Project>{0196D87E-7587-5734-B6CA-76845CCC55DA}</Project>
+      <Name>LeanCommon</Name>
     </ProjectReference>
     <ProjectReference Include="CFXRDemo.csproj">
       <Project>{FA872707-33DF-5C52-93A8-784C193AEC97}</Project>
       <Name>CFXRDemo</Name>
     </ProjectReference>
-    <ProjectReference Include="KinoBloom.Runtime.csproj">
-      <Project>{4391F72C-DAC1-F072-23FD-F376410A73AA}</Project>
-      <Name>KinoBloom.Runtime</Name>
+    <ProjectReference Include="CFXRRuntime.csproj">
+      <Project>{9ECF56F0-BE3C-2B12-18A9-3C4F10410F09}</Project>
+      <Name>CFXRRuntime</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

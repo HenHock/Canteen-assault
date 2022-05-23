@@ -130,5 +130,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionPrefub: {fileID: 4387482976666195449, guid: d1eb5368e6bef184681cd4db6cf466fe,
     type: 3}
+  health: 1
   speed: 7
-  radiusHit: 0.6
+  radiusHit: 0.3
