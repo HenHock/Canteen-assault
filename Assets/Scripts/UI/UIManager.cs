@@ -6,6 +6,10 @@ using UnityEngine.EventSystems;
 using System.Collections.Generic;
 using TMPro;
 
+/*
+ * Скрипт для настройки UI в уровнях
+ */
+
 public class UIManager : MonoBehaviour
 {
     public PanelController buyCharacterPanelController;
