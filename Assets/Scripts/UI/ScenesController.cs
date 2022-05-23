@@ -25,12 +25,17 @@ public class ScenesController : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
+        ResourcesManager.Reset(ResourceType.Life);
+        ResourcesManager.Reset(ResourceType.Money);
         Time.timeScale = 1;
+
     }
 
     public void PreviouslyLevel()
     {
-       SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        ResourcesManager.Reset(ResourceType.Life);
+        ResourcesManager.Reset(ResourceType.Money);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
         Time.timeScale = 1;
     }
 }
