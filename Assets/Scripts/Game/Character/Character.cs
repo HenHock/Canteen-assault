@@ -18,7 +18,7 @@ public class Character : MonoBehaviour
 
     private GameObject shot;
     [SerializeField] private TargetPoint target;
-    private Collider[] targets;
+    
     private float nextShoot = 0;
 
     private void Update()
@@ -49,11 +49,11 @@ public class Character : MonoBehaviour
     // Find target to shoot
     private bool isAcquireTarger()
     {
-        targets = Physics.OverlapSphere(transform.position, radiusHit, DataManager.ENEMY_LAYER_MASK);
+        DataManager.targets = Physics.OverlapSphere(transform.position, radiusHit, DataManager.ENEMY_LAYER_MASK);
 
-        if (targets.Length > 0)
+        if (DataManager.targets.Length > 0)
         {
-            target = targets[targets.Length-1].GetComponent<TargetPoint>();
+            target = DataManager.targets[DataManager.targets.Length-1].GetComponent<TargetPoint>();
             return true;
         }
 

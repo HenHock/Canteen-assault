@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class Shot : MonoBehaviour
 {
-    [SerializeField] GameObject explosionPrefub;
     public int damage { set; get; }
-    public float speed = 5;
     public Transform target { set; private get; }
+
+    public float speed = 5;
+
+    [SerializeField] private int health;
     [SerializeField, Range(0.1f,4f)] private float radiusHit = 1;
+    [SerializeField] GameObject explosionPrefub;
 
     public void OnTriggerEnter(Collider other)
     {
@@ -31,15 +34,24 @@ public class Shot : MonoBehaviour
                 {
                     Enemy enemy = target.gameObject.GetComponent<Enemy>();
                     enemy.TakeDamage(damage);
+                    health--;
+
+                    if (health == 0)
+                    {
+                        Destroy(gameObject);
+                    }
                 }
             }
         }
     }
 
     void Update()
-    { 
-        if(target != null)
-            transform.position = Vector3.MoveTowards(transform.position, target.position, speed*Time.deltaTime);
+    {
+        if (DataManager.targets.Length > 0)
+        {
+            target = DataManager.targets[0].transform;
+            transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+        }
         else Destroy(gameObject);
     }
 
