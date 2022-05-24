@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 71643c6d770789f4db46729d6ca94ab4
+guid: 322b464d12d20a94fac88a7c914d90b5
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Passion One
+  - Lato
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0

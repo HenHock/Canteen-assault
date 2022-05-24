@@ -19,6 +19,7 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] private GameObject titleEndGameText;
     [SerializeField] private GameObject statisticsEndGameText;
+    [SerializeField] private GameObject Stars;
 
     [SerializeField] private GameObject nextLevelButton;
     [SerializeField] private GameObject resetButton;
@@ -38,20 +39,26 @@ public class UIManager : MonoBehaviour
     {
         endGamePanel.Open();
         titleEndGameText.GetComponent<TextMeshProUGUI>().text = "You win!";
-        statisticsEndGameText.GetComponent<TextMeshProUGUI>().text = $"You earned {ResourcesManager.Get(ResourceType.Star)} star!";
+        ResourcesManager.Change(ResourceType.Star, 1); // Добавляем одну звезду за победу
+        Stars.GetComponent<Image>().sprite = StarsIcon.GetIcon(ResourcesManager.Get(ResourceType.Star)); // Устанавливаем новую иконку в зависимотси от полученных звезд
+        Stars.GetComponentInChildren<TextMeshProUGUI>().text = ResourcesManager.Get(ResourceType.Star).ToString();
+        //statisticsEndGameText.GetComponent<TextMeshProUGUI>().text = $"You earned {ResourcesManager.Get(ResourceType.Star)} star!";
 
         nextLevelButton.SetActive(true);
-        resetButton.SetActive(false);
+
+        if(ResourcesManager.Get(ResourceType.Star) == 3)
+            resetButton.SetActive(false);
     }
 
     public void Lose()
     {
         endGamePanel.Open();
-        titleEndGameText.GetComponent<TextMeshProUGUI>().text = "You lose :(";
-        statisticsEndGameText.GetComponent<TextMeshProUGUI>().text = "You can try again!";
+        titleEndGameText.GetComponent<TextMeshProUGUI>().text = "You lose";
+        //statisticsEndGameText.GetComponent<TextMeshProUGUI>().text = "You can try again!";
 
         nextLevelButton.SetActive(false);
         resetButton.SetActive(true);
+        resetButton.transform.Translate(Vector3.right*170/2); // Устанавливаем кнопку по середине
     }
 
     /// <summary>

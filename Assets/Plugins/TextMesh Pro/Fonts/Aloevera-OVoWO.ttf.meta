@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 074d6f5ccf8761448b21a8f194312cf5
+guid: 15cde2df2becc3d4fb0adbd44ce73c9c
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Passion
+  - Aloevera
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
