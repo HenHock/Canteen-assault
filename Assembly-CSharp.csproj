@@ -71,6 +71,7 @@
     <Compile Include="Assets\Scripts\Game\Abilities\MeatballsShotScirpt.cs" />
     <Compile Include="Assets\Scripts\Game\Money\processAdditionalGold.cs" />
     <Compile Include="Assets\Scripts\Game\DataManager.cs" />
+    <Compile Include="Assets\Scripts\UI\Main menu\Levels\LevelListGenerator.cs" />
     <Compile Include="Assets\Scripts\Game\Map\CharacterSpawnPlaceClick.cs" />
     <Compile Include="Assets\Scripts\Game\Map\MapGenerator.cs" />
     <Compile Include="Assets\Scripts\Game\Character\Shot.cs" />
@@ -88,9 +89,12 @@
     <Compile Include="Assets\Scripts\Game\Abilities\Ability.cs" />
     <Compile Include="Assets\Scripts\Game\Enemy\Enemy.cs" />
     <Compile Include="Assets\Scripts\Game\Enemy\TargetPoint.cs" />
+    <Compile Include="Assets\Scripts\UI\ButtonController.cs" />
+    <Compile Include="Assets\Scripts\UI\Main menu\Levels\LevelDisplay.cs" />
     <Compile Include="Assets\Scripts\Game\Managers\LevelManager.cs" />
     <Compile Include="Assets\Scripts\Game\Map\Cake.cs" />
     <Compile Include="Assets\Scripts\Game\Character\CharacterUpdate.cs" />
+    <Compile Include="Assets\Scripts\UI\Main menu\Levels\Level.cs" />
     <Compile Include="Assets\Scripts\UI\Game\BuyCharacterItem.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\ResourceItemSO.cs" />
     <Compile Include="Assets\Scripts\UI\Game\ResetButton.cs" />
@@ -99,10 +103,6 @@
     <Compile Include="Assets\BorderSceneDetection.cs" />
     <Compile Include="Assets\Scripts\Game\Managers\CurrencyManager.cs" />
     <Compile Include="Assets\Scripts\Game\Map\CharacterUpdatePlaceClick.cs" />
-    <Compile Include="Assets\Scripts\UI\Main menu\Levels\LevelListGenerator.cs" />
-    <Compile Include="Assets\Scripts\UI\ButtonController.cs" />
-    <Compile Include="Assets\Scripts\UI\Main menu\Levels\Level.cs" />
-    <Compile Include="Assets\Scripts\UI\Main menu\Levels\LevelDisplay.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\UI Toolkit\USS\button-style.uss" />

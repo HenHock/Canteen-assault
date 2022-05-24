@@ -1,6 +1,7 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI%20Toolkit/USS/button-style.uss?fileID=7433441132597879392&amp;guid=f264aec1f0be6ab47b751a6b470ef06b&amp;type=3#button-style" />
-    <ui:VisualElement name="VisualElement" style="height: 2347px; align-items: center; justify-content: flex-end;">
-        <ui:Button text="Play" display-tooltip-when-elided="true" name="button-play" enable-rich-text="true" class="button-style" />
+    <ui:VisualElement name="VisualElement" style="height: 2347px; align-items: center; justify-content: flex-end; background-image: url(&apos;project://database/Assets/Art/Sprites/UI/Images/welcome_page.png?fileID=2800000&amp;guid=c1c42fc65c14dd74dbbfbafc9845dcbf&amp;type=3#welcome_page&apos;); -unity-slice-left: 0; -unity-background-scale-mode: scale-and-crop;">
+        <ui:Label text="Canteen Assault" display-tooltip-when-elided="true" style="-unity-text-align: upper-center; white-space: normal; font-size: 120px; position: absolute; top: 426px; left: 136px; width: 776px; color: rgb(132, 0, 0); -unity-font: none; -unity-font-definition: url(&apos;project://database/Assets/UI%20Toolkit/Fonts/PassionOne-Black%20SDF.asset?fileID=11400000&amp;guid=beb51a4af721c4e4e8ac897cac93bbe3&amp;type=2#PassionOne-Black SDF&apos;);" />
+        <ui:Button text="Play" display-tooltip-when-elided="true" name="button-play" enable-rich-text="true" class="button-style" style="width: 800px;" />
     </ui:VisualElement>
 </ui:UXML>

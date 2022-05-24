@@ -14,7 +14,7 @@ public class LevelListGenerator : MonoBehaviour
     private Vector2 startPosition = new Vector2(-290, 360);
     private int levelCount = 1;
 
-    private void OnEnable()
+    private void Start()
     {
         // –егул€роное вырожени€ дл€ поиска всех сцен, в которых присутсвует слово level 
         Regex regex = new Regex(@"level\w*", RegexOptions.IgnoreCase);
