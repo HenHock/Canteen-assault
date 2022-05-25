@@ -92,7 +92,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100058, guid: f783b7aac5e1b604bbcde592a5145213, type: 3}
       propertyPath: m_Name
-      value: Kitchener 1
+      value: Kitchener 1 dif
       objectReference: {fileID: 0}
     - target: {fileID: 100058, guid: f783b7aac5e1b604bbcde592a5145213, type: 3}
       propertyPath: m_TagString
@@ -620,9 +620,10 @@ MonoBehaviour:
   costToBuy: 120
   costToUpgrade: 50
   attackDamage: 8
-  moneyBackPercentage: 100
   nextLevelPrefab: {fileID: 6388480008027206938, guid: 0715a21a2638e5542a5b23b4b421e2d9,
     type: 3}
+  teacherInfo: {fileID: 11400000, guid: 5f79e6246c17fa14a8e7a35482d3040b, type: 2}
+  moneyBackPercentage: 100
   radiusHit: 4
   attackSpeed: 0.5
   turret: {fileID: 7698938979109528536}

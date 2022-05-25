@@ -35,6 +35,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -1669338684561177667, guid: 98235cd36794b91488c9119743b453da,
         type: 3}
+      propertyPath: teacherInfo
+      value: 
+      objectReference: {fileID: 11400000, guid: 669e621857227a64ab0b87f5e61ed2bc,
+        type: 2}
+    - target: {fileID: -1669338684561177667, guid: 98235cd36794b91488c9119743b453da,
+        type: 3}
       propertyPath: attackDamage
       value: 7
       objectReference: {fileID: 0}

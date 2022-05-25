@@ -16,15 +16,16 @@ public class CharacterUpdate : MonoBehaviour
 
     public void UpdateCharacter()
     {
-        if (ResourcesManager.Get(ResourceType.Money) < characterPrefab.GetComponent<Character>().costToBuy)
+        GameObject character = Instantiate(characterPrefab);
+
+        if (ResourcesManager.Get(ResourceType.Money) < character.GetComponent<Character>().costToBuy)
         {
             Debug.Log("Sorry, you need more money!");
+            Destroy(character);
         }
         else
         {
-            ResourcesManager.Change(ResourceType.Money, -characterPrefab.GetComponent<Character>().costToBuy);
-
-            GameObject character = Instantiate(characterPrefab);
+            ResourcesManager.Change(ResourceType.Money, -character.GetComponent<Character>().costToBuy);
 
             character.transform.SetParent(DataManager.selectedCharacter.transform.parent);
             character.transform.localPosition = new Vector3(DataManager.selectedCharacter.transform.localPosition.x,
@@ -39,7 +40,7 @@ public class CharacterUpdate : MonoBehaviour
             // Destroy all UpdateCharacterItem
             foreach (Transform child in DataManager.uIController.updateCharacterPanel.transform)
                 if (child.GetComponentInChildren<CharacterUpdate>() != null)
-                    Destroy(child.gameObject);
+                    Destroy(child.GetChild(0).gameObject);
 
             // Close update character panel
             DataManager.uIController.updateCharacterPanel.Close();

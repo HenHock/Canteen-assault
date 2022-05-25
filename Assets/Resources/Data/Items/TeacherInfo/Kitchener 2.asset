@@ -20,4 +20,5 @@ MonoBehaviour:
   attackRadius: 4
   costToBuy: 150
   image: {fileID: 0}
-  nextTechearInfo: {fileID: 11400000, guid: 4bf548de2764ad44aa46e4b7756cad6b, type: 2}
+  prefab: {fileID: 6388480008027206938, guid: 0d1ed3acd6f95424d946214aaf594309, type: 3}
+  nextTeacherInfo: {fileID: 11400000, guid: 4bf548de2764ad44aa46e4b7756cad6b, type: 2}

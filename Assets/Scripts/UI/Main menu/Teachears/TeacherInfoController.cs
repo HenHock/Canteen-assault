@@ -26,7 +26,7 @@ public class TeacherInfoController : MonoBehaviour
     [SerializeField] private Sprite selectedButton;
     [SerializeField] private Sprite unselectedButton;
 
-    private int indexT = 0;
+    public int indexT { get; set; } = 0;
 
     public void NextTeachearInfo()
     {

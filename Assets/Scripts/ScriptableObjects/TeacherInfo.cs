@@ -7,9 +7,11 @@ public class TeacherInfo : ScriptableObject
 {
     public string nameTeacher;
     public string description;
-    public float damage;
+    public int damage;
     public float attackSpeed;
     public float attackRadius;
     public int costToBuy;
     public Sprite image;
+    public GameObject prefab;
+    public TeacherInfo nextTeacherInfo;
 }

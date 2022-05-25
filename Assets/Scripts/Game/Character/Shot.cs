@@ -25,7 +25,7 @@ public class Shot : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (DataManager.targets.Length > 0)
+        if (DataManager.targets.Length > 0 && health > 1)
         {
             target = DataManager.targets[0].transform;
         }
@@ -45,7 +45,7 @@ public class Shot : MonoBehaviour
                     enemy.TakeDamage(damage);
                     health--;
 
-                    if (health == 0)
+                    if (health <= 1)
                     {
                         Destroy(gameObject);
                     }

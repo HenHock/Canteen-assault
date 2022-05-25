@@ -16,18 +16,19 @@ public class CharacterSpawn : MonoBehaviour
 
     private void SpawnCharacter()
     {
-        if (ResourcesManager.Get(ResourceType.Money)<characterPrefab.GetComponent<Character>().costToBuy)
+        GameObject character = Instantiate(characterPrefab);
+
+        if (ResourcesManager.Get(ResourceType.Money) < character.GetComponent<Character>().costToBuy)
         {
             Debug.Log("Sorry, you need more money!");
+            Destroy(character);
         }
         else
         {
-            ResourcesManager.Change(ResourceType.Money, -characterPrefab.GetComponent<Character>().costToBuy);
-
-            GameObject character = Instantiate(characterPrefab);
-
             character.transform.SetParent(DataManager.selectedPositionPlaceCharacterSpawn.GetChild(0).transform);
-            character.transform.localPosition = new Vector3(0,0 + character.transform.localScale.y/2,0);
+            character.transform.localPosition = new Vector3(0, 0 + character.transform.localScale.y / 2, 0);
+
+            ResourcesManager.Change(ResourceType.Money, -character.GetComponent<Character>().costToBuy);
 
             if(DataManager.selectedPositionPlaceCharacterSpawn.childCount > 0)
             {

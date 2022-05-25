@@ -8,16 +8,10 @@ using TMPro;
 public class BuyCharacterItem : MonoBehaviour
 {
     [SerializeField]
-    private List<GameObject> prefabs;
+    private List<TeacherInfo> teachers;
 
-    private int costToBuy;
-    private int attackDamage;
-    private float radiusHit;
-    private float attackSpeed;
-    private float startItemPosition = 510;
     private GameObject img;
     private GameObject nameCharacter;
-    private GameObject characterSkills;
     private GameObject buyCharacterButton;
     private TextMeshProUGUI TMP_speedAttack;
     private TextMeshProUGUI TMP_radiusAttack;
@@ -28,20 +22,13 @@ public class BuyCharacterItem : MonoBehaviour
     //#if UNITY_EDITOR
     void Start()
     {
-        foreach (GameObject prefab in prefabs)
+        foreach (TeacherInfo info in teachers)
         {
-            if (prefab.GetComponent<Character>() != null)
+            if (info != null)
             {
-                costToBuy = prefab.GetComponent<Character>().costToBuy;
-                attackDamage = prefab.GetComponent<Character>().attackDamage;
-                attackSpeed = prefab.GetComponent<Character>().attackSpeed;
-                radiusHit = prefab.GetComponent<Character>().radiusHit;
-
                 // Create new ItemPanel and fill it with prefab's information.
                 GameObject itemPanel = Instantiate(ItemPanel);
                 itemPanel.transform.SetParent(transform);
-                itemPanel.transform.localPosition = new Vector3(0 , startItemPosition, 0);
-                startItemPosition -= itemPanel.GetComponent<RectTransform>().rect.height;
 
                 img = itemPanel.transform.Find("ImageCharacter").gameObject;
                 nameCharacter = itemPanel.transform.Find("NameCharacter").gameObject;
@@ -50,17 +37,17 @@ public class BuyCharacterItem : MonoBehaviour
                 TMP_radiusAttack = itemPanel.transform.Find("RadiusAttack").GetComponent<TextMeshProUGUI>();
 
                 buyCharacterButton = itemPanel.transform.Find("CharacterBuyButton").gameObject;
-                buyCharacterButton.GetComponent<CharacterSpawn>().characterPrefab = prefab;
+                buyCharacterButton.GetComponent<CharacterSpawn>().characterPrefab = info.prefab;
                 buyCharacterButton.GetComponent<Button>().onClick.AddListener(buyCharacterButton.GetComponent<CharacterSpawn>().onClick);
 
-                if (prefab.GetComponent<Image>() != null)
-                    img.GetComponent<Image>().sprite = prefab.GetComponent<Image>().sprite;
+                if (info.image != null)
+                    img.GetComponent<Image>().sprite = info.image;
 
-                nameCharacter.GetComponent<TextMeshProUGUI>().text = prefab.name;
-                buyCharacterButton.GetComponentInChildren<TextMeshProUGUI>().text = costToBuy.ToString();
-                TMP_damage.text = attackDamage.ToString();
-                TMP_speedAttack.text = attackSpeed.ToString();
-                TMP_radiusAttack.text = radiusHit.ToString();
+                nameCharacter.GetComponent<TextMeshProUGUI>().text = info.nameTeacher;
+                buyCharacterButton.GetComponentInChildren<TextMeshProUGUI>().text = info.costToBuy.ToString();
+                TMP_damage.text = info.damage.ToString();
+                TMP_speedAttack.text = info.attackSpeed.ToString();
+                TMP_radiusAttack.text = info.attackRadius.ToString();
             }
         }
     }
