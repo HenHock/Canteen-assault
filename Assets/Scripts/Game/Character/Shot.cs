@@ -23,12 +23,21 @@ public class Shot : MonoBehaviour
         }
     }
 
+    private void OnTriggerStay(Collider other)
+    {
+        if (DataManager.targets.Length > 0)
+        {
+            target = DataManager.targets[0].transform;
+        }
+    }
+
     void Hurt()
     {
-        Collider[] targets = Physics.OverlapSphere(transform.position, radiusHit);
-        
-        if(targets.Length > 0){
-            foreach(Collider target in targets)
+        Collider[] targets = Physics.OverlapSphere(transform.position, radiusHit, DataManager.ENEMY_LAYER_MASK);
+
+        if (targets.Length > 0)
+        {
+            foreach (Collider target in targets)
             {
                 if (string.Equals(target.gameObject.tag, "Enemy"))
                 {
@@ -47,11 +56,8 @@ public class Shot : MonoBehaviour
 
     void Update()
     {
-        if (DataManager.targets.Length > 0)
-        {
-            target = DataManager.targets[0].transform;
+        if(target != null)
             transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
-        }
         else Destroy(gameObject);
     }
 
