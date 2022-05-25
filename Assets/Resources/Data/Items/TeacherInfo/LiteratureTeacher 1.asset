@@ -10,12 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e25c4411d139f141b9b185c38536420, type: 3}
-  m_Name: Kitchener
+  m_Name: LiteratureTeacher 1
   m_EditorClassIdentifier: 
-  nameTeacher: Kitchener
-  description: A lover of all students, who perfectly prepares <br>exotic dishes,
-    and even better throws them <br>at his students.
-  damage: 0
-  attackSpeed: 0
-  attackRadius: 0
+  nameTeacher: Literature teacher
+  description: An ordinary literature teacher<br>who likes to throw school supplies
+    <br>at the students.
+  damage: 4
+  attackSpeed: 1
+  attackRadius: 3
+  costToBuy: 100
   image: {fileID: 0}
+  nextTechearInfo: {fileID: 11400000, guid: b3a8d3c0074fff845a17ad88ceda35a3, type: 2}

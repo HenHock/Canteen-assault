@@ -10,5 +10,6 @@ public class TeacherInfo : ScriptableObject
     public float damage;
     public float attackSpeed;
     public float attackRadius;
+    public int costToBuy;
     public Sprite image;
 }

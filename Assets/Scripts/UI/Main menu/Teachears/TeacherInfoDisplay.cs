@@ -12,27 +12,28 @@ public class TeacherInfoDisplay : MonoBehaviour
     [SerializeField] private TextMeshProUGUI damage;
     [SerializeField] private TextMeshProUGUI attackSpeed;
     [SerializeField] private TextMeshProUGUI attackRadius;
+    [SerializeField] private TextMeshProUGUI costToBuy;
     [SerializeField] private Image image;
 
     void Start()
     {
-        nameTeacher.text = teacherInfo.nameTeacher;
-        description.text = teacherInfo.description;
-        damage.text = teacherInfo.damage.ToString();
-        attackSpeed.text = teacherInfo.attackSpeed.ToString();
-        attackRadius.text = teacherInfo.attackRadius.ToString();
-        image.sprite = teacherInfo.image;
+        SetTeacherInfo();
     }
 
     public void ChangeTeacherInfo(TeacherInfo teacherInfo)
     {
         this.teacherInfo = teacherInfo;
+        SetTeacherInfo(); ;
+    }
 
+    private void SetTeacherInfo()
+    {
         nameTeacher.text = teacherInfo.nameTeacher;
         description.text = teacherInfo.description;
         damage.text = teacherInfo.damage.ToString();
         attackSpeed.text = teacherInfo.attackSpeed.ToString();
         attackRadius.text = teacherInfo.attackRadius.ToString();
         image.sprite = teacherInfo.image;
+        costToBuy.text = teacherInfo.costToBuy.ToString();
     }
 }

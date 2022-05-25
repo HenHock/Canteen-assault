@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e25c4411d139f141b9b185c38536420, type: 3}
+  m_Name: Kitchener 1
+  m_EditorClassIdentifier: 
+  nameTeacher: Kitchener
+  description: A lover of all students, who perfectly prepares <br>exotic dishes,
+    and even better throws them <br>at his students.
+  damage: 15
+  attackSpeed: 0.5
+  attackRadius: 4
+  costToBuy: 120
+  image: {fileID: 0}
+  nextTechearInfo: {fileID: 11400000, guid: d56393601abcea24b9de74574dcd3f89, type: 2}
