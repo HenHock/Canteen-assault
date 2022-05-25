@@ -35,6 +35,8 @@ public class ScenesController : MonoBehaviour
     {
         ResourcesManager.Reset(ResourceType.Life);
         ResourcesManager.Reset(ResourceType.Money);
+        ResourcesManager.Reset(ResourceType.EnemyCount);
+        ResourcesManager.Reset(ResourceType.NumberWave);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
         Time.timeScale = 1;
     }

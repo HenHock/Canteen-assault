@@ -16,11 +16,25 @@ public class SpawnEnemies : MonoBehaviour
         enemyWavesList = LevelManager.returnEnemyList(DataManager.currentLevel);
         StartCoroutine(SpawnWaves());
     }
+    private int CountAllEnemiesAtWave(int numberWave)
+    {
+        int sum = 0;
+        for (int k = 0; k < enemyWavesList[numberWave].squardsList.Count; k++)
+        {
+            sum += enemyWavesList[numberWave].squardsList[k].numberOfEnemyinSquard;
+
+        }
+        return sum;
+    }
+
     
     private IEnumerator SpawnWaves()
     {
-        for(int k=0; k<enemyWavesList.Count;k++)
+       
+        for (int k=0; k<enemyWavesList.Count;k++)
         {
+            ResourcesManager.Change(ResourceType.NumberWave, k+1);
+            ResourcesManager.Change(ResourceType.EnemyCount, CountAllEnemiesAtWave(k));
             yield return new WaitForSeconds(enemyWavesList[k].delayTime);
             MakeListEnemies(k);
             MixList(enemyWavesList[k].allSquardsList);
@@ -68,6 +82,7 @@ public class SpawnEnemies : MonoBehaviour
             _enemy.transform.SetParent(transform);
             _enemy.transform.localPosition = new Vector3( 0, 0, 0);
             DataManager.NumberOfAllEnemies++;
+            ResourcesManager.Change(ResourceType.EnemyCount, -1);
         }
     }
 

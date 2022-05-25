@@ -60,8 +60,10 @@ public class Enemy : MonoBehaviour
     {
         moveTween?.Kill();
         jumpTween?.Kill();
+
         DropMoney makeMoneyDrop = gameObject.GetComponent<DropMoney>();
         makeMoneyDrop.Drop(transform.position);
+
         Instantiate(explosionPrefub, transform.position, Quaternion.Euler(0, 0, 0));
         EnemyDestroy();
     }
