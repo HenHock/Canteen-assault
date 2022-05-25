@@ -620,9 +620,10 @@ MonoBehaviour:
   costToBuy: 250
   costToUpgrade: 300
   attackDamage: 15
-  moneyBackPercentage: 100
   nextLevelPrefab: {fileID: 6388480008027206938, guid: 0d1ed3acd6f95424d946214aaf594309,
     type: 3}
+  teacherInfo: {fileID: 11400000, guid: 5f79e6246c17fa14a8e7a35482d3040b, type: 2}
+  moneyBackPercentage: 100
   radiusHit: 4
   attackSpeed: 0.5
   turret: {fileID: 7698938979109528536}

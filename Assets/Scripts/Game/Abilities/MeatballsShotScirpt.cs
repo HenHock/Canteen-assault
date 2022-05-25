@@ -10,7 +10,7 @@ public class MeatballsShotScirpt : MonoBehaviour
     {
         meatball = transform.GetChild(0);
 
-        for(int i = 0; i < 10; i++)
+        for(int i = 0; i < 15; i++)
         {
             GameObject newMeatball = Instantiate(meatball.gameObject);
             newMeatball.transform.SetParent(transform);

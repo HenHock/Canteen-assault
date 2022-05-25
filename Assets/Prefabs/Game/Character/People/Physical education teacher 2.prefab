@@ -26,13 +26,19 @@ PrefabInstance:
         type: 3}
       propertyPath: shotPrefab
       value: 
-      objectReference: {fileID: 1345975013518307251, guid: 11c2b64f0ef606947b9afd1d97616099,
+      objectReference: {fileID: 2722265603637243481, guid: c4a63ec34a1bb964197503075ea75327,
         type: 3}
     - target: {fileID: -1669338684561177667, guid: 98235cd36794b91488c9119743b453da,
         type: 3}
       propertyPath: attackSpeed
       value: 0.6
       objectReference: {fileID: 0}
+    - target: {fileID: -1669338684561177667, guid: 98235cd36794b91488c9119743b453da,
+        type: 3}
+      propertyPath: teacherInfo
+      value: 
+      objectReference: {fileID: 11400000, guid: 669e621857227a64ab0b87f5e61ed2bc,
+        type: 2}
     - target: {fileID: -1669338684561177667, guid: 98235cd36794b91488c9119743b453da,
         type: 3}
       propertyPath: attackDamage

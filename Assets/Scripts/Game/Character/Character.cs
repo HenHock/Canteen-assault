@@ -5,20 +5,35 @@ using UnityEngine;
 
 public class Character : MonoBehaviour 
 {
-    public int costToBuy; 
-    public int costToUpgrade; 
-    public int attackDamage; 
-    [Range(1,100)] public float moneyBackPercentage; 
-    public GameObject nextLevelPrefab; 
+    public int costToBuy { get; private set; }
+    public int attackDamage { get; private set; }
+    public float radiusHit { get; private set; }
+    public float attackSpeed { get; private set; }
 
-    [SerializeField, Range(1.5f, 10f)] public float radiusHit = 1.5f; 
-    [SerializeField, Range (0f, 10f)] public float attackSpeed = 2f;
+    public GameObject nextLevelPrefab;
+
+    [SerializeField] private TeacherInfo teacherInfo;
     [SerializeField] private Transform turret; 
     [SerializeField] private GameObject shotPrefab;
-
+    [SerializeField] private TargetPoint target;
     private GameObject shot;
-    [SerializeField] private TargetPoint target; 
     private float nextShoot = 0;
+
+    private void Awake()
+    {
+        if(teacherInfo != null)
+        {
+            costToBuy = teacherInfo.costToBuy;
+            attackDamage = teacherInfo.damage;
+            attackSpeed = teacherInfo.attackSpeed;
+            radiusHit = teacherInfo.attackRadius;
+        }
+    }
+
+    public TeacherInfo GetNextTeacherInfo()
+    {
+        return teacherInfo.nextTeacherInfo;
+    }
 
     private void Update()
     {
@@ -48,11 +63,11 @@ public class Character : MonoBehaviour
     // Find target to shoot
     private bool isAcquireTarger()
     {
-        Collider[] targets = Physics.OverlapSphere(transform.position, radiusHit, DataManager.ENEMY_LAYER_MASK);
+        DataManager.targets = Physics.OverlapSphere(transform.position, radiusHit, DataManager.ENEMY_LAYER_MASK);
 
-        if (targets.Length > 0)
+        if (DataManager.targets.Length > 0)
         {
-            target = targets[targets.Length-1].GetComponent<TargetPoint>();
+            target = DataManager.targets[DataManager.targets.Length-1].GetComponent<TargetPoint>();
             return true;
         }
 
@@ -79,7 +94,7 @@ public class Character : MonoBehaviour
 
     public void DestroyCharacter()
     {
-        ResourcesManager.Change(ResourceType.Money, costToBuy * moneyBackPercentage * 0.01f);
+        ResourcesManager.Change(ResourceType.Money, costToBuy);
         Destroy(gameObject);
     }
 

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e25c4411d139f141b9b185c38536420, type: 3}
+  m_Name: LiteratureTeacher 2
+  m_EditorClassIdentifier: 
+  nameTeacher: Literature teacher
+  description: An ordinary literature teacher<br>who likes to throw school supplies
+    <br>at the students.
+  damage: 4
+  attackSpeed: 2
+  attackRadius: 3
+  costToBuy: 150
+  image: {fileID: 0}
+  prefab: {fileID: 2584213311033791341, guid: ca39b2fa14c177544ba59dc1e4d4ff13, type: 3}
+  nextTeacherInfo: {fileID: 11400000, guid: e3916fadab602fb4895b68cbb3bb2e2d, type: 2}

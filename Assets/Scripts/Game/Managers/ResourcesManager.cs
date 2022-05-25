@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum ResourceType
 {
@@ -32,7 +33,7 @@ public static class ResourcesManager
         
         if (valueByResourceType[resource] < 0)
             valueByResourceType[resource] = 0;
-        
+
         OnResourcesAmountChanged?.Invoke(resource, valueByResourceType[resource]);
     }
 

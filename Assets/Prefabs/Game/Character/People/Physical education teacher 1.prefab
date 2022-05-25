@@ -440,14 +440,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9bd1000b57d56e4a80cffc74a74eff7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  costToBuy: 150
-  costToUpgrade: 200
-  attackDamage: 6
-  moneyBackPercentage: 100
   nextLevelPrefab: {fileID: 2590110198521185471, guid: 15fd56dfc6748b34399305183f85ed88,
     type: 3}
-  radiusHit: 3
-  attackSpeed: 0.5
+  teacherInfo: {fileID: 11400000, guid: 18e83716e4658f743b80bb5e8319af4b, type: 2}
   turret: {fileID: 9131692453547442046}
   shotPrefab: {fileID: 1345975013518307251, guid: 11c2b64f0ef606947b9afd1d97616099,
     type: 3}
