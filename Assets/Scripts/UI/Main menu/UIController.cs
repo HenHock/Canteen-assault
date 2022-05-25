@@ -48,6 +48,7 @@ public class UIController : MonoBehaviour
         var root = UIDocument.rootVisualElement;
         Button startButton = root.Q<Button>("button-play");
         startButton.clicked += StartButton_Click;
+
     }
 
     private void OpenPanel(PanelType panel)

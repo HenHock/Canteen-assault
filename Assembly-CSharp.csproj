@@ -82,6 +82,7 @@
     <Compile Include="Assets\Scripts\Game\Abilities\DragObject.cs" />
     <Compile Include="Assets\Scripts\UI\Main menu\UIController.cs" />
     <Compile Include="Assets\Scripts\UI\Game\AbilityDisplay.cs" />
+    <Compile Include="Assets\Scripts\UI\Game\StarsIcon.cs" />
     <Compile Include="Assets\Scripts\UI\Game\PathManager.cs" />
     <Compile Include="Assets\Scripts\UI\Game\ScenesController.cs" />
     <Compile Include="Assets\Scripts\UI\UIManager.cs" />
@@ -103,7 +104,9 @@
     <Compile Include="Assets\BorderSceneDetection.cs" />
     <Compile Include="Assets\Scripts\Game\Managers\CurrencyManager.cs" />
     <Compile Include="Assets\Scripts\Game\Map\CharacterUpdatePlaceClick.cs" />
-    <Compile Include="Assets\Scripts\UI\Game\StarsIcon.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\TeacherInfo.cs" />
+    <Compile Include="Assets\Scripts\UI\Main menu\Teachears\TeacherInfoDisplay.cs" />
+    <Compile Include="Assets\Scripts\UI\Main menu\Teachears\TeacherInfoController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\UI Toolkit\USS\button-style.uss" />
