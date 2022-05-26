@@ -38,15 +38,15 @@ public class LevelManager : MonoBehaviour
         
         returnEnemyList = getEnemyList;
         returnNumberOfLevels = getNumberOfLevels;
-               
 
     }
 
     private void Start()
     {
-        
-        ResourcesManager.Change(ResourceType.Life, resourceManagerStruct[DataManager.currentLevel].startHealthByLevel);
-        ResourcesManager.Change(ResourceType.Money, resourceManagerStruct[DataManager.currentLevel].startMoneyByLevel);
+        ResourcesManager.Reset(ResourceType.Life);
+        ResourcesManager.Reset(ResourceType.Money);
+        ResourcesManager.Reset(ResourceType.EnemyCount);
+        ResourcesManager.Reset(ResourceType.NumberWave);
         Time.timeScale = 1;
     }
 }

@@ -92,7 +92,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100058, guid: 3b524a6b242ca1243b30520be42cd95f, type: 3}
       propertyPath: m_Name
-      value: Literature teacher 1
+      value: Literature teacher 1 dif
       objectReference: {fileID: 0}
     - target: {fileID: 100058, guid: 3b524a6b242ca1243b30520be42cd95f, type: 3}
       propertyPath: m_TagString
@@ -271,16 +271,28 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400056, guid: 3b524a6b242ca1243b30520be42cd95f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400056, guid: 3b524a6b242ca1243b30520be42cd95f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400056, guid: 3b524a6b242ca1243b30520be42cd95f, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400056, guid: 3b524a6b242ca1243b30520be42cd95f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.65
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400056, guid: 3b524a6b242ca1243b30520be42cd95f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.10499954
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400056, guid: 3b524a6b242ca1243b30520be42cd95f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -15.040859
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400056, guid: 3b524a6b242ca1243b30520be42cd95f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -484,7 +496,7 @@ MonoBehaviour:
   moneyBackPercentage: 100
   nextLevelPrefab: {fileID: 2584213311033791341, guid: 475ff81825be1bb4ea356cddd4a7e6c7,
     type: 3}
-  radiusHit: 3
+  radiusHit: 2
   attackSpeed: 1
   turret: {fileID: 4523048579013326269}
   shotPrefab: {fileID: 1103964131845936, guid: faa352a3dce1ac244b963b62aeefb0ed, type: 3}

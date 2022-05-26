@@ -9,7 +9,9 @@ public enum ResourceType
 {
     Life,
     Money,
-    Star
+    Star,
+    EnemyCount,
+    NumberWave
 }
 
 public static class ResourcesManager
@@ -23,7 +25,9 @@ public static class ResourcesManager
         {
             { ResourceType.Life, 0 },
             { ResourceType.Money, 0 },
-            { ResourceType.Star, 0 }
+            { ResourceType.Star, 0 },
+            { ResourceType.EnemyCount, 0 },
+            { ResourceType.NumberWave, 0 }
         };
     }
 

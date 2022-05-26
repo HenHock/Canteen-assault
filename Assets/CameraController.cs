@@ -55,8 +55,6 @@ public class CameraController : MonoBehaviour
             }
         }
         
-        //newPosition.x = Mathf.Clamp(newPosition.x, RightDown.transform, , 145f);  // ограничеваем передвижение Рига по X и Z
-        //newPosition.z = Mathf.Clamp(newPosition.z, -8.5f, 390f);
         transform.position = Vector3.Lerp(transform.position, putInBorders(newPosition), Time.deltaTime * movementTime); // плавное передвижение
     }
 
@@ -76,32 +74,4 @@ public class CameraController : MonoBehaviour
             newPosition.z = RightDown.transform.position.z;
         return newPosition;
     }
-
-
-
-    //private Vector3 touchStart;
-    //public Camera cam;
-    //public float groundZ = 0;
-
-    //// Update is called once per frame
-    //void Update()
-    //{
-    //    if (Input.GetMouseButtonDown(0))
-    //    {
-    //        touchStart = GetWorldPosition(groundZ);
-    //    }
-    //    if (Input.GetMouseButton(0))
-    //    {
-    //        Vector3 direction = touchStart - GetWorldPosition(groundZ);
-    //        cam.transform.position += direction;
-    //    }
-    //}
-    //private Vector3 GetWorldPosition(float z)
-    //{
-    //    Ray mousePos = cam.ScreenPointToRay(Input.mousePosition);
-    //    Plane ground = new Plane(Vector3.forward, new Vector3(0, 0, z));
-    //    float distance;
-    //    ground.Raycast(mousePos, out distance);
-    //    return mousePos.GetPoint(distance);
-    //}
 }

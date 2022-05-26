@@ -271,16 +271,28 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400056, guid: f7fb11e322af985439510231b47e1dbf, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400056, guid: f7fb11e322af985439510231b47e1dbf, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400056, guid: f7fb11e322af985439510231b47e1dbf, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400056, guid: f7fb11e322af985439510231b47e1dbf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.6448736
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400056, guid: f7fb11e322af985439510231b47e1dbf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.036068
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400056, guid: f7fb11e322af985439510231b47e1dbf, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -20.889969
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400056, guid: f7fb11e322af985439510231b47e1dbf, type: 3}
       propertyPath: m_LocalRotation.w
@@ -446,7 +458,7 @@ MonoBehaviour:
   moneyBackPercentage: 100
   nextLevelPrefab: {fileID: 2590110198521185471, guid: 318480ee23c93b74aaaa5d3f3c619147,
     type: 3}
-  radiusHit: 3
+  radiusHit: 2
   attackSpeed: 0.5
   turret: {fileID: 9131692453547442046}
   shotPrefab: {fileID: 2722265603637243481, guid: c4a63ec34a1bb964197503075ea75327,

@@ -112,6 +112,12 @@ PrefabInstance:
       propertyPath: FasterProcent
       value: -20
       objectReference: {fileID: 0}
+    - target: {fileID: 7082707153201779243, guid: e18b2d6083bc05f48aa7c290de67fe2c,
+        type: 3}
+      propertyPath: explosionPrefub
+      value: 
+      objectReference: {fileID: 725748389856807714, guid: 4bda94453d2ca7444a0fff05b2d425f5,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e18b2d6083bc05f48aa7c290de67fe2c, type: 3}
 --- !u!4 &6308937561375435658 stripped
