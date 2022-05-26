@@ -43,8 +43,8 @@ public class LevelManager : MonoBehaviour
 
     private void Start()
     {
-        ResourcesManager.Reset(ResourceType.Life);
-        ResourcesManager.Reset(ResourceType.Money);
+        ResourcesManager.Change(ResourceType.Life, resourceManagerStruct[DataManager.currentLevel].startHealthByLevel);
+        ResourcesManager.Change(ResourceType.Money, resourceManagerStruct[DataManager.currentLevel].startMoneyByLevel);
         ResourcesManager.Reset(ResourceType.EnemyCount);
         ResourcesManager.Reset(ResourceType.NumberWave);
         Time.timeScale = 1;

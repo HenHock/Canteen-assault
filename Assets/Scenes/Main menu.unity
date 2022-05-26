@@ -936,7 +936,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05c494616adaff94d9840ffb324d5c87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  teacherInfo: {fileID: 11400000, guid: 18e83716e4658f743b80bb5e8319af4b, type: 2}
+  teacherInfo: {fileID: 0}
   nameTeacher: {fileID: 15889774}
   description: {fileID: 2071305479}
   damage: {fileID: 1352991083}

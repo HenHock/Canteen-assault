@@ -17,7 +17,7 @@ public class TeacherInfoDisplay : MonoBehaviour
 
     void Start()
     {
-        SetTeacherInfo();
+        GetComponent<TeacherInfoController>().SetFirstLevelTeacherInfo();
     }
 
     public void ChangeTeacherInfo(TeacherInfo teacherInfo)
