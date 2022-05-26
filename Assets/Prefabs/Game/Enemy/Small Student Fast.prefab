@@ -151,6 +151,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Small Student Fast
       objectReference: {fileID: 0}
+    - target: {fileID: 2910614405429017998, guid: e18b2d6083bc05f48aa7c290de67fe2c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 3407594749345748809, guid: e18b2d6083bc05f48aa7c290de67fe2c,
         type: 3}
       propertyPath: fixdedGold
