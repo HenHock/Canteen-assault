@@ -42,6 +42,8 @@ public class Enemy : MonoBehaviour
     {
         moveTween?.Kill();
         DataManager.NumberOfDeathEnemies++;
+        Debug.Log(DataManager.NumberOfAllEnemies + " " + DataManager.NumberOfDeathEnemies);
+        ResourcesManager.Change(ResourceType.EnemyCount, 1);
         if (DataManager.IsLastWave && DataManager.NumberOfDeathEnemies >= DataManager.NumberOfAllEnemies)
         {
             Cake.EndGame(true);
@@ -65,6 +67,12 @@ public class Enemy : MonoBehaviour
         makeMoneyDrop.Drop(transform.position);
 
         Instantiate(explosionPrefub, transform.position, Quaternion.Euler(0, 0, 0));
+
+        if(gameObject.CompareTag("Boss"))
+        {
+            SlowMotionController.startSlowMo();
+        }
+
         EnemyDestroy();
     }
 

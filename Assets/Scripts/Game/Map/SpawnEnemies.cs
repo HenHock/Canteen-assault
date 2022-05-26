@@ -14,16 +14,20 @@ public class SpawnEnemies : MonoBehaviour
     void Start()
     {
         enemyWavesList = LevelManager.returnEnemyList(DataManager.currentLevel);
+        ResourcesManager.Change(ResourceType.NumberWave, CountAllEnemiesAtWave());
         StartCoroutine(SpawnWaves());
     }
-    private int CountAllEnemiesAtWave(int numberWave)
+    private int CountAllEnemiesAtWave()
     {
         int sum = 0;
-        for (int k = 0; k < enemyWavesList[numberWave].squardsList.Count; k++)
+        foreach(EnemyWave squard in enemyWavesList)
         {
-            sum += enemyWavesList[numberWave].squardsList[k].numberOfEnemyinSquard;
-
+            for (int k = 0; k < squard.squardsList.Count; k++)
+            {
+                sum += squard.squardsList[k].numberOfEnemyinSquard;
+            }
         }
+        
         return sum;
     }
 
@@ -32,9 +36,7 @@ public class SpawnEnemies : MonoBehaviour
     {
        
         for (int k=0; k<enemyWavesList.Count;k++)
-        {
-            ResourcesManager.Change(ResourceType.NumberWave, k+1);
-            ResourcesManager.Change(ResourceType.EnemyCount, CountAllEnemiesAtWave(k));
+        {            
             yield return new WaitForSeconds(enemyWavesList[k].delayTime);
             MakeListEnemies(k);
             MixList(enemyWavesList[k].allSquardsList);
@@ -82,7 +84,7 @@ public class SpawnEnemies : MonoBehaviour
             _enemy.transform.SetParent(transform);
             _enemy.transform.localPosition = new Vector3( 0, 0, 0);
             DataManager.NumberOfAllEnemies++;
-            ResourcesManager.Change(ResourceType.EnemyCount, -1);
+            //ResourcesManager.Change(ResourceType.EnemyCount, -1);
         }
     }
 

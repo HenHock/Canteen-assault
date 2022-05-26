@@ -15,7 +15,7 @@ public class Shot : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (string.Equals(other.transform.tag, "Enemy"))
+        if (string.Equals(other.transform.tag, "Enemy") || string.Equals(other.transform.tag, "Boss"))
         {
             Hurt();
             if (explosionPrefub)
@@ -39,7 +39,7 @@ public class Shot : MonoBehaviour
         {
             foreach (Collider target in targets)
             {
-                if (string.Equals(target.gameObject.tag, "Enemy"))
+                if (string.Equals(target.gameObject.tag, "Enemy") || string.Equals(target.transform.tag, "Boss"))
                 {
                     Enemy enemy = target.gameObject.GetComponent<Enemy>();
                     enemy.TakeDamage(damage);
