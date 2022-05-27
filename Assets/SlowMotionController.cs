@@ -10,8 +10,8 @@ public class SlowMotionController : MonoBehaviour
     public float slowMoValue = 0.07f;
     public float slowMoDuration = 10f;
 
-   // public float perspectiveZoomSpeed = .5f;
-    //public Camera camera;
+    public float perspectiveZoomSpeed = .5f;
+    public Camera camera;
 
     // Start is called before the first frame update
     void Start()
@@ -30,10 +30,10 @@ public class SlowMotionController : MonoBehaviour
     
 
     public void SlowMotion()
-    {
+    {        
+       // camera.fieldOfView = Mathf.Clamp(camera.fieldOfView, 100f, enemyPos.position.y - 10);
+
         Time.timeScale = slowMoValue;
         Time.fixedDeltaTime = 0.02f * Time.timeScale;
-        //camera.fieldOfView += deltaMagnitudediff * perspectiveZoomSpeed;
-        //camera.fieldOfView = Mathf.Clamp(camera.fieldOfView, 100f, LeftUp.transform.position.y * 10);
     }
 }

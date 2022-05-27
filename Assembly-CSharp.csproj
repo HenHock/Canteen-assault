@@ -74,6 +74,7 @@
     <Compile Include="Assets\Scripts\UI\Main menu\Levels\LevelListGenerator.cs" />
     <Compile Include="Assets\Scripts\UI\Main menu\Teachears\TeacherInfoDisplay.cs" />
     <Compile Include="Assets\Scripts\Game\Map\CharacterSpawnPlaceClick.cs" />
+    <Compile Include="Assets\Rotate.cs" />
     <Compile Include="Assets\Scripts\Game\Map\MapGenerator.cs" />
     <Compile Include="Assets\Scripts\Game\Character\Shot.cs" />
     <Compile Include="Assets\Scripts\Game\Money\DropMoney.cs" />
@@ -107,7 +108,6 @@
     <Compile Include="Assets\BorderSceneDetection.cs" />
     <Compile Include="Assets\Scripts\Game\Managers\CurrencyManager.cs" />
     <Compile Include="Assets\Scripts\Game\Map\CharacterUpdatePlaceClick.cs" />
-    <Compile Include="Assets\Rotate.cs" />
     <Compile Include="Assets\SlowMotionController.cs" />
   </ItemGroup>
   <ItemGroup>

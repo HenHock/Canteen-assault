@@ -15001,6 +15001,14 @@ MonoBehaviour:
           type: 3}
         numberOfEnemyinSquard: 2
         numberInGroupe: 2
+      - typeOfEnemy: {fileID: 6281214345940797698, guid: b4abca2a3dce94549b4ad59614a72662,
+          type: 3}
+        numberOfEnemyinSquard: 3
+        numberInGroupe: 1
+      - typeOfEnemy: {fileID: 1471673085362196822, guid: 5739796181a4254438c2bed9532d1163,
+          type: 3}
+        numberOfEnemyinSquard: 1
+        numberInGroupe: 1
       allSquardsList: []
     - delayTime: 10
       squardsList:
@@ -18480,8 +18488,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slowMoValue: 0.07
   slowMoDuration: 5
-  perspectiveZoomSpeed: 0.5
-  camera: {fileID: 253793371}
 --- !u!1 &1478636773
 GameObject:
   m_ObjectHideFlags: 0
@@ -18644,7 +18650,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8810b7338649e64ba971c6bee1710eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeSpawn: 3
+  timeSpawn: 4
 --- !u!64 &1487841749
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -21231,7 +21237,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1693051598}
   m_LocalRotation: {x: 0.70710677, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -17.27, y: -10, z: 11}
+  m_LocalPosition: {x: -17.13, y: -10, z: 11}
   m_LocalScale: {x: 1, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
