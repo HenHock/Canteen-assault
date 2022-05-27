@@ -16,6 +16,6 @@ public class ResetButton : MonoBehaviour
         ResourcesManager.Reset(ResourceType.Money);
         ResourcesManager.Reset(ResourceType.EnemyCount);
         ResourcesManager.Reset(ResourceType.NumberWave);
-
+        ResourcesManager.Reset(ResourceType.Star);
     }
 }
