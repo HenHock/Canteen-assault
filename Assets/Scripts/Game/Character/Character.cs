@@ -33,7 +33,7 @@ public class Character : MonoBehaviour
     }
 
     /// <summary>
-    /// Метод, который генерирует объект, который отображает радиус атаки персонажа и устанавливает 0, 0, 0 относительно стола.
+    /// Метод, который генерирует объект, который отображает радиус атаки персонажа и устанавливает на позиции 0, 0, 0 относительно стола.
     /// </summary>
     public void SetRadiusAttackDisplay()
     {
@@ -44,6 +44,7 @@ public class Character : MonoBehaviour
         radiusDisplay.transform.SetParent(transform.parent.parent);
         radiusDisplay.transform.localPosition = Vector3.zero;
         radiusDisplay.transform.localPosition = Vector3.up*0.1f;
+        radiusDisplay.SetActive(DataManager.isRadiusAttackDisplay);
     }
 
     public TeacherInfo GetNextTeacherInfo()
