@@ -484,6 +484,8 @@ MonoBehaviour:
   turret: {fileID: 4523048579013326269}
   shotPrefab: {fileID: 1103964131845936, guid: faa352a3dce1ac244b963b62aeefb0ed, type: 3}
   target: {fileID: 0}
+  radiusHitDisplay: {fileID: 8275627524375916213, guid: a7ee736ff2bf9dc49820ef869c9731c0,
+    type: 3}
 --- !u!114 &7782018592874369611
 MonoBehaviour:
   m_ObjectHideFlags: 0

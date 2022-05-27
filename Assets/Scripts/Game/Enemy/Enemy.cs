@@ -42,7 +42,7 @@ public class Enemy : MonoBehaviour
     {
         moveTween?.Kill();
         DataManager.NumberOfDeathEnemies++;
-        Debug.Log(DataManager.NumberOfAllEnemies + " " + DataManager.NumberOfDeathEnemies);
+        //Debug.Log(DataManager.NumberOfAllEnemies + " " + DataManager.NumberOfDeathEnemies);
         ResourcesManager.Change(ResourceType.EnemyCount, 1);
         if (DataManager.IsLastWave && DataManager.NumberOfDeathEnemies >= DataManager.NumberOfAllEnemies)
         {

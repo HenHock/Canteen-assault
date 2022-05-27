@@ -14,8 +14,12 @@ public class DestroyCharacterClick : MonoBehaviour
             {
                 foreach (Transform item in parent)
                 {
-                    item.GetComponent<CharacterSpawnPlaceClick>().enabled = true;
-                    item.GetComponent<CharacterUpdatePlaceClick>().enabled = false;
+                    if (item.GetComponent<CharacterUpdatePlaceClick>() != null && item.GetComponent<CharacterSpawnPlaceClick>() != null)
+                    {
+                        item.GetComponent<CharacterSpawnPlaceClick>().enabled = true;
+                        item.GetComponent<CharacterUpdatePlaceClick>().enabled = false;
+                    }
+                    else Destroy(item.gameObject);
                 }
             }
 
