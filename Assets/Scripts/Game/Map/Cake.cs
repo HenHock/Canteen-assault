@@ -55,7 +55,7 @@ public class Cake : MonoBehaviour
 
     private IEnumerator endGameRealise(bool flag)
     {
-       yield return new WaitForSeconds(3);
+       yield return new WaitForSeconds(2);
         if (flag)
         {
             DataManager.uIController.Win();

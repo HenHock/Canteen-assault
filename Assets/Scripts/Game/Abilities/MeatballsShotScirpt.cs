@@ -5,6 +5,7 @@ using UnityEngine;
 public class MeatballsShotScirpt : MonoBehaviour
 {
     private Transform meatball;
+    [SerializeField] GameObject explosionPrefub;
 
     private void Start()
     {
@@ -25,5 +26,10 @@ public class MeatballsShotScirpt : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         Destroy(gameObject);
+    }
+    private void OnDestroy()
+    {
+        if (explosionPrefub)
+            Instantiate(explosionPrefub, transform.position, Quaternion.Euler(0, 0, 0));
     }
 }
