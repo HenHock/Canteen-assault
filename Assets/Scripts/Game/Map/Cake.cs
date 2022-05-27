@@ -12,6 +12,7 @@ public class Cake : MonoBehaviour
     [SerializeField] private GameObject nextCakePrefab;
 
     public static Action<int> EatCake;
+    //public static Func<bool, IEnumerable> EndGame;
     public static Action<bool> EndGame;
 
     private void Start()
@@ -19,7 +20,8 @@ public class Cake : MonoBehaviour
         ResourcesManager.OnResourcesAmountChanged += HandleLifeAmountChanged;
 
         EatCake = eatCakeRealise;
-        EndGame = endGameRealise;
+        //EndGame = endGameRealise;
+        EndGame = EndGameReturn;
     }
 
     private void OnDestroy()
@@ -40,15 +42,20 @@ public class Cake : MonoBehaviour
         }
     }
 
-
     public void eatCakeRealise(int damage)
     {
         ResourcesManager.Change(ResourceType.Life, -damage);
         changeCakeDisplay();
     }
 
-    public void endGameRealise(bool flag)
+    private void EndGameReturn(bool flag)
     {
+        StartCoroutine(endGameRealise(flag));
+    }
+
+    private IEnumerator endGameRealise(bool flag)
+    {
+       yield return new WaitForSeconds(3);
         if (flag)
         {
             DataManager.uIController.Win();
