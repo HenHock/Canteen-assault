@@ -20,7 +20,6 @@ public class UIController : MonoBehaviour
     [SerializeField] private PanelController schoolPanel;
     [SerializeField] private PanelController canteenPanel;
     [SerializeField] private PanelController detailLevelPanel;
-    [SerializeField] private UIDocument UIDocument;
     [SerializeField] private GameObject EventSystem;
 
     private IDictionary<PanelType, PanelController> panels;
@@ -44,11 +43,6 @@ public class UIController : MonoBehaviour
         onOpenPanel = OpenPanel;
         onClosePanel = ClosePanel;
         onGetPanel = GetGameObjectPanel;
-
-        var root = UIDocument.rootVisualElement;
-        Button startButton = root.Q<Button>("button-play");
-        startButton.clicked += StartButton_Click;
-
     }
 
     private void OpenPanel(PanelType panel)
@@ -65,11 +59,4 @@ public class UIController : MonoBehaviour
     {
         return panels[panel].gameObject;
     }
-
-    private void StartButton_Click()
-    {
-        Destroy(UIDocument.gameObject);
-        EventSystem.SetActive(true);
-    }
-
 }

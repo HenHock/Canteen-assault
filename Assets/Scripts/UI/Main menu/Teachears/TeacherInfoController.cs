@@ -81,13 +81,11 @@ public class TeacherInfoController : MonoBehaviour
 
     private void SelectButton(GameObject button)
     {
-        button.GetComponent<Image>().sprite = selectedButton;
-        button.GetComponentInChildren<TextMeshProUGUI>().color = new Color32(103, 0, 0, 255);
+        button.transform.localScale = Vector3.one*1.2f;
     }
 
     private void UnselectButton(GameObject button)
     {
-        button.GetComponent<Image>().sprite = unselectedButton;
-        button.GetComponentInChildren<TextMeshProUGUI>().color = new Color32(228, 153, 46, 255);
+        button.transform.localScale = Vector3.one;
     }
 }
