@@ -40,7 +40,7 @@ public class Character : MonoBehaviour
         GameObject radiusDisplay = Instantiate(radiusHitDisplay);
         DataManager.radiusAttackObjects.Add(radiusDisplay);
 
-        radiusDisplay.transform.localScale = new Vector3(radiusHit * 2.2f, 0.01f, radiusHit * 2.2f);
+        radiusDisplay.transform.localScale = new Vector3(radiusHit * 2.2f, 0.5f, radiusHit * 2.2f);
         radiusDisplay.transform.SetParent(transform.parent.parent);
         radiusDisplay.transform.localPosition = Vector3.zero;
         radiusDisplay.transform.localPosition = Vector3.up*0.1f;
