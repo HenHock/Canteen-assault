@@ -769,6 +769,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e10f55a9a2e70bf44a901d58f26bdc3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  radiusHitDisplay: {fileID: 8275627524375916213, guid: a7ee736ff2bf9dc49820ef869c9731c0,
+    type: 3}
 --- !u!61 &2972306191403347505
 BoxCollider2D:
   m_ObjectHideFlags: 0

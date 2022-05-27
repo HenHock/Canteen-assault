@@ -26,6 +26,7 @@ public class CharacterSpawn : MonoBehaviour
         else
         {
             character.transform.SetParent(DataManager.selectedPositionPlaceCharacterSpawn.GetChild(0).transform);
+            character.GetComponent<Character>().SetRadiusAttackDisplay();
             character.transform.localPosition = new Vector3(0, 0 + character.transform.localScale.y / 2, 0);
 
             ResourcesManager.Change(ResourceType.Money, -character.GetComponent<Character>().costToBuy);
@@ -34,8 +35,11 @@ public class CharacterSpawn : MonoBehaviour
             {
                 foreach (Transform item in DataManager.selectedPositionPlaceCharacterSpawn)
                 {
-                    item.GetComponent<CharacterSpawnPlaceClick>().enabled = false;
-                    item.GetComponent<CharacterUpdatePlaceClick>().enabled = true;
+                    if (item.GetComponent<CharacterUpdatePlaceClick>() != null && item.GetComponent<CharacterSpawnPlaceClick>() != null)
+                    {
+                        item.GetComponent<CharacterSpawnPlaceClick>().enabled = false;
+                        item.GetComponent<CharacterUpdatePlaceClick>().enabled = true;
+                    }
                 }
             }
 

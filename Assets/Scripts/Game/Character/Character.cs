@@ -13,11 +13,13 @@ public class Character : MonoBehaviour
     public GameObject nextLevelPrefab;
 
     [SerializeField] private TeacherInfo teacherInfo;
-    [SerializeField] private Transform turret; 
-    [SerializeField] private GameObject shotPrefab;
-    [SerializeField] private TargetPoint target;
+    [SerializeField] private Transform turret; // Объект, который выполняет прицеливания о генарицию снаряда
+    [SerializeField] private GameObject shotPrefab; 
+    [SerializeField] private GameObject radiusHitDisplay; // Объект, который отображает радиус аттаки персонажа
+
     private GameObject shot;
     private float nextShoot = 0;
+    private TargetPoint target;
 
     private void Awake()
     {
@@ -28,6 +30,20 @@ public class Character : MonoBehaviour
             attackSpeed = teacherInfo.attackSpeed;
             radiusHit = teacherInfo.attackRadius;
         }
+    }
+
+    /// <summary>
+    /// Метод, который генерирует объект, который отображает радиус атаки персонажа и устанавливает 0, 0, 0 относительно стола.
+    /// </summary>
+    public void SetRadiusAttackDisplay()
+    {
+        GameObject radiusDisplay = Instantiate(radiusHitDisplay);
+        DataManager.radiusAttackObjects.Add(radiusDisplay);
+
+        radiusDisplay.transform.localScale = new Vector3(radiusHit * 2.2f, 0.01f, radiusHit * 2.2f);
+        radiusDisplay.transform.SetParent(transform.parent.parent);
+        radiusDisplay.transform.localPosition = Vector3.zero;
+        radiusDisplay.transform.localPosition = Vector3.up*0.1f;
     }
 
     public TeacherInfo GetNextTeacherInfo()
