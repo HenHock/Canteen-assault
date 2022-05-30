@@ -15088,7 +15088,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resourceManagerStruct:
   - startHealthByLevel: 10
-    startMoneyByLevel: 220
+    startMoneyByLevel: 400
     enemyWavesList:
     - delayTime: 0
       squardsList:
@@ -16841,9 +16841,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   teachers:
+  - {fileID: 11400000, guid: 18e83716e4658f743b80bb5e8319af4b, type: 2}
   - {fileID: 11400000, guid: 5f79e6246c17fa14a8e7a35482d3040b, type: 2}
   - {fileID: 11400000, guid: 5e13570bdeada8f458a53a38c4770e3f, type: 2}
-  - {fileID: 11400000, guid: 18e83716e4658f743b80bb5e8319af4b, type: 2}
   ItemPanel: {fileID: 6970766983873431109, guid: f65961d873b467b4a8ab4300e0fbc90c,
     type: 3}
 --- !u!1 &1281884609
