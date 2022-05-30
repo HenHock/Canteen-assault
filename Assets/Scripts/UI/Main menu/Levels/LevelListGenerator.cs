@@ -24,7 +24,7 @@ public class LevelListGenerator : MonoBehaviour
              .Where(scene => scene.enabled)
              .Select(scene => scene.path)
              .ToArray();
-
+        Debug.Log(scenes.Length);
         // Все сцена, которые имеют в имени слово level добавляем на сцену
         foreach (string scene in scenes)
             if(regex.IsMatch(scene))
