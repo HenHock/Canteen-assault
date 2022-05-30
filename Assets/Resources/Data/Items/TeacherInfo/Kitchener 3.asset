@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Kitchener 3
   m_EditorClassIdentifier: 
   nameTeacher: Kitchener
-  description: A lover of all students who excels at making large <br>pies that can
-    hit multiple opponents at once.
-  damage: 20
+  description: She prepares exotic dishes, <br>and even better throws them <br>at
+    students.
+  damage: 8
   attackSpeed: 0.8
   attackRadius: 4
   costToBuy: 250
