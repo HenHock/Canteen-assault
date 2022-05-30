@@ -169,7 +169,7 @@ PrefabInstance:
     - target: {fileID: 3407594749345748809, guid: e18b2d6083bc05f48aa7c290de67fe2c,
         type: 3}
       propertyPath: fixdedGold
-      value: 5
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3407594749345748809, guid: e18b2d6083bc05f48aa7c290de67fe2c,
         type: 3}

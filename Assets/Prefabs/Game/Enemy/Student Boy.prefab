@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f41182b960962444ad2f8e52abb7cb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fixdedGold: 5
+  fixdedGold: 7
   additionalGold: 25
   percentOfDropping: 20
   goldPrefub: {fileID: 1950871307682000, guid: 01348926c7cbb3347a006c37204131c3, type: 3}
