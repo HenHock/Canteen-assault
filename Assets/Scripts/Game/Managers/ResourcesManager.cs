@@ -25,10 +25,11 @@ public static class ResourcesManager
         {
             { ResourceType.Life, 0 },
             { ResourceType.Money, 0 },
-            { ResourceType.Star, 0 },
+            //{ ResourceType.Star, 0 },
             { ResourceType.EnemyCount, 0 },
             { ResourceType.NumberWave, 0 }
         };
+        valueByResourceType.Add(ResourceType.Star, ES3.Load(SaveKeys.Star, 0));
     }
 
     public static void Change(ResourceType resource, float amount)
@@ -53,4 +54,11 @@ public static class ResourcesManager
     }
 
     public static event Action<ResourceType, float> OnResourcesAmountChanged;
+
+    public static void Save()
+    {
+        ES3.Save(SaveKeys.Star, valueByResourceType[ResourceType.Star]);
+    }
+
+
 }

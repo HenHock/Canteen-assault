@@ -20,7 +20,6 @@ public class Cake : MonoBehaviour
         ResourcesManager.OnResourcesAmountChanged += HandleLifeAmountChanged;
 
         EatCake = eatCakeRealise;
-        //EndGame = endGameRealise;
         EndGame = EndGameReturn;
     }
 

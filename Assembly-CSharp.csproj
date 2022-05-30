@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scripts\UI\Game\ResourceDisplay.cs" />
     <Compile Include="Assets\Scripts\Game\Abilities\DancingAbility.cs" />
     <Compile Include="Assets\Scripts\UI\PanelController.cs" />
+    <Compile Include="Assets\Scripts\SaveKeys.cs" />
     <Compile Include="Assets\Scripts\Game\Abilities\MeatballsAbility.cs" />
     <Compile Include="Assets\Scripts\Game\Managers\ResourcesManager.cs" />
     <Compile Include="Assets\PitchZoom.cs" />
@@ -84,6 +85,7 @@
     <Compile Include="Assets\Scripts\Game\Managers\LifeManager.cs" />
     <Compile Include="Assets\Scripts\Game\Abilities\DragObject.cs" />
     <Compile Include="Assets\Scripts\UI\Main menu\UIController.cs" />
+    <Compile Include="Assets\CakeControllerScript.cs" />
     <Compile Include="Assets\Scripts\UI\Game\AbilityDisplay.cs" />
     <Compile Include="Assets\Scripts\UI\Game\StarsIcon.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\TeacherInfo.cs" />
@@ -102,8 +104,8 @@
     <Compile Include="Assets\Scripts\UI\Main menu\Levels\Level.cs" />
     <Compile Include="Assets\Scripts\UI\Game\BuyCharacterItem.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\ResourceItemSO.cs" />
-    <Compile Include="Assets\Scripts\UI\Main menu\Teachears\TeacherInfoController.cs" />
     <Compile Include="Assets\Scripts\UI\Game\ResetButton.cs" />
+    <Compile Include="Assets\Scripts\UI\Main menu\Teachears\TeacherInfoController.cs" />
     <Compile Include="Assets\Scripts\UI\Game\HealthDisplay.cs" />
     <Compile Include="Assets\Scripts\Game\Map\SpawnEnemies.cs" />
     <Compile Include="Assets\BorderSceneDetection.cs" />

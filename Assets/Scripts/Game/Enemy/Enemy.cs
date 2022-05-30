@@ -26,7 +26,7 @@ public class Enemy : MonoBehaviour
         //Debug.Log(PathManager.GetRandomPath(_listIndex).Length);
         moveTween = transform.DOPath(PathManager.GetRandomPath(_listIndex), _speed).SetLookAt(-1f).OnComplete(() =>
         {
-            Cake.EatCake(damage);
+            CakeControllerScript.EatCake(damage);
             EnemyDestroy();
         });
         //Debug.Log(moveTween + "is anim");
@@ -46,7 +46,7 @@ public class Enemy : MonoBehaviour
         ResourcesManager.Change(ResourceType.EnemyCount, 1);
         if (DataManager.IsLastWave && DataManager.NumberOfDeathEnemies >= DataManager.NumberOfAllEnemies)
         {
-            Cake.EndGame(true);
+            CakeControllerScript.EndGame(true);
         }
     }
 

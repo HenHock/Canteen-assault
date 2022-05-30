@@ -29,4 +29,6 @@ public class DataManager : MonoBehaviour
     public static List<GameObject> radiusAttackObjects = new List<GameObject>();
 
     public static int prevWay = 0;
+
+    public static int twentyProcentAmount = 0;
 }

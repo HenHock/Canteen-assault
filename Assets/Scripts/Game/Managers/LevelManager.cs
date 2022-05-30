@@ -47,6 +47,8 @@ public class LevelManager : MonoBehaviour
         ResourcesManager.Change(ResourceType.Money, resourceManagerStruct[DataManager.currentLevel].startMoneyByLevel);
         ResourcesManager.Reset(ResourceType.EnemyCount);
         ResourcesManager.Reset(ResourceType.NumberWave);
+
+        DataManager.twentyProcentAmount = (int)ResourcesManager.Get(ResourceType.Life) / 5;
         Time.timeScale = 1;
     }
 }
