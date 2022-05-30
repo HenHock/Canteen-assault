@@ -20,6 +20,7 @@ public class Character : MonoBehaviour
     private GameObject shot;
     private float nextShoot = 0;
     private TargetPoint target;
+    private Queue<Collider> targets;
 
     private void Awake()
     {
@@ -69,8 +70,8 @@ public class Character : MonoBehaviour
         if (Time.time > nextShoot)
         {
             shot = Instantiate(shotPrefab);
+            shot.GetComponent<Shot>().character = gameObject;
             shot.GetComponent<Shot>().damage = attackDamage;
-            shot.GetComponent<Shot>().target = target.transform;
             shot.transform.rotation = turret.transform.rotation;
             shot.transform.position = turret.transform.TransformPoint(Vector3.forward * 1.5f);
             nextShoot = Time.time + (1000 / attackSpeed) / 1000;
@@ -80,16 +81,25 @@ public class Character : MonoBehaviour
     // Find target to shoot
     private bool isAcquireTarger()
     {
-        DataManager.targets = Physics.OverlapSphere(transform.position, radiusHit, DataManager.ENEMY_LAYER_MASK);
+        targets = new Queue<Collider>(Physics.OverlapSphere(transform.position, radiusHit, DataManager.ENEMY_LAYER_MASK));
 
-        if (DataManager.targets.Length > 0)
+        if (targets.Count > 0)
         {
-            target = DataManager.targets[DataManager.targets.Length-1].GetComponent<TargetPoint>();
+            target = targets.Peek().GetComponent<TargetPoint>();
             return true;
         }
 
         target = null;
         return false;
+    }
+    
+    public Transform GetNextTarget()
+    {
+        //targets = new Queue<Collider>(Physics.OverlapSphere(transform.position, radiusHit, DataManager.ENEMY_LAYER_MASK));
+        if (targets.Count > 0)
+            return targets.Dequeue().transform;
+
+        return null;
     }
 
     private bool isTargetTrucked()

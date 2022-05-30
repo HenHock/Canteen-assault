@@ -25,7 +25,6 @@ public class DataManager : MonoBehaviour
     public static int NumberOfDeathEnemies { get; set; } = 0;
     public static bool IsLastWave { get; set; } = false;
     public static bool isNeedToDestroy { get; set; } = true;
-    public static Collider[] targets;
     public static bool isRadiusAttackDisplay = true;
     public static List<GameObject> radiusAttackObjects = new List<GameObject>();
 

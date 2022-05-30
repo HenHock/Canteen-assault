@@ -2,16 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Shot : MonoBehaviour
 {
+    public GameObject character { get; set; }
     public int damage { set; get; }
-    public Transform target { set; private get; }
-
     public float speed = 5;
+
+    private Queue<Collider> targets;
+    public Transform target;
 
     [SerializeField] private int health;
     [SerializeField, Range(0.1f,4f)] private float radiusHit = 1;
     [SerializeField] GameObject explosionPrefub;
+
+    private void Start()
+    {
+        target = character.GetComponent<Character>().GetNextTarget();
+    }
 
     public void OnTriggerEnter(Collider other)
     {
@@ -25,10 +33,10 @@ public class Shot : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (DataManager.targets.Length > 0 && health > 1)
+        if (health > 0)
         {
-            target = DataManager.targets[0].transform;
-        }
+            target = character.GetComponent<Character>().GetNextTarget();
+        }else Destroy(gameObject);
     }
 
     void Hurt()
@@ -43,12 +51,13 @@ public class Shot : MonoBehaviour
                 {
                     Enemy enemy = target.gameObject.GetComponent<Enemy>();
                     enemy.TakeDamage(damage);
-                    health--;
+                    --health;
 
-                    if (health <= 1)
+                    if (health > 0)
                     {
-                        Destroy(gameObject);
+                        this.target = character.GetComponent<Character>().GetNextTarget();
                     }
+                    else Destroy(gameObject);
                 }
             }
         }
