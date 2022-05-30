@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Kitchener 2
   m_EditorClassIdentifier: 
   nameTeacher: Kitchener
-  description: A lover of all students, who perfectly prepares <br>exotic dishes,
-    and even better throws them <br>at his students.
-  damage: 20
+  description: She prepares exotic dishes, <br>and even better throws them <br>at
+    students.
+  damage: 7
   attackSpeed: 0.8
-  attackRadius: 4
+  attackRadius: 3.5
   costToBuy: 150
   image: {fileID: 21300000, guid: a3d52c430959e74439971efc47411a1e, type: 3}
   prefab: {fileID: 6388480008027206938, guid: 0d1ed3acd6f95424d946214aaf594309, type: 3}
