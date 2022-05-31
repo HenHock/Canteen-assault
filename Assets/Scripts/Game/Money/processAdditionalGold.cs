@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using Assets.Scripts.ScriptableObjects;
+using System;
 
 public class processAdditionalGold : MonoBehaviour
 {
@@ -26,6 +27,7 @@ public class processAdditionalGold : MonoBehaviour
     private void OnMouseDown()
     {
         ResourcesManager.Change(ResourceType.Money, additionalGold);
+        OnGoldCollected?.Invoke();
         additionalGoldDestroy();
     }
 
@@ -38,4 +40,6 @@ public class processAdditionalGold : MonoBehaviour
     {
         moveTween?.Kill();
     }
+
+    public static event Action OnGoldCollected;
 }

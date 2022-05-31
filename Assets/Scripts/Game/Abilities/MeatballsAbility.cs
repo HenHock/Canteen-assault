@@ -13,6 +13,7 @@ public class MeatballsAbility : Ability
 
     public override void Use()
     {
+        OnMeatballsgAbilityUse?.Invoke();
         DataManager.isNeedToDestroy = true;
         dragObject = Instantiate(aimPrefab);
         dragObject.transform.position = Vector3.zero;
@@ -36,4 +37,6 @@ public class MeatballsAbility : Ability
             Destroy(dragObject);
         AbilityDisplay.onChangeArtwork(Abilities.meatballsAbility, artWork, Use);
     }
+
+    public static event Action OnMeatballsgAbilityUse;
 }
