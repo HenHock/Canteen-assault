@@ -20,7 +20,7 @@ public class SlowMotionController : MonoBehaviour
     }
     
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         Time.timeScale = Math.Clamp(Time.timeScale, 0.0f, 1.0f);
         Time.fixedDeltaTime = Math.Clamp(Time.fixedDeltaTime, 0.0f, 0.02f);

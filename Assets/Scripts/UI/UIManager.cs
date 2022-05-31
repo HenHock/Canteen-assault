@@ -15,6 +15,7 @@ public class UIManager : MonoBehaviour
     public PanelController buyCharacterPanelController;
     public PanelController endGamePanel;
     public PanelController updateCharacterPanel;
+    public PanelController pausePanel;
     public GameObject sceneIgnoring;
 
     [SerializeField] private GameObject titleEndGameText;
@@ -33,6 +34,7 @@ public class UIManager : MonoBehaviour
         buyCharacterPanelController.Close();
         endGamePanel.Close();
         updateCharacterPanel.Close();
+        pausePanel.Close();
     }
 
     public void Win()
