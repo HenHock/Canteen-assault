@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets\CameraController.cs" />
     <Compile Include="Assets\Scripts\Game\Managers\AbilitiesManager.cs" />
+    <Compile Include="Assets\Scripts\UI\Game\PauseButtonClick.cs" />
     <Compile Include="Assets\Scripts\Game\Character\CharacterSpawn.cs" />
     <Compile Include="Assets\Scripts\Game\FloatExtensions.cs" />
     <Compile Include="Assets\Scripts\Game\Character\Character.cs" />
@@ -108,14 +109,13 @@
     <Compile Include="Assets\Scripts\UI\Main menu\Teachears\TeacherInfoController.cs" />
     <Compile Include="Assets\Scripts\UI\Game\HealthDisplay.cs" />
     <Compile Include="Assets\Scripts\Game\Map\SpawnEnemies.cs" />
+    <Compile Include="Assets\Scripts\UI\Game\MenuButtonClick.cs" />
     <Compile Include="Assets\BorderSceneDetection.cs" />
     <Compile Include="Assets\Scripts\Game\Managers\CurrencyManager.cs" />
+    <Compile Include="Assets\Scripts\UI\PageSwiper.cs" />
     <Compile Include="Assets\Scripts\Game\Map\CharacterUpdatePlaceClick.cs" />
     <Compile Include="Assets\SlowMotionController.cs" />
     <Compile Include="Assets\Scripts\UI\Game\PausePanelController.cs" />
-    <Compile Include="Assets\Scripts\UI\Game\MenuButtonClick.cs" />
-    <Compile Include="Assets\Scripts\UI\Game\PauseButtonClick.cs" />
-    <Compile Include="Assets\Scripts\UI\PageSwiper.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\UI Toolkit\USS\button-style.uss" />
