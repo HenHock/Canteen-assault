@@ -22,7 +22,7 @@ public class CakeControllerScript : MonoBehaviour
         EndGame = EndGameReturn;
         currentCakeLevel = Cake.Length;
         
-        Debug.Log(DataManager.twentyProcentAmount);
+        //Debug.Log(DataManager.twentyProcentAmount);
         currentDamage = 0;
     }
 
@@ -49,7 +49,7 @@ public class CakeControllerScript : MonoBehaviour
         ResourcesManager.Change(ResourceType.Life, -damage);
 
         currentDamage += damage;
-        Debug.Log(currentDamage);
+        //Debug.Log(currentDamage);
         if(currentDamage >= DataManager.twentyProcentAmount)
             changeCakeDisplay();
     }
