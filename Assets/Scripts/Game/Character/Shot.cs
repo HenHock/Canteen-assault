@@ -9,17 +9,12 @@ public class Shot : MonoBehaviour
     public int damage { set; get; }
     public float speed = 5;
 
-    private Queue<Collider> targets;
     public Transform target;
 
     [SerializeField] private int health;
     [SerializeField, Range(0.1f,4f)] private float radiusHit = 1;
+    [SerializeField, Range(0.1f, 2f)] private float additionalAttack = 0.1f; // радиус допольнительной атаки. 
     [SerializeField] GameObject explosionPrefub;
-
-    private void Start()
-    {
-        target = character.GetComponent<Character>().GetNextTarget();
-    }
 
     public void OnTriggerEnter(Collider other)
     {
@@ -29,14 +24,6 @@ public class Shot : MonoBehaviour
             if (explosionPrefub)
                 Instantiate(explosionPrefub, transform.position, Quaternion.Euler(0, 0, 0));
         }
-    }
-
-    private void OnTriggerStay(Collider other)
-    {
-        if (health > 0)
-        {
-            target = character.GetComponent<Character>().GetNextTarget();
-        }else Destroy(gameObject);
     }
 
     void Hurt()
@@ -55,7 +42,10 @@ public class Shot : MonoBehaviour
 
                     if (health > 0)
                     {
-                        this.target = character.GetComponent<Character>().GetNextTarget();
+                        Transform nextTarget = Physics.OverlapSphere(transform.position, additionalAttack, DataManager.ENEMY_LAYER_MASK)[0].transform;
+                        if (nextTarget != this.target)
+                            this.target = nextTarget;
+                        else this.target = null;
                     }
                     else Destroy(gameObject);
                 }

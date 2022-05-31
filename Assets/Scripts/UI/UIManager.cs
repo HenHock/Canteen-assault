@@ -70,7 +70,7 @@ public class UIManager : MonoBehaviour
 
         nextLevelButton.SetActive(false);
         resetButton.SetActive(true);
-        resetButton.transform.Translate(Vector3.right*170); // Устанавливаем кнопку по середине
+        resetButton.transform.Translate(Vector3.right*210); // Устанавливаем кнопку по середине
     }
 
     /// <summary>

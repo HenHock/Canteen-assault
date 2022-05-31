@@ -121,6 +121,7 @@
     <Compile Include="Assets\Scripts\Game\Tasks at level\Task3.cs" />
     <Compile Include="Assets\Scripts\Game\Tasks at level\Task4.cs" />
     <Compile Include="Assets\Scripts\Game\Tasks at level\Task5.cs" />
+    <Compile Include="Assets\Scripts\UI\PageSwiper.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\UI Toolkit\USS\button-style.uss" />
