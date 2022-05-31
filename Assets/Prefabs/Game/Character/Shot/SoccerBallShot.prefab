@@ -128,8 +128,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3894695eac2008e4b93a43994bfdb40c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 7
+  target: {fileID: 0}
+  health: 1
+  radiusHit: 0.3
+  additionalAttack: 0.1
   explosionPrefub: {fileID: 4387482976666195449, guid: d1eb5368e6bef184681cd4db6cf466fe,
     type: 3}
-  health: 1
-  speed: 7
-  radiusHit: 0.3

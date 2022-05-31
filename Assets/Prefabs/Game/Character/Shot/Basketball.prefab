@@ -114,11 +114,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3894695eac2008e4b93a43994bfdb40c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 3
+  target: {fileID: 0}
+  health: 1
+  radiusHit: 0.23
+  additionalAttack: 0.1
   explosionPrefub: {fileID: 5880797563127281583, guid: 265d3a5ba69981a4698ceabcedf368b0,
     type: 3}
-  health: 1
-  speed: 3
-  radiusHit: 0.23
 --- !u!135 &-1243681320870152966
 SphereCollider:
   m_ObjectHideFlags: 0

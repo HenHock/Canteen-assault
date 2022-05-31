@@ -13,14 +13,13 @@ public class Character : MonoBehaviour
     public GameObject nextLevelPrefab;
 
     [SerializeField] private TeacherInfo teacherInfo;
-    [SerializeField] private Transform turret; // Объект, который выполняет прицеливания о генарицию снаряда
+    [SerializeField] private Transform turret; // Объект, который выполняет прицеливания и генарицию снаряда
     [SerializeField] private GameObject shotPrefab; 
     [SerializeField] private GameObject radiusHitDisplay; // Объект, который отображает радиус аттаки персонажа
 
     private GameObject shot;
     private float nextShoot = 0;
     private TargetPoint target;
-    private Queue<Collider> targets;
 
     private void Awake()
     {
@@ -53,7 +52,7 @@ public class Character : MonoBehaviour
         return teacherInfo.nextTeacherInfo;
     }
 
-    private void Update()
+    private void LateUpdate()
     {
         if (isAcquireTarger() || isTargetTrucked())
             onAttack();
@@ -70,7 +69,7 @@ public class Character : MonoBehaviour
         if (Time.time > nextShoot)
         {
             shot = Instantiate(shotPrefab);
-            shot.GetComponent<Shot>().character = gameObject;
+            shot.GetComponent<Shot>().target = target.transform;
             shot.GetComponent<Shot>().damage = attackDamage;
             shot.transform.rotation = turret.transform.rotation;
             shot.transform.position = turret.transform.TransformPoint(Vector3.forward * 1.5f);
@@ -81,26 +80,18 @@ public class Character : MonoBehaviour
     // Find target to shoot
     private bool isAcquireTarger()
     {
-        targets = new Queue<Collider>(Physics.OverlapSphere(transform.position, radiusHit, DataManager.ENEMY_LAYER_MASK));
+        Collider[] targets = Physics.OverlapSphere(transform.position, radiusHit, DataManager.ENEMY_LAYER_MASK);
 
-        if (targets.Count > 0)
+        if (targets.Length > 0)
         {
-            target = targets.Peek().GetComponent<TargetPoint>();
+            target = targets[targets.Length-1].GetComponent<TargetPoint>();
             return true;
         }
 
         target = null;
         return false;
     }
-    
-    public Transform GetNextTarget()
-    {
-        //targets = new Queue<Collider>(Physics.OverlapSphere(transform.position, radiusHit, DataManager.ENEMY_LAYER_MASK));
-        if (targets.Count > 0)
-            return targets.Dequeue().transform;
-
-        return null;
-    }
+   
 
     private bool isTargetTrucked()
     {
