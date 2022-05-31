@@ -115,6 +115,7 @@
     <Compile Include="Assets\Scripts\UI\Game\PausePanelController.cs" />
     <Compile Include="Assets\Scripts\UI\Game\MenuButtonClick.cs" />
     <Compile Include="Assets\Scripts\UI\Game\PauseButtonClick.cs" />
+    <Compile Include="Assets\Scripts\UI\PageSwiper.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\UI Toolkit\USS\button-style.uss" />
