@@ -5,8 +5,6 @@ using UnityEngine;
 public class Task4 : TaskAbstract
 {
     private int countNumberUse = 0;
-    // [SerializeField] private static float howMuchDancingAbilityCouldSpent = 0;
-   // private string textTask = $"Use dancing ability no more than {howMuchUse} times.";
 
     public override string GetTextTask()
     {

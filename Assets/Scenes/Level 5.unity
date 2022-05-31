@@ -18279,6 +18279,8 @@ MonoBehaviour:
   Stars: {fileID: 946331037}
   nextLevelButton: {fileID: 1841923394}
   resetButton: {fileID: 36186104}
+  firstTask: {fileID: 493552205}
+  secondTask: {fileID: 1970524533}
 --- !u!114 &1758345770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20224,10 +20226,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1970524533}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efa36f50ab7b2e5438bd77dcf2036035, type: 3}
+  m_Script: {fileID: 11500000, guid: ce74b377790ef7a4fbd2b246a99eef50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  howMuchUse: 3
+  howMuchUse: 5
 --- !u!1001 &1980155042
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -4093,10 +4093,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 480382678}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4c01553bbc44c44f801c498fe318b81, type: 3}
+  m_Script: {fileID: 11500000, guid: a23a733b95fbce24eb0d33720b01329a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  howMuchUse: 5
+  howMuchUse: 3
 --- !u!1 &489980301
 GameObject:
   m_ObjectHideFlags: 0
@@ -16029,7 +16029,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efa36f50ab7b2e5438bd77dcf2036035, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  howMuchUse: 3
+  howMuchUse: 4
 --- !u!4 &1579352962 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7607352871602143218, guid: eb8c2793037f79d4781851ba46789e24,
@@ -17722,6 +17722,8 @@ MonoBehaviour:
   Stars: {fileID: 946331037}
   nextLevelButton: {fileID: 1841923394}
   resetButton: {fileID: 36186104}
+  firstTask: {fileID: 480382678}
+  secondTask: {fileID: 1572157541}
 --- !u!114 &1758345770
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -25,6 +25,10 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject nextLevelButton;
     [SerializeField] private GameObject resetButton;
 
+    [SerializeField] private GameObject firstTask;
+
+    [SerializeField] private GameObject secondTask;
+
     private void Awake()
     {
         DataManager.uIController = this;
@@ -41,9 +45,15 @@ public class UIManager : MonoBehaviour
     {
         endGamePanel.Open();
         titleEndGameText.GetComponent<TextMeshProUGUI>().text = "You win!";
-        ResourcesManager.Change(ResourceType.Star, 1); // ƒобавл€ем одну звезду за победу
-        Stars.GetComponent<Image>().sprite = StarsIcon.GetIcon(ResourcesManager.Get(ResourceType.Star)); // ”станавливаем новую иконку в зависимотси от полученных звезд
-        Stars.GetComponentInChildren<TextMeshProUGUI>().text = ResourcesManager.Get(ResourceType.Star).ToString();
+
+        int starCount = 1;
+        if (firstTask.GetComponent<TaskAbstract>().CheckIfComplete())
+            starCount++;
+        if (secondTask.GetComponent<TaskAbstract>().CheckIfComplete())
+            starCount++;
+        ResourcesManager.Change(ResourceType.Star, starCount); // ƒобавл€ем звезды за победу
+        Stars.GetComponent<Image>().sprite = StarsIcon.GetIcon(starCount); // ”станавливаем новую иконку в зависимотси от полученных звезд
+        Stars.GetComponentInChildren<TextMeshProUGUI>().text = starCount.ToString();
         //statisticsEndGameText.GetComponent<TextMeshProUGUI>().text = $"You earned {ResourcesManager.Get(ResourceType.Star)} star!";
 
         nextLevelButton.SetActive(true);

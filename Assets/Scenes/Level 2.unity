@@ -12051,7 +12051,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resourceManagerStruct:
   - startHealthByLevel: 5
-    startMoneyByLevel: 2000
+    startMoneyByLevel: 220
     enemyWavesList:
     - delayTime: 0
       squardsList:
@@ -12091,7 +12091,7 @@ MonoBehaviour:
         numberInGroupe: 1
       allSquardsList: []
   - startHealthByLevel: 5
-    startMoneyByLevel: 200
+    startMoneyByLevel: 220
     enemyWavesList:
     - delayTime: 0
       squardsList:
@@ -12127,7 +12127,7 @@ MonoBehaviour:
         numberInGroupe: 2
       allSquardsList: []
   - startHealthByLevel: 5
-    startMoneyByLevel: 200
+    startMoneyByLevel: 220
     enemyWavesList:
     - delayTime: 0
       squardsList:
@@ -18017,6 +18017,8 @@ MonoBehaviour:
   Stars: {fileID: 1676581007}
   nextLevelButton: {fileID: 1056243285}
   resetButton: {fileID: 1604471200}
+  firstTask: {fileID: 1991180360}
+  secondTask: {fileID: 1696310587}
 --- !u!114 &1758345770
 MonoBehaviour:
   m_ObjectHideFlags: 0
