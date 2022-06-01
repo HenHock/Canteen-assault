@@ -7,6 +7,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 using System;
+using UnityEngine.UI;
 
 public class LevelListGenerator : MonoBehaviour
 {
@@ -16,10 +17,10 @@ public class LevelListGenerator : MonoBehaviour
 
     private void Start()
     {
-        // Регуляроное вырожения для поиска всех сцен, в которых присутсвует слово level 
+        // Р РµРіСѓР»СЏСЂРѕРЅРѕРµ РІС‹СЂРѕР¶РµРЅРёСЏ РґР»СЏ РїРѕРёСЃРєР° РІСЃРµС… СЃС†РµРЅ, РІ РєРѕС‚РѕСЂС‹С… РїСЂРёСЃСѓС‚СЃРІСѓРµС‚ СЃР»РѕРІРѕ level 
         Regex regex = new Regex(@"level\w*", RegexOptions.IgnoreCase);
 
-        // Получаем все пути к сценам
+        // РџРѕР»СѓС‡Р°РµРј РІСЃРµ РїСѓС‚Рё Рє СЃС†РµРЅР°Рј
         var sceneNumber = SceneManager.sceneCountInBuildSettings;
         string sceneName;
 
@@ -29,7 +30,7 @@ public class LevelListGenerator : MonoBehaviour
         {
             sceneName = System.IO.Path.GetFileNameWithoutExtension(SceneUtility.GetScenePathByBuildIndex(i));
 
-            // Все сцена, которые имеют в имени слово level добавляем на сцену
+            // Р’СЃРµ СЃС†РµРЅР°, РєРѕС‚РѕСЂС‹Рµ РёРјРµСЋС‚ РІ РёРјРµРЅРё СЃР»РѕРІРѕ level РґРѕР±Р°РІР»СЏРµРј РЅР° СЃС†РµРЅСѓ
             if (regex.IsMatch(sceneName))
             {
                 GameObject newLevelItem = Instantiate(levelItemPrefab);
@@ -37,8 +38,9 @@ public class LevelListGenerator : MonoBehaviour
                 newLevelItem.GetComponentInChildren<TextMeshProUGUI>().text = levelCount.ToString();
                 int index = Array.FindIndex(levelsInformation, x => x.sceneName.Equals(sceneName));
                 if (index != -1)
+                {
                     newLevelItem.GetComponent<Level>().Create(levelsInformation[index]);
-
+                }
                 levelCount++;
             }
         }

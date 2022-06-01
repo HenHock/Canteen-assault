@@ -29,7 +29,7 @@ public static class ResourcesManager
             { ResourceType.EnemyCount, 0 },
             { ResourceType.NumberWave, 0 }
         };
-        valueByResourceType.Add(ResourceType.Star, ES3.Load(SaveKeys.Star, 0));
+        valueByResourceType.Add(ResourceType.Star, ES3.Load(SaveKeys.Star, -1f));
     }
 
     public static void Change(ResourceType resource, float amount)
@@ -38,7 +38,10 @@ public static class ResourcesManager
         
         if (valueByResourceType[resource] < 0)
             valueByResourceType[resource] = 0;
-
+        
+        if (ResourceType.Star == resource)
+            Save();
+        
         OnResourcesAmountChanged?.Invoke(resource, valueByResourceType[resource]);
     }
 

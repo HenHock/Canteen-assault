@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class Level : MonoBehaviour
 {
-    public string sceneName { get; private set; } // Имя сцены, которую уровень загружает
-    public TaskAbstract task_1 { get; private set; } // 1 доп. задание на уровне
-    public TaskAbstract task_2 { get; private set; } // 2 доп. задание на уровне
-    public int countStarsRecieved { get; private set; } // Кол-во уже полученных звезд
+    public string sceneName { get; private set; } // РРјСЏ СЃС†РµРЅС‹, РєРѕС‚РѕСЂСѓСЋ СѓСЂРѕРІРµРЅСЊ Р·Р°РіСЂСѓР¶Р°РµС‚
+    public TaskAbstract task_1 { get; private set; } // 1 РґРѕРї. Р·Р°РґР°РЅРёРµ РЅР° СѓСЂРѕРІРЅРµ
+    public TaskAbstract task_2 { get; private set; } // 2 РґРѕРї. Р·Р°РґР°РЅРёРµ РЅР° СѓСЂРѕРІРЅРµ
+    public int countStarsRecieved { get; private set; } // РљРѕР»-РІРѕ СѓР¶Рµ РїРѕР»СѓС‡РµРЅРЅС‹С… Р·РІРµР·Рґ
 
     public void Create(LevelInfo level)
     {
@@ -16,6 +17,10 @@ public class Level : MonoBehaviour
         task_1 = level.task_1.GetComponent<TaskAbstract>();
         task_2 = level.task_2.GetComponent<TaskAbstract>();
         countStarsRecieved = level.countStarsRecieved;
+        
+        GetComponent<Button>().interactable = level.available;
+
+        Debug.Log("level " + sceneName);
     }
 
     public void onClick()

@@ -13,7 +13,7 @@ public class Task4 : TaskAbstract
 
     public override bool CheckIfComplete()
     {
-        if (countNumberUse == howMuchUse)
+        if (countNumberUse <= howMuchUse)
             return true;
         else
             return false;

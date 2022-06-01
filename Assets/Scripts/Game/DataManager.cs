@@ -31,4 +31,5 @@ public class DataManager : MonoBehaviour
     public static int prevWay = 0;
 
     public static int twentyProcentAmount = 0;
+
 }
