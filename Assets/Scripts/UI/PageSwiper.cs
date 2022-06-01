@@ -45,6 +45,7 @@ public class PageSwiper : MonoBehaviour, IDragHandler, IEndDragHandler
             StartCoroutine(SmoothMove(transform.position, panelLocation, easing));
         }
     }
+
     IEnumerator SmoothMove(Vector3 startpos, Vector3 endpos, float seconds)
     {
         float t = 0f;
