@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using System;
 
 public class DancingAbility : Ability
 {
@@ -16,7 +17,7 @@ public class DancingAbility : Ability
             foreach (Collider target in targets)
                 target.GetComponent<Enemy>().Dancing(duration);
         }
-
+        OnDancingAbilityUse?.Invoke();
         DeactivateAbility(Abilities.dancingAbility);
     }
 
@@ -26,4 +27,6 @@ public class DancingAbility : Ability
             return gameObject.GetComponent<DancingAbility>();
         return null;
     }
+
+    public static event Action OnDancingAbilityUse;
 }
