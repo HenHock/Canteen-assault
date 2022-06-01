@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class LevelDisplay : MonoBehaviour
 {
-    [SerializeField] private GameObject task_1;
-    [SerializeField] private GameObject task_2;
+    [SerializeField] private TextMeshProUGUI task_1;
+    [SerializeField] private TextMeshProUGUI task_2;
     [SerializeField] private GameObject playButton;
     [SerializeField] private GameObject countOfStars;
 
@@ -15,6 +16,9 @@ public class LevelDisplay : MonoBehaviour
 
     private void OnEnable()
     {
+        task_1.text = levelInfo.task_1.GetTextTask();
+        task_2.text = levelInfo.task_2.GetTextTask();
+
         playButton.GetComponent<Button>().onClick.AddListener(() => SceneManager.LoadScene(levelInfo.sceneName));
     }
 }

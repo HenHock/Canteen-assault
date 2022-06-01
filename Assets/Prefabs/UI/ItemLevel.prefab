@@ -124,9 +124,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3713398245942689961}
-        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
-        m_MethodName: OnClick
+      - m_Target: {fileID: -1983201090799903706}
+        m_TargetAssemblyTypeName: Level, Assembly-CSharp
+        m_MethodName: onClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -136,9 +136,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: -1983201090799903706}
-        m_TargetAssemblyTypeName: Level, Assembly-CSharp
-        m_MethodName: onClick
+      - m_Target: {fileID: 3713398245942689961}
+        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+        m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -173,10 +173,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26266ceed8642744ca580bfece163b2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: 
-  task_1: 
-  task_2: 
-  countStarsRecieved: 0
 --- !u!1 &3713398246732529335
 GameObject:
   m_ObjectHideFlags: 0

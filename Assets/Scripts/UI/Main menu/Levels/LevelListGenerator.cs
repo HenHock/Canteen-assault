@@ -6,7 +6,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
-using UnityEngine.UI;
+using System;
 
 public class LevelListGenerator : MonoBehaviour
 {
@@ -20,21 +20,27 @@ public class LevelListGenerator : MonoBehaviour
         Regex regex = new Regex(@"level\w*", RegexOptions.IgnoreCase);
 
         // Получаем все пути к сценам
-        string[] scenes = EditorBuildSettings.scenes
-             .Where(scene => scene.enabled)
-             .Select(scene => scene.path)
-             .ToArray();
+        var sceneNumber = SceneManager.sceneCountInBuildSettings;
+        string sceneName;
 
-        // Все сцена, которые имеют в имени слово level добавляем на сцену
-        foreach (string scene in scenes)
-            if(regex.IsMatch(scene))
+        LevelInfo[] levelsInformation = Resources.LoadAll<LevelInfo>(@"Data/Items/LevelInfo");
+
+        for (int i = 0; i < sceneNumber; i++)
+        {
+            sceneName = System.IO.Path.GetFileNameWithoutExtension(SceneUtility.GetScenePathByBuildIndex(i));
+
+            // Все сцена, которые имеют в имени слово level добавляем на сцену
+            if (regex.IsMatch(sceneName))
             {
                 GameObject newLevelItem = Instantiate(levelItemPrefab);
                 newLevelItem.transform.SetParent(transform);
                 newLevelItem.GetComponentInChildren<TextMeshProUGUI>().text = levelCount.ToString();
-                newLevelItem.GetComponent<Level>().Create(scene, "", "", 0);
+                int index = Array.FindIndex(levelsInformation, x => x.sceneName.Equals(sceneName));
+                if (index != -1)
+                    newLevelItem.GetComponent<Level>().Create(levelsInformation[index]);
 
                 levelCount++;
             }
+        }
     }
 }

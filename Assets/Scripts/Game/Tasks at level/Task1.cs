@@ -16,5 +16,4 @@ public class Task1 : TaskAbstract
         else
             return false;
     }
-    //hi
 }
