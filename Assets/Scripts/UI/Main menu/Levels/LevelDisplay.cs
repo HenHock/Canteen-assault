@@ -16,8 +16,8 @@ public class LevelDisplay : MonoBehaviour
 
     private void OnEnable()
     {
-        task_1.text = levelInfo.task_1;
-        task_2.text = levelInfo.task_2;
+        task_1.text = levelInfo.task_1.GetTextTask();
+        task_2.text = levelInfo.task_2.GetTextTask();
 
         playButton.GetComponent<Button>().onClick.AddListener(() => SceneManager.LoadScene(levelInfo.sceneName));
     }

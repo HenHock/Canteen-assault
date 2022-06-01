@@ -2776,7 +2776,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &641689415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2863,8 +2863,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f299bdf0bdd4a684880fa7a6cd3eb62b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  task_1: {fileID: 0}
-  task_2: {fileID: 0}
+  task_1: {fileID: 1562253671}
+  task_2: {fileID: 137793060}
   playButton: {fileID: 1793134515}
   countOfStars: {fileID: 0}
 --- !u!1 &645782961
@@ -6109,7 +6109,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 9.875, y: 58.85272}
+  m_AnchoredPosition: {x: 9.875, y: -24.147335}
   m_SizeDelta: {x: 700, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1654443456
@@ -6187,7 +6187,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 9.875, y: -43}
+  m_AnchoredPosition: {x: 9.875, y: -126}
   m_SizeDelta: {x: 700, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1769322677

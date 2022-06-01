@@ -23,7 +23,6 @@ public class Task3 : TaskAbstract
 
     void Awake()
     {
-        Debug.Log("s");
         goldSpent = 0;
         ResourcesManager.OnResourcesAmountChanged += countSpentGold;
     }
