@@ -6,6 +6,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using System;
 
 public class LevelListGenerator : MonoBehaviour
 {
@@ -21,6 +22,8 @@ public class LevelListGenerator : MonoBehaviour
         // Получаем все пути к сценам
         var sceneNumber = SceneManager.sceneCountInBuildSettings;
         string sceneName;
+        LevelInfo[] levelsInformation = Resources.LoadAll(@"/Data/Items/LevelInfo", typeof(LevelInfo)) as LevelInfo[];
+        Debug.Log(levelsInformation.Length);
         for (int i = 0; i < sceneNumber; i++)
         {
             sceneName = System.IO.Path.GetFileNameWithoutExtension(SceneUtility.GetScenePathByBuildIndex(i));
@@ -31,7 +34,9 @@ public class LevelListGenerator : MonoBehaviour
                 GameObject newLevelItem = Instantiate(levelItemPrefab);
                 newLevelItem.transform.SetParent(transform);
                 newLevelItem.GetComponentInChildren<TextMeshProUGUI>().text = levelCount.ToString();
-                newLevelItem.GetComponent<Level>().Create(sceneName, "", "", 0);
+                int index = Array.FindIndex(levelsInformation, x => x.sceneName.Equals(sceneName));
+                if(index != -1)
+                    newLevelItem.GetComponent<Level>().Create(levelsInformation[index]);
 
                 levelCount++;
             }

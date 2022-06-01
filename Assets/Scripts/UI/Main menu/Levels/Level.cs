@@ -9,12 +9,12 @@ public class Level : MonoBehaviour
     public string task_2 { get; private set; } // 2 доп. задание на уровне
     public int countStarsRecieved { get; private set; } //  ол-во уже полученных звезд
 
-    public void Create(string sceneName, string task_1, string task_2, int countStarsRecieved)
+    public void Create(LevelInfo level)
     {
-        this.sceneName = sceneName;
-        this.task_1 = task_1;
-        this.task_2 = task_2;
-        this.countStarsRecieved = countStarsRecieved;
+        sceneName = level.sceneName;
+        task_1 = level.task_1.GetComponent<TaskAbstract>().GetTextTask();
+        task_2 = level.task_2.GetComponent<TaskAbstract>().GetTextTask();
+        countStarsRecieved = level.countStarsRecieved;
     }
 
     public void onClick()

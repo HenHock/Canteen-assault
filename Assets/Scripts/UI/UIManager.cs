@@ -19,15 +19,16 @@ public class UIManager : MonoBehaviour
     public GameObject sceneIgnoring;
 
     [SerializeField] private GameObject titleEndGameText;
-    [SerializeField] private GameObject statisticsEndGameText;
     [SerializeField] private GameObject Stars;
 
     [SerializeField] private GameObject nextLevelButton;
     [SerializeField] private GameObject resetButton;
 
     [SerializeField] private GameObject firstTask;
-
     [SerializeField] private GameObject secondTask;
+    [SerializeField] private GameObject Tasks;
+    [SerializeField] private Sprite completeTask;
+    [SerializeField] private Sprite unCompleteTask;
 
     private void Awake()
     {
@@ -46,15 +47,24 @@ public class UIManager : MonoBehaviour
         endGamePanel.Open();
         titleEndGameText.GetComponent<TextMeshProUGUI>().text = "You win!";
 
+        TaskAbstract[] tasksDescription = Tasks.GetComponentsInChildren<TaskAbstract>();
+        firstTask.GetComponentInChildren<TextMeshProUGUI>().text = tasksDescription[0].GetTextTask();
+        secondTask.GetComponentInChildren<TextMeshProUGUI>().text = tasksDescription[1].GetTextTask();
+
         int starCount = 1;
-        if (firstTask.GetComponent<TaskAbstract>().CheckIfComplete())
+        if (tasksDescription[0].CheckIfComplete())
+        {
+            firstTask.GetComponentInChildren<Image>().sprite = completeTask;
             starCount++;
-        if (secondTask.GetComponent<TaskAbstract>().CheckIfComplete())
+        }
+        if (tasksDescription[1].CheckIfComplete())
+        {
+            secondTask.GetComponentInChildren<Image>().sprite = completeTask;
             starCount++;
+        }
         ResourcesManager.Change(ResourceType.Star, starCount); // ƒобавл€ем звезды за победу
         Stars.GetComponent<Image>().sprite = StarsIcon.GetIcon(starCount); // ”станавливаем новую иконку в зависимотси от полученных звезд
         Stars.GetComponentInChildren<TextMeshProUGUI>().text = starCount.ToString();
-        //statisticsEndGameText.GetComponent<TextMeshProUGUI>().text = $"You earned {ResourcesManager.Get(ResourceType.Star)} star!";
 
         nextLevelButton.SetActive(true);
 
