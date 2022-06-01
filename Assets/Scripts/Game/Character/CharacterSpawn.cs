@@ -1,8 +1,10 @@
 using UnityEngine;
-
+using System;
 public class CharacterSpawn : MonoBehaviour
 {
     public GameObject characterPrefab {get;set;}
+
+    public static event Action<float> OnSpentMoney;
 
     public void onClick()
     {
@@ -25,8 +27,9 @@ public class CharacterSpawn : MonoBehaviour
             character.transform.localPosition = new Vector3(0, 0 + character.transform.localScale.y / 2, 0);
 
             ResourcesManager.Change(ResourceType.Money, -character.GetComponent<Character>().costToBuy);
+            OnSpentMoney?.Invoke(character.GetComponent<Character>().costToBuy);
 
-            if(DataManager.selectedPositionPlaceCharacterSpawn.childCount > 0)
+            if (DataManager.selectedPositionPlaceCharacterSpawn.childCount > 0)
             {
                 foreach (Transform item in DataManager.selectedPositionPlaceCharacterSpawn)
                 {
@@ -46,4 +49,6 @@ public class CharacterSpawn : MonoBehaviour
         PanelController buyPanelController = this.GetComponentInParent<PanelController>();
         buyPanelController.Close();
     }
+
+   
 }

@@ -16,3 +16,7 @@ MonoBehaviour:
   task_2: {fileID: 5426467226481631243, guid: 990750dd6b0e8ed4b886f6eda975a485, type: 3}
   countStarsRecieved: 0
   sceneName: Level 1
+  defaultAvailable: 1
+  available: 0
+  firstTask: 0
+  secondTask: 0

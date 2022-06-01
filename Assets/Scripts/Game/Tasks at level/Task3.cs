@@ -19,21 +19,23 @@ public class Task3 : TaskAbstract
             return true;
         else
             return false;
+        
     }
 
     void Awake()
     {
         goldSpent = 0;
-        ResourcesManager.OnResourcesAmountChanged += countSpentGold;
+        CharacterSpawn.OnSpentMoney += countSpentGold;
+        CharacterUpdate.OnSpentMoneyUpdate += countSpentGold;
     }
     private void OnDestroy()
     {
-        ResourcesManager.OnResourcesAmountChanged -= countSpentGold;
+        CharacterSpawn.OnSpentMoney -= countSpentGold;
+        CharacterUpdate.OnSpentMoneyUpdate -= countSpentGold;
     }
 
-    private void countSpentGold(ResourceType resource, float value)
+    private void countSpentGold(float value)
     {
-        if (resource == ResourceType.Money)
-            goldSpent += value;
+        goldSpent += value;
     }
 }

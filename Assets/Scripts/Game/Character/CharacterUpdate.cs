@@ -1,8 +1,9 @@
 using UnityEngine;
-
+using System;
 public class CharacterUpdate : MonoBehaviour
 {
     public GameObject characterPrefab { private get; set; }
+    public static event Action<float> OnSpentMoneyUpdate;
 
     public void onClick()
     {
@@ -21,6 +22,7 @@ public class CharacterUpdate : MonoBehaviour
         else
         {
             ResourcesManager.Change(ResourceType.Money, -character.GetComponent<Character>().costToBuy);
+            OnSpentMoneyUpdate?.Invoke(character.GetComponent<Character>().costToBuy);
 
             character.transform.SetParent(DataManager.selectedCharacter.transform.parent);
             character.transform.localPosition = new Vector3(DataManager.selectedCharacter.transform.localPosition.x,

@@ -14,7 +14,7 @@ public class Task2 : TaskAbstract
 
     public override bool CheckIfComplete()
     {
-        if (goldTimesCollected == howMuchUse)
+        if (goldTimesCollected >= howMuchUse)
             return true;
         else
             return false;
