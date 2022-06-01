@@ -1,14 +1,27 @@
 using System;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class ButtonBuyController : MonoBehaviour
 {
+    [SerializeField]
+    private Sprite desiableSprite;
+
+    [SerializeField]
+    private Sprite enableSprite;
+
     private void OnEnable()
     {
-        if (Convert.ToInt32(GetComponentInChildren<Text>().text) < ResourcesManager.Get(ResourceType.Money))
+        if (Convert.ToInt32(GetComponentInChildren<TextMeshProUGUI>().text) > ResourcesManager.Get(ResourceType.Money))
         {
-            gameObject.active = true;
+            GetComponent<Button>().enabled = false;
+            GetComponent<Image>().sprite = desiableSprite;
+        }
+        else
+        {
+            GetComponent<Button>().enabled = true;
+            GetComponent<Image>().sprite = enableSprite;
         }
     }
 }

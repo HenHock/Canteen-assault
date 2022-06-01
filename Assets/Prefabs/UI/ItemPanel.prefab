@@ -638,6 +638,7 @@ GameObject:
   - component: {fileID: 3991524080374423277}
   - component: {fileID: 6715171648668549259}
   - component: {fileID: 2972306191403347505}
+  - component: {fileID: 3455281281298869983}
   m_Layer: 5
   m_Name: CharacterBuyButton
   m_TagString: Untagged
@@ -798,6 +799,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 250, y: 60}
   m_EdgeRadius: 0
+--- !u!114 &3455281281298869983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6970766983388832925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38f06cebb42a1cc4089e43f405d99567, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  desiableSprite: {fileID: 21300000, guid: b1a92fcb0c1baf74d86007aa7e3362c8, type: 3}
+  enableSprite: {fileID: 21300000, guid: 9734fdda29298ab479c0ef9ddd72c42b, type: 3}
 --- !u!1 &6970766983467537348
 GameObject:
   m_ObjectHideFlags: 0
