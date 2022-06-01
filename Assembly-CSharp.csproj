@@ -80,6 +80,7 @@
     <Compile Include="Assets\Rotate.cs" />
     <Compile Include="Assets\Scripts\Game\Map\MapGenerator.cs" />
     <Compile Include="Assets\Scripts\Game\Character\Shot.cs" />
+    <Compile Include="Assets\Scripts\Game\Tasks at level\Task4.cs" />
     <Compile Include="Assets\Scripts\Game\Money\DropMoney.cs" />
     <Compile Include="Assets\Scripts\Game\ProgressBar.cs" />
     <Compile Include="Assets\Scripts\Game\Map\EnemyWave.cs" />
@@ -95,33 +96,32 @@
     <Compile Include="Assets\Scripts\UI\UIManager.cs" />
     <Compile Include="Assets\Scripts\UI\Game\DestroyCharacterClick.cs" />
     <Compile Include="Assets\Scripts\Game\Abilities\Ability.cs" />
+    <Compile Include="Assets\Scripts\Game\Tasks at level\Task5.cs" />
     <Compile Include="Assets\Scripts\Game\Enemy\Enemy.cs" />
     <Compile Include="Assets\Scripts\Game\Enemy\TargetPoint.cs" />
     <Compile Include="Assets\Scripts\UI\ButtonController.cs" />
     <Compile Include="Assets\Scripts\UI\Main menu\Levels\LevelDisplay.cs" />
     <Compile Include="Assets\Scripts\Game\Managers\LevelManager.cs" />
     <Compile Include="Assets\Scripts\Game\Map\Cake.cs" />
+    <Compile Include="Assets\Scripts\Game\Tasks at level\Task3.cs" />
     <Compile Include="Assets\Scripts\Game\Character\CharacterUpdate.cs" />
     <Compile Include="Assets\Scripts\UI\Main menu\Levels\Level.cs" />
     <Compile Include="Assets\Scripts\UI\Game\BuyCharacterItem.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\ResourceItemSO.cs" />
     <Compile Include="Assets\Scripts\UI\Game\ResetButton.cs" />
     <Compile Include="Assets\Scripts\UI\Main menu\Teachears\TeacherInfoController.cs" />
+    <Compile Include="Assets\Scripts\Game\Tasks at level\Task2.cs" />
     <Compile Include="Assets\Scripts\UI\Game\HealthDisplay.cs" />
     <Compile Include="Assets\Scripts\Game\Map\SpawnEnemies.cs" />
     <Compile Include="Assets\Scripts\UI\Game\MenuButtonClick.cs" />
     <Compile Include="Assets\BorderSceneDetection.cs" />
     <Compile Include="Assets\Scripts\Game\Managers\CurrencyManager.cs" />
+    <Compile Include="Assets\Scripts\UI\PageSwiper.cs" />
+    <Compile Include="Assets\Scripts\Game\Tasks at level\TaskAbstract.cs" />
+    <Compile Include="Assets\Scripts\Game\Tasks at level\Task1.cs" />
     <Compile Include="Assets\Scripts\Game\Map\CharacterUpdatePlaceClick.cs" />
     <Compile Include="Assets\SlowMotionController.cs" />
     <Compile Include="Assets\Scripts\UI\Game\PausePanelController.cs" />
-    <Compile Include="Assets\Scripts\Game\Tasks at level\TaskAbstract.cs" />
-    <Compile Include="Assets\Scripts\Game\Tasks at level\Task1.cs" />
-    <Compile Include="Assets\Scripts\Game\Tasks at level\Task2.cs" />
-    <Compile Include="Assets\Scripts\Game\Tasks at level\Task3.cs" />
-    <Compile Include="Assets\Scripts\Game\Tasks at level\Task4.cs" />
-    <Compile Include="Assets\Scripts\Game\Tasks at level\Task5.cs" />
-    <Compile Include="Assets\Scripts\UI\PageSwiper.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\UI Toolkit\USS\button-style.uss" />
