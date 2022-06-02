@@ -11,7 +11,7 @@ public class Level : MonoBehaviour
     public TaskAbstract task_2 { get; private set; } // 2 доп. задание на уровне
     public int countStarsRecieved { get; private set; } // Кол-во уже полученных звезд
 
-    public void Create(LevelInfo level)
+    public void Create(LevelInfo level, bool ifPrevFinished)
     {
         sceneName = level.sceneName;
         task_1 = level.task_1.GetComponent<TaskAbstract>();
@@ -19,6 +19,8 @@ public class Level : MonoBehaviour
         countStarsRecieved = level.countStarsRecieved;
         
         GetComponent<Button>().interactable = level.available;
+        if (ifPrevFinished)
+            GetComponent<Button>().interactable = true;
 
         Debug.Log("level " + sceneName);
     }

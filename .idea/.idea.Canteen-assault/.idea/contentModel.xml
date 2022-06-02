@@ -616,7 +616,6 @@
             </e>
           </e>
           <e p="GlobalApplicationData.cs" t="Include" />
-          <e p="LevelData.cs" t="Include" />
           <e p="SaveKeys.cs" t="Include" />
           <e p="ScriptableObjects" t="Include">
             <e p="LevelInfo.cs" t="Include" />

@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using TMPro;
 
 /*
- * Скрипт для настройки UI в уровнях
+ * пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ UI пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
  */
 
 public class UIManager : MonoBehaviour
@@ -52,23 +52,42 @@ public class UIManager : MonoBehaviour
         secondTask.GetComponentInChildren<TextMeshProUGUI>().text = tasksDescription[1].GetTextTask();
 
         int starCount = 1;
+        int starSave = 0;
+
+        if (!Tasks.GetComponent<TaskManager>().getLevelInfo().finished)
+        {
+            Tasks.GetComponent<TaskManager>().getLevelInfo().finished = true;
+            starSave++;
+        }
+        
         if (tasksDescription[0].CheckIfComplete())
         {
             firstTask.GetComponentInChildren<Image>().sprite = completeTask;
             starCount++;
+            if (Tasks.GetComponent<TaskManager>().getLevelInfo().firstTask)
+            {
+                Tasks.GetComponent<TaskManager>().getLevelInfo().CompleteTask(1);
+                starSave++;
+            }
         }
         if (tasksDescription[1].CheckIfComplete())
         {
             secondTask.GetComponentInChildren<Image>().sprite = completeTask;
             starCount++;
+
+            if (Tasks.GetComponent<TaskManager>().getLevelInfo().secondTask)
+            {
+                Tasks.GetComponent<TaskManager>().getLevelInfo().CompleteTask(2);
+                starSave++;
+            }
         }
-        ResourcesManager.Change(ResourceType.Star, starCount); // Добавляем звезды за победу
-        Stars.GetComponent<Image>().sprite = StarsIcon.GetIcon(starCount); // Устанавливаем новую иконку в зависимотси от полученных звезд
+        ResourcesManager.Change(ResourceType.Star, starSave); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+        Stars.GetComponent<Image>().sprite = StarsIcon.GetIcon(starCount); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
         Stars.GetComponentInChildren<TextMeshProUGUI>().text = starCount.ToString();
 
         nextLevelButton.SetActive(true);
 
-        if(ResourcesManager.Get(ResourceType.Star) == 3)
+        if(starCount == 3)
             resetButton.SetActive(false);
     }
 
@@ -83,7 +102,7 @@ public class UIManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Проверяет если курсор находится на UI объекте
+    /// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ UI пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     /// </summary>
     /// <returns>true or false</returns>
     public static bool IsPointerOverUIObject()

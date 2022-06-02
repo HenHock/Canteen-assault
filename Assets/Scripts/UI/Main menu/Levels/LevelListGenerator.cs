@@ -26,6 +26,8 @@ public class LevelListGenerator : MonoBehaviour
 
         LevelInfo[] levelsInformation = Resources.LoadAll<LevelInfo>(@"Data/Items/LevelInfo");
 
+        bool ifPrevFinished = false;
+        
         for (int i = 0; i < sceneNumber; i++)
         {
             sceneName = System.IO.Path.GetFileNameWithoutExtension(SceneUtility.GetScenePathByBuildIndex(i));
@@ -39,7 +41,8 @@ public class LevelListGenerator : MonoBehaviour
                 int index = Array.FindIndex(levelsInformation, x => x.sceneName.Equals(sceneName));
                 if (index != -1)
                 {
-                    newLevelItem.GetComponent<Level>().Create(levelsInformation[index]);
+                    newLevelItem.GetComponent<Level>().Create(levelsInformation[index], ifPrevFinished);
+                    ifPrevFinished = levelsInformation[index].finished;
                 }
                 levelCount++;
             }

@@ -12,7 +12,8 @@ public class LevelInfo : ScriptableObject
 
 
     [SerializeField] private bool defaultAvailable;
-    
+
+    public bool finished;
     public bool available;
     public bool firstTask;
     public bool secondTask;
