@@ -7,6 +7,10 @@ public class MenuButtonClick : MonoBehaviour
 {
     public void BackToMenu()
     {
-        SceneManager.LoadScene(0); // Загружаем сцену MainMenu
+        SceneManager.LoadScene("Main menu"); // Загружаем сцену MainMenu
+        ResourcesManager.Reset(ResourceType.Money);
+        ResourcesManager.Reset(ResourceType.Life);
+        ResourcesManager.Reset(ResourceType.EnemyCount);
+        ResourcesManager.Reset(ResourceType.NumberWave);
     }
 }
