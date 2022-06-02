@@ -15,4 +15,9 @@ public class TaskManager : MonoBehaviour
         GameObject secondTask = Instantiate(levelInfo.task_2);
         secondTask.transform.SetParent(transform);
     }
+
+    public LevelInfo getLevelInfo()
+    {
+        return levelInfo;
+    }
 }

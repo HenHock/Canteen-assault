@@ -2416,7 +2416,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 215babe53ccb0184485329f273bef532, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelInfo: {fileID: 11400000, guid: 2fbf28552bd6dda438d99572a23f62b3, type: 2}
+  levelInfo: {fileID: 11400000, guid: 19be32f087e3a554aab45b14e4051f75, type: 2}
 --- !u!4 &218699657
 Transform:
   m_ObjectHideFlags: 0
@@ -12825,47 +12825,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resourceManagerStruct:
   - startHealthByLevel: 10
-    startMoneyByLevel: 350
+    startMoneyByLevel: 400
     enemyWavesList:
     - delayTime: 0
       squardsList:
-      - typeOfEnemy: {fileID: 914514279314569284, guid: 21741747b98a161439a93fab44a1174d,
+      - typeOfEnemy: {fileID: 5203135501161705419, guid: fd242588ceca7ae48a777cbd504c46f4,
           type: 3}
-        numberOfEnemyinSquard: 8
+        numberOfEnemyinSquard: 4
         numberInGroupe: 2
-      - typeOfEnemy: {fileID: 6281214345940797698, guid: b4abca2a3dce94549b4ad59614a72662,
-          type: 3}
-        numberOfEnemyinSquard: 6
-        numberInGroupe: 2
-      allSquardsList: []
-    - delayTime: 10
-      squardsList:
       - typeOfEnemy: {fileID: 9197050588711862813, guid: c9288dd4362f00540aca5047a532c1cb,
           type: 3}
         numberOfEnemyinSquard: 2
         numberInGroupe: 2
-      - typeOfEnemy: {fileID: 914514279314569284, guid: 21741747b98a161439a93fab44a1174d,
+      allSquardsList: []
+    - delayTime: 5
+      squardsList:
+      - typeOfEnemy: {fileID: 1471673085362196822, guid: 5739796181a4254438c2bed9532d1163,
           type: 3}
-        numberOfEnemyinSquard: 6
-        numberInGroupe: 2
+        numberOfEnemyinSquard: 1
+        numberInGroupe: 1
       - typeOfEnemy: {fileID: 6281214345940797698, guid: b4abca2a3dce94549b4ad59614a72662,
           type: 3}
-        numberOfEnemyinSquard: 8
+        numberOfEnemyinSquard: 4
         numberInGroupe: 2
       allSquardsList: []
     - delayTime: 10
       squardsList:
-      - typeOfEnemy: {fileID: 6281214345940797698, guid: b4abca2a3dce94549b4ad59614a72662,
-          type: 3}
-        numberOfEnemyinSquard: 6
-        numberInGroupe: 2
-      - typeOfEnemy: {fileID: 9197050588711862813, guid: c9288dd4362f00540aca5047a532c1cb,
+      - typeOfEnemy: {fileID: 914514279314569284, guid: 21741747b98a161439a93fab44a1174d,
           type: 3}
         numberOfEnemyinSquard: 4
         numberInGroupe: 2
-      - typeOfEnemy: {fileID: 1471673085362196822, guid: 5739796181a4254438c2bed9532d1163,
+      - typeOfEnemy: {fileID: 6281214345940797698, guid: b4abca2a3dce94549b4ad59614a72662,
           type: 3}
-        numberOfEnemyinSquard: 1
+        numberOfEnemyinSquard: 4
+        numberInGroupe: 2
+      - typeOfEnemy: {fileID: 2910614405429017998, guid: e18b2d6083bc05f48aa7c290de67fe2c,
+          type: 3}
+        numberOfEnemyinSquard: 4
         numberInGroupe: 1
       allSquardsList: []
 --- !u!1 &1084016121

@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d8ea5f38eea54fc469c830b70ba46675, type: 3}
-  m_Name: Level 1
+  m_Name: Level 9
   m_EditorClassIdentifier: 
-  task_1: {fileID: 1648071798375376426, guid: d1ae57e426f26ba45ba6364a9f56324d, type: 3}
+  task_1: {fileID: 7453791911685897472, guid: 8d9a3c2c5c138d44c9c1324034fe18d8, type: 3}
   task_2: {fileID: 5426467226481631243, guid: 990750dd6b0e8ed4b886f6eda975a485, type: 3}
   countStarsRecieved: 0
-  sceneName: Level 1
-  defaultAvailable: 1
-  finished: 1
-  available: 1
-  firstTask: 1
+  sceneName: Level 9
+  defaultAvailable: 0
+  finished: 0
+  available: 0
+  firstTask: 0
   secondTask: 0

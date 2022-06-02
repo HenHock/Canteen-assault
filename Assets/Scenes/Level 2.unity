@@ -2638,6 +2638,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 384368919}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &384619683 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6098781301679923542, guid: cca606601e5c586468bd2d5888577942,
+    type: 3}
+  m_PrefabInstance: {fileID: 1393433201}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &388105542
 GameObject:
   m_ObjectHideFlags: 0
@@ -3504,10 +3510,12 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 739699297}
   - {fileID: 1518244404}
   - {fileID: 1078975585}
   - {fileID: 1758345768}
   - {fileID: 977751225}
+  - {fileID: 1888864111}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5026,6 +5034,56 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 736843448}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &739699296
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 739699297}
+  - component: {fileID: 739699298}
+  m_Layer: 0
+  m_Name: CakeController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &739699297
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 739699296}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -891.7828, y: -2210.826, z: -13.634592}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 524643561}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &739699298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 739699296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c73a5f4fd3d4fe468f65e97aded2437, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cake:
+  - {fileID: 1158314584}
+  - {fileID: 892598673}
+  - {fileID: 2091530779}
+  - {fileID: 1622300339}
+  - {fileID: 384619683}
 --- !u!1 &749975568
 GameObject:
   m_ObjectHideFlags: 0
@@ -6082,6 +6140,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 862571274}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &892598673 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2970060519431955487, guid: cca606601e5c586468bd2d5888577942,
+    type: 3}
+  m_PrefabInstance: {fileID: 1393433201}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &896932096
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7109,7 +7173,7 @@ Transform:
   - {fileID: 1579352962}
   - {fileID: 1428873019}
   m_Father: {fileID: 524643561}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &977751226
 MonoBehaviour:
@@ -9197,7 +9261,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 524643561}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1078975586
 MonoBehaviour:
@@ -9213,7 +9277,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resourceManagerStruct:
   - startHealthByLevel: 5
-    startMoneyByLevel: 2000
+    startMoneyByLevel: 250
     enemyWavesList:
     - delayTime: 0
       squardsList:
@@ -9221,10 +9285,6 @@ MonoBehaviour:
           type: 3}
         numberOfEnemyinSquard: 4
         numberInGroupe: 2
-      - typeOfEnemy: {fileID: 8688853251620885656, guid: 71fd9db8ff6a97246ab4ac3d1e8d0dc6,
-          type: 3}
-        numberOfEnemyinSquard: 4
-        numberInGroupe: 2
       - typeOfEnemy: {fileID: 6281214345940797698, guid: b4abca2a3dce94549b4ad59614a72662,
           type: 3}
         numberOfEnemyinSquard: 4
@@ -9235,94 +9295,22 @@ MonoBehaviour:
       - typeOfEnemy: {fileID: 914514279314569284, guid: 21741747b98a161439a93fab44a1174d,
           type: 3}
         numberOfEnemyinSquard: 4
-        numberInGroupe: 1
+        numberInGroupe: 2
+      - typeOfEnemy: {fileID: 8688853251620885656, guid: 71fd9db8ff6a97246ab4ac3d1e8d0dc6,
+          type: 3}
+        numberOfEnemyinSquard: 2
+        numberInGroupe: 2
+      allSquardsList: []
+    - delayTime: 5
+      squardsList:
+      - typeOfEnemy: {fileID: 914514279314569284, guid: 21741747b98a161439a93fab44a1174d,
+          type: 3}
+        numberOfEnemyinSquard: 6
+        numberInGroupe: 2
       - typeOfEnemy: {fileID: 9197050588711862813, guid: c9288dd4362f00540aca5047a532c1cb,
           type: 3}
-        numberOfEnemyinSquard: 4
-        numberInGroupe: 2
-      allSquardsList: []
-    - delayTime: 10
-      squardsList:
-      - typeOfEnemy: {fileID: 914514279314569284, guid: 21741747b98a161439a93fab44a1174d,
-          type: 3}
-        numberOfEnemyinSquard: 6
-        numberInGroupe: 2
-      - typeOfEnemy: {fileID: 1471673085362196822, guid: 5739796181a4254438c2bed9532d1163,
-          type: 3}
         numberOfEnemyinSquard: 1
         numberInGroupe: 1
-      allSquardsList: []
-  - startHealthByLevel: 5
-    startMoneyByLevel: 200
-    enemyWavesList:
-    - delayTime: 0
-      squardsList:
-      - typeOfEnemy: {fileID: 1471673085362196822, guid: 5739796181a4254438c2bed9532d1163,
-          type: 3}
-        numberOfEnemyinSquard: 1
-        numberInGroupe: 1
-      allSquardsList: []
-    - delayTime: 10
-      squardsList:
-      - typeOfEnemy: {fileID: 914514279314569284, guid: 21741747b98a161439a93fab44a1174d,
-          type: 3}
-        numberOfEnemyinSquard: 4
-        numberInGroupe: 1
-      - typeOfEnemy: {fileID: 5203135501161705419, guid: fd242588ceca7ae48a777cbd504c46f4,
-          type: 3}
-        numberOfEnemyinSquard: 6
-        numberInGroupe: 2
-      allSquardsList: []
-    - delayTime: 5
-      squardsList:
-      - typeOfEnemy: {fileID: 2910614405429017998, guid: e18b2d6083bc05f48aa7c290de67fe2c,
-          type: 3}
-        numberOfEnemyinSquard: 6
-        numberInGroupe: 2
-      - typeOfEnemy: {fileID: 6281214345940797698, guid: b4abca2a3dce94549b4ad59614a72662,
-          type: 3}
-        numberOfEnemyinSquard: 6
-        numberInGroupe: 2
-      - typeOfEnemy: {fileID: 8688853251620885656, guid: 71fd9db8ff6a97246ab4ac3d1e8d0dc6,
-          type: 3}
-        numberOfEnemyinSquard: 6
-        numberInGroupe: 2
-      allSquardsList: []
-  - startHealthByLevel: 5
-    startMoneyByLevel: 200
-    enemyWavesList:
-    - delayTime: 0
-      squardsList:
-      - typeOfEnemy: {fileID: 5203135501161705419, guid: fd242588ceca7ae48a777cbd504c46f4,
-          type: 3}
-        numberOfEnemyinSquard: 10
-        numberInGroupe: 2
-      - typeOfEnemy: {fileID: 6281214345940797698, guid: b4abca2a3dce94549b4ad59614a72662,
-          type: 3}
-        numberOfEnemyinSquard: 20
-        numberInGroupe: 2
-      allSquardsList: []
-    - delayTime: 5
-      squardsList:
-      - typeOfEnemy: {fileID: 1471673085362196822, guid: 5739796181a4254438c2bed9532d1163,
-          type: 3}
-        numberOfEnemyinSquard: 1
-        numberInGroupe: 1
-      - typeOfEnemy: {fileID: 914514279314569284, guid: 21741747b98a161439a93fab44a1174d,
-          type: 3}
-        numberOfEnemyinSquard: 4
-        numberInGroupe: 2
-      allSquardsList: []
-    - delayTime: 5
-      squardsList:
-      - typeOfEnemy: {fileID: 9197050588711862813, guid: c9288dd4362f00540aca5047a532c1cb,
-          type: 3}
-        numberOfEnemyinSquard: 4
-        numberInGroupe: 2
-      - typeOfEnemy: {fileID: 8688853251620885656, guid: 71fd9db8ff6a97246ab4ac3d1e8d0dc6,
-          type: 3}
-        numberOfEnemyinSquard: 4
-        numberInGroupe: 2
       allSquardsList: []
 --- !u!1 &1105953767
 GameObject:
@@ -9767,6 +9755,12 @@ Transform:
   m_Father: {fileID: 652969667}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1158314584 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7902022967601662764, guid: cca606601e5c586468bd2d5888577942,
+    type: 3}
+  m_PrefabInstance: {fileID: 1393433201}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1187244754
 GameObject:
   m_ObjectHideFlags: 0
@@ -11512,7 +11506,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 524643561}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1518244405
 MonoBehaviour:
@@ -11992,6 +11986,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1607659421}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1622300339 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2859684651782562362, guid: cca606601e5c586468bd2d5888577942,
+    type: 3}
+  m_PrefabInstance: {fileID: 1393433201}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1625501043
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13026,7 +13026,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 524643561}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1758345769
 MonoBehaviour:
@@ -14092,6 +14092,54 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 288b229db858c114299d1bf70ffc95cd, type: 3}
+--- !u!1 &1888864110
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1888864111}
+  - component: {fileID: 1888864112}
+  m_Layer: 0
+  m_Name: SlowMotion
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1888864111
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1888864110}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -893.15173, y: -2212.4248, z: -5.6643615}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 524643561}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1888864112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1888864110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 169578bb9ac1c3c4788c4cba8ab1f0a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slowMoValue: 0.07
+  slowMoDuration: 5
+  perspectiveZoomSpeed: 0.5
+  camera: {fileID: 0}
 --- !u!1001 &1895076940
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15183,6 +15231,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2081579286}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &2091530779 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9051805624905261626, guid: cca606601e5c586468bd2d5888577942,
+    type: 3}
+  m_PrefabInstance: {fileID: 1393433201}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2094858204
 GameObject:
   m_ObjectHideFlags: 0
