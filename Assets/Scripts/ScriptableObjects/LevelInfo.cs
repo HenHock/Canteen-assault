@@ -34,7 +34,9 @@ public class LevelInfo : ScriptableObject
 
     public void Unlock()
     {
+        Debug.Log("here at level "+sceneName);
         available = true;
+        Debug.Log(available);
         ES3.Save(sceneName, available);
     }
 

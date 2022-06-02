@@ -2867,6 +2867,7 @@ MonoBehaviour:
   task_2: {fileID: 137793060}
   playButton: {fileID: 1793134515}
   countOfStars: {fileID: 0}
+  completeTask: {fileID: 0}
 --- !u!1 &645782961
 GameObject:
   m_ObjectHideFlags: 0

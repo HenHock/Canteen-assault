@@ -64,7 +64,7 @@ public class UIManager : MonoBehaviour
         {
             firstTask.GetComponentInChildren<Image>().sprite = completeTask;
             starCount++;
-            if (Tasks.GetComponent<TaskManager>().getLevelInfo().firstTask)
+            if (!Tasks.GetComponent<TaskManager>().getLevelInfo().firstTask)
             {
                 Tasks.GetComponent<TaskManager>().getLevelInfo().CompleteTask(1);
                 starSave++;
@@ -75,7 +75,7 @@ public class UIManager : MonoBehaviour
             secondTask.GetComponentInChildren<Image>().sprite = completeTask;
             starCount++;
 
-            if (Tasks.GetComponent<TaskManager>().getLevelInfo().secondTask)
+            if (!Tasks.GetComponent<TaskManager>().getLevelInfo().secondTask)
             {
                 Tasks.GetComponent<TaskManager>().getLevelInfo().CompleteTask(2);
                 starSave++;
