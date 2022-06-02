@@ -32,6 +32,7 @@
                 </e>
               </e>
               <e p="LeanCommon.asmdef" t="Include" />
+              <e p="package.json" t="Include" />
               <e p="Required" t="Include">
                 <e p="Scripts" t="Include">
                   <e p="LeanCommon.cs" t="Include" />
@@ -71,6 +72,7 @@
                 </e>
               </e>
               <e p="LeanTouch.asmdef" t="Include" />
+              <e p="package.json" t="Include" />
               <e p="Required" t="Include">
                 <e p="Scripts" t="Include">
                   <e p="LeanFinger.cs" t="Include" />
@@ -129,12 +131,6 @@
           </e>
           <e p="Demigiant" t="Include">
             <e p="DOTween" t="Include">
-              <e p="DOTween.dll" t="Include" />
-              <e p="DOTween.XML" t="Include" />
-              <e p="Editor" t="Include">
-                <e p="DOTweenEditor.dll" t="Include" />
-                <e p="DOTweenEditor.XML" t="Include" />
-              </e>
               <e p="Modules" t="Include">
                 <e p="DOTweenModuleAudio.cs" t="Include" />
                 <e p="DOTweenModuleEPOOutline.cs" t="Include" />
@@ -563,6 +559,7 @@
             </e>
             <e p="Sprites" t="Include">
               <e p="EmojiOne Attribution.txt" t="Include" />
+              <e p="EmojiOne.json" t="Include" />
             </e>
           </e>
         </e>
@@ -659,6 +656,7 @@
             <e p="PageSwiper.cs" t="Include" />
             <e p="PanelController.cs" t="Include" />
             <e p="UIManager.cs" t="Include" />
+            <e p="UITaskDisplay.cs" t="Include" />
           </e>
         </e>
         <e p="SlowMotionController.cs" t="Include" />

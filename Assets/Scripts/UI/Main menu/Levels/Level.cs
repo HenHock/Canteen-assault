@@ -18,8 +18,8 @@ public class Level : MonoBehaviour
     public void Create(LevelInfo level, bool ifPrevFinished, bool isComplete)
     {
         sceneName = level.sceneName;
-        task_1 = level.task_1.GetComponent<TaskAbstract>();
-        task_2 = level.task_2.GetComponent<TaskAbstract>();
+        task_1 = level.task_1;
+        task_2 = level.task_2;
         countStarsRecieved = level.countStarsRecieved;
         
         GetComponent<Button>().interactable = level.available;

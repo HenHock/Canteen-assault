@@ -4,32 +4,24 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
+using UI;
 
 public class LevelDisplay : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI task_1;
-    [SerializeField] private Image task_1Img;
-    [SerializeField] private TextMeshProUGUI task_2;
-    [SerializeField] private Image task_2Img;
+    [SerializeField] private UITaskDisplay firstTaskDisplay;
+    [SerializeField] private UITaskDisplay secondTaskDisplay;
     [SerializeField] private GameObject playButton;
     [SerializeField] private GameObject countOfStars;
-    [SerializeField] private Sprite completeTask;
 
     public Level levelInfo { private get; set; }
 
     private void OnEnable()
     {
-        task_1.text = levelInfo.task_1.GetTextTask();
-        task_2.text = levelInfo.task_2.GetTextTask();
+        firstTaskDisplay.SetData(levelInfo.task_1.GetTextTask());
+        secondTaskDisplay.SetData(levelInfo.task_2.GetTextTask());
 
-        if (levelInfo.IsComplete)
-        {
-            if(levelInfo.task_1Finished)
-                task_1Img.sprite = completeTask;
-                    
-            if(levelInfo.task_2Finished)
-                task_2Img.sprite = completeTask;
-        }
+        firstTaskDisplay.UpdateState(levelInfo.task_1Finished);
+        secondTaskDisplay.UpdateState(levelInfo.task_2Finished);
 
 
         playButton.GetComponent<Button>().onClick.AddListener(() => SceneManager.LoadScene(levelInfo.sceneName));
