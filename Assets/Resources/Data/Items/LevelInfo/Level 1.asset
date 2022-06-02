@@ -17,7 +17,7 @@ MonoBehaviour:
   countStarsRecieved: 0
   sceneName: Level 1
   defaultAvailable: 1
-  finished: 1
+  finished: 0
   available: 1
-  firstTask: 1
+  firstTask: 0
   secondTask: 0

@@ -45,7 +45,14 @@ public class LevelInfo : ScriptableObject
         available = ES3.Load(sceneName, defaultAvailable);
         firstTask = ES3.Load($"{sceneName} Task 1", false);
         secondTask = ES3.Load($"{sceneName} Task 2", false);
+        finished = ES3.Load($"{sceneName} Finished", false);
         
         Debug.Log($"{sceneName}: {available} ... {defaultAvailable}");
+    }
+    
+    public void LevelFinish()
+    {
+        finished = true;
+        ES3.Save($"{sceneName} Finished", finished);
     }
 }

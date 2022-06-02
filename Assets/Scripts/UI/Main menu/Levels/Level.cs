@@ -41,4 +41,6 @@ public class Level : MonoBehaviour
         GameObject panel = UIController.onGetPanel(PanelType.detailLevelPanel);
         panel.GetComponent<LevelDisplay>().levelInfo = this;
     }
+
+    
 }
