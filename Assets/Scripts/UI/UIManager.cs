@@ -74,6 +74,22 @@ public class UIManager : MonoBehaviour
 
     public void Lose()
     {
+        TaskAbstract[] tasksDescription = Tasks.GetComponentsInChildren<TaskAbstract>();
+        firstTask.GetComponentInChildren<TextMeshProUGUI>().text = tasksDescription[0].GetTextTask();
+        secondTask.GetComponentInChildren<TextMeshProUGUI>().text = tasksDescription[1].GetTextTask();
+
+        int starCount = 1;
+        if (tasksDescription[0].CheckIfComplete())
+        {
+            firstTask.GetComponentInChildren<Image>().sprite = completeTask;
+            starCount++;
+        }
+        if (tasksDescription[1].CheckIfComplete())
+        {
+            secondTask.GetComponentInChildren<Image>().sprite = completeTask;
+            starCount++;
+        }
+
         endGamePanel.Open();
         titleEndGameText.GetComponent<TextMeshProUGUI>().text = "You lose";
         //statisticsEndGameText.GetComponent<TextMeshProUGUI>().text = "You can try again!";
