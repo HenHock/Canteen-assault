@@ -1,23 +1,32 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TaskManager : MonoBehaviour
+namespace Game.Tasks_at_level
 {
-    [SerializeField]
-    private LevelInfo levelInfo;
-
-    private void Awake()
+    public class TaskManager : MonoBehaviour
     {
-        GameObject firstTask = Instantiate(levelInfo.task_1);
-        firstTask.transform.SetParent(transform);
+        [SerializeField]
+        private LevelInfo levelInfo;
 
-        GameObject secondTask = Instantiate(levelInfo.task_2);
-        secondTask.transform.SetParent(transform);
-    }
+        [SerializeField] private List<TaskAbstract> tasksDescriptions = new List<TaskAbstract>();
 
-    public LevelInfo getLevelInfo()
-    {
-        return levelInfo;
+        private void Awake()
+        {
+            tasksDescriptions.Add(Instantiate(levelInfo.task_1, transform));
+            tasksDescriptions.Add(Instantiate(levelInfo.task_2, transform));
+        }
+
+        public LevelInfo getLevelInfo()
+        {
+            return levelInfo;
+        }
+
+        public TaskAbstract TaskDescription(int index)
+        {
+            if (index < 0 || index >= tasksDescriptions.Count)
+                return tasksDescriptions[0];
+
+            return tasksDescriptions[index];
+        }
     }
 }

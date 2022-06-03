@@ -5,8 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New LevelInfo", menuName = "LevelInfo")]
 public class LevelInfo : ScriptableObject
 {
-    public GameObject task_1;
-    public GameObject task_2;
+    public TaskAbstract task_1;
+    public TaskAbstract task_2;
     public int countStarsRecieved;
     public string sceneName;
 
@@ -45,7 +45,14 @@ public class LevelInfo : ScriptableObject
         available = ES3.Load(sceneName, defaultAvailable);
         firstTask = ES3.Load($"{sceneName} Task 1", false);
         secondTask = ES3.Load($"{sceneName} Task 2", false);
+        finished = ES3.Load($"{sceneName} Finished", false);
         
         Debug.Log($"{sceneName}: {available} ... {defaultAvailable}");
+    }
+    
+    public void LevelFinish()
+    {
+        finished = true;
+        ES3.Save($"{sceneName} Finished", finished);
     }
 }

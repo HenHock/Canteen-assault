@@ -2878,11 +2878,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f299bdf0bdd4a684880fa7a6cd3eb62b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  task_1: {fileID: 1562253671}
-  task_2: {fileID: 137793060}
+  firstTaskDisplay: {fileID: 1642453884}
+  secondTaskDisplay: {fileID: 1762262007}
   playButton: {fileID: 1793134515}
   countOfStars: {fileID: 0}
-  completeTask: {fileID: 0}
 --- !u!1 &645782961
 GameObject:
   m_ObjectHideFlags: 0
@@ -6114,6 +6113,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1642453883}
+  - component: {fileID: 1642453884}
   m_Layer: 5
   m_Name: Task1
   m_TagString: Untagged
@@ -6143,6 +6143,23 @@ RectTransform:
   m_AnchoredPosition: {x: 9.875, y: -24.147335}
   m_SizeDelta: {x: 700, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1642453884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1642453882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77fb28eff2223254ebef575001f279e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  descriptionLabel: {fileID: 1562253671}
+  icon: {fileID: 1771803822}
+  stateSprites:
+  - {fileID: 21300000, guid: e5e900ddc4c32904b9f30ec0a4366054, type: 3}
+  - {fileID: 21300000, guid: 04377f8048858e7419a83f15589fd153, type: 3}
 --- !u!1 &1654443456
 GameObject:
   m_ObjectHideFlags: 0
@@ -6207,6 +6224,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1762262006}
+  - component: {fileID: 1762262007}
   m_Layer: 5
   m_Name: Task2
   m_TagString: Untagged
@@ -6236,6 +6254,23 @@ RectTransform:
   m_AnchoredPosition: {x: 9.875, y: -126}
   m_SizeDelta: {x: 700, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1762262007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1762262005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77fb28eff2223254ebef575001f279e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  descriptionLabel: {fileID: 137793060}
+  icon: {fileID: 1266678237}
+  stateSprites:
+  - {fileID: 21300000, guid: e5e900ddc4c32904b9f30ec0a4366054, type: 3}
+  - {fileID: 21300000, guid: 04377f8048858e7419a83f15589fd153, type: 3}
 --- !u!1 &1769322677
 GameObject:
   m_ObjectHideFlags: 0

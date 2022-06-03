@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8ea5f38eea54fc469c830b70ba46675, type: 3}
   m_Name: Level 9
   m_EditorClassIdentifier: 
-  task_1: {fileID: 7453791911685897472, guid: 8d9a3c2c5c138d44c9c1324034fe18d8, type: 3}
-  task_2: {fileID: 5426467226481631243, guid: 990750dd6b0e8ed4b886f6eda975a485, type: 3}
+  task_1: {fileID: 473573571935241535, guid: b21d390eb2c303741a4accb7c8f972fb, type: 3}
+  task_2: {fileID: 1105439948504589603, guid: 990750dd6b0e8ed4b886f6eda975a485, type: 3}
   countStarsRecieved: 0
   sceneName: Level 9
   defaultAvailable: 0
