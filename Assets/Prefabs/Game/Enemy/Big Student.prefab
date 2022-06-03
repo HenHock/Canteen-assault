@@ -89,6 +89,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3407594749345748809, guid: e18b2d6083bc05f48aa7c290de67fe2c,
         type: 3}
+      propertyPath: goldPrefub
+      value: 
+      objectReference: {fileID: 1950871307682000, guid: 01348926c7cbb3347a006c37204131c3,
+        type: 3}
+    - target: {fileID: 3407594749345748809, guid: e18b2d6083bc05f48aa7c290de67fe2c,
+        type: 3}
       propertyPath: percentOfDropping
       value: 7
       objectReference: {fileID: 0}

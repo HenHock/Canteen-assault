@@ -13,7 +13,7 @@ public class ButtonBuyController : MonoBehaviour
 
     private void OnEnable()
     {
-        if (Convert.ToInt32(GetComponentInChildren<TextMeshProUGUI>().text) > ResourcesManager.Get(ResourceType.Money))
+        if (Convert.ToInt32(GetComponentInChildren<TextMeshProUGUI>().text) >= ResourcesManager.Get(ResourceType.Money))
         {
             GetComponent<Button>().enabled = false;
             GetComponent<Image>().sprite = desiableSprite;

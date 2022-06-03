@@ -20,30 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e3fee61-a6a6-46e3-a0cb-ed45c14ea9d2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Canteen-assault/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Canteen-assault/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Canteen-assault/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Canteen-assault/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Canteen-assault/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Canteen-assault/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/Canteen-assault/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Canteen-assault/v16/.suo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/Items/LevelInfo/Level 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/Items/LevelInfo/Level 1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/Items/LevelInfo/Level 10.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/Items/LevelInfo/Level 10.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/Items/LevelInfo/Level 2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/Items/LevelInfo/Level 2.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/Items/LevelInfo/Level 3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/Items/LevelInfo/Level 3.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/Items/LevelInfo/Level 4.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/Items/LevelInfo/Level 4.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/Items/LevelInfo/Level 5.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/Items/LevelInfo/Level 5.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/Items/LevelInfo/Level 6.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/Items/LevelInfo/Level 6.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/Items/LevelInfo/Level 7.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/Items/LevelInfo/Level 7.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/Items/LevelInfo/Level 8.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/Items/LevelInfo/Level 8.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/Items/LevelInfo/Level 9.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/Items/LevelInfo/Level 9.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Enemy/Big Student.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Game/Enemy/Big Student.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/Items/TeacherInfo/LiteratureTeacher 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/Items/TeacherInfo/LiteratureTeacher 1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/Items/TeacherInfo/LiteratureTeacher 2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/Items/TeacherInfo/LiteratureTeacher 2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/Items/TeacherInfo/LiteratureTeacher 3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/Items/TeacherInfo/LiteratureTeacher 3.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/Items/TeacherInfo/PhysicalEducationTeacher 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/Items/TeacherInfo/PhysicalEducationTeacher 1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/Items/TeacherInfo/PhysicalEducationTeacher 2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/Items/TeacherInfo/PhysicalEducationTeacher 2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/Items/TeacherInfo/PhysicalEducationTeacher 3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/Items/TeacherInfo/PhysicalEducationTeacher 3.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level 1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main menu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Tasks at level/TaskManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Tasks at level/TaskManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/LevelInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/LevelInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Main menu/Levels/Level.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Main menu/Levels/Level.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Main menu/Levels/LevelDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Main menu/Levels/LevelDisplay.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Canteen-assault.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Canteen-assault.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -69,6 +54,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UITaskDisplay.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Main menu/Levels/Level.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Enemy/TargetPoint.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Money/DropMoney.cs" />
       </list>
     </option>
   </component>
