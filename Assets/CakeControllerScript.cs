@@ -62,7 +62,7 @@ public class CakeControllerScript : MonoBehaviour
     private IEnumerator endGameRealise(bool flag)
     {
         yield return new WaitForSeconds(2);
-        if (flag)
+        if (flag && ResourcesManager.Get(ResourceType.Life) > 0)
         {
             DataManager.uIController.Win();
         }
