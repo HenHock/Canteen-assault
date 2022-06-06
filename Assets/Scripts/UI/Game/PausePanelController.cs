@@ -18,9 +18,9 @@ public class PausePanelController : PanelController
 
         levelIDDisplay.text = levelInfo.sceneName;
 
-        if (UIController.onBlurAction != null)
-            UIController.onBlurAction(true);
-        else UIManager.OnBlurAction(true);
+        if (UIManager.OnBlurAction != null)
+            UIManager.OnBlurAction(true);
+        else UIController.onBlurAction(true);
 
         Time.timeScale = 0;
 
@@ -39,9 +39,9 @@ public class PausePanelController : PanelController
 
     private void OnDisable()
     {
-        if (UIController.onBlurAction != null)
-            UIController.onBlurAction(false);
-        else UIManager.OnBlurAction(false);
+        if (UIManager.OnBlurAction != null)
+            UIManager.OnBlurAction(false);
+        else UIController.onBlurAction(false);
 
         Time.timeScale = 1;
     }

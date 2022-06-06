@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PanelController : MonoBehaviour
 {
+    public static GameObject blur;
     [SerializeField]
     private PanelController previouslyPanel;
 
@@ -32,15 +33,15 @@ public class PanelController : MonoBehaviour
 
     private void OnEnable()
     {
-        if (UIController.onBlurAction != null)
-            UIController.onBlurAction(true);
-        else UIManager.OnBlurAction(true);
+        if (UIManager.OnBlurAction != null)
+            UIManager.OnBlurAction(true);
+        else UIController.onBlurAction(true);
     }
 
     private void OnDisable()
     {
-        if (UIController.onBlurAction != null)
-            UIController.onBlurAction(false);
-        else UIManager.OnBlurAction(false);
+        if (UIManager.OnBlurAction != null)
+            UIManager.OnBlurAction(false);
+        else UIController.onBlurAction(false);
     }
 }

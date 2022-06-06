@@ -476,7 +476,7 @@ MonoBehaviour:
   secondTask: {fileID: 5434582497232974995}
   completeTask: {fileID: 21300000, guid: 04377f8048858e7419a83f15589fd153, type: 3}
   unCompleteTask: {fileID: 21300000, guid: e5e900ddc4c32904b9f30ec0a4366054, type: 3}
-  levelIDDisplay: {fileID: 0}
+  levelIDDisplay: {fileID: 7250889029686569867}
 --- !u!1 &5434582496203194432
 GameObject:
   m_ObjectHideFlags: 0
@@ -7468,7 +7468,7 @@ GameObject:
   - component: {fileID: 5243808286778860757}
   - component: {fileID: 7250889029686569867}
   m_Layer: 5
-  m_Name: LevelNumber
+  m_Name: LevelID
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -9,7 +9,7 @@ namespace Game.Tasks_at_level
 
         [SerializeField] private List<TaskAbstract> tasksDescriptions = new List<TaskAbstract>();
 
-        private void Awake()
+        private void Start()
         {
             levelInfo = DataManager.levelInfo;
 
