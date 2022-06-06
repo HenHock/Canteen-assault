@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class DataManager : MonoBehaviour
 {
-    public static int currentLevel = 0;
+    [SerializeField] private LevelInfo _levelInfo;
+    public static LevelInfo levelInfo;
 
+    public static int currentLevel = 0;
     public static Transform selectedPositionPlaceCharacterSpawn;
     public static UIManager uIController;
     public static GameObject selectedCharacter;
@@ -33,4 +35,8 @@ public class DataManager : MonoBehaviour
 
     public static int twentyProcentAmount = 0;
 
+    private void Awake()
+    {
+        levelInfo = _levelInfo;
+    }
 }

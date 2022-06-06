@@ -10855,6 +10855,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5003ad8bfb80ebc44ac8e7130430049b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _levelInfo: {fileID: 11400000, guid: d6d6cd2b72344a34894781fb2b04743d, type: 2}
 --- !u!114 &1540883547 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5434582496818585216, guid: 3c714babf9e504b4fb656c6c3f50f293,
@@ -12941,7 +12942,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 215babe53ccb0184485329f273bef532, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelInfo: {fileID: 11400000, guid: d6d6cd2b72344a34894781fb2b04743d, type: 2}
   tasksDescriptions: []
 --- !u!1 &1826688057
 GameObject:

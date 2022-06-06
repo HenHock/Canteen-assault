@@ -11,24 +11,28 @@ public class PausePanelController : PanelController
     [SerializeField] private GameObject Tasks;
     [SerializeField] private Sprite completeTask;
     [SerializeField] private Sprite unCompleteTask;
+    [SerializeField] private TextMeshProUGUI levelIDDisplay;
 
     private void OnEnable()
     {
+        LevelInfo levelInfo = DataManager.levelInfo;
+
+        levelIDDisplay.text = levelInfo.sceneName;
+
         if (UIController.onBlurAction != null)
             UIController.onBlurAction(true);
         else UIManager.OnBlurAction(true);
 
         Time.timeScale = 0;
 
-        TaskAbstract[] tasksDescription = Tasks.GetComponentsInChildren<TaskAbstract>();
-        firstTask.GetComponentInChildren<TextMeshProUGUI>().text = tasksDescription[0].GetTextTask();
-        secondTask.GetComponentInChildren<TextMeshProUGUI>().text = tasksDescription[1].GetTextTask();
+        firstTask.GetComponentInChildren<TextMeshProUGUI>().text = levelInfo.task_1.GetTextTask();
+        secondTask.GetComponentInChildren<TextMeshProUGUI>().text = levelInfo.task_2.GetTextTask();
 
-        if (tasksDescription[0].CheckIfComplete())
+        if (levelInfo.task_1.CheckIfComplete())
         {
             firstTask.GetComponentInChildren<Image>().sprite = completeTask;
         }else firstTask.GetComponentInChildren<Image>().sprite = unCompleteTask;
-        if (tasksDescription[1].CheckIfComplete())
+        if (levelInfo.task_2.CheckIfComplete())
         {
             secondTask.GetComponentInChildren<Image>().sprite = completeTask;
         }else secondTask.GetComponentInChildren<Image>().sprite = unCompleteTask;

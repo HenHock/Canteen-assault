@@ -5,13 +5,14 @@ namespace Game.Tasks_at_level
 {
     public class TaskManager : MonoBehaviour
     {
-        [SerializeField]
         private LevelInfo levelInfo;
 
         [SerializeField] private List<TaskAbstract> tasksDescriptions = new List<TaskAbstract>();
 
         private void Awake()
         {
+            levelInfo = DataManager.levelInfo;
+
             tasksDescriptions.Add(Instantiate(levelInfo.task_1, transform));
             tasksDescriptions.Add(Instantiate(levelInfo.task_2, transform));
         }

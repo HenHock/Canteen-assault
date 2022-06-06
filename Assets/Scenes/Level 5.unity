@@ -2433,7 +2433,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 215babe53ccb0184485329f273bef532, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelInfo: {fileID: 11400000, guid: 2fbf28552bd6dda438d99572a23f62b3, type: 2}
   tasksDescriptions: []
 --- !u!4 &218699657
 Transform:
@@ -16345,6 +16344,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5003ad8bfb80ebc44ac8e7130430049b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _levelInfo: {fileID: 11400000, guid: 2fbf28552bd6dda438d99572a23f62b3, type: 2}
 --- !u!1 &1521775955
 GameObject:
   m_ObjectHideFlags: 0
@@ -18847,11 +18847,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c69377e87c512941bab5302f00fe5a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buyCharacterPanelController: {fileID: 1773071654}
-  endGamePanel: {fileID: 1908197941}
-  updateCharacterPanel: {fileID: 1804348975}
-  pausePanel: {fileID: 547829691}
   sceneIgnoring: {fileID: 1826688057}
+  buyCharacterPanelController: {fileID: 1773071654}
+  updateCharacterPanel: {fileID: 1804348975}
+  endGamePanel: {fileID: 1908197941}
+  pausePanel: {fileID: 547829691}
+  Blur: {fileID: 0}
   titleEndGameText: {fileID: 1949241308}
   starCountText: {fileID: 1949241306}
   Stars: {fileID: 1949241307}

@@ -2859,7 +2859,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 215babe53ccb0184485329f273bef532, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelInfo: {fileID: 11400000, guid: cf70882495aaf6b4fa6f0f67325265c0, type: 2}
   tasksDescriptions: []
 --- !u!4 &436562990
 Transform:
@@ -10718,6 +10717,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5003ad8bfb80ebc44ac8e7130430049b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _levelInfo: {fileID: 11400000, guid: cf70882495aaf6b4fa6f0f67325265c0, type: 2}
 --- !u!1 &1547862326 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5434582496633198597, guid: 3c714babf9e504b4fb656c6c3f50f293,
