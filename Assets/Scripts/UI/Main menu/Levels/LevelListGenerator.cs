@@ -12,7 +12,6 @@ using UnityEngine.UI;
 public class LevelListGenerator : MonoBehaviour
 {
     [SerializeField] private GameObject levelItemPrefab;
-    private Vector2 startPosition = new Vector2(-290, 360);
     private int levelCount = 1;
 
     private void Start()
@@ -41,7 +40,7 @@ public class LevelListGenerator : MonoBehaviour
                 int index = Array.FindIndex(levelsInformation, x => x.sceneName.Equals(sceneName));
                 if (index != -1)
                 {
-                    newLevelItem.GetComponent<Level>().Create(levelsInformation[index], ifPrevFinished, levelsInformation[index].finished);
+                    newLevelItem.GetComponent<Level>().Create(levelsInformation[index], ifPrevFinished, levelsInformation[index].finished, levelCount);
                     ifPrevFinished = levelsInformation[index].finished;
                 }
                 levelCount++;

@@ -12,6 +12,7 @@ public class LevelDisplay : MonoBehaviour
     [SerializeField] private UITaskDisplay secondTaskDisplay;
     [SerializeField] private GameObject playButton;
     [SerializeField] private GameObject countOfStars;
+    [SerializeField] private TextMeshProUGUI title;
 
     public Level levelInfo { private get; set; }
 
@@ -23,7 +24,7 @@ public class LevelDisplay : MonoBehaviour
         firstTaskDisplay.UpdateState(levelInfo.task_1Finished);
         secondTaskDisplay.UpdateState(levelInfo.task_2Finished);
 
-
+        title.text = levelInfo.levelID.ToString();
         playButton.GetComponent<Button>().onClick.AddListener(() => SceneManager.LoadScene(levelInfo.sceneName));
     }
 }

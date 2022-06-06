@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class Level : MonoBehaviour
 {
+    public int levelID { get; private set; } // Номер уровня
     public string sceneName { get; private set; } // Имя сцены, которую уровень загружает
     public TaskAbstract task_1 { get; private set; } // 1 доп. задание на уровне
     public bool task_1Finished { get; private set; }
@@ -15,8 +16,9 @@ public class Level : MonoBehaviour
 
     public bool IsComplete;
 
-    public void Create(LevelInfo level, bool ifPrevFinished, bool isComplete)
+    public void Create(LevelInfo level, bool ifPrevFinished, bool isComplete, int ID)
     {
+        levelID = ID;
         sceneName = level.sceneName;
         task_1 = level.task_1;
         task_2 = level.task_2;
