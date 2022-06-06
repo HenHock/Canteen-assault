@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PanelController : MonoBehaviour
 {
@@ -33,15 +34,15 @@ public class PanelController : MonoBehaviour
 
     private void OnEnable()
     {
-        if (UIManager.OnBlurAction != null)
-            UIManager.OnBlurAction(true);
-        else UIController.onBlurAction(true);
+        if (SceneManager.GetActiveScene().name.Equals("Main menu"))
+            UIController.onBlurAction(true);
+        else UIManager.OnBlurAction(true);
     }
 
     private void OnDisable()
     {
-        if (UIManager.OnBlurAction != null)
-            UIManager.OnBlurAction(false);
-        else UIController.onBlurAction(false);
+        if (SceneManager.GetActiveScene().name.Equals("Main menu"))
+            UIController.onBlurAction(false);
+        else UIManager.OnBlurAction(false);
     }
 }
