@@ -7,8 +7,13 @@ public class ButtonController : MonoBehaviour
 {
     public PanelType panelType;
 
-    public void OnClick()
+    public void OnOpenPanel()
     {
         UIController.onOpenPanel(panelType);
+    }
+
+    public void OnClosePanel()
+    {
+        UIController.onClosePanel(panelType);
     }
 }

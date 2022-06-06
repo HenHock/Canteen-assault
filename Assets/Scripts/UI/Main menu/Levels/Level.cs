@@ -33,7 +33,6 @@ public class Level : MonoBehaviour
         task_1Finished = level.firstTask;
         task_2Finished = level.secondTask;
         IsComplete = isComplete;
-        Debug.Log("level " + sceneName);
     }
 
     public void onClick()

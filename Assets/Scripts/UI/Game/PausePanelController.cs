@@ -14,6 +14,10 @@ public class PausePanelController : PanelController
 
     private void OnEnable()
     {
+        if (UIController.onBlurAction != null)
+            UIController.onBlurAction(true);
+        else UIManager.OnBlurAction(true);
+
         Time.timeScale = 0;
 
         TaskAbstract[] tasksDescription = Tasks.GetComponentsInChildren<TaskAbstract>();
@@ -32,6 +36,10 @@ public class PausePanelController : PanelController
 
     private void OnDisable()
     {
+        if (UIController.onBlurAction != null)
+            UIController.onBlurAction(false);
+        else UIManager.OnBlurAction(false);
+
         Time.timeScale = 1;
     }
 }

@@ -14,12 +14,13 @@ using UI;
 
 public class UIManager : MonoBehaviour
 {
-    public PanelController buyCharacterPanelController;
-    public PanelController endGamePanel;
-    public PanelController updateCharacterPanel;
-    public PanelController pausePanel;
     public GameObject sceneIgnoring;
+    public PanelController buyCharacterPanelController;
+    public PanelController updateCharacterPanel;
+    public PanelController endGamePanel;
+    public PanelController pausePanel;
 
+    [SerializeField] private GameObject Blur;
     [SerializeField] private TMP_Text titleEndGameText;
     [SerializeField] private TMP_Text starCountText;
     [SerializeField] private Image Stars;
@@ -31,8 +32,12 @@ public class UIManager : MonoBehaviour
     [SerializeField] private UITaskDisplay secondTask;
     [SerializeField] private TaskManager Tasks;
 
+    public static Action<bool> OnBlurAction;
+
     private void Awake()
     {
+        Blur.SetActive(false);
+
         DataManager.uIController = this;
         sceneIgnoring.SetActive(false);
 
@@ -41,6 +46,8 @@ public class UIManager : MonoBehaviour
         endGamePanel.Close();
         updateCharacterPanel.Close();
         pausePanel.Close();
+
+        OnBlurAction += (bool flag) => { Blur.SetActive(flag); };
     }
 
     public void Win()
@@ -79,7 +86,7 @@ public class UIManager : MonoBehaviour
         }
         ResourcesManager.Change(ResourceType.Star, starSave); // ��������� ������ �� ������
         Stars.sprite = StarsIcon.GetIcon(starCount); // ������������� ����� ������ � ����������� �� ���������� �����
-        starCountText.text = starCount.ToString();
+        starCountText.text = starCount.ToString() + "/3";
 
         nextLevelButton.gameObject.SetActive(true);
 

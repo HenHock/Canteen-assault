@@ -12269,6 +12269,12 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 30b92673b9b7ef44c9c11a474d9910c9, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d0d657c1182735489e24a5ce302b99c, type: 3}
+--- !u!1 &1650670553 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5383752364534507606, guid: 3c714babf9e504b4fb656c6c3f50f293,
+    type: 3}
+  m_PrefabInstance: {fileID: 1895076940}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1667593384 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5434582496116824046, guid: 3c714babf9e504b4fb656c6c3f50f293,
@@ -13080,11 +13086,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c69377e87c512941bab5302f00fe5a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buyCharacterPanelController: {fileID: 1356603190}
-  endGamePanel: {fileID: 1696197087}
-  updateCharacterPanel: {fileID: 440112152}
-  pausePanel: {fileID: 1667593384}
   sceneIgnoring: {fileID: 1826688057}
+  buyCharacterPanelController: {fileID: 1356603190}
+  updateCharacterPanel: {fileID: 440112152}
+  endGamePanel: {fileID: 1696197087}
+  pausePanel: {fileID: 1667593384}
+  Blur: {fileID: 1650670553}
   titleEndGameText: {fileID: 1895076947}
   starCountText: {fileID: 1895076945}
   Stars: {fileID: 1895076946}

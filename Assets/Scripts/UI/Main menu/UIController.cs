@@ -21,15 +21,24 @@ public class UIController : MonoBehaviour
     [SerializeField] private PanelController canteenPanel;
     [SerializeField] private PanelController detailLevelPanel;
     [SerializeField] private GameObject EventSystem;
+    [SerializeField] private GameObject Blur;
 
     private IDictionary<PanelType, PanelController> panels;
 
     public static Action<PanelType> onOpenPanel;
+    public static Action<bool> onBlurAction;
     public static Action<PanelType> onClosePanel;
     public static Func<PanelType, GameObject> onGetPanel;
 
-    private void Start()
+    public void SetBlurActivety(bool flag)
     {
+        Blur.SetActive(flag);
+    }
+
+    private void Awake()
+    {
+        Blur.SetActive(false);
+
         panels = new Dictionary<PanelType, PanelController>()
         {
             {PanelType.schoolPanel, schoolPanel},
@@ -43,6 +52,7 @@ public class UIController : MonoBehaviour
         onOpenPanel = OpenPanel;
         onClosePanel = ClosePanel;
         onGetPanel = GetGameObjectPanel;
+        onBlurAction = SetBlurActivety;
     }
 
     private void OpenPanel(PanelType panel)

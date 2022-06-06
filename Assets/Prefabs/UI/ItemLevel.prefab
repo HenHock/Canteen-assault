@@ -138,7 +138,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 3713398245942689961}
         m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
-        m_MethodName: OnClick
+        m_MethodName: OnOpenPanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -173,6 +173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26266ceed8642744ca580bfece163b2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsComplete: 0
 --- !u!1 &3713398246732529335
 GameObject:
   m_ObjectHideFlags: 0

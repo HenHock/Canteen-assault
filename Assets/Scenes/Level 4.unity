@@ -13501,11 +13501,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c69377e87c512941bab5302f00fe5a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buyCharacterPanelController: {fileID: 1462351076}
-  endGamePanel: {fileID: 1462351075}
-  updateCharacterPanel: {fileID: 1462351070}
-  pausePanel: {fileID: 1462351069}
   sceneIgnoring: {fileID: 1826688057}
+  buyCharacterPanelController: {fileID: 1462351076}
+  updateCharacterPanel: {fileID: 1462351070}
+  endGamePanel: {fileID: 1462351075}
+  pausePanel: {fileID: 1462351069}
+  Blur: {fileID: 1766442176}
   titleEndGameText: {fileID: 1462351078}
   starCountText: {fileID: 1462351073}
   Stars: {fileID: 1462351074}
@@ -13810,6 +13811,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1764992398}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1766442176 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5383752364534507606, guid: 3c714babf9e504b4fb656c6c3f50f293,
+    type: 3}
+  m_PrefabInstance: {fileID: 1462351067}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1779678566
 GameObject:
   m_ObjectHideFlags: 0

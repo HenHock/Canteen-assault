@@ -26,6 +26,7 @@ public class DataManager : MonoBehaviour
     public static bool IsLastWave { get; set; } = false;
     public static bool isNeedToDestroy { get; set; } = true;
     public static bool isRadiusAttackDisplay = true;
+    public static GameObject activePanel;
     public static List<GameObject> radiusAttackObjects = new List<GameObject>();
 
     public static int prevWay = 0;

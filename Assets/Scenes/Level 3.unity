@@ -3283,6 +3283,12 @@ Transform:
   m_Father: {fileID: 1249666432}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &522213245 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5383752364534507606, guid: 3c714babf9e504b4fb656c6c3f50f293,
+    type: 3}
+  m_PrefabInstance: {fileID: 303751007}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &524602787
 GameObject:
   m_ObjectHideFlags: 0
@@ -12194,11 +12200,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c69377e87c512941bab5302f00fe5a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buyCharacterPanelController: {fileID: 303751016}
-  endGamePanel: {fileID: 303751015}
-  updateCharacterPanel: {fileID: 303751010}
-  pausePanel: {fileID: 303751009}
   sceneIgnoring: {fileID: 1826688057}
+  buyCharacterPanelController: {fileID: 303751016}
+  updateCharacterPanel: {fileID: 303751010}
+  endGamePanel: {fileID: 303751015}
+  pausePanel: {fileID: 303751009}
+  Blur: {fileID: 522213245}
   titleEndGameText: {fileID: 303751022}
   starCountText: {fileID: 303751020}
   Stars: {fileID: 303751021}

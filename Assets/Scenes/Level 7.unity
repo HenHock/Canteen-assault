@@ -9670,6 +9670,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1281884609}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1284098116 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5383752364534507606, guid: 3c714babf9e504b4fb656c6c3f50f293,
+    type: 3}
+  m_PrefabInstance: {fileID: 5434582497511168731}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1296416571
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12351,11 +12357,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c69377e87c512941bab5302f00fe5a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buyCharacterPanelController: {fileID: 1413437864}
-  endGamePanel: {fileID: 1540883547}
-  updateCharacterPanel: {fileID: 1252994287}
-  pausePanel: {fileID: 1831603509}
   sceneIgnoring: {fileID: 1826688057}
+  buyCharacterPanelController: {fileID: 1413437864}
+  updateCharacterPanel: {fileID: 1252994287}
+  endGamePanel: {fileID: 1540883547}
+  pausePanel: {fileID: 1831603509}
+  Blur: {fileID: 1284098116}
   titleEndGameText: {fileID: 5434582497511168738}
   starCountText: {fileID: 5434582497511168736}
   Stars: {fileID: 5434582497511168737}
