@@ -7,7 +7,6 @@ public class PanelController : MonoBehaviour
 {
     public static GameObject blur;
     [SerializeField]
-    private PanelController previouslyPanel;
 
     public void Close()
     {
