@@ -19,7 +19,7 @@ public class UIManager : MonoBehaviour
     public PanelController updateCharacterPanel;
     public PanelController endGamePanel;
     public PanelController pausePanel;
-
+    
     [SerializeField] private GameObject Blur;
     [SerializeField] private TMP_Text titleEndGameText;
     [SerializeField] private TMP_Text starCountText;
@@ -47,7 +47,7 @@ public class UIManager : MonoBehaviour
         updateCharacterPanel.Close();
         pausePanel.Close();
 
-        OnBlurAction += (bool flag) => { Blur.SetActive(flag); };
+        OnBlurAction = (bool flag) => { Blur.SetActive(flag); };
     }
 
     public void Win()

@@ -62,7 +62,6 @@
     <Compile Include="Assets\Scripts\Game\Character\CharacterSpawn.cs" />
     <Compile Include="Assets\Scripts\Game\FloatExtensions.cs" />
     <Compile Include="Assets\Scripts\Game\Character\Character.cs" />
-    <Compile Include="Assets\Scripts\UI\Game\PanelManager.cs" />
     <Compile Include="Assets\Scripts\UI\UITaskDisplay.cs" />
     <Compile Include="Assets\Scripts\UI\Game\ResourceDisplay.cs" />
     <Compile Include="Assets\Scripts\Game\Abilities\DancingAbility.cs" />
