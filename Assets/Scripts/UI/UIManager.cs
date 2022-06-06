@@ -9,7 +9,7 @@ using TMPro;
 using UI;
 
 /*
- * ������ ��� ��������� UI � �������
+ * Script for manage UI in level's scene
  */
 
 public class UIManager : MonoBehaviour
@@ -84,8 +84,8 @@ public class UIManager : MonoBehaviour
                 starSave++;
             }
         }
-        ResourcesManager.Change(ResourceType.Star, starSave); // ��������� ������ �� ������
-        Stars.sprite = StarsIcon.GetIcon(starCount); // ������������� ����� ������ � ����������� �� ���������� �����
+        ResourcesManager.Change(ResourceType.Star, starSave); // Add a star for a win
+        Stars.sprite = StarsIcon.GetIcon(starCount); // Get stars icon
         starCountText.text = starCount.ToString() + "/3";
 
         nextLevelButton.gameObject.SetActive(true);
@@ -107,7 +107,7 @@ public class UIManager : MonoBehaviour
     }
 
     /// <summary>
-    /// ��������� ���� ������ ��������� �� UI �������
+    /// Check if pointer over ui object and return bool value
     /// </summary>
     /// <returns>true or false</returns>
     public static bool IsPointerOverUIObject()
