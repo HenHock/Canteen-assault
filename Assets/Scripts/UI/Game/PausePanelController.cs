@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PausePanelController : PanelController
@@ -18,9 +19,9 @@ public class PausePanelController : PanelController
 
         levelIDDisplay.text = levelInfo.sceneName;
 
-        if (UIManager.OnBlurAction != null)
-            UIManager.OnBlurAction(true);
-        else UIController.onBlurAction(true);
+        if (SceneManager.GetActiveScene().name.Equals("Main menu"))
+            UIController.onBlurAction(true);
+        else UIManager.OnBlurAction(true);
 
         Time.timeScale = 0;
 
@@ -39,9 +40,9 @@ public class PausePanelController : PanelController
 
     private void OnDisable()
     {
-        if (UIManager.OnBlurAction != null)
-            UIManager.OnBlurAction(false);
-        else UIController.onBlurAction(false);
+        if (SceneManager.GetActiveScene().name.Equals("Main menu"))
+            UIController.onBlurAction(false);
+        else UIManager.OnBlurAction(false);
 
         Time.timeScale = 1;
     }
