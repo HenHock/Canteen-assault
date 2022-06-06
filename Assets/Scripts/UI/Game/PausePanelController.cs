@@ -8,7 +8,6 @@ public class PausePanelController : PanelController
 {
     [SerializeField] private GameObject firstTask;
     [SerializeField] private GameObject secondTask;
-    [SerializeField] private GameObject Tasks;
     [SerializeField] private Sprite completeTask;
     [SerializeField] private Sprite unCompleteTask;
     [SerializeField] private TextMeshProUGUI levelIDDisplay;

@@ -265,8 +265,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 218, y: 155}
-  m_SizeDelta: {x: 135, y: 135}
+  m_AnchoredPosition: {x: 215, y: 195}
+  m_SizeDelta: {x: 125, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5434582496114958236
 CanvasRenderer:
@@ -474,7 +474,6 @@ MonoBehaviour:
   previouslyPanel: {fileID: 0}
   firstTask: {fileID: 5434582496330128504}
   secondTask: {fileID: 5434582497232974995}
-  Tasks: {fileID: 0}
   completeTask: {fileID: 21300000, guid: 04377f8048858e7419a83f15589fd153, type: 3}
   unCompleteTask: {fileID: 21300000, guid: e5e900ddc4c32904b9f30ec0a4366054, type: 3}
   levelIDDisplay: {fileID: 0}
@@ -2534,7 +2533,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4, y: -172}
+  m_AnchoredPosition: {x: 4, y: -158}
   m_SizeDelta: {x: 800, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8743713843164973583
@@ -2592,8 +2591,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3, y: -443}
-  m_SizeDelta: {x: 300, y: 150}
+  m_AnchoredPosition: {x: 10, y: -402}
+  m_SizeDelta: {x: 300, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5434582496703331987
 CanvasRenderer:
@@ -3080,7 +3079,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7ef24b305bd9adb448860310c378433c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5893b53e06bc6924b92c8e42e6a0521f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5869,8 +5868,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -3, y: 297}
-  m_SizeDelta: {x: 300, y: 150}
+  m_AnchoredPosition: {x: 9.999998, y: 325.8}
+  m_SizeDelta: {x: 300, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5434582497476050214
 CanvasRenderer:
@@ -7013,7 +7012,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &5434582497919821468
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7064,16 +7063,16 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b20b113d1bdd1cd4fb0b2f2e420700c2, type: 2}
-  m_sharedMaterial: {fileID: -5984881031485537422, guid: b20b113d1bdd1cd4fb0b2f2e420700c2,
+  m_fontAsset: {fileID: 11400000, guid: db129aa68c0661a459ca719d957706a5, type: 2}
+  m_sharedMaterial: {fileID: 3026675496115666014, guid: db129aa68c0661a459ca719d957706a5,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190183
-  m_fontColor: {r: 0.40392157, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

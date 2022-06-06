@@ -36,7 +36,7 @@ public class DataManager : MonoBehaviour
     public static int twentyProcentAmount = 0;
 
     private void Awake()
-    {
+    { 
         levelInfo = _levelInfo;
     }
 }
