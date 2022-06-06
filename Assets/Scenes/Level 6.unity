@@ -123,6 +123,30 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &7677561 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8743713843164973583, guid: 3c714babf9e504b4fb656c6c3f50f293,
+    type: 3}
+  m_PrefabInstance: {fileID: 1895076940}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1895076941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77fb28eff2223254ebef575001f279e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7677562 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2016720073368961491, guid: 3c714babf9e504b4fb656c6c3f50f293,
+    type: 3}
+  m_PrefabInstance: {fileID: 1895076940}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1895076942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77fb28eff2223254ebef575001f279e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &18071067
 GameObject:
   m_ObjectHideFlags: 0
@@ -13097,8 +13121,8 @@ MonoBehaviour:
   Stars: {fileID: 1895076946}
   nextLevelButton: {fileID: 1895076944}
   resetButton: {fileID: 1895076943}
-  firstTask: {fileID: 1895076942}
-  secondTask: {fileID: 1895076941}
+  firstTask: {fileID: 7677562}
+  secondTask: {fileID: 7677561}
   Tasks: {fileID: 584310379}
 --- !u!114 &1758345770
 MonoBehaviour:

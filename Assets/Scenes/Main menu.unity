@@ -4410,7 +4410,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a25d9382217e96a498aba378ac821676, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  previouslyPanel: {fileID: 0}
+  previouslyPanel: {fileID: 927701068}
 --- !u!114 &927701069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4502,7 +4502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a25d9382217e96a498aba378ac821676, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  previouslyPanel: {fileID: 0}
+  previouslyPanel: {fileID: 982043506}
 --- !u!114 &982043507
 MonoBehaviour:
   m_ObjectHideFlags: 0
