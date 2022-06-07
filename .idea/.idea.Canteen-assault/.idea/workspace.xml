@@ -20,10 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e3fee61-a6a6-46e3-a0cb-ed45c14ea9d2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Canteen-assault/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Canteen-assault/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Canteen-assault/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Canteen-assault/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/Canteen-assault/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Canteen-assault/v16/.suo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Canteen-assault/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Canteen-assault/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level 10.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level 10.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level 2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level 2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level 4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level 4.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level 9.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level 9.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Game/ResetButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Game/ResetButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +54,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Main menu/Levels/Level.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Enemy/TargetPoint.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Money/DropMoney.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Game/ResetButton.cs" />
       </list>
     </option>
   </component>
@@ -95,7 +100,7 @@
       <workItem from="1654097114425" duration="2683000" />
       <workItem from="1654103988122" duration="2052000" />
       <workItem from="1654144863591" duration="10930000" />
-      <workItem from="1654517263935" duration="824000" />
+      <workItem from="1654517263935" duration="1432000" />
     </task>
     <servers />
   </component>
