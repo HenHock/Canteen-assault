@@ -13,6 +13,7 @@ public class UpdateCharacterItem : MonoBehaviour
     private TextMeshProUGUI TMP_radiusAttack;
     private TextMeshProUGUI TMP_damage;
 
+    [SerializeField] private GameObject description;
     [SerializeField] private GameObject ItemPanel;
 
     void OnEnable()
@@ -22,8 +23,9 @@ public class UpdateCharacterItem : MonoBehaviour
 
         TeacherInfo info = DataManager.selectedCharacter.GetComponent<Character>().GetNextTeacherInfo();
 
-        if (info != null)
+        if (info != null && info.available)
         {
+            description.SetActive(false);
             // Create new ItemPanel and fill it with prefab's information.
             GameObject itemPanel = Instantiate(ItemPanel);
             itemPanel.transform.SetParent(transform);
@@ -46,6 +48,10 @@ public class UpdateCharacterItem : MonoBehaviour
             TMP_damage.text = info.damage.ToString();
             TMP_speedAttack.text = info.attackSpeed.ToString();
             TMP_radiusAttack.text = info.attackRadius.ToString();
+        }
+        else
+        {
+            description.SetActive(true);
         }
     }
 }

@@ -10,6 +10,8 @@ public enum PanelType
     schoolPanel,
     canteenPanel,
     detailLevelPanel,
+    confirmPanel,
+    messageBoxPanel
 };
 
 public class UIController : MonoBehaviour
@@ -20,6 +22,8 @@ public class UIController : MonoBehaviour
     [SerializeField] private PanelController schoolPanel;
     [SerializeField] private PanelController canteenPanel;
     [SerializeField] private PanelController detailLevelPanel;
+    [SerializeField] private PanelController confirmPanel;
+    [SerializeField] private PanelController messageBoxPanel;
     [SerializeField] private GameObject EventSystem;
     [SerializeField] private GameObject Blur;
 
@@ -32,7 +36,10 @@ public class UIController : MonoBehaviour
 
     public void SetBlurActivety(bool flag)
     {
-        Blur.SetActive(flag);
+        if(schoolPanel.gameObject.activeSelf)
+            Blur.SetActive(true);
+        else
+            Blur.SetActive(flag);
     }
 
     private void Awake()
@@ -44,6 +51,8 @@ public class UIController : MonoBehaviour
             {PanelType.schoolPanel, schoolPanel},
             {PanelType.canteenPanel, canteenPanel},
             {PanelType.detailLevelPanel, detailLevelPanel},
+            {PanelType.confirmPanel, confirmPanel},
+            {PanelType.messageBoxPanel, messageBoxPanel},
         };
 
         foreach(var panel in panels.Values)

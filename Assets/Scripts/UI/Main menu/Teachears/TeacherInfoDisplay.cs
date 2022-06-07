@@ -6,6 +6,9 @@ using UnityEngine.UI;
 
 public class TeacherInfoDisplay : MonoBehaviour
 {
+    /*
+     * Script which display information on the panel
+     */
     [SerializeField] private TeacherInfo teacherInfo;
     [SerializeField] private TextMeshProUGUI nameTeacher;
     [SerializeField] private TextMeshProUGUI description;
@@ -35,5 +38,7 @@ public class TeacherInfoDisplay : MonoBehaviour
         attackRadius.text = teacherInfo.attackRadius.ToString();
         image.sprite = teacherInfo.image;
         costToBuy.text = teacherInfo.costToBuy.ToString();
+
+        teacherInfo.available = ES3.Load(teacherInfo.prefab.name, false);
     }
 }

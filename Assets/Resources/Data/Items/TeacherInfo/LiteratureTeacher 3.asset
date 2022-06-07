@@ -22,3 +22,5 @@ MonoBehaviour:
   image: {fileID: 21300000, guid: 5300b7c860c05f247853849824ef1ebe, type: 3}
   prefab: {fileID: 3318423671671420020, guid: fcd56e4b9c4ddff4d81c14543c65025d, type: 3}
   nextTeacherInfo: {fileID: 0}
+  available: 0
+  costStarsToBuy: 3

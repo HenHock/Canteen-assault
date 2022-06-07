@@ -127,6 +127,8 @@
     <Compile Include="Assets\Scripts\Game\Map\CharacterUpdatePlaceClick.cs" />
     <Compile Include="Assets\SlowMotionController.cs" />
     <Compile Include="Assets\Scripts\UI\Game\PausePanelController.cs" />
+    <Compile Include="Assets\Scripts\UI\Main menu\Teachears\BuyUpgradeButton.cs" />
+    <Compile Include="Assets\Scripts\UI\Main menu\Teachears\BackupUpgradeButton.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\UI Toolkit\USS\button-style.uss" />

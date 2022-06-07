@@ -5,9 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class PanelController : MonoBehaviour
 {
-    public static GameObject blur;
-    [SerializeField]
-
     public void Close()
     {
         if(DataManager.uIController != null)
