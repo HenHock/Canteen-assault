@@ -96,7 +96,10 @@ public class UIManager : MonoBehaviour
 
     public void Lose()
     {
-        UpdateTasksData();
+        //UpdateTasksData();
+
+        firstTask.UpdateState(false);
+        secondTask.UpdateState(false);
 
         endGamePanel.Open();
         titleEndGameText.text = "You lose";
