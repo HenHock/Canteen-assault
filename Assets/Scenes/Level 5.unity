@@ -12879,6 +12879,30 @@ MonoBehaviour:
         numberOfEnemyinSquard: 1
         numberInGroupe: 1
       allSquardsList: []
+--- !u!114 &1083293723 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8743713843164973583, guid: 3c714babf9e504b4fb656c6c3f50f293,
+    type: 3}
+  m_PrefabInstance: {fileID: 1949241299}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 163385551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77fb28eff2223254ebef575001f279e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1083293724 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2016720073368961491, guid: 3c714babf9e504b4fb656c6c3f50f293,
+    type: 3}
+  m_PrefabInstance: {fileID: 1949241299}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1126667429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77fb28eff2223254ebef575001f279e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1084016121
 GameObject:
   m_ObjectHideFlags: 0
@@ -18864,8 +18888,8 @@ MonoBehaviour:
   Stars: {fileID: 1949241307}
   nextLevelButton: {fileID: 1949241301}
   resetButton: {fileID: 1949241300}
-  firstTask: {fileID: 1126667429}
-  secondTask: {fileID: 163385551}
+  firstTask: {fileID: 1083293724}
+  secondTask: {fileID: 1083293723}
   Tasks: {fileID: 218699656}
 --- !u!114 &1758345770
 MonoBehaviour:

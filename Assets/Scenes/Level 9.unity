@@ -9158,18 +9158,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resourceManagerStruct:
   - startHealthByLevel: 5
-    startMoneyByLevel: 220
+    startMoneyByLevel: 250
     enemyWavesList:
     - delayTime: 0
       squardsList:
       - typeOfEnemy: {fileID: 8688853251620885656, guid: 71fd9db8ff6a97246ab4ac3d1e8d0dc6,
           type: 3}
-        numberOfEnemyinSquard: 6
-        numberInGroupe: 2
-      - typeOfEnemy: {fileID: 6281214345940797698, guid: b4abca2a3dce94549b4ad59614a72662,
-          type: 3}
         numberOfEnemyinSquard: 3
         numberInGroupe: 1
+      - typeOfEnemy: {fileID: 6281214345940797698, guid: b4abca2a3dce94549b4ad59614a72662,
+          type: 3}
+        numberOfEnemyinSquard: 6
+        numberInGroupe: 2
       allSquardsList: []
     - delayTime: 5
       squardsList:

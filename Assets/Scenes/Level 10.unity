@@ -9282,7 +9282,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resourceManagerStruct:
   - startHealthByLevel: 5
-    startMoneyByLevel: 250
+    startMoneyByLevel: 300
     enemyWavesList:
     - delayTime: 0
       squardsList:
@@ -9310,7 +9310,7 @@ MonoBehaviour:
         numberOfEnemyinSquard: 2
         numberInGroupe: 2
       allSquardsList: []
-    - delayTime: 5
+    - delayTime: 10
       squardsList:
       - typeOfEnemy: {fileID: 1471673085362196822, guid: 5739796181a4254438c2bed9532d1163,
           type: 3}

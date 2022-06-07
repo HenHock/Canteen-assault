@@ -52,7 +52,8 @@ public static class ResourcesManager
 
     public static void Reset(ResourceType resource)
     {
-        valueByResourceType[resource] = 0;
+        if (ResourceType.Star != resource)
+            valueByResourceType[resource] = 0;
         OnResourcesAmountChanged?.Invoke(resource, valueByResourceType[resource]);
     }
 

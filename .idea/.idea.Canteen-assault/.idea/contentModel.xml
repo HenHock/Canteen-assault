@@ -8,6 +8,11 @@
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Art" t="Include">
+          <e p="Shaders" t="Include">
+            <e p="Blur.shader" t="Include" />
+          </e>
+        </e>
         <e p="BorderSceneDetection.cs" t="Include" />
         <e p="CakeControllerScript.cs" t="Include" />
         <e p="CameraController.cs" t="Include" />
@@ -32,7 +37,6 @@
                 </e>
               </e>
               <e p="LeanCommon.asmdef" t="Include" />
-              <e p="package.json" t="Include" />
               <e p="Required" t="Include">
                 <e p="Scripts" t="Include">
                   <e p="LeanCommon.cs" t="Include" />
@@ -72,7 +76,6 @@
                 </e>
               </e>
               <e p="LeanTouch.asmdef" t="Include" />
-              <e p="package.json" t="Include" />
               <e p="Required" t="Include">
                 <e p="Scripts" t="Include">
                   <e p="LeanFinger.cs" t="Include" />
@@ -131,6 +134,12 @@
           </e>
           <e p="Demigiant" t="Include">
             <e p="DOTween" t="Include">
+              <e p="DOTween.dll" t="Include" />
+              <e p="DOTween.XML" t="Include" />
+              <e p="Editor" t="Include">
+                <e p="DOTweenEditor.dll" t="Include" />
+                <e p="DOTweenEditor.XML" t="Include" />
+              </e>
               <e p="Modules" t="Include">
                 <e p="DOTweenModuleAudio.cs" t="Include" />
                 <e p="DOTweenModuleEPOOutline.cs" t="Include" />
@@ -559,7 +568,6 @@
             </e>
             <e p="Sprites" t="Include">
               <e p="EmojiOne Attribution.txt" t="Include" />
-              <e p="EmojiOne.json" t="Include" />
             </e>
           </e>
         </e>
