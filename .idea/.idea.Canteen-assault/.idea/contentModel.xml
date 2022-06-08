@@ -571,6 +571,9 @@
             </e>
           </e>
         </e>
+        <e p="ProcessRestoreCakePannel.cs" t="Include" />
+        <e p="RestoreNoButton.cs" t="Include" />
+        <e p="ReturnScript.cs" t="Include" />
         <e p="Rotate.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="Game" t="Include">
@@ -656,6 +659,8 @@
                 <e p="LevelListGenerator.cs" t="Include" />
               </e>
               <e p="Teachears" t="Include">
+                <e p="BackupUpgradeButton.cs" t="Include" />
+                <e p="BuyUpgradeButton.cs" t="Include" />
                 <e p="TeacherInfoController.cs" t="Include" />
                 <e p="TeacherInfoDisplay.cs" t="Include" />
               </e>
