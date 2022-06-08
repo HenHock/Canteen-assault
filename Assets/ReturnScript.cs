@@ -6,11 +6,13 @@ using UnityEngine;
 
 public class ReturnScript : MonoBehaviour
 {
+    public static Action getReward;
     [SerializeField] private GameObject parentPannel;
     public void onClick()
     {
         //play adds
-        getAdditionalCake();
+        
+        
     }
 
     public void getAdditionalCake()
@@ -19,5 +21,10 @@ public class ReturnScript : MonoBehaviour
         CakeControllerScript.AddCake();
         Time.timeScale = 1;
         parentPannel.SetActive(false);
+    }
+
+    private void Start()
+    {
+        getReward = getAdditionalCake;
     }
 }
