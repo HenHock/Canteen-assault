@@ -1,29 +1,32 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CakeControllerScript : MonoBehaviour
 {
-    public int countStar { get; set; } = 3;
 
-    [SerializeField] private GameObject[] Cake;
-    private int currentCakeLevel;
-    private int currentDamage = 0;
+    [SerializeField] private GameObject[] cake;
+    [SerializeField] private GameObject restorePanel;
+    private int _currentCakeLevel;
+    private int _currentDamage;
 
     public static Action<int> EatCake;
+    public static Action AddCake;
     public static Action<bool> EndGame;
+    public static Action ForceLose;
 
     private void Start()
     {
         ResourcesManager.OnResourcesAmountChanged += HandleLifeAmountChanged;
 
-        EatCake = eatCakeRealise;
+        EatCake = EatCakeRealise;
         EndGame = EndGameReturn;
-        currentCakeLevel = Cake.Length;
+        AddCake = AddCakeDisplay;
+        ForceLose = endGameRealise;
+        _currentCakeLevel = cake.Length;
         
         //Debug.Log(DataManager.twentyProcentAmount);
-        currentDamage = 0;
+        _currentDamage = 0;
     }
 
     private void OnDestroy()
@@ -44,24 +47,36 @@ public class CakeControllerScript : MonoBehaviour
         }
     }
 
-    public void eatCakeRealise(int damage)
+    private void EatCakeRealise(int damage)
     {
         ResourcesManager.Change(ResourceType.Life, -damage);
 
-        currentDamage += damage;
+        _currentDamage += damage;
         //Debug.Log(currentDamage);
-        if(currentDamage >= DataManager.twentyProcentAmount)
-            changeCakeDisplay();
+        if(_currentDamage >= DataManager.twentyProcentAmount)
+            ChangeCakeDisplay();
     }
 
     private void EndGameReturn(bool flag)
     {
-        StartCoroutine(endGameRealise(flag));
+        //Debug.Log((!flag && !DataManager.returnToGame) + " " + !restorePanel.activeInHierarchy);
+        if(!restorePanel.activeInHierarchy)
+        {
+            if (!flag && !DataManager.returnToGame)
+            {
+                restorePanel.SetActive(true);
+            }
+            else
+            {
+                StartCoroutine(endGameRealise(flag));
+            }
+        }
     }
 
     private IEnumerator endGameRealise(bool flag)
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
+        
         if (flag && ResourcesManager.Get(ResourceType.Life) > 0)
         {
             DataManager.uIController.Win();
@@ -70,22 +85,35 @@ public class CakeControllerScript : MonoBehaviour
         {
             DataManager.uIController.Lose();
         }
-        Time.timeScale = 0;
+        Time.timeScale = 0;   
+    }
+    
+    private void endGameRealise()
+    {
+        DataManager.uIController.Lose();
+        Time.timeScale = 0;   
     }
 
-    private void changeCakeDisplay()
+    private void ChangeCakeDisplay()
     {
-        while(currentDamage >= DataManager.twentyProcentAmount)
+        while(_currentDamage >= DataManager.twentyProcentAmount)
         {
-            if (currentCakeLevel > 0)
+            if (_currentCakeLevel > 0)
             {
-                currentCakeLevel--;
-                Cake[currentCakeLevel].SetActive(false);
+                _currentCakeLevel--;
+                cake[_currentCakeLevel].SetActive(false);
 
             }
-            currentDamage -= DataManager.twentyProcentAmount;
-        Debug.Log($"after change {currentDamage}");
+            _currentDamage -= DataManager.twentyProcentAmount;
         }
+        
+    }
+    private void AddCakeDisplay()
+    {
+        _currentCakeLevel = 3;
+        cake[0].SetActive(true);
+        cake[1].SetActive(true);
+        cake[2].SetActive(true);
         
     }
 }

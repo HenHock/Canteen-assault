@@ -12,6 +12,7 @@ public class DataManager : MonoBehaviour
     public static UIManager uIController;
     public static GameObject selectedCharacter;
     public static bool canMoveCamera;
+    public static bool returnToGame;
 
     /*
      * 1 - default layer

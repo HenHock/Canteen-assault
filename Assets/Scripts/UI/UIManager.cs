@@ -98,6 +98,10 @@ public class UIManager : MonoBehaviour
     {
         //UpdateTasksData();
 
+        
+
+        UpdateTasksData();
+        
         firstTask.UpdateState(false);
         secondTask.UpdateState(false);
 

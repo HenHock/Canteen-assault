@@ -10,6 +10,7 @@ public class Cake : MonoBehaviour
     public int countStar { get; set; } = 3;
 
     [SerializeField] private GameObject nextCakePrefab;
+    [SerializeField] private ProcessRestoreCakePannel restorePannel;
 
     public static Action<int> EatCake;
     //public static Func<bool, IEnumerable> EndGame;
@@ -49,12 +50,13 @@ public class Cake : MonoBehaviour
 
     private void EndGameReturn(bool flag)
     {
+        restorePannel.enabled = true;
         StartCoroutine(endGameRealise(flag));
     }
 
     private IEnumerator endGameRealise(bool flag)
     {
-       yield return new WaitForSeconds(2);
+       yield return new WaitForSeconds(5);
         if (flag)
         {
             DataManager.uIController.Win();

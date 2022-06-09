@@ -63,6 +63,7 @@
     <Compile Include="Assets\Scripts\Game\FloatExtensions.cs" />
     <Compile Include="Assets\Scripts\Game\Character\Character.cs" />
     <Compile Include="Assets\Scripts\UI\UITaskDisplay.cs" />
+    <Compile Include="Assets\ReturnScript.cs" />
     <Compile Include="Assets\Scripts\UI\Game\ResourceDisplay.cs" />
     <Compile Include="Assets\Scripts\Game\Abilities\DancingAbility.cs" />
     <Compile Include="Assets\Scripts\UI\PanelController.cs" />
@@ -92,6 +93,7 @@
     <Compile Include="Assets\Scripts\UI\Game\AbilityDisplay.cs" />
     <Compile Include="Assets\Scripts\UI\Game\StarsIcon.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\TeacherInfo.cs" />
+    <Compile Include="Assets\ProcessRestoreCakePannel.cs" />
     <Compile Include="Assets\Scripts\UI\Game\PathManager.cs" />
     <Compile Include="Assets\Scripts\UI\Game\ScenesController.cs" />
     <Compile Include="Assets\Scripts\UI\UIManager.cs" />
@@ -117,18 +119,20 @@
     <Compile Include="Assets\Scripts\UI\Game\HealthDisplay.cs" />
     <Compile Include="Assets\Scripts\Game\Tasks at level\TaskManager.cs" />
     <Compile Include="Assets\Scripts\Game\Map\SpawnEnemies.cs" />
+    <Compile Include="Assets\Scripts\UI\Main menu\Teachears\BackupUpgradeButton.cs" />
     <Compile Include="Assets\Scripts\UI\Game\MenuButtonClick.cs" />
     <Compile Include="Assets\BorderSceneDetection.cs" />
     <Compile Include="Assets\Scripts\Game\Managers\CurrencyManager.cs" />
     <Compile Include="Assets\Scripts\UI\PageSwiper.cs" />
     <Compile Include="Assets\Scripts\Game\Tasks at level\TaskAbstract.cs" />
     <Compile Include="Assets\Scripts\UI\Game\ButtonBuyController.cs" />
+    <Compile Include="Assets\Scripts\UI\Main menu\Teachears\BuyUpgradeButton.cs" />
     <Compile Include="Assets\Scripts\Game\Tasks at level\Task1.cs" />
     <Compile Include="Assets\Scripts\Game\Map\CharacterUpdatePlaceClick.cs" />
     <Compile Include="Assets\SlowMotionController.cs" />
     <Compile Include="Assets\Scripts\UI\Game\PausePanelController.cs" />
-    <Compile Include="Assets\Scripts\UI\Main menu\Teachears\BuyUpgradeButton.cs" />
-    <Compile Include="Assets\Scripts\UI\Main menu\Teachears\BackupUpgradeButton.cs" />
+    <Compile Include="Assets\RestoreNoButton.cs" />
+    <Compile Include="Assets\AddsCore.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\UI Toolkit\USS\button-style.uss" />
@@ -786,6 +790,12 @@
     </Reference>
     <Reference Include="Unity.Notifications.iOS">
       <HintPath>Library\ScriptAssemblies\Unity.Notifications.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Advertisements">
+      <HintPath>Library\ScriptAssemblies\UnityEngine.Advertisements.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Advertisements.Editor">
+      <HintPath>Library\ScriptAssemblies\UnityEngine.Advertisements.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

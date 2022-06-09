@@ -35,7 +35,8 @@ public class LevelManager : MonoBehaviour
         DataManager.NumberOfDeathEnemies = 0;
         DataManager.IsLastWave = false;
         DataManager.canMoveCamera = true;
-        
+        DataManager.returnToGame = false;
+
         returnEnemyList = getEnemyList;
         returnNumberOfLevels = getNumberOfLevels;
 
