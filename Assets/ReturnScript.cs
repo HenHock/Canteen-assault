@@ -3,16 +3,19 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.Advertisements;
 
 public class ReturnScript : MonoBehaviour
 {
     public static Action getReward;
     [SerializeField] private GameObject parentPannel;
+
     public void onClick()
     {
         //play adds
-        
-        
+        AddsCore.ShowAdds();
+
     }
 
     public void getAdditionalCake()
@@ -27,4 +30,6 @@ public class ReturnScript : MonoBehaviour
     {
         getReward = getAdditionalCake;
     }
+
+
 }
