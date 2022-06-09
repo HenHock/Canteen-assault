@@ -20,14 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e3fee61-a6a6-46e3-a0cb-ed45c14ea9d2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Canteen-assault/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Canteen-assault/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AddsCore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddsCore.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProcessRestoreCakePannel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProcessRestoreCakePannel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RestoreNoButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RestoreNoButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ReturnScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ReturnScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/PanelController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PanelController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,12 +52,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/DataManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Game/ResetButton.cs" />
         <option value="$PROJECT_DIR$/Assets/CakeControllerScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/AddsCore.cs" />
-        <option value="$PROJECT_DIR$/Assets/ReturnScript.cs" />
         <option value="$PROJECT_DIR$/Assets/ProcessRestoreCakePannel.cs" />
         <option value="$PROJECT_DIR$/Assets/RestoreNoButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/PanelController.cs" />
+        <option value="$PROJECT_DIR$/Assets/ReturnScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/AddsCore.cs" />
       </list>
     </option>
   </component>

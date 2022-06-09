@@ -61,6 +61,7 @@ public class AddsCore : MonoBehaviour, IUnityAdsInitializationListener, IUnityAd
 
     public void OnUnityAdsShowStart(string placementId)
     {
+        ReturnScript.getReward();
         Debug.Log("Ads start");
     }
 
@@ -75,14 +76,15 @@ public class AddsCore : MonoBehaviour, IUnityAdsInitializationListener, IUnityAd
         {
             Debug.Log("Unity Ads Rewarded Ad Completed");
             // Grant a reward.
-            ReturnScript.getReward();
+            //ReturnScript.getReward();
 
             // Load another ad:
-            Advertisement.Load(_gameId);
+            
         }
         else
         {
-            RestoreNoButton.GetNoReward();
+            //RestoreNoButton.GetNoReward();
         }
+        //Advertisement.Load(_gameId);
     }
 }
