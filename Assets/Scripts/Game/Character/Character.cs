@@ -16,6 +16,7 @@ public class Character : MonoBehaviour
     [SerializeField] private Transform turret; // Объект, который выполняет прицеливания и генарицию снаряда
     [SerializeField] private GameObject shotPrefab; 
     [SerializeField] private GameObject radiusHitDisplay; // Объект, который отображает радиус аттаки персонажа
+    private GameObject radiusDisplay; // Экземпляр объекта, отображает радиус аттаки персонажа
 
     private GameObject shot;
     private float nextShoot = 0;
@@ -37,7 +38,7 @@ public class Character : MonoBehaviour
     /// </summary>
     public void SetRadiusAttackDisplay()
     {
-        GameObject radiusDisplay = Instantiate(radiusHitDisplay);
+        radiusDisplay = Instantiate(radiusHitDisplay);
         DataManager.radiusAttackObjects.Add(radiusDisplay);
 
         radiusDisplay.transform.localScale = new Vector3(radiusHit * 2.2f, 0.5f, radiusHit * 2.2f);
@@ -114,6 +115,11 @@ public class Character : MonoBehaviour
     {
         ResourcesManager.Change(ResourceType.Money, costToBuy);
         Destroy(gameObject);
+    }
+
+    private void OnDestroy()
+    {
+        Destroy(radiusDisplay);
     }
 
     private void OnDrawGizmosSelected()

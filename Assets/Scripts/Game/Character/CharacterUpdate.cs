@@ -25,6 +25,7 @@ public class CharacterUpdate : MonoBehaviour
             OnSpentMoneyUpdate?.Invoke(character.GetComponent<Character>().costToBuy);
 
             character.transform.SetParent(DataManager.selectedCharacter.transform.parent);
+            character.GetComponent<Character>().SetRadiusAttackDisplay();
             character.transform.localPosition = new Vector3(DataManager.selectedCharacter.transform.localPosition.x,
                 DataManager.selectedCharacter.transform.localPosition.y, DataManager.selectedCharacter.transform.localPosition.z);
 
