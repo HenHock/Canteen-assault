@@ -26,6 +26,7 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] private Button nextLevelButton;
     [SerializeField] private Button resetButton;
+    [SerializeField] private GameObject pauseButton;
 
     [SerializeField] private UITaskDisplay firstTask;
     [SerializeField] private UITaskDisplay secondTask;
@@ -52,6 +53,7 @@ public class UIManager : MonoBehaviour
     public void Win()
     {
         endGamePanel.Open();
+        pauseButton.gameObject.SetActive(false);
         titleEndGameText.text = "You win!";
         
         int starSave = 0;

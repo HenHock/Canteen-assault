@@ -12230,6 +12230,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1717505099}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1721772029 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5434582496213192649, guid: 3c714babf9e504b4fb656c6c3f50f293,
+    type: 3}
+  m_PrefabInstance: {fileID: 5434582497511168731}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1752311095
 GameObject:
   m_ObjectHideFlags: 0
@@ -12420,6 +12426,7 @@ MonoBehaviour:
   Stars: {fileID: 5434582497511168737}
   nextLevelButton: {fileID: 5434582497511168733}
   resetButton: {fileID: 5434582497511168732}
+  pauseButton: {fileID: 1721772029}
   firstTask: {fileID: 5434582497511168735}
   secondTask: {fileID: 5434582497511168734}
   Tasks: {fileID: 1820174796}
