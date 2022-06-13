@@ -4967,6 +4967,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 814039150098555759, guid: 3c714babf9e504b4fb656c6c3f50f293,
+        type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5434582496116824046, guid: 3c714babf9e504b4fb656c6c3f50f293,
         type: 3}
       propertyPath: firstTask
