@@ -72,8 +72,8 @@ public class SpawnEnemies : MonoBehaviour
     {
         for (int numberSquard = 0; numberSquard < enemyWavesList[numberWave].allSquardsList.Count; numberSquard++)
         {
-                SpawnGroupe(numberWave, numberSquard);
-                yield return new WaitForSeconds(timeSpawn);
+            SpawnGroupe(numberWave, numberSquard);
+            yield return new WaitForSeconds(timeSpawn);
         }
     }
     private void SpawnGroupe(int numberWave, int numberSquard)
