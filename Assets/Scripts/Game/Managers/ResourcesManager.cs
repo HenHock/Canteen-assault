@@ -54,6 +54,7 @@ public static class ResourcesManager
     {
         if (ResourceType.Star != resource)
             valueByResourceType[resource] = 0;
+        OnResourcesAmountChanged -= CakeControllerScript.HandleLifeAmountChanged;
         OnResourcesAmountChanged?.Invoke(resource, valueByResourceType[resource]);
     }
 

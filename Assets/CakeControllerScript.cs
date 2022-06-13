@@ -34,7 +34,7 @@ public class CakeControllerScript : MonoBehaviour
         ResourcesManager.OnResourcesAmountChanged -= HandleLifeAmountChanged;
     }
 
-    private void HandleLifeAmountChanged(ResourceType type, float amount)
+    public static void HandleLifeAmountChanged(ResourceType type, float amount)
     {
         if (type != ResourceType.Life)
         {
@@ -62,7 +62,8 @@ public class CakeControllerScript : MonoBehaviour
         //Debug.Log((!flag && !DataManager.returnToGame) + " " + !restorePanel.activeInHierarchy);
         if(!restorePanel.activeInHierarchy)
         {
-            if (!flag && !DataManager.returnToGame)
+            int dif = DataManager.NumberOfAllEnemies - DataManager.NumberOfDeathEnemies;
+            if (!flag && !DataManager.returnToGame && dif > 1)
             {
                 restorePanel.SetActive(true);
             }
@@ -114,6 +115,5 @@ public class CakeControllerScript : MonoBehaviour
         cake[0].SetActive(true);
         cake[1].SetActive(true);
         cake[2].SetActive(true);
-        
     }
 }
