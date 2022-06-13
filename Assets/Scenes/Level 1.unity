@@ -4967,6 +4967,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5434582496116824046, guid: 3c714babf9e504b4fb656c6c3f50f293,
+        type: 3}
+      propertyPath: firstTask
+      value: 
+      objectReference: {fileID: 1447462986}
+    - target: {fileID: 5434582496116824046, guid: 3c714babf9e504b4fb656c6c3f50f293,
+        type: 3}
+      propertyPath: secondTask
+      value: 
+      objectReference: {fileID: 881150274}
     - target: {fileID: 5434582496334938583, guid: 3c714babf9e504b4fb656c6c3f50f293,
         type: 3}
       propertyPath: m_SizeDelta.x
@@ -5119,6 +5129,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c714babf9e504b4fb656c6c3f50f293, type: 3}
+--- !u!1 &768960153 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5434582496213192649, guid: 3c714babf9e504b4fb656c6c3f50f293,
+    type: 3}
+  m_PrefabInstance: {fileID: 768960152}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &775112076
 GameObject:
   m_ObjectHideFlags: 0
@@ -5944,6 +5960,12 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2859684651782562362, guid: cca606601e5c586468bd2d5888577942,
     type: 3}
   m_PrefabInstance: {fileID: 1393433201}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &881150274 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2169458607225254295, guid: 3c714babf9e504b4fb656c6c3f50f293,
+    type: 3}
+  m_PrefabInstance: {fileID: 768960152}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &896932096
 PrefabInstance:
@@ -10909,6 +10931,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 896932096}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1447462986 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2801468759125441017, guid: 3c714babf9e504b4fb656c6c3f50f293,
+    type: 3}
+  m_PrefabInstance: {fileID: 768960152}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1455327607
 GameObject:
   m_ObjectHideFlags: 0
@@ -13008,6 +13036,7 @@ MonoBehaviour:
   Stars: {fileID: 1723061330}
   nextLevelButton: {fileID: 723185862}
   resetButton: {fileID: 234149425}
+  pauseButton: {fileID: 768960153}
   firstTask: {fileID: 981996687}
   secondTask: {fileID: 492602835}
   Tasks: {fileID: 1820174796}

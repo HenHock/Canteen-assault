@@ -10381,6 +10381,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 288b229db858c114299d1bf70ffc95cd, type: 3}
+--- !u!1 &1325114612 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5434582496213192649, guid: 3c714babf9e504b4fb656c6c3f50f293,
+    type: 3}
+  m_PrefabInstance: {fileID: 1895076940}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1326603738
 GameObject:
   m_ObjectHideFlags: 0
@@ -13171,6 +13177,7 @@ MonoBehaviour:
   Stars: {fileID: 1895076945}
   nextLevelButton: {fileID: 1895076944}
   resetButton: {fileID: 1895076943}
+  pauseButton: {fileID: 1325114612}
   firstTask: {fileID: 1895076947}
   secondTask: {fileID: 1895076946}
   Tasks: {fileID: 584310379}
