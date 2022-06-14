@@ -16,15 +16,17 @@ public class Enemy : MonoBehaviour
 
     private Tween moveTween;
     private Tween jumpTween;
+    private Animator animator;
 
     void Start()
     {
+        animator = GetComponent<Animator>();
         int _listIndex = PathManager.GetRandomPathNumber();
 
         scale = transform.localScale.x;
 
         _speed = PathManager.GetPathDuration(_listIndex)-(float)(PathManager.GetPathDuration(_listIndex) * FasterProcent * 0.01);
-
+        animator.SetFloat("Velocity", _speed * Time.deltaTime * 5);
         moveTween = transform.DOPath(PathManager.GetRandomPath(_listIndex), _speed).SetLookAt(-1f).OnComplete(() =>
         {
             CakeControllerScript.EatCake(damage);
