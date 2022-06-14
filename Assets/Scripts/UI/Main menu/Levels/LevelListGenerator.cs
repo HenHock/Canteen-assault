@@ -41,7 +41,6 @@ public class LevelListGenerator : MonoBehaviour
                 int index = Array.FindIndex(levelsInformation, x => x.sceneName.Equals(sceneName));
                 if (index != -1)
                 {
-                    Debug.Log("d");
                     newLevelItem.GetComponent<Level>().Create(levelsInformation[index], ifPrevFinished, levelsInformation[index].finished, levelCount);
                     newLevelItem.transform.GetChild(1).GetComponent<Image>().sprite = StarsIcon.GetIcon(levelsInformation[index].countStarsRecieved);
                     ifPrevFinished = levelsInformation[index].finished;
