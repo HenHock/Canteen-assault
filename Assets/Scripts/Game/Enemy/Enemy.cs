@@ -7,7 +7,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public int Health = 0;
-    private float _speed;
+    public float _speed = 1;
     [SerializeField] private int damage = 1;
     [SerializeField] private ProgressBar healthBar;
     [SerializeField] private float FasterProcent;
@@ -19,17 +19,18 @@ public class Enemy : MonoBehaviour
 
     void Start()
     {
-        scale = transform.localScale.x;
         int _listIndex = PathManager.GetRandomPathNumber();
+
+        scale = transform.localScale.x;
+
         _speed = PathManager.GetPathDuration(_listIndex)-(float)(PathManager.GetPathDuration(_listIndex) * FasterProcent * 0.01);
-        //Debug.Log(_speed + "speed");
-        //Debug.Log(PathManager.GetRandomPath(_listIndex).Length);
+
         moveTween = transform.DOPath(PathManager.GetRandomPath(_listIndex), _speed).SetLookAt(-1f).OnComplete(() =>
         {
             CakeControllerScript.EatCake(damage);
             EnemyDestroy();
         });
-        //Debug.Log(moveTween + "is anim");
+
         healthBar.Initialize(Health);
     }
 
