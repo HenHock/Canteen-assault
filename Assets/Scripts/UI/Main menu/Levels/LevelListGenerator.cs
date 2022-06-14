@@ -12,6 +12,7 @@ using UnityEngine.UI;
 public class LevelListGenerator : MonoBehaviour
 {
     [SerializeField] private GameObject levelItemPrefab;
+    [SerializeField] private GameObject scrollbar;
     private int levelCount = 1;
 
     private void Start()
@@ -40,11 +41,21 @@ public class LevelListGenerator : MonoBehaviour
                 int index = Array.FindIndex(levelsInformation, x => x.sceneName.Equals(sceneName));
                 if (index != -1)
                 {
+                    Debug.Log("d");
                     newLevelItem.GetComponent<Level>().Create(levelsInformation[index], ifPrevFinished, levelsInformation[index].finished, levelCount);
+                    newLevelItem.transform.GetChild(1).GetComponent<Image>().sprite = StarsIcon.GetIcon(levelsInformation[index].countStarsRecieved);
                     ifPrevFinished = levelsInformation[index].finished;
                 }
                 levelCount++;
             }
         }
+
+        StartCoroutine(resetScrollPos());
+    }
+
+    IEnumerator resetScrollPos()
+    {
+        yield return null; // Waiting just one frame is probably good enough, yield return null does that
+        scrollbar.GetComponent<Scrollbar>().value = 1;
     }
 }

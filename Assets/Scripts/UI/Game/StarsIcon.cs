@@ -9,11 +9,11 @@ public class StarsIcon : MonoBehaviour
     [SerializeField] private Sprite stars_2;
     [SerializeField] private Sprite stars_3;
 
-    private static IDictionary<float, Sprite> starsIcon;
+    private static IDictionary<int, Sprite> starsIcon;
 
-    private void Start()
+    private void Awake()
     {
-        starsIcon = new Dictionary<float, Sprite>()
+        starsIcon = new Dictionary<int, Sprite>()
         {
             {0, stars_0 },
             {1, stars_1},
@@ -22,7 +22,7 @@ public class StarsIcon : MonoBehaviour
         };
     }
 
-    public static Sprite GetIcon(float val)
+    public static Sprite GetIcon(int val)
     {
         return starsIcon[val];
     }

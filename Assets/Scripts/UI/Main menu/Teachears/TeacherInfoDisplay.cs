@@ -33,7 +33,7 @@ public class TeacherInfoDisplay : MonoBehaviour
     {
         nameTeacher.text = teacherInfo.nameTeacher;
         description.text = teacherInfo.description;
-        damage.text = teacherInfo.damage.ToString();
+        damage.text = teacherInfo.damage.ToString() + "x" + teacherInfo.countAttack;
         attackSpeed.text = teacherInfo.attackSpeed.ToString();
         attackRadius.text = teacherInfo.attackRadius.ToString();
         image.sprite = teacherInfo.image;

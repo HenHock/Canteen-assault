@@ -45,7 +45,7 @@ public class UpdateCharacterItem : MonoBehaviour
 
             nameCharacter.GetComponent<TextMeshProUGUI>().text = info.nameTeacher;
             updateCharacterButton.GetComponentInChildren<TextMeshProUGUI>().text = info.costToBuy.ToString();
-            TMP_damage.text = info.damage.ToString();
+            TMP_damage.text = info.damage.ToString() + "x" + info.countAttack;
             TMP_speedAttack.text = info.attackSpeed.ToString();
             TMP_radiusAttack.text = info.attackRadius.ToString();
         }

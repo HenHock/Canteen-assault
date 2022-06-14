@@ -97,10 +97,6 @@ public class UIManager : MonoBehaviour
 
     public void Lose()
     {
-        //UpdateTasksData();
-
-        
-
         UpdateTasksData();
         
         firstTask.UpdateState(false);

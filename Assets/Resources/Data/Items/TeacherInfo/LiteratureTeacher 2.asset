@@ -24,3 +24,4 @@ MonoBehaviour:
   nextTeacherInfo: {fileID: 11400000, guid: e3916fadab602fb4895b68cbb3bb2e2d, type: 2}
   available: 0
   costStarsToBuy: 3
+  countAttack: 1

@@ -23,3 +23,5 @@ MonoBehaviour:
   prefab: {fileID: 686638384857076333, guid: a119ac8345536e14abb5cc2a29b4a4a1, type: 3}
   nextTeacherInfo: {fileID: 11400000, guid: b3a8d3c0074fff845a17ad88ceda35a3, type: 2}
   available: 1
+  costStarsToBuy: 0
+  countAttack: 1

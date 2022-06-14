@@ -7,7 +7,7 @@ public class LevelInfo : ScriptableObject
 {
     public TaskAbstract task_1;
     public TaskAbstract task_2;
-    public int countStarsRecieved;
+    public int countStarsRecieved { get; private set; } = 0;
     public string sceneName;
 
 
@@ -46,8 +46,31 @@ public class LevelInfo : ScriptableObject
         firstTask = ES3.Load($"{sceneName} Task 1", false);
         secondTask = ES3.Load($"{sceneName} Task 2", false);
         finished = ES3.Load($"{sceneName} Finished", false);
+
+        if(firstTask)
+            countStarsRecieved++;
+        if(secondTask)
+            countStarsRecieved++;
+        if (finished)
+            countStarsRecieved++;
+        
         
         Debug.Log($"{sceneName}: {available} ... {defaultAvailable}");
+    }
+
+    public void UpdateData()
+    {
+        Debug.Log(sceneName);
+        firstTask = ES3.Load($"{sceneName} Task 1", false);
+        secondTask = ES3.Load($"{sceneName} Task 2", false);
+        finished = ES3.Load($"{sceneName} Finished", false);
+
+        if (firstTask)
+            countStarsRecieved++;
+        if (secondTask)
+            countStarsRecieved++;
+        if (finished)
+            countStarsRecieved++;
     }
     
     public void LevelFinish()

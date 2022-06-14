@@ -16,4 +16,5 @@ public class TeacherInfo : ScriptableObject
     public TeacherInfo nextTeacherInfo;
     public bool available; // Available to buy upgrade or not
     public int costStarsToBuy; // For first level of the teacher have to equal to 0
+    public int countAttack;
 }
