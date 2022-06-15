@@ -1,0 +1,130 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &2422225077514614300
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -1669338684561177667, guid: 98235cd36794b91488c9119743b453da,
+        type: 3}
+      propertyPath: turret
+      value: 
+      objectReference: {fileID: 6856503075432188258}
+    - target: {fileID: -1669338684561177667, guid: 98235cd36794b91488c9119743b453da,
+        type: 3}
+      propertyPath: costToBuy
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: -1669338684561177667, guid: 98235cd36794b91488c9119743b453da,
+        type: 3}
+      propertyPath: radiusHit
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -1669338684561177667, guid: 98235cd36794b91488c9119743b453da,
+        type: 3}
+      propertyPath: shotPrefab
+      value: 
+      objectReference: {fileID: 2722265603637243481, guid: c4a63ec34a1bb964197503075ea75327,
+        type: 3}
+    - target: {fileID: -1669338684561177667, guid: 98235cd36794b91488c9119743b453da,
+        type: 3}
+      propertyPath: attackSpeed
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: -1669338684561177667, guid: 98235cd36794b91488c9119743b453da,
+        type: 3}
+      propertyPath: teacherInfo
+      value: 
+      objectReference: {fileID: 11400000, guid: 669e621857227a64ab0b87f5e61ed2bc,
+        type: 2}
+    - target: {fileID: -1669338684561177667, guid: 98235cd36794b91488c9119743b453da,
+        type: 3}
+      propertyPath: attackDamage
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -1669338684561177667, guid: 98235cd36794b91488c9119743b453da,
+        type: 3}
+      propertyPath: costToUpgrade
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: -1669338684561177667, guid: 98235cd36794b91488c9119743b453da,
+        type: 3}
+      propertyPath: nextLevelPrefab
+      value: 
+      objectReference: {fileID: 8584138613846144119, guid: 6953e8ff3c1eace4688d5d80c8dc9fa2,
+        type: 3}
+    - target: {fileID: -1669338684561177667, guid: 98235cd36794b91488c9119743b453da,
+        type: 3}
+      propertyPath: moneyBackPercentage
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 174676523816742593, guid: 98235cd36794b91488c9119743b453da,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 174676523816742593, guid: 98235cd36794b91488c9119743b453da,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.2438617
+      objectReference: {fileID: 0}
+    - target: {fileID: 174676523816742593, guid: 98235cd36794b91488c9119743b453da,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.16739964
+      objectReference: {fileID: 0}
+    - target: {fileID: 174676523816742593, guid: 98235cd36794b91488c9119743b453da,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -22.699852
+      objectReference: {fileID: 0}
+    - target: {fileID: 174676523816742593, guid: 98235cd36794b91488c9119743b453da,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 174676523816742593, guid: 98235cd36794b91488c9119743b453da,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 174676523816742593, guid: 98235cd36794b91488c9119743b453da,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 174676523816742593, guid: 98235cd36794b91488c9119743b453da,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 174676523816742593, guid: 98235cd36794b91488c9119743b453da,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 174676523816742593, guid: 98235cd36794b91488c9119743b453da,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 174676523816742593, guid: 98235cd36794b91488c9119743b453da,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 174676523816972963, guid: 98235cd36794b91488c9119743b453da,
+        type: 3}
+      propertyPath: m_Name
+      value: Physical education teacher 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 98235cd36794b91488c9119743b453da, type: 3}
+--- !u!4 &6856503075432188258 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9131692453547442046, guid: 98235cd36794b91488c9119743b453da,
+    type: 3}
+  m_PrefabInstance: {fileID: 2422225077514614300}
+  m_PrefabAsset: {fileID: 0}

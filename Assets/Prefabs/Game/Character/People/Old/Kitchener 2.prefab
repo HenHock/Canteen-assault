@@ -1,0 +1,125 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &4947585073427514021
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2017941185452668863, guid: 008f5a10d531fba43a38b244da87d036,
+        type: 3}
+      propertyPath: m_Name
+      value: Kitchener 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2017941185453026269, guid: 008f5a10d531fba43a38b244da87d036,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2017941185453026269, guid: 008f5a10d531fba43a38b244da87d036,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.19400644
+      objectReference: {fileID: 0}
+    - target: {fileID: 2017941185453026269, guid: 008f5a10d531fba43a38b244da87d036,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.1673994
+      objectReference: {fileID: 0}
+    - target: {fileID: 2017941185453026269, guid: 008f5a10d531fba43a38b244da87d036,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -23.269651
+      objectReference: {fileID: 0}
+    - target: {fileID: 2017941185453026269, guid: 008f5a10d531fba43a38b244da87d036,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2017941185453026269, guid: 008f5a10d531fba43a38b244da87d036,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2017941185453026269, guid: 008f5a10d531fba43a38b244da87d036,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2017941185453026269, guid: 008f5a10d531fba43a38b244da87d036,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2017941185453026269, guid: 008f5a10d531fba43a38b244da87d036,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2017941185453026269, guid: 008f5a10d531fba43a38b244da87d036,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2017941185453026269, guid: 008f5a10d531fba43a38b244da87d036,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7903008122108735536, guid: 008f5a10d531fba43a38b244da87d036,
+        type: 3}
+      propertyPath: turret
+      value: 
+      objectReference: {fileID: 3346590537302368637}
+    - target: {fileID: 7903008122108735536, guid: 008f5a10d531fba43a38b244da87d036,
+        type: 3}
+      propertyPath: costToBuy
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 7903008122108735536, guid: 008f5a10d531fba43a38b244da87d036,
+        type: 3}
+      propertyPath: radiusHit
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7903008122108735536, guid: 008f5a10d531fba43a38b244da87d036,
+        type: 3}
+      propertyPath: shotPrefab
+      value: 
+      objectReference: {fileID: 1000011003416750, guid: 1eb5fd885f4b34540ad0fd8739e6f616,
+        type: 3}
+    - target: {fileID: 7903008122108735536, guid: 008f5a10d531fba43a38b244da87d036,
+        type: 3}
+      propertyPath: attackSpeed
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7903008122108735536, guid: 008f5a10d531fba43a38b244da87d036,
+        type: 3}
+      propertyPath: teacherInfo
+      value: 
+      objectReference: {fileID: 11400000, guid: d56393601abcea24b9de74574dcd3f89,
+        type: 2}
+    - target: {fileID: 7903008122108735536, guid: 008f5a10d531fba43a38b244da87d036,
+        type: 3}
+      propertyPath: attackDamage
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7903008122108735536, guid: 008f5a10d531fba43a38b244da87d036,
+        type: 3}
+      propertyPath: nextLevelPrefab
+      value: 
+      objectReference: {fileID: 3287589888976586153, guid: 4a7f2fb21369a4449b603eb085bf05bf,
+        type: 3}
+    - target: {fileID: 7903008122108735536, guid: 008f5a10d531fba43a38b244da87d036,
+        type: 3}
+      propertyPath: moneyBackPercentage
+      value: 100
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 008f5a10d531fba43a38b244da87d036, type: 3}
+--- !u!4 &3346590537302368637 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7698938979109528536, guid: 008f5a10d531fba43a38b244da87d036,
+    type: 3}
+  m_PrefabInstance: {fileID: 4947585073427514021}
+  m_PrefabAsset: {fileID: 0}
