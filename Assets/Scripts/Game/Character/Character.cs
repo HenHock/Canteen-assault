@@ -10,7 +10,7 @@ public class Character : MonoBehaviour
     public float radiusHit { get; private set; }
     public float attackSpeed { get; private set; }
 
-    public GameObject nextLevelPrefab;
+    //public GameObject nextLevelPrefab;
 
     [SerializeField] private TeacherInfo teacherInfo;
     [SerializeField] private Transform turret; // Объект, который выполняет прицеливания и генарицию снаряда
@@ -64,7 +64,10 @@ public class Character : MonoBehaviour
         if (target != null)
         {
             turret.LookAt(target.position);
-            transform.LookAt(target.position);
+            var newRotation = Quaternion.LookRotation(target.position - transform.position, Vector3.forward);
+            newRotation.x = 0.0f;
+            newRotation.z = 0.0f;
+            transform.rotation = Quaternion.Slerp(transform.rotation, newRotation, Time.deltaTime * 10);
         }
 
         if (Time.time > nextShoot)

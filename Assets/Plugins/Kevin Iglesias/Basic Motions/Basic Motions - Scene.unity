@@ -140,7 +140,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400120, guid: 5917c0e93d180a842b61d1ebc62a195c, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 400120, guid: 5917c0e93d180a842b61d1ebc62a195c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -673,6 +673,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sturm
+      objectReference: {fileID: 0}
+    - target: {fileID: 2593501273369941865, guid: 3db605b1fb38ff14fb05573540b57dd9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2762904580842207784, guid: 3db605b1fb38ff14fb05573540b57dd9,
         type: 3}
@@ -3178,6 +3183,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Student girl
       objectReference: {fileID: 0}
+    - target: {fileID: 8599341287498971579, guid: 5a4dee218b466bc4090321300b48cda2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8659988352875512761, guid: 5a4dee218b466bc4090321300b48cda2,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -4199,6 +4209,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Small student
+      objectReference: {fileID: 0}
+    - target: {fileID: 5340848751068435002, guid: cd118af2de01dcd428560f664efd8777,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5720119142264544914, guid: cd118af2de01dcd428560f664efd8777,
         type: 3}
@@ -6193,6 +6208,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Student boy
       objectReference: {fileID: 0}
+    - target: {fileID: 6426448535808468658, guid: 0b620a17b1f9688468048decdf26ca15,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6651859861109975578, guid: 0b620a17b1f9688468048decdf26ca15,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7094,7 +7114,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 50.000004, y: -176.636, z: 0}
 --- !u!1001 &1735233133
 PrefabInstance:
@@ -8451,6 +8471,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Student power
       objectReference: {fileID: 0}
+    - target: {fileID: 9045437640196017442, guid: 7d3f183f3c3d4184a85df268648e8cfb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d3f183f3c3d4184a85df268648e8cfb, type: 3}
 --- !u!1001 &1778454300
@@ -8619,6 +8644,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Big student
+      objectReference: {fileID: 0}
+    - target: {fileID: 1041079475191451442, guid: 4547b479a9caf2e46959bb89d9543b28,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1165568587209974116, guid: 4547b479a9caf2e46959bb89d9543b28,
         type: 3}
