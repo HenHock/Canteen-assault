@@ -7,7 +7,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public int Health = 0;
-    private float _speed;
+    public float _speed = 1;
     [SerializeField] private int damage = 1;
     [SerializeField] private ProgressBar healthBar;
     [SerializeField] private float FasterProcent;
@@ -16,20 +16,24 @@ public class Enemy : MonoBehaviour
 
     private Tween moveTween;
     private Tween jumpTween;
+    private Animator animator;
 
     void Start()
     {
-        scale = transform.localScale.x;
+        animator = GetComponent<Animator>();
+
         int _listIndex = PathManager.GetRandomPathNumber();
-        _speed = PathManager.GetPathDuration(_listIndex)-(float)(PathManager.GetPathDuration(_listIndex) * FasterProcent * 0.01);
-        //Debug.Log(_speed + "speed");
-        //Debug.Log(PathManager.GetRandomPath(_listIndex).Length);
+
+        scale = transform.localScale.x;
+
+        _speed = PathManager.GetPathDuration(_listIndex) - (float)(PathManager.GetPathDuration(_listIndex) * FasterProcent * 0.01);
+        animator.SetFloat("Velocity", _speed * Time.deltaTime * 5);
         moveTween = transform.DOPath(PathManager.GetRandomPath(_listIndex), _speed).SetLookAt(-1f).OnComplete(() =>
         {
             CakeControllerScript.EatCake(damage);
             EnemyDestroy();
         });
-        //Debug.Log(moveTween + "is anim");
+
         healthBar.Initialize(Health);
     }
 
@@ -78,14 +82,21 @@ public class Enemy : MonoBehaviour
 
     public void Dancing(int duration)
     {
+        animator?.SetBool("IsDansing", true);
         moveTween?.Pause();
-        jumpTween = transform.DOJump(transform.position, 0.5f, duration, duration);
+        //jumpTween = transform.DOJump(transform.position, 0.5f, duration, duration);
+        //animator.speed = duration/2;
+        //animator?.SetFloat("Velocity", 0f);
+        
         StartCoroutine(waitToPlayAnim(duration));
     }
 
     private IEnumerator waitToPlayAnim(int duration)
     {
         yield return new WaitForSeconds(duration);
+        animator?.SetBool("IsDansing", false);
+        //animator.speed = 1;
+        //animator?.SetFloat("Velocity", _speed * Time.deltaTime * 5);
         moveTween?.Play();
     }
 

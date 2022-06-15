@@ -57,21 +57,6 @@ public class LevelInfo : ScriptableObject
         
         Debug.Log($"{sceneName}: {available} ... {defaultAvailable}");
     }
-
-    public void UpdateData()
-    {
-        Debug.Log(sceneName);
-        firstTask = ES3.Load($"{sceneName} Task 1", false);
-        secondTask = ES3.Load($"{sceneName} Task 2", false);
-        finished = ES3.Load($"{sceneName} Finished", false);
-
-        if (firstTask)
-            countStarsRecieved++;
-        if (secondTask)
-            countStarsRecieved++;
-        if (finished)
-            countStarsRecieved++;
-    }
     
     public void LevelFinish()
     {
