@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ProcessRestoreCakePannel : PanelController
@@ -11,6 +12,8 @@ public class ProcessRestoreCakePannel : PanelController
     
     [SerializeField] private TMP_Text timeLeftTMP;
     [SerializeField] private Button cancelButton;
+
+    [SerializeField] private GameObject endGamePannel;
    // [SerializeField] private Button pauseButton;
    // [SerializeField] private Button playButton;
     private int timeLeft;
@@ -32,15 +35,16 @@ public class ProcessRestoreCakePannel : PanelController
         yield return new WaitForSeconds(3f);
         cancelButton.gameObject.SetActive(true);
     }
-    /*
+
     private void OnDisable()
     {
-        
+        if (!endGamePannel.activeInHierarchy)
+        {
             UIManager.OnBlurAction(false);
-            uiInLevel.SetActive(false);
-        
-    }*/
+            uiInLevel.SetActive(true);
+        }
 
+    }
     /*
     private IEnumerator changeTime()
     {
