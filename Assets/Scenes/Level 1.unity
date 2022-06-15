@@ -2259,17 +2259,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: DancingAbility
       objectReference: {fileID: 0}
-    - target: {fileID: 4179715775816939404, guid: eb8c2793037f79d4781851ba46789e24,
-        type: 3}
-      propertyPath: artWork
-      value: 
-      objectReference: {fileID: 21300000, guid: a592ebeec60f93a45bb6f2e4793465e0,
-        type: 3}
-    - target: {fileID: 4179715775816939404, guid: eb8c2793037f79d4781851ba46789e24,
-        type: 3}
-      propertyPath: cooldown
-      value: 20
-      objectReference: {fileID: 0}
     - target: {fileID: 7607352871602143218, guid: eb8c2793037f79d4781851ba46789e24,
         type: 3}
       propertyPath: m_RootOrder
@@ -4838,39 +4827,19 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 814039150098555759, guid: 3c714babf9e504b4fb656c6c3f50f293,
+    - target: {fileID: 5159314189977442878, guid: 3c714babf9e504b4fb656c6c3f50f293,
         type: 3}
-      propertyPath: m_hasFontAssetChanged
+      propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5434582496334938583, guid: 3c714babf9e504b4fb656c6c3f50f293,
+    - target: {fileID: 5434582497311745713, guid: 3c714babf9e504b4fb656c6c3f50f293,
         type: 3}
-      propertyPath: m_SizeDelta.x
+      propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5434582496874924453, guid: 3c714babf9e504b4fb656c6c3f50f293,
+    - target: {fileID: 5434582497518797126, guid: 3c714babf9e504b4fb656c6c3f50f293,
         type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5434582497711104360, guid: 3c714babf9e504b4fb656c6c3f50f293,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5434582497735457629, guid: 3c714babf9e504b4fb656c6c3f50f293,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5434582497936579034, guid: 3c714babf9e504b4fb656c6c3f50f293,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5434582497936579034, guid: 3c714babf9e504b4fb656c6c3f50f293,
-        type: 3}
-      propertyPath: m_AnchorMax.y
+      propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5434582497956891562, guid: 3c714babf9e504b4fb656c6c3f50f293,
@@ -5812,11 +5781,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 977751225}
     m_Modifications:
-    - target: {fileID: 371011691215617083, guid: eadc1cd4b178a9642ba2a888856c76be,
-        type: 3}
-      propertyPath: cooldown
-      value: 15
-      objectReference: {fileID: 0}
     - target: {fileID: 2785806203730290888, guid: eadc1cd4b178a9642ba2a888856c76be,
         type: 3}
       propertyPath: m_RootOrder
