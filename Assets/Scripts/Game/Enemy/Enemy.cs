@@ -21,11 +21,12 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+
         int _listIndex = PathManager.GetRandomPathNumber();
 
         scale = transform.localScale.x;
 
-        _speed = PathManager.GetPathDuration(_listIndex)-(float)(PathManager.GetPathDuration(_listIndex) * FasterProcent * 0.01);
+        _speed = PathManager.GetPathDuration(_listIndex) - (float)(PathManager.GetPathDuration(_listIndex) * FasterProcent * 0.01);
         animator.SetFloat("Velocity", _speed * Time.deltaTime * 5);
         moveTween = transform.DOPath(PathManager.GetRandomPath(_listIndex), _speed).SetLookAt(-1f).OnComplete(() =>
         {
@@ -81,14 +82,21 @@ public class Enemy : MonoBehaviour
 
     public void Dancing(int duration)
     {
+        animator?.SetBool("IsDansing", true);
         moveTween?.Pause();
-        jumpTween = transform.DOJump(transform.position, 0.5f, duration, duration);
+        //jumpTween = transform.DOJump(transform.position, 0.5f, duration, duration);
+        //animator.speed = duration/2;
+        //animator?.SetFloat("Velocity", 0f);
+        
         StartCoroutine(waitToPlayAnim(duration));
     }
 
     private IEnumerator waitToPlayAnim(int duration)
     {
         yield return new WaitForSeconds(duration);
+        animator?.SetBool("IsDansing", false);
+        //animator.speed = 1;
+        //animator?.SetFloat("Velocity", _speed * Time.deltaTime * 5);
         moveTween?.Play();
     }
 

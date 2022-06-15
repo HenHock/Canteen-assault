@@ -51,6 +51,6 @@ public class ProgressBar : MonoBehaviour
 
     private void Update()
     {
-        transform.LookAt(_mainCamera.transform.position);
+        //transform.LookAt(_mainCamera.transform.position);
     }
 }
