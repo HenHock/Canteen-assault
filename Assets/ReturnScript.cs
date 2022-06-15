@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ReturnScript : MonoBehaviour
 {
@@ -17,7 +18,9 @@ public class ReturnScript : MonoBehaviour
     {
         ResourcesManager.Change(ResourceType.Life, 3);
         CakeControllerScript.AddCake();
+        
         Time.timeScale = 1;
+        //как-то обозначить, что мы купили рекламу
         parentPannel.SetActive(false);
     }
 
