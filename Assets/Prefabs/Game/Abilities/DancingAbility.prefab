@@ -45,5 +45,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 5
-  artWork: {fileID: 21300000, guid: b138db3ad342b7949bfa4ea7e256bc96, type: 3}
+  artWork: {fileID: 21300000, guid: 2f105a5701f70094ea449f610d701be6, type: 3}
   duration: 5

@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RestoreNoButton : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class RestoreNoButton : MonoBehaviour
         UIManager.OnBlurAction(false);
         Time.timeScale = 1;
         CakeControllerScript.ForceLose();
+       
         parentPannel.SetActive(false);
     }
 }
