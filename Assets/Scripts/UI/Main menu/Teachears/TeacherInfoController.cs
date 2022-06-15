@@ -115,12 +115,14 @@ public class TeacherInfoController : MonoBehaviour
     {
         button.transform.localScale = Vector3.one*1.2f;
         button.GetComponent<Image>().sprite = selectedButton;
+        button.transform.localScale = new Vector3(0.6f, 0.6f, 0.6f);
     }
 
     private void UnselectButton(GameObject button)
     {
         button.transform.localScale = Vector3.one;
         button.GetComponent<Image>().sprite = unSelectedButton;
+        button.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
     }
 
     private void DisableButton(GameObject button)
