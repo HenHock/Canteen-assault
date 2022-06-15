@@ -14073,11 +14073,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cake:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1393433206}
+  - {fileID: 1393433205}
+  - {fileID: 1393433204}
+  - {fileID: 1393433203}
+  - {fileID: 1393433202}
   restorePanel: {fileID: 1300392388}
 --- !u!1 &1228937640
 GameObject:
@@ -15266,6 +15266,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cca606601e5c586468bd2d5888577942, type: 3}
+--- !u!1 &1393433202 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 349943430661892135, guid: cca606601e5c586468bd2d5888577942,
+    type: 3}
+  m_PrefabInstance: {fileID: 1393433201}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1393433203 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1687257792026102288, guid: cca606601e5c586468bd2d5888577942,
+    type: 3}
+  m_PrefabInstance: {fileID: 1393433201}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1393433204 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4180914802832630901, guid: cca606601e5c586468bd2d5888577942,
+    type: 3}
+  m_PrefabInstance: {fileID: 1393433201}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1393433205 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5262749259547879193, guid: cca606601e5c586468bd2d5888577942,
+    type: 3}
+  m_PrefabInstance: {fileID: 1393433201}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1393433206 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1385094218903693081, guid: cca606601e5c586468bd2d5888577942,
+    type: 3}
+  m_PrefabInstance: {fileID: 1393433201}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1397426193
 GameObject:
   m_ObjectHideFlags: 0
