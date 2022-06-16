@@ -22,8 +22,9 @@
     <list default="true" id="3e3fee61-a6a6-46e3-a0cb-ed45c14ea9d2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Canteen-assault/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Canteen-assault/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vs/Canteen-assault/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Canteen-assault/v16/.suo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/UICanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/UICanvas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProcessRestoreCakePannel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProcessRestoreCakePannel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Main menu Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Main menu Canvas.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameObject.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameObject.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level 10.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level 10.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +103,7 @@
       <workItem from="1654103988122" duration="2052000" />
       <workItem from="1654144863591" duration="10930000" />
       <workItem from="1654517263935" duration="2650000" />
-      <workItem from="1655303684422" duration="6203000" />
+      <workItem from="1655303684422" duration="6259000" />
     </task>
     <servers />
   </component>
