@@ -92,6 +92,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a25d9382217e96a498aba378ac821676, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uiInLevel: {fileID: 0}
 --- !u!1 &600594960686162794
 GameObject:
   m_ObjectHideFlags: 0
@@ -2055,6 +2056,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a25d9382217e96a498aba378ac821676, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uiInLevel: {fileID: 0}
 --- !u!1 &6020058646930344608
 GameObject:
   m_ObjectHideFlags: 0
@@ -5314,6 +5316,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a25d9382217e96a498aba378ac821676, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uiInLevel: {fileID: 0}
 --- !u!1 &6020058648006928950
 GameObject:
   m_ObjectHideFlags: 0
@@ -5486,7 +5489,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6020058648048376992
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5573,6 +5576,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a25d9382217e96a498aba378ac821676, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uiInLevel: {fileID: 0}
 --- !u!114 &6020058648048376988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5625,8 +5629,8 @@ MonoBehaviour:
   backupButton: {fileID: 6020058647540043265}
   selectedButton: {fileID: 21300000, guid: 3614ed1569b0e2245889a92bb4571581, type: 3}
   unSelectedButton: {fileID: 21300000, guid: dbc640f21113ff348af9f7c050b74bf4, type: 3}
-  disableButton: {fileID: 21300000, guid: d5d3772c5fd3ad24da757ea6532804b0, type: 3}
-  enableButton: {fileID: 21300000, guid: ec0d9cabe43dc67449781ee6bce9f18d, type: 3}
+  disableButton: {fileID: 21300000, guid: dbc640f21113ff348af9f7c050b74bf4, type: 3}
+  enableButton: {fileID: 21300000, guid: 3614ed1569b0e2245889a92bb4571581, type: 3}
 --- !u!1 &6020058648056698440
 GameObject:
   m_ObjectHideFlags: 0
@@ -6598,6 +6602,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a25d9382217e96a498aba378ac821676, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uiInLevel: {fileID: 0}
 --- !u!1 &6020058648384104597
 GameObject:
   m_ObjectHideFlags: 0
@@ -6904,6 +6909,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a25d9382217e96a498aba378ac821676, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uiInLevel: {fileID: 0}
 --- !u!114 &6020058648423450935
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7528,7 +7534,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5803922, g: 0.8000001, b: 0.36078432, a: 1}
+  m_Color: {r: 0.97647065, g: 0.57254905, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
