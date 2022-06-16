@@ -4827,25 +4827,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5434582496770130813, guid: 3c714babf9e504b4fb656c6c3f50f293,
+    - target: {fileID: 3382095451823740419, guid: 3c714babf9e504b4fb656c6c3f50f293,
         type: 3}
-      propertyPath: m_IsActive
+      propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5434582497936579034, guid: 3c714babf9e504b4fb656c6c3f50f293,
+    - target: {fileID: 5434582496334938583, guid: 3c714babf9e504b4fb656c6c3f50f293,
         type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.48333338
+      propertyPath: m_SizeDelta.x
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5434582497936579034, guid: 3c714babf9e504b4fb656c6c3f50f293,
+    - target: {fileID: 5434582496874924453, guid: 3c714babf9e504b4fb656c6c3f50f293,
         type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
+      propertyPath: m_SizeDelta.x
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5434582497936579034, guid: 3c714babf9e504b4fb656c6c3f50f293,
+    - target: {fileID: 5434582497711104360, guid: 3c714babf9e504b4fb656c6c3f50f293,
         type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.023333335
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5434582497735457629, guid: 3c714babf9e504b4fb656c6c3f50f293,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5434582497956891562, guid: 3c714babf9e504b4fb656c6c3f50f293,
         type: 3}
@@ -9110,18 +9115,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resourceManagerStruct:
   - startHealthByLevel: 5
-    startMoneyByLevel: 200
+    startMoneyByLevel: 100
     enemyWavesList:
     - delayTime: 0
       squardsList:
       - typeOfEnemy: {fileID: 5340848751068435002, guid: cd118af2de01dcd428560f664efd8777,
           type: 3}
-        numberOfEnemyinSquard: 6
-        numberInGroupe: 2
+        numberOfEnemyinSquard: 2
+        numberInGroupe: 1
       - typeOfEnemy: {fileID: 6426448535808468658, guid: 0b620a17b1f9688468048decdf26ca15,
           type: 3}
-        numberOfEnemyinSquard: 6
-        numberInGroupe: 2
+        numberOfEnemyinSquard: 2
+        numberInGroupe: 1
+      allSquardsList: []
+    - delayTime: 0
+      squardsList:
+      - typeOfEnemy: {fileID: 8599341287498971579, guid: 5a4dee218b466bc4090321300b48cda2,
+          type: 3}
+        numberOfEnemyinSquard: 1
+        numberInGroupe: 1
+      - typeOfEnemy: {fileID: 9045437640196017442, guid: 7d3f183f3c3d4184a85df268648e8cfb,
+          type: 3}
+        numberOfEnemyinSquard: 1
+        numberInGroupe: 1
       allSquardsList: []
 --- !u!1 &1105953767
 GameObject:

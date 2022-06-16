@@ -18,7 +18,7 @@ MonoBehaviour:
   damage: 6
   attackSpeed: 0.5
   attackRadius: 3
-  costToBuy: 250
+  costToBuy: 120
   image: {fileID: 21300000, guid: 6e036026b50378e41aa4e1a02377161f, type: 3}
   prefab: {fileID: 5303727556306322704, guid: 46ba80f271ab631438b6ab281a0b17d4, type: 3}
   nextTeacherInfo: {fileID: 0}
