@@ -13,7 +13,7 @@ public class PausePanelController : PanelController
     [SerializeField] private Sprite completeTask;
     [SerializeField] private Sprite unCompleteTask;
     [SerializeField] private TextMeshProUGUI levelIDDisplay;
-
+    [SerializeField] private GameObject buttonsToHide;
     private void OnEnable()
     {
         LevelInfo levelInfo = DataManager.levelInfo;
@@ -22,7 +22,11 @@ public class PausePanelController : PanelController
 
         if (SceneManager.GetActiveScene().name.Equals("Main menu"))
             UIController.onBlurAction(true);
-        else UIManager.OnBlurAction(true);
+        else
+        {
+            UIManager.OnBlurAction(true);
+            buttonsToHide.SetActive(false);
+        }
 
         Time.timeScale = 0;
 
@@ -43,7 +47,11 @@ public class PausePanelController : PanelController
     {
         if (SceneManager.GetActiveScene().name.Equals("Main menu"))
             UIController.onBlurAction(false);
-        else UIManager.OnBlurAction(false);
+        else
+        {
+            UIManager.OnBlurAction(false);
+            buttonsToHide.SetActive(true);
+        }
 
         Time.timeScale = 1;
     }
