@@ -98,7 +98,8 @@ public class UIManager : MonoBehaviour
     public void Lose()
     {
         UpdateTasksData();
-        
+
+        pauseButton.gameObject.SetActive(false);
         firstTask.UpdateState(false);
         secondTask.UpdateState(false);
 

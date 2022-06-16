@@ -130,6 +130,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5655612571668517702, guid: 8ed47b59450ea1541b793803ca2d88ad,
+        type: 3}
+      propertyPath: m_Spacing.x
+      value: -120
+      objectReference: {fileID: 0}
+    - target: {fileID: 6020058648048376989, guid: 8ed47b59450ea1541b793803ca2d88ad,
+        type: 3}
+      propertyPath: teacherInfoList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6020058648130564355, guid: 8ed47b59450ea1541b793803ca2d88ad,
         type: 3}
       propertyPath: m_Name

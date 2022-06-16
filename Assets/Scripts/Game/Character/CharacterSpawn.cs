@@ -26,7 +26,7 @@ public class CharacterSpawn : MonoBehaviour
         {
             character.transform.SetParent(DataManager.selectedPositionPlaceCharacterSpawn.GetChild(0).transform);
             character.GetComponent<Character>().SetRadiusAttackDisplay();
-            character.transform.localPosition = new Vector3(0, 0 + character.transform.localScale.y / 2, 0);
+            character.transform.localPosition = new Vector3(0, 0 + character.transform.localScale.y / 2+0.21f, 0);
 
             ResourcesManager.Change(ResourceType.Money, -character.GetComponent<Character>().costToBuy);
             OnSpentMoney?.Invoke(character.GetComponent<Character>().costToBuy);
