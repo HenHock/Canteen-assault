@@ -42,20 +42,35 @@ public class LevelInfo : ScriptableObject
 
     private void Awake()
     {
+        countStarsRecieved = 0;
+
         available = ES3.Load(sceneName, defaultAvailable);
         firstTask = ES3.Load($"{sceneName} Task 1", false);
         secondTask = ES3.Load($"{sceneName} Task 2", false);
         finished = ES3.Load($"{sceneName} Finished", false);
-
-        if(firstTask)
-            countStarsRecieved++;
-        if(secondTask)
-            countStarsRecieved++;
-        if (finished)
-            countStarsRecieved++;
-        
         
         Debug.Log($"{sceneName}: {available} ... {defaultAvailable}");
+    }
+
+    public int getStars()
+    {
+        if (available)
+        {
+            countStarsRecieved = 0;
+
+            firstTask = ES3.Load($"{sceneName} Task 1", false);
+            secondTask = ES3.Load($"{sceneName} Task 2", false);
+            finished = ES3.Load($"{sceneName} Finished", false);
+
+            if (firstTask)
+                countStarsRecieved++;
+            if (secondTask)
+                countStarsRecieved++;
+            if (finished)
+                countStarsRecieved++;
+        }
+
+        return countStarsRecieved;
     }
     
     public void LevelFinish()

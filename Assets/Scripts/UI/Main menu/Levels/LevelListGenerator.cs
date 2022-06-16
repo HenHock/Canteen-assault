@@ -14,6 +14,7 @@ public class LevelListGenerator : MonoBehaviour
     [SerializeField] private GameObject levelItemPrefab;
     [SerializeField] private GameObject scrollbar;
     private int levelCount = 1;
+    private LevelInfo[] levelsInformation;
 
     private void Start()
     {
@@ -24,8 +25,8 @@ public class LevelListGenerator : MonoBehaviour
         var sceneNumber = SceneManager.sceneCountInBuildSettings;
         string sceneName;
 
-        LevelInfo[] levelsInformation = Resources.LoadAll<LevelInfo>(@"Data/Items/LevelInfo");
-
+        levelsInformation = Resources.LoadAll<LevelInfo>(@"Data/Items/LevelInfo");
+        Debug.Log($"Levels info -> {levelsInformation.Length}");
         bool ifPrevFinished = false;
         
         for (int i = 0; i < sceneNumber; i++)
@@ -41,10 +42,10 @@ public class LevelListGenerator : MonoBehaviour
                 int index = Array.FindIndex(levelsInformation, x => x.sceneName.Equals(sceneName));
                 if (index != -1)
                 {
-                    Debug.Log($"Level {index}: {levelsInformation[index].countStarsRecieved} stars");
+                    Debug.Log($"Level {levelsInformation[index].sceneName}: {levelsInformation[index].countStarsRecieved} stars");
 
                     newLevelItem.GetComponent<Level>().Create(levelsInformation[index], ifPrevFinished, levelsInformation[index].finished, levelCount);
-                    newLevelItem.transform.GetChild(1).GetComponent<Image>().sprite = StarsIcon.GetIcon(levelsInformation[index].countStarsRecieved);
+                    newLevelItem.transform.GetChild(1).GetComponent<Image>().sprite = StarsIcon.GetIcon(levelsInformation[index].getStars());
                     ifPrevFinished = levelsInformation[index].finished;
                 }
                 levelCount++;

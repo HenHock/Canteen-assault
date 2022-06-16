@@ -13232,10 +13232,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19b0714d28699b347ad8ee5e2467786a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stars_0: {fileID: 21300000, guid: 07f4103b30e002a45beba2a51a5edd24, type: 3}
-  stars_1: {fileID: 21300000, guid: 989d4f927dc3878449f270503206d6fa, type: 3}
-  stars_2: {fileID: 21300000, guid: 1b7a040cac5861d4983bf980467e6712, type: 3}
-  stars_3: {fileID: 21300000, guid: 47f2db258a4658c4f8175bc97e71510b, type: 3}
+  stars_0: {fileID: 21300000, guid: df8a071b192ca624ea4f7c3ad812cc9e, type: 3}
+  stars_1: {fileID: 21300000, guid: fe83c0e24969c1e4eacdecb5d1b22e6b, type: 3}
+  stars_2: {fileID: 21300000, guid: c7bf305843ae8a64fb89727f7788e0aa, type: 3}
+  stars_3: {fileID: 21300000, guid: 0b8fa6f4e492c544a80199da19982da0, type: 3}
 --- !u!1 &1759008767
 GameObject:
   m_ObjectHideFlags: 0
