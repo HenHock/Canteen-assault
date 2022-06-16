@@ -8816,7 +8816,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resourceManagerStruct:
   - startHealthByLevel: 5
-    startMoneyByLevel: 200
+    startMoneyByLevel: 140
     enemyWavesList:
     - delayTime: 0
       squardsList:

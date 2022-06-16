@@ -6,34 +6,34 @@ EditorUserSettings:
   serializedVersion: 4
   m_ConfigSettings:
     RecentlyUsedSceneGuid-0:
-      value: 56045204010d5e5e59565a7615260a44124f1a7a74717432282b1867e1b2353b
-      flags: 0
-    RecentlyUsedSceneGuid-1:
-      value: 560507035553505a58585826117a064445164e737b7970692e7c4f64e6b96c3a
-      flags: 0
-    RecentlyUsedSceneGuid-2:
-      value: 5608565754560f580c0a092416710f4442161a7a742c73607b784830b1e4356b
-      flags: 0
-    RecentlyUsedSceneGuid-3:
-      value: 07570152040d0f0d5e0d5d2144270944134f417b7c2b76367f284866b5e4603c
-      flags: 0
-    RecentlyUsedSceneGuid-4:
-      value: 51090300070d5f0e595b547215770e4447164b7f287c77622f7e1e65b1e36560
-      flags: 0
-    RecentlyUsedSceneGuid-5:
-      value: 0050075707565e090908557341210744404e4a7c7b7b74367d714a64b5e1613e
-      flags: 0
-    RecentlyUsedSceneGuid-6:
-      value: 0709065257050c0c5d560a2141735d44424f1c29797127642b7f1f6be7e3376c
-      flags: 0
-    RecentlyUsedSceneGuid-7:
-      value: 055000500700500f0c5f5c7614715c444415492e2d7c71687f7c446bbbb4656a
-      flags: 0
-    RecentlyUsedSceneGuid-8:
       value: 0507565e50505a0c54595b2140770f4410164d7e757d776829711967b7b0366f
       flags: 0
+    RecentlyUsedSceneGuid-1:
+      value: 07570152040d0f0d5e0d5d2144270944134f417b7c2b76367f284866b5e4603c
+      flags: 0
+    RecentlyUsedSceneGuid-2:
+      value: 51090300070d5f0e595b547215770e4447164b7f287c77622f7e1e65b1e36560
+      flags: 0
+    RecentlyUsedSceneGuid-3:
+      value: 0050075707565e090908557341210744404e4a7c7b7b74367d714a64b5e1613e
+      flags: 0
+    RecentlyUsedSceneGuid-4:
+      value: 0709065257050c0c5d560a2141735d44424f1c29797127642b7f1f6be7e3376c
+      flags: 0
+    RecentlyUsedSceneGuid-5:
+      value: 055000500700500f0c5f5c7614715c444415492e2d7c71687f7c446bbbb4656a
+      flags: 0
+    RecentlyUsedSceneGuid-6:
+      value: 0255015455025c595c080e2414755944154e1d7a2a2c71627c7b4c6bb6b6663b
+      flags: 0
+    RecentlyUsedSceneGuid-7:
+      value: 56045204010d5e5e59565a7615260a44124f1a7a74717432282b1867e1b2353b
+      flags: 0
+    RecentlyUsedSceneGuid-8:
+      value: 560507035553505a58585826117a064445164e737b7970692e7c4f64e6b96c3a
+      flags: 0
     RecentlyUsedSceneGuid-9:
-      value: 0208005652005f0d5c56592141205a44414f1a2e287975677478196be3b0306e
+      value: 5608565754560f580c0a092416710f4442161a7a742c73607b784830b1e4356b
       flags: 0
     UnityRemoteDevice:
       value: 225f4d46245b0d4902070862342649191512
