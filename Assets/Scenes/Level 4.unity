@@ -9290,7 +9290,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resourceManagerStruct:
   - startHealthByLevel: 5
-    startMoneyByLevel: 150
+    startMoneyByLevel: 170
     enemyWavesList:
     - delayTime: 0
       squardsList:
