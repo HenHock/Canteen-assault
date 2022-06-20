@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class BuyUpgradeButton : MonoBehaviour
 {
-    private GameObject confirmPanel;
+    private PanelController confirmPanel;
     private int costStarsToBuyUpgrade;
     private TeacherInfo teacherInfo;
 
@@ -16,8 +16,7 @@ public class BuyUpgradeButton : MonoBehaviour
 
     public void onClick()
     {
-        confirmPanel?.SetActive(true);
-        DataManager.activePanel = confirmPanel;
+        confirmPanel?.Open();
 
         description.text = $"Do you want to buy this upgrade for {costStarsToBuyUpgrade} stars?";
         confirmButton.onClick.RemoveAllListeners();
@@ -28,7 +27,7 @@ public class BuyUpgradeButton : MonoBehaviour
     {
         gameObject.SetActive(!teacherInfo.available);
 
-        confirmPanel = UIController.onGetPanel(PanelType.confirmPanel);
+        confirmPanel = UIController.onGetPanel(PanelType.confirmPanel).GetComponent<PanelController>();
         costStarsToBuyUpgrade = teacherInfo.costStarsToBuy;
         this.teacherInfo = teacherInfo;
     }
@@ -40,7 +39,7 @@ public class BuyUpgradeButton : MonoBehaviour
             ResourcesManager.Change(ResourceType.Star, -costStarsToBuyUpgrade);
             teacherInfo.available = true;
             ES3.Save(teacherInfo.prefab.name, teacherInfo.available);
-            confirmPanel?.GetComponent<PanelController>().Close();
+            confirmPanel?.Close();
             GetComponentInParent<TeacherInfoController>().SettingUpgradeBackupButton(teacherInfo);
         }
         else

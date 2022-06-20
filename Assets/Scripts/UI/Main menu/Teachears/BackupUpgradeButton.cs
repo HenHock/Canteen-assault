@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UI;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class BackupUpgradeButton : MonoBehaviour
 {
-    private GameObject confirmPanel;
+    private PanelController confirmPanel;
     private int costStarsToBuyUpgrade;
     private TeacherInfo teacherInfo;
 
@@ -15,8 +16,7 @@ public class BackupUpgradeButton : MonoBehaviour
 
     public void onClick()
     {
-        confirmPanel?.SetActive(true);
-        DataManager.activePanel = confirmPanel;
+        confirmPanel?.Open();
 
         description.text = $"Do you want to return {costStarsToBuyUpgrade} stars and will lose the ability to install this upgrade.";
         confirmButton.onClick.RemoveAllListeners();
@@ -29,7 +29,7 @@ public class BackupUpgradeButton : MonoBehaviour
             gameObject.SetActive(teacherInfo.available);
         else gameObject.SetActive(false);
 
-        confirmPanel = UIController.onGetPanel(PanelType.confirmPanel);
+        confirmPanel = UIController.onGetPanel(PanelType.confirmPanel).GetComponent<PanelController>();
         costStarsToBuyUpgrade = teacherInfo.costStarsToBuy;
         this.teacherInfo = teacherInfo;
     }

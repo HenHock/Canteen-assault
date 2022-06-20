@@ -16,9 +16,8 @@ namespace UI
             if(DataManager.uIController != null)
                 DataManager.uIController.sceneIgnoring.SetActive(false);
 
+            DataManager.activePanel.SetActive(false);
             DataManager.activePanel = null;
-
-            gameObject.SetActive(false);
 
             if (prevPanel != null)
                 prevPanel.GetComponent<PanelController>().Open();

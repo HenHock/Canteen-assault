@@ -34,10 +34,7 @@ public class UIController : MonoBehaviour
 
     public void SetBlurActivety(bool flag)
     {
-        if(schoolPanel.gameObject.activeSelf)
-            Blur.SetActive(true);
-        else
-            Blur.SetActive(flag);
+        Blur.SetActive(flag);
     }
 
     private void Awake()
