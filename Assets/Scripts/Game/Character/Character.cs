@@ -100,7 +100,7 @@ public class Character : MonoBehaviour
     /// <returns>Collider targer</returns>
     private Collider FindTarger(Collider[] targets)
     {
-        int index = 0;
+        int index = targets.Length-1;
         int min_health = 0;
         for(int i = 0;i < targets.Length; i++)
         {

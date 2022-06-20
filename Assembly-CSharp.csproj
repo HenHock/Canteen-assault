@@ -133,6 +133,7 @@
     <Compile Include="Assets\Scripts\Game\Map\CharacterUpdatePlaceClick.cs" />
     <Compile Include="Assets\SlowMotionController.cs" />
     <Compile Include="Assets\Scripts\UI\Game\PausePanelController.cs" />
+    <Compile Include="Assets\Scripts\Game\Character\MultiAttackShot.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\UI Toolkit\USS\button-style.uss" />
