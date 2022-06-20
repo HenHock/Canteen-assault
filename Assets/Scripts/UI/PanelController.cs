@@ -7,7 +7,10 @@ namespace UI
     public class PanelController : MonoBehaviour
     {
     
-        [SerializeField] public GameObject uiInLevel;
+        public GameObject uiInLevel;
+
+        [SerializeField] private GameObject prevPanel;
+
         public void Close()
         {
             if(DataManager.uIController != null)
@@ -16,6 +19,9 @@ namespace UI
             DataManager.activePanel = null;
 
             gameObject.SetActive(false);
+
+            if (prevPanel != null)
+                prevPanel.GetComponent<PanelController>().Open();
         }
 
         public void Open()

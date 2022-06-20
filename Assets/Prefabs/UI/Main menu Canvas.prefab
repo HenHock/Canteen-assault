@@ -93,6 +93,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiInLevel: {fileID: 0}
+  prevPanel: {fileID: 0}
 --- !u!1 &600594960686162794
 GameObject:
   m_ObjectHideFlags: 0
@@ -2057,6 +2058,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiInLevel: {fileID: 0}
+  prevPanel: {fileID: 6020058648048376999}
 --- !u!1 &6020058646930344608
 GameObject:
   m_ObjectHideFlags: 0
@@ -2792,10 +2794,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6020058646921625718}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 6020058646921625712}
+        m_TargetAssemblyTypeName: UI.PanelController, Assembly-CSharp
+        m_MethodName: Close
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3660,6 +3662,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 6020058648048376995}
+        m_TargetAssemblyTypeName: UI.PanelController, Assembly-CSharp
+        m_MethodName: Close
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 6020058647540043265}
         m_TargetAssemblyTypeName: BackupUpgradeButton, Assembly-CSharp
         m_MethodName: onClick
@@ -5317,6 +5331,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiInLevel: {fileID: 0}
+  prevPanel: {fileID: 6020058648048376999}
 --- !u!1 &6020058648006928950
 GameObject:
   m_ObjectHideFlags: 0
@@ -5577,6 +5592,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiInLevel: {fileID: 0}
+  prevPanel: {fileID: 0}
 --- !u!114 &6020058648048376988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6603,6 +6619,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiInLevel: {fileID: 0}
+  prevPanel: {fileID: 0}
 --- !u!1 &6020058648384104597
 GameObject:
   m_ObjectHideFlags: 0
@@ -6910,6 +6927,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiInLevel: {fileID: 0}
+  prevPanel: {fileID: 109066561077786926}
 --- !u!114 &6020058648423450935
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7595,6 +7613,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 6020058648048376995}
+        m_TargetAssemblyTypeName: UI.PanelController, Assembly-CSharp
+        m_MethodName: Close
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 6020058648541136342}
         m_TargetAssemblyTypeName: BuyUpgradeButton, Assembly-CSharp
         m_MethodName: onClick

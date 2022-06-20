@@ -81,7 +81,7 @@
     <Compile Include="Assets\Scripts\Game\Map\CharacterSpawnPlaceClick.cs" />
     <Compile Include="Assets\Rotate.cs" />
     <Compile Include="Assets\Scripts\Game\Map\MapGenerator.cs" />
-    <Compile Include="Assets\Scripts\Game\Character\Shot.cs" />
+    <Compile Include="Assets\Scripts\Game\Character\Type of shots\Shot.cs" />
     <Compile Include="Assets\Scripts\Game\Tasks at level\Task4.cs" />
     <Compile Include="Assets\Scripts\Game\Money\DropMoney.cs" />
     <Compile Include="Assets\Scripts\Game\ProgressBar.cs" />
@@ -133,7 +133,7 @@
     <Compile Include="Assets\Scripts\Game\Map\CharacterUpdatePlaceClick.cs" />
     <Compile Include="Assets\SlowMotionController.cs" />
     <Compile Include="Assets\Scripts\UI\Game\PausePanelController.cs" />
-    <Compile Include="Assets\Scripts\Game\Character\MultiAttackShot.cs" />
+    <Compile Include="Assets\Scripts\Game\Character\Type of shots\MultiAttackShot.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\UI Toolkit\USS\button-style.uss" />
