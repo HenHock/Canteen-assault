@@ -65,7 +65,7 @@ public class Character : MonoBehaviour
             var newRotation = Quaternion.LookRotation(target.position - transform.position, Vector3.forward);
             newRotation.x = 0.0f;
             newRotation.z = 0.0f;
-            transform.rotation = Quaternion.Slerp(transform.rotation, newRotation, Time.deltaTime * 10);
+            transform.rotation = Quaternion.Slerp(transform.rotation, newRotation, Time.deltaTime * 15);
         }
 
         if (Time.time > nextShoot)
@@ -86,14 +86,34 @@ public class Character : MonoBehaviour
 
         if (targets.Length > 0)
         {
-            target = targets[targets.Length-1].GetComponent<TargetPoint>();
+            target = FindTarger(targets).GetComponent<TargetPoint>();
             return true;
         }
 
         target = null;
         return false;
     }
-   
+    /// <summary>
+    /// Find and return target to hit with lowest health percentage
+    /// </summary>
+    /// <param name="targets"></param>
+    /// <returns>Collider targer</returns>
+    private Collider FindTarger(Collider[] targets)
+    {
+        int index = 0;
+        int min_health = 0;
+        for(int i = 0;i < targets.Length; i++)
+        {
+            int targetHealth = targets[i].GetComponent<Enemy>().GetHealthInProccent();
+            if (targetHealth < min_health)
+            {
+                min_health = targetHealth;
+                index = i;
+            }
+        }
+
+        return targets[index];
+    }
 
     private bool isTargetTrucked()
     {
