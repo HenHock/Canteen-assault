@@ -5,18 +5,21 @@ using UnityEngine;
 
 public class AnimationButton : MonoBehaviour
 {
-    private Tween growAndSmallTween;
-
-    private Sequence quence;
+    [SerializeField] private RectTransform shineRect;
+    
+    private Tween scaleTween;
+    private Tween shineTween;
     // Start is called before the first frame update
     void Start()
     {
-        Sequence quence = DOTween.Sequence();
-        quence.Append(transform.DOScale(1.1f, 1f));
-        quence.Append(transform.DOScale(1f, 1f));
-        quence.SetLoops(-1);
+        scaleTween = transform.DOScale(   transform.localScale.x + 0.1f, 1f).SetLoops(-1, LoopType.Yoyo);
 
-           // .SetLoops(-1);
+        Sequence shineSequence = DOTween.Sequence();
+        shineSequence.Append(DOVirtual.DelayedCall(2f, null));
+        shineSequence.Append(shineRect.DOAnchorPosX(250f, 1f).SetEase(Ease.InQuad));
+        shineSequence.SetLoops(-1, LoopType.Restart);
+        shineTween = shineSequence;
+        // .SetLoops(-1);
     }
 
     // Update is called once per frame
