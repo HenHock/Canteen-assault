@@ -1,9 +1,7 @@
 using DG.Tweening;
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-//Hello
+
 public class Enemy : MonoBehaviour
 {
     public int Health = 0;
@@ -46,7 +44,6 @@ public class Enemy : MonoBehaviour
     {
         moveTween?.Kill();
         DataManager.NumberOfDeathEnemies++;
-        //Debug.Log(DataManager.NumberOfAllEnemies + " " + DataManager.NumberOfDeathEnemies);
         ResourcesManager.Change(ResourceType.EnemyCount, 1);
         if (DataManager.IsLastWave && DataManager.NumberOfDeathEnemies >= DataManager.NumberOfAllEnemies)
         {
@@ -84,10 +81,6 @@ public class Enemy : MonoBehaviour
     {
         animator?.SetBool("IsDansing", true);
         moveTween?.Pause();
-        //jumpTween = transform.DOJump(transform.position, 0.5f, duration, duration);
-        //animator.speed = duration/2;
-        //animator?.SetFloat("Velocity", 0f);
-        
         StartCoroutine(waitToPlayAnim(duration));
     }
 
@@ -95,8 +88,6 @@ public class Enemy : MonoBehaviour
     {
         yield return new WaitForSeconds(duration);
         animator?.SetBool("IsDansing", false);
-        //animator.speed = 1;
-        //animator?.SetFloat("Velocity", _speed * Time.deltaTime * 5);
         moveTween?.Play();
     }
 
