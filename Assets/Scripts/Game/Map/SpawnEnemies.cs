@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 using UnityEngine;
-
+/*
+ * Script to generate a wave of prefabs of different enemies from each other, a sufficient number.
+ */
 public class SpawnEnemies : MonoBehaviour
 {
     [SerializeField] private int timeSpawn = 1;
-    //[SerializeField] private List<EnemyWave> enemyWavesList;
     private List<EnemyWave> enemyWavesList;
 
     private GameObject _enemy;
@@ -84,7 +84,6 @@ public class SpawnEnemies : MonoBehaviour
             _enemy.transform.SetParent(transform);
             _enemy.transform.localPosition = new Vector3( 0, 0, 0);
             DataManager.NumberOfAllEnemies++;
-            //ResourcesManager.Change(ResourceType.EnemyCount, -1);
         }
     }
 

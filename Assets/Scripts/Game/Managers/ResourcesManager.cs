@@ -13,7 +13,9 @@ public enum ResourceType
     EnemyCount,
     NumberWave
 }
-
+/*
+ * Scrip for manage resources on scenes
+ */
 public static class ResourcesManager
 {
     private static Dictionary<ResourceType, float> valueByResourceType;
@@ -25,7 +27,6 @@ public static class ResourcesManager
         {
             { ResourceType.Life, 0 },
             { ResourceType.Money, 0 },
-            //{ ResourceType.Star, 0 },
             { ResourceType.EnemyCount, 0 },
             { ResourceType.NumberWave, 0 }
         };
@@ -64,6 +65,4 @@ public static class ResourcesManager
     {
         ES3.Save(SaveKeys.Star, valueByResourceType[ResourceType.Star]);
     }
-
-
 }

@@ -1,8 +1,8 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * Script in which describe character(teacher) behavior.
+ */
 public class Character : MonoBehaviour 
 {
     public int costToBuy { get; private set; }
@@ -10,13 +10,11 @@ public class Character : MonoBehaviour
     public float radiusHit { get; private set; }
     public float attackSpeed { get; private set; }
 
-    //public GameObject nextLevelPrefab;
-
     [SerializeField] private TeacherInfo teacherInfo;
-    [SerializeField] private Transform turret; // ќбъект, который выполн€ет прицеливани€ и генарицию снар€да
+    [SerializeField] private Transform turret; // An object that performs aiming and projectile generation
     [SerializeField] private GameObject shotPrefab; 
-    [SerializeField] private GameObject radiusHitDisplay; // ќбъект, который отображает радиус аттаки персонажа
-    private GameObject radiusDisplay; // Ёкземпл€р объекта, отображает радиус аттаки персонажа
+    [SerializeField] private GameObject radiusHitDisplay; // An object that displays the character's attack radius
+    private GameObject radiusDisplay; // An object instance that displays the character's attack radius
 
     private GameObject shot;
     private float nextShoot = 0;
@@ -34,7 +32,7 @@ public class Character : MonoBehaviour
     }
 
     /// <summary>
-    /// ћетод, который генерирует объект, который отображает радиус атаки персонажа и устанавливает на позиции 0, 0, 0 относительно стола.
+    /// A method that generates an object that displays the character's attack radius and sets to positions 0, 0, 0 relative to the table.
     /// </summary>
     public void SetRadiusAttackDisplay()
     {
@@ -67,7 +65,7 @@ public class Character : MonoBehaviour
             var newRotation = Quaternion.LookRotation(target.position - transform.position, Vector3.forward);
             newRotation.x = 0.0f;
             newRotation.z = 0.0f;
-            transform.rotation = Quaternion.Slerp(transform.rotation, newRotation, Time.deltaTime * 10);
+            transform.rotation = Quaternion.Slerp(transform.rotation, newRotation, Time.deltaTime * 15);
         }
 
         if (Time.time > nextShoot)
@@ -88,14 +86,34 @@ public class Character : MonoBehaviour
 
         if (targets.Length > 0)
         {
-            target = targets[targets.Length-1].GetComponent<TargetPoint>();
+            target = FindTarger(targets).GetComponent<TargetPoint>();
             return true;
         }
 
         target = null;
         return false;
     }
-   
+    /// <summary>
+    /// Find and return target to hit with lowest health percentage
+    /// </summary>
+    /// <param name="targets"></param>
+    /// <returns>Collider targer</returns>
+    private Collider FindTarger(Collider[] targets)
+    {
+        int index = targets.Length-1;
+        int min_health = 0;
+        for(int i = 0;i < targets.Length; i++)
+        {
+            int targetHealth = targets[i].GetComponent<Enemy>().GetHealthInProccent();
+            if (targetHealth < min_health)
+            {
+                min_health = targetHealth;
+                index = i;
+            }
+        }
+
+        return targets[index];
+    }
 
     private bool isTargetTrucked()
     {

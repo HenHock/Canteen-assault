@@ -92,6 +92,7 @@ public class DragObject : MonoBehaviour
             GetComponent<SphereCollider>().enabled = false;
             GameObject meatballs = Instantiate(meatballsEfectPrefab);
             meatballs.transform.position = transform.position;
+            gameObject.GetComponent<DragObject>().enabled = false;
         }
         yield return new WaitForSeconds(duration);
         Destroy(gameObject);
