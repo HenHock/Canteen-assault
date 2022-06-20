@@ -1,25 +1,27 @@
 using DG.Tweening;
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-//Hello
+
 public class Enemy : MonoBehaviour
 {
     public int Health = 0;
     public float _speed = 1;
+
     [SerializeField] private int damage = 1;
     [SerializeField] private ProgressBar healthBar;
     [SerializeField] private float FasterProcent;
     [SerializeField] private GameObject explosionPrefub;
+
     public float scale { get; private set; }
 
+    private int max_Health;
     private Tween moveTween;
     private Tween jumpTween;
     private Animator animator;
 
     void Start()
     {
+        max_Health = Health;
         animator = GetComponent<Animator>();
 
         int _listIndex = PathManager.GetRandomPathNumber();
@@ -46,12 +48,16 @@ public class Enemy : MonoBehaviour
     {
         moveTween?.Kill();
         DataManager.NumberOfDeathEnemies++;
-        //Debug.Log(DataManager.NumberOfAllEnemies + " " + DataManager.NumberOfDeathEnemies);
         ResourcesManager.Change(ResourceType.EnemyCount, 1);
         if (DataManager.IsLastWave && DataManager.NumberOfDeathEnemies >= DataManager.NumberOfAllEnemies)
         {
             CakeControllerScript.EndGame(true);
         }
+    }
+
+    public int GetHealthInProccent()
+    {
+        return max_Health * 100 / Health;
     }
 
     public void TakeDamage(int _damage)
@@ -84,10 +90,6 @@ public class Enemy : MonoBehaviour
     {
         animator?.SetBool("IsDansing", true);
         moveTween?.Pause();
-        //jumpTween = transform.DOJump(transform.position, 0.5f, duration, duration);
-        //animator.speed = duration/2;
-        //animator?.SetFloat("Velocity", 0f);
-        
         StartCoroutine(waitToPlayAnim(duration));
     }
 
@@ -95,8 +97,6 @@ public class Enemy : MonoBehaviour
     {
         yield return new WaitForSeconds(duration);
         animator?.SetBool("IsDansing", false);
-        //animator.speed = 1;
-        //animator?.SetFloat("Velocity", _speed * Time.deltaTime * 5);
         moveTween?.Play();
     }
 

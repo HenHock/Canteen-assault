@@ -135,6 +135,16 @@ PrefabInstance:
       propertyPath: m_Spacing.x
       value: -120
       objectReference: {fileID: 0}
+    - target: {fileID: 6020058646921625712, guid: 8ed47b59450ea1541b793803ca2d88ad,
+        type: 3}
+      propertyPath: prevPanel
+      value: 
+      objectReference: {fileID: 701606874}
+    - target: {fileID: 6020058647957641207, guid: 8ed47b59450ea1541b793803ca2d88ad,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6020058648048376989, guid: 8ed47b59450ea1541b793803ca2d88ad,
         type: 3}
       propertyPath: teacherInfoList.Array.size
@@ -252,6 +262,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ed47b59450ea1541b793803ca2d88ad, type: 3}
+--- !u!1 &701606874 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6020058648048376999, guid: 8ed47b59450ea1541b793803ca2d88ad,
+    type: 3}
+  m_PrefabInstance: {fileID: 481797662}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &751087353
 GameObject:
   m_ObjectHideFlags: 0

@@ -1120,7 +1120,7 @@ GameObject:
   - component: {fileID: 5579560929547211771}
   m_Layer: 9
   m_Name: Sturm
-  m_TagString: Enemy
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
