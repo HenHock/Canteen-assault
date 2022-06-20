@@ -577,6 +577,7 @@
         <e p="RestoreNoButton.cs" t="Include" />
         <e p="ReturnScript.cs" t="Include" />
         <e p="Rotate.cs" t="Include" />
+        <e p="ScaleAnimationButton.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="Game" t="Include">
             <e p="Abilities" t="Include">
@@ -590,7 +591,10 @@
               <e p="Character.cs" t="Include" />
               <e p="CharacterSpawn.cs" t="Include" />
               <e p="CharacterUpdate.cs" t="Include" />
-              <e p="Shot.cs" t="Include" />
+              <e p="Type of shots" t="Include">
+                <e p="MultiAttackShot.cs" t="Include" />
+                <e p="Shot.cs" t="Include" />
+              </e>
             </e>
             <e p="DataManager.cs" t="Include" />
             <e p="Enemy" t="Include">
