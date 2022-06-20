@@ -141,5 +141,7 @@ public class TeacherInfoController : MonoBehaviour
     {
         upgradeButton.Enable(teacherInfo);
         backupButton.Enable(teacherInfo);
+
+        EnableButton(backupButton.gameObject);
     }
 }

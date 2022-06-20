@@ -39,7 +39,6 @@ public class BuyUpgradeButton : MonoBehaviour
             ResourcesManager.Change(ResourceType.Star, -costStarsToBuyUpgrade);
             teacherInfo.available = true;
             ES3.Save(teacherInfo.prefab.name, teacherInfo.available);
-            confirmPanel?.Close();
             GetComponentInParent<TeacherInfoController>().SettingUpgradeBackupButton(teacherInfo);
         }
         else
