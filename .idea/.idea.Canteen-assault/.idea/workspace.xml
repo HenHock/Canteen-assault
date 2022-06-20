@@ -20,11 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e3fee61-a6a6-46e3-a0cb-ed45c14ea9d2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Canteen-assault/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Canteen-assault/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Canteen-assault/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Canteen-assault/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Main menu Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Main menu Canvas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/UICanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/UICanvas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Game/PausePanelController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Game/PausePanelController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +57,7 @@
         <option value="$PROJECT_DIR$/Assets/ReturnScript.cs" />
         <option value="$PROJECT_DIR$/Assets/ProcessRestoreCakePannel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Game/PausePanelController.cs" />
+        <option value="$PROJECT_DIR$/Assets/AnimationButton.cs" />
       </list>
     </option>
   </component>
@@ -105,6 +105,7 @@
       <workItem from="1654144863591" duration="10930000" />
       <workItem from="1654517263935" duration="2650000" />
       <workItem from="1655303684422" duration="7180000" />
+      <workItem from="1655712523536" duration="2956000" />
     </task>
     <servers />
   </component>
