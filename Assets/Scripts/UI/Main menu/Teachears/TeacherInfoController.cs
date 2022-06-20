@@ -87,7 +87,10 @@ public class TeacherInfoController : MonoBehaviour
         UnselectButton(levelTeacherInfoButton_1);
         UnselectButton(levelTeacherInfoButton_3);
         SettingUpgradeBackupButton(teacherInfoList[indexT].level_2);
-        EnableButton(upgradeButton.gameObject);
+
+        if (teacherInfoList[indexT].level_3.available)
+            DisableButton(backupButton.gameObject);
+        else EnableButton(upgradeButton.gameObject);
     }
 
     public void SetThirdLevelTeacherInfo()
@@ -103,6 +106,9 @@ public class TeacherInfoController : MonoBehaviour
         if (!teacherInfoList[indexT].level_2.available)
             DisableButton(upgradeButton.gameObject);
         else EnableButton(upgradeButton.gameObject);
+
+        if(teacherInfoList[indexT].level_3.available)
+            EnableButton(backupButton.gameObject);
     }
 
     private void EnableButton(GameObject button)
