@@ -8,7 +8,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <ProjectGuid>{DB11AA23-2642-39A7-63A3-7963FE73041D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -70,6 +71,7 @@
     <Compile Include="Assets\Scripts\SaveKeys.cs" />
     <Compile Include="Assets\Scripts\Game\Abilities\MeatballsAbility.cs" />
     <Compile Include="Assets\Scripts\Game\Managers\ResourcesManager.cs" />
+    <Compile Include="Assets\Scripts\Game\Character\Type of shots\MultiAttackShot.cs" />
     <Compile Include="Assets\PitchZoom.cs" />
     <Compile Include="Assets\Scripts\UI\Game\UpdateCharacterItem.cs" />
     <Compile Include="Assets\Scripts\Game\Abilities\MeatballsShotScirpt.cs" />
@@ -113,6 +115,7 @@
     <Compile Include="Assets\Scripts\Game\Character\CharacterUpdate.cs" />
     <Compile Include="Assets\Scripts\UI\Main menu\Levels\Level.cs" />
     <Compile Include="Assets\Scripts\UI\Game\BuyCharacterItem.cs" />
+    <Compile Include="Assets\AnimationButton.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\ResourceItemSO.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\LevelInfo.cs" />
     <Compile Include="Assets\Scripts\UI\Game\ResetButton.cs" />
@@ -133,8 +136,7 @@
     <Compile Include="Assets\Scripts\Game\Map\CharacterUpdatePlaceClick.cs" />
     <Compile Include="Assets\SlowMotionController.cs" />
     <Compile Include="Assets\Scripts\UI\Game\PausePanelController.cs" />
-    <Compile Include="Assets\Scripts\Game\Character\Type of shots\MultiAttackShot.cs" />
-    <Compile Include="Assets\AnimationButton.cs" />
+    <Compile Include="Assets\ScaleAnimationButton.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\UI Toolkit\USS\button-style.uss" />

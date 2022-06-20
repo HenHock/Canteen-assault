@@ -16,7 +16,7 @@ namespace UI
             if(DataManager.uIController != null)
                 DataManager.uIController.sceneIgnoring.SetActive(false);
 
-            DataManager.activePanel.SetActive(false);
+            DataManager.activePanel?.SetActive(false);
             DataManager.activePanel = null;
 
             if (prevPanel != null)
@@ -25,8 +25,7 @@ namespace UI
 
         public void Open()
         {
-            if (DataManager.activePanel != null)
-                DataManager.activePanel.GetComponent<PanelController>().Close();
+            DataManager.activePanel?.GetComponent<PanelController>().Close();
 
             DataManager.activePanel = gameObject;
 
@@ -43,7 +42,7 @@ namespace UI
             else
             {
                 UIManager.OnBlurAction(true);
-                uiInLevel.SetActive(false);
+                uiInLevel?.SetActive(false);
             }
         }
 
@@ -54,7 +53,7 @@ namespace UI
             else
             {
                 UIManager.OnBlurAction(false);
-                uiInLevel.SetActive(true);
+                uiInLevel?.SetActive(true);
             }
         }
     }
