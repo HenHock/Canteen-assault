@@ -148,8 +148,26 @@ PrefabInstance:
     - target: {fileID: 6020058648048376989, guid: 8ed47b59450ea1541b793803ca2d88ad,
         type: 3}
       propertyPath: teacherInfoList.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6020058648048376989, guid: 8ed47b59450ea1541b793803ca2d88ad,
+        type: 3}
+      propertyPath: teacherInfoList.Array.data[2].level_1
+      value: 
+      objectReference: {fileID: 11400000, guid: 83072a3cfad1c9f46a01455c0ee6cadc,
+        type: 2}
+    - target: {fileID: 6020058648048376989, guid: 8ed47b59450ea1541b793803ca2d88ad,
+        type: 3}
+      propertyPath: teacherInfoList.Array.data[2].level_2
+      value: 
+      objectReference: {fileID: 11400000, guid: 1f48c4b70a8074142a5c7ce27ec0abd1,
+        type: 2}
+    - target: {fileID: 6020058648048376989, guid: 8ed47b59450ea1541b793803ca2d88ad,
+        type: 3}
+      propertyPath: teacherInfoList.Array.data[2].level_3
+      value: 
+      objectReference: {fileID: 11400000, guid: 1198f60cf25963f4b8ae530a700856cb,
+        type: 2}
     - target: {fileID: 6020058648130564355, guid: 8ed47b59450ea1541b793803ca2d88ad,
         type: 3}
       propertyPath: m_Name
