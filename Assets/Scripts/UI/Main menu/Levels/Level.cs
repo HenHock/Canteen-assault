@@ -6,6 +6,11 @@ using UnityEngine.UI;
 
 public class Level : MonoBehaviour
 {
+    [SerializeField]
+    private Color avaibleColor;
+
+    [SerializeField]
+    private Image IconSprint;
     public int levelID { get; private set; } // Номер уровня
     public string sceneName { get; private set; } // Имя сцены, которую уровень загружает
     public TaskAbstract task_1 { get; private set; } // 1 доп. задание на уровне
@@ -25,11 +30,18 @@ public class Level : MonoBehaviour
         countStarsRecieved = level.countStarsRecieved;
         
         GetComponent<Button>().interactable = level.available;
+        if (level.available)
+        {
+            IconSprint.color = avaibleColor;
+        }
+        
         if (ifPrevFinished)
         {
             level.Unlock();
-            
+
+            IconSprint.color = avaibleColor;
             GetComponent<Button>().interactable = true;
+            
         }
 
         task_1Finished = level.firstTask;

@@ -26,7 +26,7 @@ public class LevelListGenerator : MonoBehaviour
         string sceneName;
 
         levelsInformation = Resources.LoadAll<LevelInfo>(@"Data/Items/LevelInfo");
-        Debug.Log($"Levels info -> {levelsInformation.Length}");
+        //Debug.Log($"Levels info -> {levelsInformation.Length}");
         bool ifPrevFinished = false;
         
         for (int i = 0; i < sceneNumber; i++)
@@ -42,7 +42,7 @@ public class LevelListGenerator : MonoBehaviour
                 int index = Array.FindIndex(levelsInformation, x => x.sceneName.Equals(sceneName));
                 if (index != -1)
                 {
-                    Debug.Log($"Level {levelsInformation[index].sceneName}: {levelsInformation[index].countStarsRecieved} stars");
+                    //Debug.Log($"Level {levelsInformation[index].sceneName}: {levelsInformation[index].countStarsRecieved} stars");
 
                     newLevelItem.GetComponent<Level>().Create(levelsInformation[index], ifPrevFinished, levelsInformation[index].finished, levelCount);
                     newLevelItem.transform.Find("StarsImage").GetComponent<Image>().sprite = StarsIcon.GetIcon(levelsInformation[index].getStars());
