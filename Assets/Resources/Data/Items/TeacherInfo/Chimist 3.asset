@@ -22,5 +22,5 @@ MonoBehaviour:
   prefab: {fileID: 7282716661252400744, guid: 1f11134dcfb5ee743b880162a43f3244, type: 3}
   nextTeacherInfo: {fileID: 0}
   available: 0
-  costStarsToBuy: 0
+  costStarsToBuy: 10
   countAttack: 1

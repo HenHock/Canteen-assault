@@ -1126,6 +1126,7 @@ MonoBehaviour:
   unCompleteTask: {fileID: 21300000, guid: e5e900ddc4c32904b9f30ec0a4366054, type: 3}
   levelIDDisplay: {fileID: 7250889029686569867}
   buttonsToHide: {fileID: 7415700452354151179}
+  pauseButton: {fileID: 5434582496213192649}
 --- !u!1 &5434582496203194432
 GameObject:
   m_ObjectHideFlags: 0
