@@ -800,12 +800,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &170072940 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1114707831832632166, guid: 3c714babf9e504b4fb656c6c3f50f293,
-    type: 3}
-  m_PrefabInstance: {fileID: 768960152}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &176682729
 GameObject:
   m_ObjectHideFlags: 0
@@ -1135,18 +1129,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 768960152}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &207644862 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5565689885913510921, guid: 3c714babf9e504b4fb656c6c3f50f293,
-    type: 3}
-  m_PrefabInstance: {fileID: 768960152}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 207644860}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a25d9382217e96a498aba378ac821676, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &210369570
 GameObject:
   m_ObjectHideFlags: 0
@@ -4845,71 +4827,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3130748830086496924, guid: 3c714babf9e504b4fb656c6c3f50f293,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3130748830086496924, guid: 3c714babf9e504b4fb656c6c3f50f293,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 207644862}
-    - target: {fileID: 3130748830086496924, guid: 3c714babf9e504b4fb656c6c3f50f293,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Close
-      objectReference: {fileID: 0}
-    - target: {fileID: 3130748830086496924, guid: 3c714babf9e504b4fb656c6c3f50f293,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UI.PanelController, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 3130748830086496924, guid: 3c714babf9e504b4fb656c6c3f50f293,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 3937256026001406717, guid: 3c714babf9e504b4fb656c6c3f50f293,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3937256026001406717, guid: 3c714babf9e504b4fb656c6c3f50f293,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3937256026001406717, guid: 3c714babf9e504b4fb656c6c3f50f293,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5383752364534507606, guid: 3c714babf9e504b4fb656c6c3f50f293,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5434582496334938583, guid: 3c714babf9e504b4fb656c6c3f50f293,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5434582496874924453, guid: 3c714babf9e504b4fb656c6c3f50f293,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5434582497711104360, guid: 3c714babf9e504b4fb656c6c3f50f293,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5434582497735457629, guid: 3c714babf9e504b4fb656c6c3f50f293,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5434582497956891562, guid: 3c714babf9e504b4fb656c6c3f50f293,
         type: 3}
       propertyPath: m_Name
@@ -5020,16 +4937,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5565689885913510921, guid: 3c714babf9e504b4fb656c6c3f50f293,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5565689885913510921, guid: 3c714babf9e504b4fb656c6c3f50f293,
-        type: 3}
-      propertyPath: uiInLevel
-      value: 
-      objectReference: {fileID: 170072940}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c714babf9e504b4fb656c6c3f50f293, type: 3}
 --- !u!1 &775112076

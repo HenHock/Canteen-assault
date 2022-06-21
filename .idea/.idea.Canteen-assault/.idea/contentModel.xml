@@ -9,6 +9,7 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="AddsCore.cs" t="Include" />
+        <e p="aimDisplay.cs" t="Include" />
         <e p="AnimationButton.cs" t="Include" />
         <e p="Art" t="Include">
           <e p="Shaders" t="Include">
@@ -593,6 +594,9 @@
               <e p="CharacterUpdate.cs" t="Include" />
               <e p="Type of shots" t="Include">
                 <e p="MultiAttackShot.cs" t="Include" />
+                <e p="PoisonAttackPlace.cs" t="Include" />
+                <e p="PoisonAttackShot.cs" t="Include" />
+                <e p="RadiusAttackShot.cs" t="Include" />
                 <e p="Shot.cs" t="Include" />
               </e>
             </e>
@@ -608,6 +612,7 @@
               <e p="LevelManager.cs" t="Include" />
               <e p="LifeManager.cs" t="Include" />
               <e p="ResourcesManager.cs" t="Include" />
+              <e p="StatusEffectManager.cs" t="Include" />
             </e>
             <e p="Map" t="Include">
               <e p="Cake.cs" t="Include" />
