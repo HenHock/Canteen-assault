@@ -5798,9 +5798,9 @@ MonoBehaviour:
   - level_1: {fileID: 11400000, guid: 5f79e6246c17fa14a8e7a35482d3040b, type: 2}
     level_2: {fileID: 11400000, guid: d56393601abcea24b9de74574dcd3f89, type: 2}
     level_3: {fileID: 11400000, guid: 4bf548de2764ad44aa46e4b7756cad6b, type: 2}
-  - level_1: {fileID: 11400000, guid: 18e83716e4658f743b80bb5e8319af4b, type: 2}
-    level_2: {fileID: 11400000, guid: 669e621857227a64ab0b87f5e61ed2bc, type: 2}
-    level_3: {fileID: 11400000, guid: 8cf44a0c978a6d0498b4205dc9af51fd, type: 2}
+  - level_1: {fileID: 11400000, guid: 83072a3cfad1c9f46a01455c0ee6cadc, type: 2}
+    level_2: {fileID: 11400000, guid: 1f48c4b70a8074142a5c7ce27ec0abd1, type: 2}
+    level_3: {fileID: 11400000, guid: 1198f60cf25963f4b8ae530a700856cb, type: 2}
   levelTeacherInfoButton_1: {fileID: 6020058647018747272}
   levelTeacherInfoButton_2: {fileID: 6020058646963661594}
   levelTeacherInfoButton_3: {fileID: 6020058648135205146}
@@ -6577,10 +6577,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6020058647957641207}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 6020058647957641201}
+        m_TargetAssemblyTypeName: UI.PanelController, Assembly-CSharp
+        m_MethodName: Close
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

@@ -22,8 +22,8 @@ public class UIController : MonoBehaviour
     [SerializeField] private PanelController detailLevelPanel;
     [SerializeField] private PanelController confirmPanel;
     [SerializeField] private PanelController messageBoxPanel;
-    [SerializeField] private GameObject EventSystem;
     [SerializeField] private GameObject Blur;
+    [SerializeField] private GameObject educationCanvas;
 
     private IDictionary<PanelType, PanelController> panels;
 
@@ -35,6 +35,11 @@ public class UIController : MonoBehaviour
     public void SetBlurActivety(bool flag)
     {
         Blur.SetActive(flag);
+    }
+
+    private void Start()
+    {
+        educationCanvas.SetActive(GlobalApplicationData.IsFirstLaunch);
     }
 
     private void Awake()

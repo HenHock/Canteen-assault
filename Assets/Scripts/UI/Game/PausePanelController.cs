@@ -14,6 +14,8 @@ public class PausePanelController : PanelController
     [SerializeField] private Sprite unCompleteTask;
     [SerializeField] private TextMeshProUGUI levelIDDisplay;
     [SerializeField] private GameObject buttonsToHide;
+    [SerializeField] private GameObject pauseButton;
+
     private void OnEnable()
     {
         LevelInfo levelInfo = DataManager.levelInfo;
@@ -50,6 +52,7 @@ public class PausePanelController : PanelController
         else
         {
             UIManager.OnBlurAction(false);
+            pauseButton.SetActive(true);
             buttonsToHide.SetActive(true);
         }
 
