@@ -11,9 +11,8 @@ GameObject:
   - component: {fileID: 8558993591675622729}
   - component: {fileID: 1729410932898641164}
   - component: {fileID: 7903654250205981323}
-  - component: {fileID: -2021191120691642958}
-  - component: {fileID: 2773750241125834180}
   - component: {fileID: -1243681320870152966}
+  - component: {fileID: 3266400491822635604}
   m_Layer: 0
   m_Name: Basketball
   m_TagString: Untagged
@@ -86,41 +85,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!54 &-2021191120691642958
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8954230633760785283}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &2773750241125834180
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8954230633760785283}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3894695eac2008e4b93a43994bfdb40c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 3
-  target: {fileID: 0}
-  health: 1
-  radiusHit: 0.23
-  additionalAttack: 0.1
-  explosionPrefub: {fileID: 5880797563127281583, guid: 265d3a5ba69981a4698ceabcedf368b0,
-    type: 3}
 --- !u!135 &-1243681320870152966
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -134,3 +98,22 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3266400491822635604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8954230633760785283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0c0e1482fb007d4095038fe16f1a59b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  target: {fileID: 0}
+  explosionPrefub: {fileID: 1583133410359590, guid: f2cec9fd01e349f418008078bcb2765d,
+    type: 3}
+  radiusPrefab: {fileID: 597204999838736522, guid: 9ee08310a9108f745a541e089ed063fd,
+    type: 3}
+  radiusHit: 1

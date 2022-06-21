@@ -9,14 +9,13 @@ public class MultiAttackShot : Shot
 
     public override void Hurt()
     {
-        --countAttack;
-        if (countAttack > 0)
-        {
-            Enemy enemy = target.gameObject.GetComponent<Enemy>();
-            enemy.TakeDamage(damage);
+        target.gameObject.GetComponent<Enemy>().TakeDamage(damage);
 
+        if(--countAttack <= 0)
+            Destroy(gameObject);
+        else if(target != Physics.OverlapSphere(transform.position, additionalRadiusAttack, DataManager.ENEMY_LAYER_MASK)[0].transform)
+        {
             target = Physics.OverlapSphere(transform.position, additionalRadiusAttack, DataManager.ENEMY_LAYER_MASK)[0].transform;
-        }
-        else Destroy(gameObject);
+        }else target = Physics.OverlapSphere(transform.position, additionalRadiusAttack, DataManager.ENEMY_LAYER_MASK)[1].transform;
     }
 }

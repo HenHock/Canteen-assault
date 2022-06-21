@@ -13,11 +13,12 @@ namespace UI
 
         public void Close()
         {
-            if(DataManager.uIController != null)
+            if (DataManager.uIController != null)
                 DataManager.uIController.sceneIgnoring.SetActive(false);
-
-            DataManager.activePanel?.SetActive(false);
-            DataManager.activePanel = null;
+            if (DataManager.activePanel != null) {
+                DataManager.activePanel.SetActive(false);
+                DataManager.activePanel = null;
+            }
 
             if (prevPanel != null)
                 prevPanel.GetComponent<PanelController>().Open();
@@ -25,7 +26,8 @@ namespace UI
 
         public void Open()
         {
-            DataManager.activePanel?.GetComponent<PanelController>().Close();
+            if (DataManager.activePanel != null)
+                DataManager.activePanel.GetComponent<PanelController>().Close();
 
             DataManager.activePanel = gameObject;
 

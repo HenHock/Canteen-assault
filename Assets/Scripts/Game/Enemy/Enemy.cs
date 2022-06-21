@@ -13,6 +13,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private GameObject explosionPrefub;
 
     public float scale { get; private set; }
+    public bool isPoison { get; set; }
 
     private int max_Health;
     private Tween moveTween;
@@ -99,5 +100,4 @@ public class Enemy : MonoBehaviour
         animator?.SetBool("IsDansing", false);
         moveTween?.Play();
     }
-
 }

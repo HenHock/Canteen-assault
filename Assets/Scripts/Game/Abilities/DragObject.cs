@@ -85,17 +85,17 @@ public class DragObject : MonoBehaviour
     /// <param name="duration">Время ожидания в секундах</param>
     /// <param name="target">Объект, который нужно уничтожить</param>
     /// <returns></returns>
-    private IEnumerator DestroyByTime(GameObject target, float duration)
+    public IEnumerator DestroyByTime(GameObject target, float duration)
     {
         if (DataManager.isNeedToDestroy)
         {
             GetComponent<SphereCollider>().enabled = false;
             GameObject meatballs = Instantiate(meatballsEfectPrefab);
             meatballs.transform.position = transform.position;
-            gameObject.GetComponent<DragObject>().enabled = false;
+            target.GetComponent<DragObject>().enabled = false;
         }
         yield return new WaitForSeconds(duration);
-        Destroy(gameObject);
+        Destroy(target);
     }
 
     private Vector3 GetMouseWorldPos()
