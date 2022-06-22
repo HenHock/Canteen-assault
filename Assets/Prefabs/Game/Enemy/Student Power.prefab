@@ -3687,6 +3687,7 @@ GameObject:
   - component: {fileID: 8146382311590904218}
   - component: {fileID: 6536712124509495597}
   - component: {fileID: -7495103033385786294}
+  - component: {fileID: 5029898052398754201}
   m_Layer: 9
   m_Name: Student power
   m_TagString: Enemy
@@ -3793,6 +3794,19 @@ CapsuleCollider:
   m_Height: 2.8
   m_Direction: 1
   m_Center: {x: 0, y: 1.25, z: 0}
+--- !u!114 &5029898052398754201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9045437640196017442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e41dfce6062490c48959a3726e9803f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  burnTickTimer: 
 --- !u!1 &9060801941986998599
 GameObject:
   m_ObjectHideFlags: 0
