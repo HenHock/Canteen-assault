@@ -56,15 +56,16 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\ScaleAnimationButton.cs" />
-    <Compile Include="Assets\CameraController.cs" />
+    <Compile Include="Assets\QuickOutline\Scripts\Outline.cs" />
+    <Compile Include="Assets\Scripts\ScaleAnimationButton.cs" />
+    <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\Game\Managers\AbilitiesManager.cs" />
     <Compile Include="Assets\Scripts\UI\Game\PauseButtonClick.cs" />
     <Compile Include="Assets\Scripts\Game\Character\CharacterSpawn.cs" />
     <Compile Include="Assets\Scripts\Game\FloatExtensions.cs" />
     <Compile Include="Assets\Scripts\Game\Character\Character.cs" />
     <Compile Include="Assets\Scripts\UI\UITaskDisplay.cs" />
-    <Compile Include="Assets\ReturnScript.cs" />
+    <Compile Include="Assets\Scripts\ReturnScript.cs" />
     <Compile Include="Assets\Scripts\UI\Game\ResourceDisplay.cs" />
     <Compile Include="Assets\Scripts\Game\Abilities\DancingAbility.cs" />
     <Compile Include="Assets\Scripts\Game\Character\Type of shots\PoisonAttackPlace.cs" />
@@ -74,7 +75,7 @@
     <Compile Include="Assets\Scripts\Game\Character\Type of shots\PoisonAttackShot.cs" />
     <Compile Include="Assets\Scripts\Game\Managers\ResourcesManager.cs" />
     <Compile Include="Assets\Scripts\Game\Character\Type of shots\MultiAttackShot.cs" />
-    <Compile Include="Assets\PitchZoom.cs" />
+    <Compile Include="Assets\Scripts\PitchZoom.cs" />
     <Compile Include="Assets\Scripts\UI\Game\UpdateCharacterItem.cs" />
     <Compile Include="Assets\Scripts\Game\Abilities\MeatballsShotScirpt.cs" />
     <Compile Include="Assets\Scripts\Game\Money\processAdditionalGold.cs" />
@@ -83,7 +84,7 @@
     <Compile Include="Assets\Scripts\UI\Main menu\Teachears\TeacherInfoDisplay.cs" />
     <Compile Include="Assets\Scripts\UI\Game\RadiusAttackDisplay.cs" />
     <Compile Include="Assets\Scripts\Game\Map\CharacterSpawnPlaceClick.cs" />
-    <Compile Include="Assets\Rotate.cs" />
+    <Compile Include="Assets\Scripts\Rotate.cs" />
     <Compile Include="Assets\Scripts\Game\Map\MapGenerator.cs" />
     <Compile Include="Assets\Scripts\Game\Character\Type of shots\Shot.cs" />
     <Compile Include="Assets\Scripts\Game\Tasks at level\Task4.cs" />
@@ -93,19 +94,19 @@
     <Compile Include="Assets\Scripts\Game\Managers\LifeManager.cs" />
     <Compile Include="Assets\Scripts\Game\Abilities\DragObject.cs" />
     <Compile Include="Assets\Scripts\UI\Main menu\UIController.cs" />
-    <Compile Include="Assets\CakeControllerScript.cs" />
+    <Compile Include="Assets\Scripts\CakeControllerScript.cs" />
     <Compile Include="Assets\Scripts\UI\Game\AbilityDisplay.cs" />
     <Compile Include="Assets\Scripts\UI\Game\StarsIcon.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\TeacherInfo.cs" />
-    <Compile Include="Assets\ProcessRestoreCakePannel.cs" />
+    <Compile Include="Assets\Scripts\ProcessRestoreCakePannel.cs" />
     <Compile Include="Assets\Scripts\UI\Game\PathManager.cs" />
-    <Compile Include="Assets\RestoreNoButton.cs" />
+    <Compile Include="Assets\Scripts\RestoreNoButton.cs" />
     <Compile Include="Assets\Scripts\UI\Game\ScenesController.cs" />
     <Compile Include="Assets\Scripts\UI\UIManager.cs" />
     <Compile Include="Assets\Scripts\UI\Game\DestroyCharacterClick.cs" />
     <Compile Include="Assets\Scripts\Game\Abilities\Ability.cs" />
     <Compile Include="Assets\Scripts\Game\Character\Type of shots\RadiusAttackShot.cs" />
-    <Compile Include="Assets\AddsCore.cs" />
+    <Compile Include="Assets\Scripts\AddsCore.cs" />
     <Compile Include="Assets\Scripts\Game\Tasks at level\Task5.cs" />
     <Compile Include="Assets\Scripts\GlobalApplicationData.cs" />
     <Compile Include="Assets\Scripts\Game\Enemy\Enemy.cs" />
@@ -119,7 +120,7 @@
     <Compile Include="Assets\Scripts\Game\Character\CharacterUpdate.cs" />
     <Compile Include="Assets\Scripts\UI\Main menu\Levels\Level.cs" />
     <Compile Include="Assets\Scripts\UI\Game\BuyCharacterItem.cs" />
-    <Compile Include="Assets\AnimationButton.cs" />
+    <Compile Include="Assets\Scripts\AnimationButton.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\ResourceItemSO.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\LevelInfo.cs" />
     <Compile Include="Assets\Scripts\UI\Game\ResetButton.cs" />
@@ -130,8 +131,8 @@
     <Compile Include="Assets\Scripts\Game\Map\SpawnEnemies.cs" />
     <Compile Include="Assets\Scripts\UI\Main menu\Teachears\BackupUpgradeButton.cs" />
     <Compile Include="Assets\Scripts\UI\Game\MenuButtonClick.cs" />
-    <Compile Include="Assets\BorderSceneDetection.cs" />
-    <Compile Include="Assets\aimDisplay.cs" />
+    <Compile Include="Assets\Scripts\BorderSceneDetection.cs" />
+    <Compile Include="Assets\Scripts\aimDisplay.cs" />
     <Compile Include="Assets\Scripts\Game\Managers\CurrencyManager.cs" />
     <Compile Include="Assets\Scripts\UI\PageSwiper.cs" />
     <Compile Include="Assets\Scripts\Game\Tasks at level\TaskAbstract.cs" />
@@ -139,12 +140,15 @@
     <Compile Include="Assets\Scripts\UI\Main menu\Teachears\BuyUpgradeButton.cs" />
     <Compile Include="Assets\Scripts\Game\Tasks at level\Task1.cs" />
     <Compile Include="Assets\Scripts\Game\Map\CharacterUpdatePlaceClick.cs" />
-    <Compile Include="Assets\SlowMotionController.cs" />
+    <Compile Include="Assets\Scripts\SlowMotionController.cs" />
     <Compile Include="Assets\Scripts\UI\Game\PausePanelController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\UI Toolkit\USS\button-style.uss" />
     <None Include="Assets\UI Toolkit\WelcomePage.uxml" />
+    <None Include="Assets\QuickOutline\Resources\Shaders\OutlineMask.shader" />
+    <None Include="Assets\QuickOutline\Readme.txt" />
+    <None Include="Assets\QuickOutline\Resources\Shaders\OutlineFill.shader" />
     <None Include="Assets\Art\Shaders\Blur.shader" />
   </ItemGroup>
   <ItemGroup>
