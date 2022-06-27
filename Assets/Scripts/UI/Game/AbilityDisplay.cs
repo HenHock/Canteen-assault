@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using TMPro;
 
 public class AbilityDisplay : MonoBehaviour
 {
@@ -33,11 +34,27 @@ public class AbilityDisplay : MonoBehaviour
         {
             leftAbilityButton.GetComponent<Button>().enabled = false;
             changeColor(ability, leftAbilityButton.GetComponent<Image>());
+           StartCoroutine(cooldownStart(leftAbilityButton, ability));
         }
         else 
         { 
             rightAbilityButton.GetComponent<Button>().enabled = false;
-            changeColor(ability, rightAbilityButton.GetComponent<Image>()); 
+            changeColor(ability, rightAbilityButton.GetComponent<Image>());
+            StartCoroutine(cooldownStart(rightAbilityButton, ability));
+        }
+    }
+
+    private IEnumerator cooldownStart(GameObject button, Abilities ability)
+    {
+        int cooldown = AbilitiesManager.GetAbility(ability).cooldown;
+        button.GetComponent<Image>().enabled = false;
+        button.transform.GetChild(0).gameObject.SetActive(true);
+        button.GetComponentInChildren<TextMeshProUGUI>().text = cooldown.ToString();
+        while(cooldown > 0)
+        {
+            button.GetComponentInChildren<TextMeshProUGUI>().text = cooldown.ToString();
+            yield return new WaitForSeconds(1f);
+            cooldown--;
         }
     }
 
@@ -53,11 +70,15 @@ public class AbilityDisplay : MonoBehaviour
         if (firstAbility == ability)
         {
             leftAbilityButton.GetComponent<Button>().enabled = true;
+            leftAbilityButton.GetComponent<Image>().enabled = true;
+            leftAbilityButton.transform.GetChild(0).gameObject.SetActive(false);
             changeColor(ability, leftAbilityButton.GetComponent<Image>());
         }
         else
         {
             rightAbilityButton.GetComponent<Button>().enabled = true;
+            rightAbilityButton.transform.GetChild(0).gameObject.SetActive(false);
+            rightAbilityButton.GetComponent<Image>().enabled = true;
             changeColor(ability, rightAbilityButton.GetComponent<Image>());
         }
     }
