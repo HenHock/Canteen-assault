@@ -1917,12 +1917,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 312056010}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &342632512 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6104446654615649840, guid: 3c714babf9e504b4fb656c6c3f50f293,
-    type: 3}
-  m_PrefabInstance: {fileID: 768960152}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &348231811
 GameObject:
   m_ObjectHideFlags: 0
@@ -4939,6 +4933,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c714babf9e504b4fb656c6c3f50f293, type: 3}
+--- !u!114 &768960153 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1500380338047819385, guid: 3c714babf9e504b4fb656c6c3f50f293,
+    type: 3}
+  m_PrefabInstance: {fileID: 768960152}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f92f2419e4d4e0442abac11307975f68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &775112076
 GameObject:
   m_ObjectHideFlags: 0
@@ -12863,7 +12869,7 @@ MonoBehaviour:
   - {fileID: 1393433204}
   - {fileID: 1393433203}
   - {fileID: 1393433202}
-  restorePanel: {fileID: 342632512}
+  restorePanel: {fileID: 768960153}
 --- !u!4 &1764794373
 Transform:
   m_ObjectHideFlags: 0
