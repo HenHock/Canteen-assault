@@ -636,6 +636,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5182452424944712383}
   - component: {fileID: 1429011288811115741}
+  - component: {fileID: 8471423790031886531}
+  - component: {fileID: 180867834654348575}
   m_Layer: 5
   m_Name: Content
   m_TagString: Untagged
@@ -679,6 +681,44 @@ MonoBehaviour:
   percentThreshold: 0.2
   easing: 0.5
   totalPages: 1
+--- !u!222 &8471423790031886531
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2476976288286888639}
+  m_CullTransparentMesh: 1
+--- !u!114 &180867834654348575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2476976288286888639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &3134148455036009943
 GameObject:
   m_ObjectHideFlags: 0
@@ -1777,6 +1817,7 @@ GameObject:
   - component: {fileID: 6111301527000759628}
   - component: {fileID: 5931377689222293348}
   - component: {fileID: 793084561392702149}
+  - component: {fileID: 8244042213439571674}
   m_Layer: 5
   m_Name: PlayButton
   m_TagString: Untagged
@@ -1888,7 +1929,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4826055206470452919}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8244042213439571674}
+        m_TargetAssemblyTypeName: QuickPlayLevelButton, Assembly-CSharp
+        m_MethodName: onClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &6111301527000759628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1927,6 +1980,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShowMaskGraphic: 1
+--- !u!114 &8244042213439571674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5515892249333921488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19ce959432958b24c902103aae1e7efb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6006157229062489066
 GameObject:
   m_ObjectHideFlags: 0
