@@ -17,7 +17,7 @@ public class AnimationButton : MonoBehaviour
 
         Sequence shineSequence = DOTween.Sequence().SetUpdate(true);
         shineSequence.Append(DOVirtual.DelayedCall(Random.Range(1f, 3f), null));
-        shineSequence.Append(shineRect.DOAnchorPosX(250f, 1f).SetEase(Ease.InQuad));
+        shineSequence.Append(shineRect.DOAnchorPosX(400f, 1f).SetEase(Ease.InQuad));
         shineSequence.SetLoops(-1, LoopType.Restart);
         shineTween = shineSequence;
     }
