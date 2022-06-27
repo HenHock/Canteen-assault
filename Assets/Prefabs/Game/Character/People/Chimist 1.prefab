@@ -1784,7 +1784,7 @@ Animator:
   m_GameObject: {fileID: 7282716661252400744}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: f07d57b5a64f8c944b3e3e168b603724, type: 3}
-  m_Controller: {fileID: 9100000, guid: a8555c0cff30527479e32562cef9141f, type: 2}
+  m_Controller: {fileID: 9100000, guid: 9f22d15385cc9924c85b7add6d413276, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1808,8 +1808,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   teacherInfo: {fileID: 11400000, guid: 83072a3cfad1c9f46a01455c0ee6cadc, type: 2}
   turret: {fileID: 7189287768113947956}
-  shotPrefab: {fileID: 8954230633760785283, guid: a746a3b5585073442a7eda413e29a18d,
-    type: 3}
+  shotPrefab: {fileID: 1000011342884364, guid: c309a978e819ccc44b3cd58122b058cb, type: 3}
   radiusHitDisplay: {fileID: 8275627524375916213, guid: a7ee736ff2bf9dc49820ef869c9731c0,
     type: 3}
 --- !u!114 &-4851418850710232316

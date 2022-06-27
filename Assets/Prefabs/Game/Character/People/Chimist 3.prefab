@@ -16,7 +16,7 @@ PrefabInstance:
         type: 3}
       propertyPath: shotPrefab
       value: 
-      objectReference: {fileID: 8954230633760785283, guid: 7369a1a3486566941aaa35f53ea9e034,
+      objectReference: {fileID: 1000013096799518, guid: b478b568718ec7c4f816251941abf4db,
         type: 3}
     - target: {fileID: 6870017483908294177, guid: be1a5017995fd8546818cc7744a65944,
         type: 3}

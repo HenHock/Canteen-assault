@@ -29,6 +29,12 @@ PrefabInstance:
       propertyPath: nextLevelPrefab
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 837094993186913318, guid: 6075e9e0269bf28468b516c06f6b6020,
+        type: 3}
+      propertyPath: radiusHitDisplay
+      value: 
+      objectReference: {fileID: 1000011448446114, guid: 6eeda56f7a50a5c40a7fd733f5e048ee,
+        type: 3}
     - target: {fileID: 1171210237365520911, guid: 6075e9e0269bf28468b516c06f6b6020,
         type: 3}
       propertyPath: m_RootOrder

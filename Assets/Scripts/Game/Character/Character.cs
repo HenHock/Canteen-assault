@@ -20,15 +20,20 @@ public class Character : MonoBehaviour
     private float nextShoot = 0;
     private TargetPoint target;
 
+    private Animator animator;
+    private string animatorVar_attack = "isAttack";
+
     private void Awake()
     {
-        if(teacherInfo != null)
+        if (teacherInfo != null)
         {
+            animator = GetComponent<Animator>();
             costToBuy = teacherInfo.costToBuy;
             attackDamage = teacherInfo.damage;
             attackSpeed = teacherInfo.attackSpeed;
             radiusHit = teacherInfo.attackRadius;
         }
+        else Debug.LogError($"Information about teacher was not set. Please check in prefab teacherInfo variable");
     }
 
     /// <summary>
@@ -55,18 +60,20 @@ public class Character : MonoBehaviour
     {
         if (isAcquireTarger() || isTargetTrucked())
             onAttack();
+        else PlayAnimAttack(false);
     }
 
     private void onAttack()
     {
         if (target != null)
         {
+            //PlayAnimAttack(true);
             turret.LookAt(target.position);
             var newRotation = Quaternion.LookRotation(target.position - transform.position, Vector3.forward);
             newRotation.x = 0.0f;
             newRotation.z = 0.0f;
             transform.rotation = Quaternion.Slerp(transform.rotation, newRotation, Time.deltaTime * 15);
-        }
+        }else PlayAnimAttack(false);
 
         if (Time.time > nextShoot)
         {
@@ -154,5 +161,11 @@ public class Character : MonoBehaviour
             Gizmos.color = Color.red;
             Debug.DrawLine(pos, target.position);
         }
+    }
+
+    private void PlayAnimAttack(bool flag)
+    {
+        animator?.SetBool(animatorVar_attack, flag);
+        animator.speed = 1 / ((1000 / attackSpeed) / 1000)*2.75f;
     }
 }
