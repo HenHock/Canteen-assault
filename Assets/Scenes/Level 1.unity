@@ -1868,12 +1868,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 312056010}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &342632512 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6104446654615649840, guid: 3c714babf9e504b4fb656c6c3f50f293,
+--- !u!114 &342632513 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1500380338047819385, guid: 3c714babf9e504b4fb656c6c3f50f293,
     type: 3}
   m_PrefabInstance: {fileID: 768960152}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f92f2419e4d4e0442abac11307975f68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &348231811
 GameObject:
   m_ObjectHideFlags: 0
@@ -7667,6 +7673,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 663433128}
     m_Modifications:
+    - target: {fileID: 625380049492621216, guid: 7b1aca651b3cd5c4788a34dab021bc0c,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 744017922062862362, guid: 7b1aca651b3cd5c4788a34dab021bc0c,
         type: 3}
       propertyPath: m_RootOrder
@@ -7680,7 +7691,7 @@ PrefabInstance:
     - target: {fileID: 3867074159215068798, guid: 7b1aca651b3cd5c4788a34dab021bc0c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7590153667698265656, guid: 7b1aca651b3cd5c4788a34dab021bc0c,
         type: 3}
@@ -10534,7 +10545,7 @@ MonoBehaviour:
   - {fileID: 1393433204}
   - {fileID: 1393433203}
   - {fileID: 1393433202}
-  restorePanel: {fileID: 342632512}
+  restorePanel: {fileID: 342632513}
 --- !u!4 &1764794373
 Transform:
   m_ObjectHideFlags: 0
