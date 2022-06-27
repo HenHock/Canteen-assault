@@ -24,7 +24,8 @@ public class CharacterSpawn : MonoBehaviour
         }
         else
         {
-            character.transform.SetParent(DataManager.selectedPositionPlaceCharacterSpawn.GetChild(0).transform);
+            Debug.Log(DataManager.selectedPositionPlaceCharacterSpawn.name);
+            character.transform.SetParent(DataManager.selectedPositionPlaceCharacterSpawn.Find("chair").transform);
             character.GetComponent<Character>().SetRadiusAttackDisplay();
             character.transform.localPosition = new Vector3(0, 0 + character.transform.localScale.y / 2+0.21f, 0);
 

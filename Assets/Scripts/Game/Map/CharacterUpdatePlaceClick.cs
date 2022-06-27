@@ -36,25 +36,15 @@ public class CharacterUpdatePlaceClick : MonoBehaviour
 
     private GameObject GetLastChild(GameObject parent)
     {
-        //the parent object
-        GameObject lastChild = parent;
-
-        /*
-        Initialize a checkChild element
-
-        while check child is not null, continue checking
-
-        assign the checkChild to its child
-         */
-        for (GameObject checkChild = parent; checkChild != null; checkChild = checkChild.transform.GetChild(0).gameObject)
+        if (parent.name.Equals("chair"))
+            return parent.transform.GetChild(0).gameObject;
+        else
         {
-            lastChild = checkChild;
-            if (checkChild.GetComponent<Character>())
-            {
-                break;
-            }
+            Transform child = parent.transform.Find("chair");
+            if (child != null)
+                return child.GetChild(0).gameObject;
         }
-
-        return lastChild;
+        
+        return null;
     }
 }
