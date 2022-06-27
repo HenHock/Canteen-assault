@@ -12593,7 +12593,7 @@ MonoBehaviour:
   - {fileID: 1393433204}
   - {fileID: 1393433203}
   - {fileID: 1393433202}
-  restorePanel: {fileID: 1300392388}
+  restorePanel: {fileID: 1949241304}
 --- !u!1 &1228937640
 GameObject:
   m_ObjectHideFlags: 0
@@ -13176,12 +13176,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1298274863}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1300392388 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6104446654615649840, guid: 3c714babf9e504b4fb656c6c3f50f293,
-    type: 3}
-  m_PrefabInstance: {fileID: 1949241299}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1315730278
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19457,6 +19451,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 77fb28eff2223254ebef575001f279e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1949241304 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1500380338047819385, guid: 3c714babf9e504b4fb656c6c3f50f293,
+    type: 3}
+  m_PrefabInstance: {fileID: 1949241299}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f92f2419e4d4e0442abac11307975f68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1949241306 stripped

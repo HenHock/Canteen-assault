@@ -1,12 +1,13 @@
 using System;
 using System.Collections;
+using UI;
 using UnityEngine;
 
 public class CakeControllerScript : MonoBehaviour
 {
 
     [SerializeField] private GameObject[] cake;
-    [SerializeField] private GameObject restorePanel;
+    [SerializeField] private PanelController restorePanel;
     private int _currentCakeLevel;
     private int _currentDamage;
 
@@ -28,6 +29,8 @@ public class CakeControllerScript : MonoBehaviour
         //Debug.Log(DataManager.twentyProcentAmount);
         _currentDamage = 0;
     }
+    
+
 
     private void OnDestroy()
     {
@@ -60,12 +63,12 @@ public class CakeControllerScript : MonoBehaviour
     private void EndGameReturn(bool flag)
     {
         //Debug.Log((!flag && !DataManager.returnToGame) + " " + !restorePanel.activeInHierarchy);
-        if(!restorePanel.activeInHierarchy)
+        if(!restorePanel.gameObject.activeInHierarchy)
         {
             int dif = DataManager.NumberOfAllEnemies - DataManager.NumberOfDeathEnemies;
             if (!flag && !DataManager.returnToGame && dif > 1)
             {
-                restorePanel.SetActive(true);
+                restorePanel.Open();
             }
             else
             {
