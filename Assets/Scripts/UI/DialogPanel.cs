@@ -47,4 +47,12 @@ public class DialogPanel : MonoBehaviour
     {
         this.body.text = body;
     }
+
+    public void ChangeInformation(Phrases phrase)
+    {
+        speaker.text = phrase.speaker;
+        body.text = phrase.messageText;
+        note.text = phrase.note;
+        speakerImage.sprite = phrase.sprite;
+    }
 }
