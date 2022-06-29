@@ -88,10 +88,12 @@
     <Compile Include="Assets\Scripts\Rotate.cs" />
     <Compile Include="Assets\Scripts\Game\Map\MapGenerator.cs" />
     <Compile Include="Assets\Scripts\Game\Character\Type of shots\Shot.cs" />
+    <Compile Include="Assets\Scripts\UI\DialogPanel.cs" />
     <Compile Include="Assets\Scripts\Game\Tasks at level\Task4.cs" />
     <Compile Include="Assets\Scripts\Game\Money\DropMoney.cs" />
     <Compile Include="Assets\Scripts\Game\ProgressBar.cs" />
     <Compile Include="Assets\Scripts\Game\Map\EnemyWave.cs" />
+    <Compile Include="Assets\Scripts\UI\Main menu\QuickPlayLevelButton.cs" />
     <Compile Include="Assets\Scripts\Game\Managers\LifeManager.cs" />
     <Compile Include="Assets\Scripts\Game\Abilities\DragObject.cs" />
     <Compile Include="Assets\Scripts\UI\Main menu\UIController.cs" />
@@ -120,6 +122,7 @@
     <Compile Include="Assets\Scripts\Game\Tasks at level\Task3.cs" />
     <Compile Include="Assets\Scripts\Game\Character\CharacterUpdate.cs" />
     <Compile Include="Assets\Scripts\UI\Main menu\Levels\Level.cs" />
+    <Compile Include="Assets\Scripts\UI\Education\EducationMainMenuController.cs" />
     <Compile Include="Assets\Scripts\UI\Game\BuyCharacterItem.cs" />
     <Compile Include="Assets\Scripts\AnimationButton.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\ResourceItemSO.cs" />
@@ -143,7 +146,6 @@
     <Compile Include="Assets\Scripts\Game\Map\CharacterUpdatePlaceClick.cs" />
     <Compile Include="Assets\Scripts\SlowMotionController.cs" />
     <Compile Include="Assets\Scripts\UI\Game\PausePanelController.cs" />
-    <Compile Include="Assets\Scripts\UI\Main menu\QuickPlayLevelButton.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\UI Toolkit\USS\button-style.uss" />
