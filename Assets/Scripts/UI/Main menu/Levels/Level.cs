@@ -28,14 +28,8 @@ public class Level : MonoBehaviour
         task_1 = level.task_1;
         task_2 = level.task_2;
         countStarsRecieved = level.countStarsRecieved;
-        
-        GetComponent<Button>().interactable = level.available;
-        if (level.available)
-        {
-            IconSprint.color = avaibleColor;
-        }
-        
-        if (ifPrevFinished)
+   
+        if (ifPrevFinished || level.available)
         {
             level.Unlock();
 
@@ -43,6 +37,7 @@ public class Level : MonoBehaviour
             GetComponent<Button>().interactable = true;
             
         }
+        
 
         task_1Finished = level.firstTask;
         task_2Finished = level.secondTask;

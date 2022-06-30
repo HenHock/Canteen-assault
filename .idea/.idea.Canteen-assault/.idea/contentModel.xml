@@ -758,13 +758,15 @@
           <e p="ScriptableObjects" t="Include">
             <e p="LevelInfo.cs" t="Include" />
             <e p="ResourceItemSO.cs" t="Include" />
+            <e p="Scenario.cs" t="Include" />
             <e p="TeacherInfo.cs" t="Include" />
           </e>
           <e p="SlowMotionController.cs" t="Include" />
           <e p="UI" t="Include">
             <e p="ButtonController.cs" t="Include" />
+            <e p="DialogPanel.cs" t="Include" />
             <e p="Education" t="Include">
-              <e p="EducationLevel_1.cs" t="Include" />
+              <e p="EducationController.cs" t="Include" />
             </e>
             <e p="Game" t="Include">
               <e p="AbilityDisplay.cs" t="Include" />
@@ -789,6 +791,7 @@
                 <e p="LevelDisplay.cs" t="Include" />
                 <e p="LevelListGenerator.cs" t="Include" />
               </e>
+              <e p="QuickPlayLevelButton.cs" t="Include" />
               <e p="Teachears" t="Include">
                 <e p="BackupUpgradeButton.cs" t="Include" />
                 <e p="BuyUpgradeButton.cs" t="Include" />
