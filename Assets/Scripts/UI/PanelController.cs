@@ -37,6 +37,11 @@ namespace UI
             gameObject.SetActive(true);
         }
 
+        public void DeletePrevPanel()
+        {
+            prevPanel = null;
+        }
+
         private void OnEnable()
         {
             if (SceneManager.GetActiveScene().name.Equals("Main menu"))

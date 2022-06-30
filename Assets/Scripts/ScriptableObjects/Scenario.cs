@@ -17,18 +17,24 @@ public class Scenario : ScriptableObject
 {
     [SerializeField] private List<Phrases> scenario;
 
+    private int index = 0;
+
+    private void Awake()
+    {
+        index = 0;
+    }
+
     public Phrases GetNextPhrases()
     {
-        Phrases phrase = scenario[0];
-        scenario.RemoveAt(0);
+        Phrases phrase = scenario[index++];
         return phrase;
     }
 
-    public bool isEmpty()
+    public bool isNext()
     {
-        if (scenario.Count > 0)
-            return false;
+        if (index < scenario.Count)
+            return true;
 
-        return true;
+        return false;
     }
 }

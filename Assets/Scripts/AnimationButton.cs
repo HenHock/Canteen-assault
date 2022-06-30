@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 public class AnimationButton : MonoBehaviour
@@ -25,5 +26,20 @@ public class AnimationButton : MonoBehaviour
     private void OnDestroy()
     {
         shineTween?.Kill();
+    }
+
+    public void DeactibvateAnimatedButton()
+    {
+        shineTween?.Pause();
+        gameObject.GetComponent<Button>().enabled = false;
+        gameObject.GetComponent<Image>().color = Color.grey;
+    }
+
+    public void ActivateAnimatedButton()
+    {
+        shineTween?.Play();
+        gameObject.SetActive(true);
+        gameObject.GetComponent<Button>().enabled = true;
+        gameObject.GetComponent<Image>().color = Color.white;
     }
 }

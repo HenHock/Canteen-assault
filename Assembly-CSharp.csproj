@@ -83,7 +83,6 @@
     <Compile Include="Assets\Scripts\UI\Main menu\Levels\LevelListGenerator.cs" />
     <Compile Include="Assets\Scripts\UI\Main menu\Teachears\TeacherInfoDisplay.cs" />
     <Compile Include="Assets\Scripts\UI\Game\RadiusAttackDisplay.cs" />
-    <Compile Include="Assets\Scripts\UI\Education\EducationLevel_1.cs" />
     <Compile Include="Assets\Scripts\Game\Map\CharacterSpawnPlaceClick.cs" />
     <Compile Include="Assets\Scripts\Rotate.cs" />
     <Compile Include="Assets\Scripts\Game\Map\MapGenerator.cs" />
@@ -122,10 +121,11 @@
     <Compile Include="Assets\Scripts\Game\Tasks at level\Task3.cs" />
     <Compile Include="Assets\Scripts\Game\Character\CharacterUpdate.cs" />
     <Compile Include="Assets\Scripts\UI\Main menu\Levels\Level.cs" />
-    <Compile Include="Assets\Scripts\UI\Education\EducationMainMenuController.cs" />
+    <Compile Include="Assets\Scripts\UI\Education\EducationController.cs" />
     <Compile Include="Assets\Scripts\UI\Game\BuyCharacterItem.cs" />
     <Compile Include="Assets\Scripts\AnimationButton.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\ResourceItemSO.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\Scenario.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\LevelInfo.cs" />
     <Compile Include="Assets\Scripts\UI\Game\ResetButton.cs" />
     <Compile Include="Assets\Scripts\UI\Main menu\Teachears\TeacherInfoController.cs" />
@@ -146,7 +146,6 @@
     <Compile Include="Assets\Scripts\Game\Map\CharacterUpdatePlaceClick.cs" />
     <Compile Include="Assets\Scripts\SlowMotionController.cs" />
     <Compile Include="Assets\Scripts\UI\Game\PausePanelController.cs" />
-    <Compile Include="Assets\Scripts\ScriptableObjects\Scenario.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\UI Toolkit\USS\button-style.uss" />

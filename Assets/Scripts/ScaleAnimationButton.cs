@@ -13,6 +13,16 @@ public class ScaleAnimationButton : MonoBehaviour
 
     }
 
+    public void stopAnimation()
+    {
+        scaleTween?.Pause();
+    }
+
+    public void startAnimation()
+    {
+        scaleTween?.Play();
+    }
+
     private void OnDestroy()
     {
         scaleTween?.Kill();

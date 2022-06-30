@@ -34,7 +34,9 @@ public class TeacherInfoController : MonoBehaviour
     [SerializeField] private Sprite selectedButton;
     [SerializeField] private Sprite unSelectedButton;
     [SerializeField] private Sprite disableButton;
-    [SerializeField] private Sprite enableButton; 
+    [SerializeField] private Sprite enableButton;
+
+    [SerializeField] private EducationController educationController;
 
     public int indexT { get; set; } = 0;
 
@@ -43,6 +45,16 @@ public class TeacherInfoController : MonoBehaviour
         foreach(levelTeacherInfo info in teacherInfoList)
             if(!ES3.Load(info.level_1.prefab.name, false))
                 ES3.Save(info.level_1.prefab.name, true);
+
+        if (GlobalApplicationData.IsFirstLaunch)
+        {
+            educationController.SchoolEnter();
+            DisableButton(nextButton);
+            DisableButton(levelTeacherInfoButton_1);
+
+            DisableButton(levelTeacherInfoButton_3);
+            DisableButton(backupButton.gameObject);
+        }
     }
 
     public void NextTeachearInfo()
@@ -114,7 +126,9 @@ public class TeacherInfoController : MonoBehaviour
     private void EnableButton(GameObject button)
     {
         button.GetComponent<Image>().sprite = enableButton;
-        button.GetComponent<Button>().enabled = true;
+        button.GetComponent<AnimationButton>()?.ActivateAnimatedButton();
+        button.GetComponent<ScaleAnimationButton>()?.startAnimation();
+        button.GetComponent<Image>().color = new Color32(189, 104, 86, 255);
     }
 
     private void SelectButton(GameObject button)
@@ -134,7 +148,8 @@ public class TeacherInfoController : MonoBehaviour
     private void DisableButton(GameObject button)
     {
         button.GetComponent<Image>().sprite = disableButton;
-        button.GetComponent<Button>().enabled = false;
+        button.GetComponent<AnimationButton>()?.DeactibvateAnimatedButton();
+        button.GetComponent<ScaleAnimationButton>()?.stopAnimation();
     }
 
     public void SettingUpgradeBackupButton(TeacherInfo teacherInfo)
