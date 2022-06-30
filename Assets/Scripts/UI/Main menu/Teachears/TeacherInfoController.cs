@@ -31,10 +31,9 @@ public class TeacherInfoController : MonoBehaviour
     [SerializeField] private BuyUpgradeButton upgradeButton;
     [SerializeField] private BackupUpgradeButton backupButton;
 
-    [SerializeField] private Sprite selectedButton;
-    [SerializeField] private Sprite unSelectedButton;
-    [SerializeField] private Sprite disableButton;
-    [SerializeField] private Sprite enableButton;
+    
+    [SerializeField] private Color disableButton;
+    [SerializeField] private Color enableButton;
 
     [SerializeField] private EducationController educationController;
 
@@ -127,31 +126,30 @@ public class TeacherInfoController : MonoBehaviour
 
     private void EnableButton(GameObject button)
     {
-        button.GetComponent<Image>().sprite = enableButton;
+        button.GetComponent<Image>().color = enableButton;
+
         button.GetComponent<AnimationButton>()?.ActivateAnimatedButton();
         button.GetComponent<ScaleAnimationButton>()?.startAnimation();
-        button.GetComponent<Image>().color = new Color32(189, 104, 86, 255);
+    }
+    
+    private void DisableButton(GameObject button)
+    {
+        button.GetComponent<Image>().color = disableButton;
+
+        button.GetComponent<AnimationButton>()?.DeactibvateAnimatedButton();
+        button.GetComponent<ScaleAnimationButton>()?.stopAnimation();
     }
 
     private void SelectButton(GameObject button)
     {
         button.transform.localScale = Vector3.one*1.2f;
-        button.GetComponent<Image>().sprite = selectedButton;
-        button.transform.localScale = new Vector3(0.6f, 0.6f, 0.6f);
+        button.transform.localScale = new Vector3(0.55f, 0.55f, 0.55f);
     }
 
     private void UnselectButton(GameObject button)
     {
         button.transform.localScale = Vector3.one;
-        button.GetComponent<Image>().sprite = unSelectedButton;
         button.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
-    }
-
-    private void DisableButton(GameObject button)
-    {
-        button.GetComponent<Image>().sprite = disableButton;
-        button.GetComponent<AnimationButton>()?.DeactibvateAnimatedButton();
-        button.GetComponent<ScaleAnimationButton>()?.stopAnimation();
     }
 
     public void SettingUpgradeBackupButton(TeacherInfo teacherInfo)
