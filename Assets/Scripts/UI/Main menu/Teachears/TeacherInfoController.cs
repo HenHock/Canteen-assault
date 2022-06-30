@@ -88,7 +88,8 @@ public class TeacherInfoController : MonoBehaviour
         SelectButton(levelTeacherInfoButton_1);
         UnselectButton(levelTeacherInfoButton_2);
         UnselectButton(levelTeacherInfoButton_3);
-        SettingUpgradeBackupButton(teacherInfoList[indexT].level_1);
+        upgradeButton.gameObject.SetActive(false);
+        backupButton.gameObject.SetActive(false);
     }
 
     public void SetSecondLevelTeacherInfo()
@@ -98,11 +99,12 @@ public class TeacherInfoController : MonoBehaviour
         SelectButton(levelTeacherInfoButton_2);
         UnselectButton(levelTeacherInfoButton_1);
         UnselectButton(levelTeacherInfoButton_3);
+        EnableButton(upgradeButton.gameObject);
         SettingUpgradeBackupButton(teacherInfoList[indexT].level_2);
 
         if (teacherInfoList[indexT].level_3.available)
             DisableButton(backupButton.gameObject);
-        else EnableButton(upgradeButton.gameObject);
+        //else EnableButton(upgradeButton.gameObject);
     }
 
     public void SetThirdLevelTeacherInfo()

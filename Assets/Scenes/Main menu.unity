@@ -584,6 +584,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2318591962673697942, guid: 8ed47b59450ea1541b793803ca2d88ad,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2318591962673697964, guid: 8ed47b59450ea1541b793803ca2d88ad,
         type: 3}
       propertyPath: educationController
@@ -594,6 +599,11 @@ PrefabInstance:
       propertyPath: educationController
       value: 
       objectReference: {fileID: 1598466208}
+    - target: {fileID: 2318591963183238638, guid: 8ed47b59450ea1541b793803ca2d88ad,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2318591963325790514, guid: 8ed47b59450ea1541b793803ca2d88ad,
         type: 3}
       propertyPath: m_Name
@@ -707,6 +717,11 @@ PrefabInstance:
     - target: {fileID: 2318591963325790670, guid: 8ed47b59450ea1541b793803ca2d88ad,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2318591964320646709, guid: 8ed47b59450ea1541b793803ca2d88ad,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
