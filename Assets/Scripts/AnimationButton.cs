@@ -31,7 +31,10 @@ public class AnimationButton : MonoBehaviour
     public void DeactibvateAnimatedButton()
     {
         shineTween?.Pause();
-        gameObject.GetComponent<Button>().enabled = false;
+        if (gameObject.GetComponent<Button>())
+        {
+            gameObject.GetComponent<Button>().enabled = false;
+        }
         gameObject.GetComponent<Image>().color = Color.grey;
     }
 
@@ -39,7 +42,10 @@ public class AnimationButton : MonoBehaviour
     {
         shineTween?.Play();
         gameObject.SetActive(true);
-        gameObject.GetComponent<Button>().enabled = true;
+        if (gameObject.GetComponent<Button>())
+        {
+            gameObject.GetComponent<Button>().enabled = true;
+        }
         gameObject.GetComponent<Image>().color = Color.white;
     }
 }
