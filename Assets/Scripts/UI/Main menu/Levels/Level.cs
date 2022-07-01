@@ -8,9 +8,11 @@ public class Level : MonoBehaviour
 {
     [SerializeField]
     private Color avaibleColor;
+    
+    
 
     [SerializeField]
-    private Image IconSprint;
+    private GameObject IconSprint;
     public int levelID { get; private set; } // Номер уровня
     public string sceneName { get; private set; } // Имя сцены, которую уровень загружает
     public TaskAbstract task_1 { get; private set; } // 1 доп. задание на уровне
@@ -33,11 +35,18 @@ public class Level : MonoBehaviour
         {
             level.Unlock();
 
-            IconSprint.color = avaibleColor;
-            GetComponent<Button>().interactable = true;
-            
+            //IconSprint.GetComponent<Image>().color = avaibleColor;
+            GetComponent<Button>().interactable = true; 
+            IconSprint.SetActive(true);
         }
-        
+        else
+        {
+            GetComponent<Button>().interactable = false;
+            IconSprint.SetActive(false);
+            //IconSprint.GetComponent<AnimationButton>()?.DeactibvateAnimatedButton();
+        }
+
+               
 
         task_1Finished = level.firstTask;
         task_2Finished = level.secondTask;
