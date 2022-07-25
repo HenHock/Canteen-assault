@@ -11,5 +11,10 @@ public static class GlobalApplicationData
     private static void Init()
     {
         isFirstLaunch = ES3.Load("IsFirstLaunch", true);
+        if (isFirstLaunch)
+        {
+            ES3.Save("IsFirstLaunch", !isFirstLaunch);
+            isFirstLaunch = false;
+        }
     }
 }
