@@ -8,7 +8,7 @@ This project was created during the 4th year internship period from 04/21/2022 t
 The project is not finished, but there is already an opportunity to play and try the first 10 levels.
 
 # About the project:
-Title: Canteen Assault
+Title: Canteen Assault   
 Genre: Tower Defense
 
 A team of 6 novice video game developers (including those who developed this project) proposed the idea of developing a video game in which the player must protect the school cafeteria from the attack of hungry schoolchildren. To do this, he places the staff of the school (teachers, etc.) in different places. They attack schoolchildren, preventing them from reaching the end of the level.
