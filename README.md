@@ -3,7 +3,7 @@
 Link to the apk file with the game for testing:
 https://drive.google.com/file/d/1Ohof8XV4xBXQmceo04qayvVZKnR4FzU-/view?usp=sharing
  
-This project was created during the 4th year internship period from 04/21/2022 to 06/25/2022 in college. 2 people worked on the project who had no experience in mobile game development, but we received some recommendations from other people who are related to video game development. Most of their recommendations related to the correct development of the game in such a way as to reach a large audience. Our design and playability were also judged.
+This project was created during the 4th year internship period from 04/21/2022 to 06/25/2022 in college. 2 people worked on the project who had no experience in mobile game development, but we received some recommendations from other people who are related to game development. Most of their recommendations related to the correct development of the game in such a way as to reach a large audience. Our design and playability were also judged.
 
 The project is not finished, but there is already an opportunity to play and try the first 10 levels.
 
